@@ -259,11 +259,15 @@
         <characteristicType name="Range" id="eb7e-7ebc-1a0e-68be"/>
         <characteristicType name="Shots" id="88f2-c7fc-8a84-1851"/>
         <characteristicType name="Pen" id="27a4-048c-375a-0a88"/>
+        <characteristicType name="Special Rules" id="f4d7-272b-2c65-a2f0"/>
       </characteristicTypes>
     </profileType>
     <profileType name="Vehicle" id="2726-bc10-a0e6-6b0b" hidden="false" kind="model">
       <characteristicTypes>
         <characteristicType name="Damage Value" id="28cf-9f74-5808-52b3"/>
+        <characteristicType name="Trans Shots" id="fc92-518e-d558-16a1"/>
+        <characteristicType name="Type Ranged" id="37d0-58a9-4b21-5e3b"/>
+        <characteristicType name="Special Rules" id="b5b7-688f-e6a8-1a52"/>
       </characteristicTypes>
     </profileType>
     <profileType name="Soldier" id="3763-06fa-ca50-8895" hidden="false" kind="model"/>
@@ -393,6 +397,7 @@ Remember that sometimes a team weapon and its crew might be mounted on a single 
 
 Squad-Based Team Weapons
 The most common team weapon carried by the typical infantry squad is the light machine gun. if a team weapon is included in an infantry squad, then one of the other infantrymen in the squad becomes it second crewman, for example, a Bren gun team of firer and loader. Choose which model becomes the loader -- you can pick any model in the squad, and you must mark this model clearly, so that both you and the opponent can easily recognize it. Then keep the loader within an inch of the weapon-carrying model at all times. When the team weapons is fired, the loader cannot fire his own personal weapon -- he is too busy crewing the team weapon. If the loader is killed or is not within an inch of the firer, the weapon suffers a -1 &apos;to hit&apos; penalty as described above.</description>
+      <alias>Team</alias>
     </rule>
     <rule name="Anti-tank Gun" id="fcc8-ae5f-7a91-a6ae" hidden="false" publicationId="6d3a-4ad3-2bb6-913e" page="96">
       <description>Anti-tank guns are designed to accurately target vehicles through improved sights. All anti-tank guns (from light to super-heavy, including those mounted on vehicles) get an additional +1 modifier to hit vehicles when shooting with a Fire order (including ambush and reaction fire).</description>
@@ -564,6 +569,33 @@ If an army is left with a number of units which all have the Slow Load special r
     <rule name="(X)-degree arc of fire" id="9980-2fd1-805a-2115" hidden="false">
       <description>This weapon can fire in the (X) arc around it</description>
     </rule>
+    <rule name="Front Arc" id="c775-2678-de83-b38d" hidden="false">
+      <description>This weapon can fire to the front of the hull</description>
+    </rule>
+    <rule name="Left arc" id="90bd-287c-52b3-25d1" hidden="false">
+      <description>This weapon can fire to the left of the hull</description>
+    </rule>
+    <rule name="Rear Arc" id="ec56-6021-ddca-d365" hidden="false">
+      <description>This weapon can fire to the rear of the hull</description>
+    </rule>
+    <rule name="Right Arc" id="fac3-d151-ae8d-a830" hidden="false">
+      <description>This weapon can fire to the Right of the hull</description>
+    </rule>
+    <rule name="Cavalry Carbine" id="2d45-e213-2aba-636e" hidden="false">
+      <description>Cavalry units can carry infantry small arms, but the only weapon that can be fired whilst mounted is a pistol or carbine (which is treated as a pistol). Note that carbines are treated as rifles when used by troops on foot. All other weaponry can only be fired if dismounted.</description>
+    </rule>
+    <rule name="Turret-mounted Right Arc" id="746e-247e-ee5b-1067" hidden="false">
+      <description>This weapon can only shoot to the right arc of the turret.</description>
+    </rule>
+    <rule name="Turret-mounted Left Arc" id="66e4-01e4-15be-588b" hidden="false">
+      <description>This weapon can only shoot to the left arc of the turret.</description>
+    </rule>
+    <rule name="Turret-mounted Rear Arc" id="992c-64f2-1cb3-2e58" hidden="false">
+      <description>This weapon can only shoot to the rear arc of the turret.</description>
+    </rule>
+    <rule name="Turret-mounted Front Arc" id="6863-d3fa-1cb4-3ba6" hidden="false">
+      <description>This weapon can only shoot to the front arc of the turret.</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Rifle" hidden="false" id="6ce7-ab1d-78f6-abd4" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -585,7 +617,6 @@ If an army is left with a number of units which all have the Slow Load special r
     <selectionEntry type="upgrade" import="true" name="Submachine gun (SMG)" hidden="false" id="fff8-007f-a304-2bc1" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <infoLinks>
         <infoLink name="Submachine gun (SMG)" id="02f1-8897-26be-3f11" hidden="false" type="profile" targetId="2734-3469-0851-661f"/>
-        <infoLink name="Assault" id="cd75-77d8-8ba1-c1c9" hidden="false" type="rule" targetId="49ba-a446-8703-fb50"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Small Arms" hidden="false" id="b056-3e81-88c1-b9ec" targetId="32ca-d61e-c2c4-f901" primary="true"/>
@@ -611,7 +642,6 @@ If an army is left with a number of units which all have the Slow Load special r
     <selectionEntry type="upgrade" import="true" name="Light machine gun (LMG)" hidden="false" id="d7fb-eba4-e0e0-869e" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <infoLinks>
         <infoLink name="Light machine gun (LMG)" id="8b59-1f58-02dc-df15" hidden="false" type="profile" targetId="33a5-f1db-91b1-95fb"/>
-        <infoLink name="Team Weapon" id="1773-f779-5e7d-5c68" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Small Arms" hidden="false" id="f6b8-0120-4db9-38c3" targetId="32ca-d61e-c2c4-f901" primary="true"/>
@@ -620,8 +650,6 @@ If an army is left with a number of units which all have the Slow Load special r
     <selectionEntry type="upgrade" import="true" name="Medium machine gun (MMG)" hidden="false" id="1f9d-4f47-77c9-c2a5" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <infoLinks>
         <infoLink name="Medium machine gun (MMG)" id="00c5-e160-75ca-fda0" hidden="false" type="profile" targetId="765c-da59-4995-3317"/>
-        <infoLink name="Team Weapon" id="11f3-3988-f781-d19b" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
-        <infoLink name="Fixed" id="d7d2-ed30-1aa8-028e" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
       </infoLinks>
       <categoryLinks>
         <categoryLink name="Small Arms" hidden="false" id="cd85-23ad-f9ba-ac45" targetId="32ca-d61e-c2c4-f901" primary="true"/>
@@ -631,11 +659,6 @@ If an army is left with a number of units which all have the Slow Load special r
       <categoryLinks>
         <categoryLink targetId="f613-cba9-0906-48ae" id="ce4f-0dfa-fbf0-279d" primary="true" name="Heavy Weapons"/>
       </categoryLinks>
-      <infoLinks>
-        <infoLink name="Team Weapon" id="ef0e-f6d8-27b7-f3bc" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
-        <infoLink name="Heavy machine gun (HMG)" id="ab5a-69f9-07da-5098" hidden="false" type="profile" targetId="eaf4-2622-6e88-8636"/>
-        <infoLink name="Fixed" id="2e42-e0b7-16b6-5c47" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
-      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Light automatic cannon" hidden="false" id="f6c6-6e07-ad5a-77d8" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
@@ -672,7 +695,6 @@ If an army is left with a number of units which all have the Slow Load special r
         <categoryLink name="Heavy Weapons" hidden="false" id="3c9a-8b5d-ee24-3604" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="5400-e5c0-3c75-d647" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Anti-tank rifle" id="7030-d6df-cc53-d5e2" hidden="false" type="profile" targetId="0d2d-1b2c-5105-1eff"/>
       </infoLinks>
     </selectionEntry>
@@ -711,9 +733,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <categoryLink name="Heavy Weapons" hidden="false" id="816c-3eb9-8f8e-b46c" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="One-shot" id="fab7-f011-5642-1fcb" hidden="false" type="rule" targetId="1c40-2706-1b68-ad79"/>
         <infoLink name="Panzerfaust" id="7a04-1f05-ff7c-c444" hidden="false" type="profile" targetId="9d00-d119-d721-50fe"/>
-        <infoLink name="Shaped Charge" id="0833-b7fe-3479-beb1" hidden="false" type="rule" targetId="171f-2a70-e00b-319b"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Light anti-tank gun" hidden="false" id="c83f-2485-b692-0273" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -736,9 +756,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <categoryLink name="Heavy Weapons" hidden="false" id="ec3f-b103-0043-733a" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="2246-292e-af3c-13ef" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Flamethrower (infantry)" id="75d7-0c3c-25ca-f092" hidden="false" type="profile" targetId="a99b-c4e0-682e-c877"/>
-        <infoLink name="Flamethrower" id="44d1-d3e5-0041-5458" hidden="false" type="rule" targetId="2012-07f1-439d-b424"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Flamethrower (vehicle)" hidden="false" id="df21-c75d-1fe8-682c" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -800,14 +818,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <categoryLink name="Heavy Weapons" hidden="false" id="2aa3-65f8-75a7-25ab" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="7c02-c235-e8f7-ffe2" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Light mortar" id="2586-78ba-c328-0ae7" hidden="false" type="profile" targetId="fd4a-fe42-d51f-5eff"/>
-        <infoLink name="Indirect Fire" id="1ed3-674b-5176-8103" hidden="false" type="rule" targetId="c89c-bd90-9db3-bbcb"/>
-        <infoLink name="HE (X)" id="a9c4-4ac6-7d02-cb64" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
-          <modifiers>
-            <modifier type="set" value="HE (1&quot;)" field="name"/>
-          </modifiers>
-        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Medium mortar" hidden="false" id="d853-2809-a2a6-3db8" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -815,15 +826,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <categoryLink name="Heavy Weapons" hidden="false" id="a5d3-4f90-d5a2-e9fc" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="d4b6-b158-b746-e5e2" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Medium mortar" id="e1c4-0a2c-4811-2174" hidden="false" type="profile" targetId="ec83-02a0-5922-5406"/>
-        <infoLink name="Indirect Fire" id="f7c0-7a88-4aa2-7805" hidden="false" type="rule" targetId="c89c-bd90-9db3-bbcb"/>
-        <infoLink name="HE (X)" id="7683-4265-3c26-80ef" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
-          <modifiers>
-            <modifier type="set" value="HE (2&quot;)" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Fixed" id="9245-8a66-af1d-e3ad" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy mortar" hidden="false" id="0eea-f379-fa00-7f11" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -893,13 +896,7 @@ If an army is left with a number of units which all have the Slow Load special r
     <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="ba6d-c909-e3c7-77c6"/>
     <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="3f9f-f0b3-2ed7-5a0f"/>
     <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="9bac-4afd-b230-6650"/>
-    <selectionEntry type="upgrade" import="true" name="Cavalry Carbine" hidden="false" id="87f3-ea06-5f88-f882">
-      <infoLinks>
-        <infoLink name="Rifle" id="213c-50de-7734-a04a" hidden="false" type="profile" targetId="8f32-25d0-9493-e156"/>
-        <infoLink name="Pistol" id="2ab7-376f-10be-4b3b" hidden="false" type="profile" targetId="41ac-c76b-14fc-a5cc"/>
-        <infoLink name="Cavalry Carbine" id="068d-4c99-7e49-1f4e" hidden="false" type="rule" targetId="fcea-76e8-3bd4-2d96"/>
-      </infoLinks>
-    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Cavalry Carbine" hidden="false" id="87f3-ea06-5f88-f882"/>
     <selectionEntry type="upgrade" import="true" name="Unarmed" hidden="false" id="9bbb-3619-c95a-b206">
       <infoLinks>
         <infoLink name="Unarmed" id="95bc-fb90-3d29-2d83" hidden="false" type="rule" targetId="a9f8-6896-7207-84ce"/>
@@ -908,13 +905,36 @@ If an army is left with a number of units which all have the Slow Load special r
     <selectionEntry type="upgrade" import="true" name="Demolition Charge" hidden="false" id="f7f6-dc31-3120-b5cc">
       <infoLinks>
         <infoLink name="Demolition Charge" id="1451-8502-cc94-2a96" hidden="false" type="profile" targetId="8f52-8aa1-955b-e683"/>
-        <infoLink name="One-shot" id="be31-1c70-2248-7531" hidden="false" type="rule" targetId="1c40-2706-1b68-ad79"/>
-        <infoLink name="HE (X)" id="905a-2944-9b07-88d1" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Turret-mounted Light Anti-tank Gun" hidden="false" id="bef9-67c1-02ff-e895">
+      <infoLinks>
+        <infoLink name="Light anti-tank gun" id="ff59-7b10-830a-ba48" hidden="false" type="profile" targetId="01bd-b6cb-a000-bad3"/>
+        <infoLink name="HE (X)" id="433e-6a93-673d-373e" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
           <modifiers>
-            <modifier type="set" value="HE (3&quot;)" field="name"/>
+            <modifier type="set" value="HE (1&quot;)" field="name"/>
           </modifiers>
         </infoLink>
-        <infoLink name="Demolition Charges" id="fe82-cd25-3689-af37" hidden="false" type="profile" targetId="cc1f-9d18-9e2f-9289"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Co-axial MMG" hidden="false" id="5c66-1865-fb99-4f89">
+      <infoLinks>
+        <infoLink name="Co-axial MMG" id="d75d-3532-103b-953f" hidden="false" type="profile" targetId="ee23-796c-bb86-1cea"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Turret Rear-mounted MMG" hidden="false" id="cb0e-fd90-7aa6-dc9f">
+      <infoLinks>
+        <infoLink name="Turret-mounted Rear-facing MMG" id="6c75-ea96-ec8c-2f39" hidden="false" type="profile" targetId="c413-28a1-5dc1-4d44"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name=" Front, Right, Rear Arc Turret-mounted MMG" hidden="false" id="95c4-bdb8-99db-b044">
+      <infoLinks>
+        <infoLink name=" Front, Right, Rear Arc Turret-mounted MMG" id="24c8-d7c8-1975-e3bf" hidden="false" type="profile" targetId="f3c8-7afb-246a-8108"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name=" Front, Left, Rear Arc Turret-mounted MMG" hidden="false" id="8ad3-05f1-31de-87e9">
+      <infoLinks>
+        <infoLink name=" Front, Left, Rear Arc Turret-mounted MMG" id="6aaa-c3a6-6e93-f24b" hidden="false" type="profile" targetId="2b10-5b89-06b5-e127"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -924,6 +944,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">24&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Light machine gun (LMG)" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="33a5-f1db-91b1-95fb" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -931,6 +952,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">4</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team</characteristic>
       </characteristics>
     </profile>
     <profile name="Medium machine gun (MMG)" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="765c-da59-4995-3317" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -938,6 +960,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">6</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, Fixed</characteristic>
       </characteristics>
     </profile>
     <profile name="Assault rifle" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="1c91-3b01-2ef1-95a2" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -945,6 +968,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">18&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Assault</characteristic>
       </characteristics>
     </profile>
     <profile name="Automatic rifle" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="6bbb-25ce-da47-db73" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -952,6 +976,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">30&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Submachine gun (SMG)" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="2734-3469-0851-661f" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -959,6 +984,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">12&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Assault</characteristic>
       </characteristics>
     </profile>
     <profile name="Pistol" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="41ac-c76b-14fc-a5cc" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -966,6 +992,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">6&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">-</characteristic>
       </characteristics>
     </profile>
     <profile name="Heavy machine gun (HMG)" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="eaf4-2622-6e88-8636" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -973,6 +1000,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">6</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+1</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, Fixed</characteristic>
       </characteristics>
     </profile>
     <profile name="Light automatic cannon" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="0ed7-1d67-6c7e-0245" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -980,6 +1008,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+2</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, Fixed. HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile name="Heavy automatic cannon" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="2667-e751-e170-935d" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -987,6 +1016,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+3</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Anti-tank rifle" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="0d2d-1b2c-5105-1eff" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -994,6 +1024,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+2</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="PIAT (Projector, Infantry, Anti-Tank)" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="4f72-a994-46c9-689a" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1001,6 +1032,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">12&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+5</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Bazooka" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="aaa5-420c-be70-f47b" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1008,6 +1040,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">24&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+5</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Panzerschreck" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="445a-ef63-f319-ca8e" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1015,6 +1048,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">24&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+6</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Panzerfaust" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="9d00-d119-d721-50fe" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1022,6 +1056,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">12&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+6</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Light anti-tank gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="01bd-b6cb-a000-bad3" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1029,6 +1064,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+4</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Medium anti-tank gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="8f96-d96f-6f60-6a04" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1036,6 +1072,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">60&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+5</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Heavy anti-tank gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="4793-e8ef-653d-fd6d" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1043,6 +1080,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+6</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Super-heavy anti-tank gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="9d60-a884-81c9-88a7" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1050,6 +1088,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">84&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+7</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Flamethrower (infantry)" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="a99b-c4e0-682e-c877" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1057,6 +1096,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">6&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+2</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, Flamethrower</characteristic>
       </characteristics>
     </profile>
     <profile name="Flamethrower (vehicle)" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="1a1f-97f0-f638-6924" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1064,6 +1104,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">12&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+2</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Light mortar" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="fd4a-fe42-d51f-5eff" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1071,6 +1112,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">12-36&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, Indirect Fire, HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile name="Medium mortar" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="ec83-02a0-5922-5406" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1078,6 +1120,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">12-60&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, Indirect Fire, HE (2&quot;), Fixed</characteristic>
       </characteristics>
     </profile>
     <profile name="Heavy mortar" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="9c91-e042-bc91-835d" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1085,6 +1128,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">12-72&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Light howitzer" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="f58e-9f23-25cf-785d" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1092,6 +1136,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot; (or 30-60&quot;)</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Medium howitzer" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="dda3-7b15-6321-6f43" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1099,6 +1144,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">60&quot; (or 32-72&quot;)</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Heavy howitzer" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="7c3a-fdac-1012-9fb6" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1106,6 +1152,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot; (or 42-84&quot;)</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Demolition Charge" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="8f52-8aa1-955b-e683">
@@ -1113,6 +1160,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">-</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
     <profile name="Demolition Charges" typeId="bd89-e167-3562-59e1" typeName="Ability" hidden="false" id="cc1f-9d18-9e2f-9289">
@@ -1130,6 +1178,54 @@ weapon against the building (and any unit inside) instead of using the template.
 
 If the marker is placed in contact with a vehicle, and it explodes before the vehicle moves away, treat it
 as a direct hit by a 3” HE weapon against the vehicle instead of using the template.</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Co-axial MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="ee23-796c-bb86-1cea">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
+      </characteristics>
+    </profile>
+    <profile name="Turret-mounted Rear-facing MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="c413-28a1-5dc1-4d44">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Turret Rear-mounted Machine Gun</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Cavalry Carbine (Rifle)" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="3069-4195-d234-900e">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">24&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Cavalry Carbine</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Cavalry Carbine (Pistol)" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="2b78-e229-9169-e355">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">6&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Cavalry Carbine</characteristic>
+      </characteristics>
+    </profile>
+    <profile name=" Front, Left, Rear Arc Turret-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="2b10-5b89-06b5-e127">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Turret-mounted Front Arc, Turret-mounted Left Arc, Turret-mounted Front Arc</characteristic>
+      </characteristics>
+    </profile>
+    <profile name=" Front, Right, Rear Arc Turret-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="f3c8-7afb-246a-8108">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Turret-mounted Front Arc, Turret-mounted Right Arc, Turret-mounted Front Arc</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
