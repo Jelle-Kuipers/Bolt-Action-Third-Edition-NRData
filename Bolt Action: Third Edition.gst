@@ -542,6 +542,15 @@ If an army is left with a number of units which all have the Slow Load special r
     <rule name="Medic" id="58b2-6edc-0259-220a" hidden="false">
       <comment>needs text</comment>
     </rule>
+    <rule name="Cavalry Carbine" id="fcea-76e8-3bd4-2d96" hidden="false">
+      <description>Cavalry units can carry infantry small arms, but the only weapon that can be fired whilst mounted is a pistol or carbine (which is treated as a pistol). Note that carbines are treated as rifles when used by troops on foot. All other weaponry can only be fired if dismounted.</description>
+    </rule>
+    <rule name="Unarmed" id="a9f8-6896-7207-84ce" hidden="false">
+      <description>TODO CHECK ERRATA!</description>
+    </rule>
+    <rule name="Skis" id="6115-5f5d-01fd-5ce0" hidden="false">
+      <description>Ski troops ignore movement penalties for snow and other winter conditions.</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Rifle" hidden="false" id="6ce7-ab1d-78f6-abd4" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -871,6 +880,18 @@ If an army is left with a number of units which all have the Slow Load special r
     <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="ba6d-c909-e3c7-77c6"/>
     <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="3f9f-f0b3-2ed7-5a0f"/>
     <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="9bac-4afd-b230-6650"/>
+    <selectionEntry type="upgrade" import="true" name="Cavalry Carbine" hidden="false" id="87f3-ea06-5f88-f882">
+      <infoLinks>
+        <infoLink name="Rifle" id="213c-50de-7734-a04a" hidden="false" type="profile" targetId="8f32-25d0-9493-e156"/>
+        <infoLink name="Pistol" id="2ab7-376f-10be-4b3b" hidden="false" type="profile" targetId="41ac-c76b-14fc-a5cc"/>
+        <infoLink name="Cavalry Carbine" id="068d-4c99-7e49-1f4e" hidden="false" type="rule" targetId="fcea-76e8-3bd4-2d96"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Unarmed" hidden="false" id="9bbb-3619-c95a-b206">
+      <infoLinks>
+        <infoLink name="Unarmed" id="95bc-fb90-3d29-2d83" hidden="false" type="rule" targetId="a9f8-6896-7207-84ce"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
     <profile name="Rifle" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="8f32-25d0-9493-e156" publicationId="6d3a-4ad3-2bb6-913e" page="92">
