@@ -69,7 +69,7 @@
     </forceEntry>
     <forceEntry name="Rifle Platoon" id="2de2-8df0-ebf4-b7de" hidden="false" publicationId="6d3a-4ad3-2bb6-913e" page="184">
       <categoryLinks>
-        <categoryLink name="Anti-Tank Team" hidden="false" id="cd0a-729a-c046-8ed2" targetId="573f-2b84-c891-5e1b">
+        <categoryLink name="Anti-Tank Teams" hidden="false" id="cd0a-729a-c046-8ed2" targetId="573f-2b84-c891-5e1b">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8393-fd9a-ab02-1b1e"/>
           </constraints>
@@ -79,7 +79,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c84-0a20-4049-572b"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Infantry Squad" hidden="false" id="94cf-e5bf-f0b6-e2be" targetId="dc5d-8aeb-6591-b49b">
+        <categoryLink name="Infantry Squads" hidden="false" id="94cf-e5bf-f0b6-e2be" targetId="dc5d-8aeb-6591-b49b">
           <constraints>
             <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="76ab-5461-0631-2b4e"/>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="45fd-b998-955c-a80e"/>
@@ -145,7 +145,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c086-7c27-8fe0-6c32-max"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Infantry Squad" hidden="false" id="1506-4800-9307-d9e2" targetId="dc5d-8aeb-6591-b49b">
+        <categoryLink name="Infantry Squads" hidden="false" id="1506-4800-9307-d9e2" targetId="dc5d-8aeb-6591-b49b">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6c11-d350-5320-7126"/>
             <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="7269-bd0a-4a45-7c50"/>
@@ -156,7 +156,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e02-ab73-aeac-e930"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Anti-Tank Team" hidden="false" id="c7d7-7538-e38b-0908" targetId="573f-2b84-c891-5e1b">
+        <categoryLink name="Anti-Tank Teams" hidden="false" id="c7d7-7538-e38b-0908" targetId="573f-2b84-c891-5e1b">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f41c-6b16-efde-5245"/>
           </constraints>
@@ -178,7 +178,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="14d3-6862-bb8d-1186-max"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Anti-Tank Team" hidden="false" id="7453-1ac4-9a5c-7367" targetId="573f-2b84-c891-5e1b">
+        <categoryLink name="Anti-Tank Teams" hidden="false" id="7453-1ac4-9a5c-7367" targetId="573f-2b84-c891-5e1b">
           <constraints>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="7ec6-6fb0-7711-bb84"/>
           </constraints>
@@ -552,6 +552,17 @@ If an army is left with a number of units which all have the Slow Load special r
     </rule>
     <rule name="Skis" id="6115-5f5d-01fd-5ce0" hidden="false">
       <description>Ski troops ignore movement penalties for snow and other winter conditions.</description>
+    </rule>
+    <rule name="Spotter" id="1b62-7298-1a6a-9c66" hidden="false">
+      <comment>needs text</comment>
+      <description>TODO add text</description>
+    </rule>
+    <rule name="Gun Shield" id="412c-c847-20d1-bdba" hidden="false"/>
+    <rule name="Flak" id="5a52-9a1c-d540-fa50" hidden="false">
+      <description>TODO get rule</description>
+    </rule>
+    <rule name="(X)-degree arc of fire" id="9980-2fd1-805a-2115" hidden="false">
+      <description>This weapon can fire in the (X) arc around it</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>
