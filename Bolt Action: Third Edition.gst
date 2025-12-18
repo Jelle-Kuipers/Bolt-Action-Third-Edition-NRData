@@ -596,6 +596,141 @@ If an army is left with a number of units which all have the Slow Load special r
     <rule name="Turret-mounted Front Arc" id="6863-d3fa-1cb4-3ba6" hidden="false">
       <description>This weapon can only shoot to the front arc of the turret.</description>
     </rule>
+    <rule name="Internal volatile fuel tanks" id="e1bf-ef5e-9356-a7c2" hidden="false">
+      <description>When rolling on the Armoured Vehicle Damage Results Tables against a vehicle equipped with flamethrowers, add an extra +1 to the roll to represent the increased risk from carrying around so much volatile fuel for the flamethrower.</description>
+    </rule>
+    <rule name="HE (1&quot;)" id="993a-e64e-16a4-93fb" hidden="false" page="97" publicationId="6d3a-4ad3-2bb6-913e">
+      <description>The HE special rule refers to weapons that can fire a high-explosive shot. Some weapons can only fire HE shots and their Pen value is indicated as HE. Some weapons, for instance anti-tank guns, can fire either anti-tank shots (using the Pen value indicated) or HE shots. If the target is an infantry or artillery unit, the weapon MUST fire HE, but against vehicles (either armoured or soft-skins), the player must declare which type of shot the weapon is firing as they declare a target.
+
+The number in the bracket after the HE shows how powerful the shell is and therefore how large the explosion is going to be, rated from 1&quot; to 4&quot; in diameter (see the table on page 99).
+
+When firing an HE weapon, pick a target unit and roll to hit in the same way as for a normal shot.
+
+If the target is hit by an HE shot, you need to use the appropriate template to determine how many models in the unit have been hit. Templates are circles either 1&quot;, 2&quot;, 3&quot; or 4&quot; diameter. First pick a point to place the centre of the template on. This can be anywhere on top of, or between, the target unit&apos;s models. so that the template covers as many models as possible in the target unit (including a point that is out of sight and/or range), but the template cannot clip any friendly models. The easiest way to do this is to photocopy and cut out one of the templates from page 316, but you can also simply measure the range of the explosion from a point of your choice (remember that in such case, you will be using the radius of the template, which is half the given diameter). We shall assume you are going to use a template. Note that if a weapon team or artillery unit has been mounted on a single collective base, you should imagine that each model has an individual 25mm round base when placing the template.
+
+Once the template is in position, count the number of models whose bases are under the template (even partially) -- that is the number of hits caused on the target unit. It is of course possible, especially with large explosions, to clip models from other enemy units nearby. This is fine, but remember that you are trying to hit as many models as possible in the target unit and you cannot clip any friendly models -- once these two conditions are met, however, other enemy units nearby are fair game, even units that are out of sight! Each unit hit suffers a number of hits equal to the number of its models that are under the template. Note that a 1&quot; template placed between two models of the same unit that are spaced out as much as possible can always hit two models at a minimum (unless of course the unit has gaping holes in it due to having lost models in that same turn!).
+
+A unit shot at by HE can react by taking an immediate Down action in the usual manner. Once the unit has gone Down, roll to hit, place the template, and determine the number of HE hits caused normally, but then halve that number, rounding the result up. This represents the men who have &apos;hit the dirt&apos; and who might be lucky enough to avoid the blast and flying shrapnel.
+
+HE hits don&apos;t cause a single pin marker on the target, but rather a variable number of pin markers. This represents the terrifying effect of artillery shells exploding on and near the unit. The number of pin markers caused is generated randomly by rolling a D2 or D3 depending on the HE value of the shooter shown as on the Table below. For example, if hit by a shell with an HE value of 1&quot;, the target takes D2 pin markers - i.e roll a D6 with scores of 1, 2 or 3 = 1 and scores of 4, 5, or 6 = 2.
+
+Models hit get their saves as normal, including the Down modifier on top of cover from terrain or intervening models (except, of course, if the firer is in point-blank range). Take saves and then roll to damage as normal, starting from the target unit and then rolling for other units hit in any order you like. The penetration value of HE shells. which is also applied on the roll to damage for all targets hit, also varies with the HE values -- larger and more powerful shells having higher values. This is also shown on the Table below. However, HE shells don&apos;t rely on the kinetic energy of the shell itself to penetrate a target&apos;s armour, so they don&apos;t suffer the -1 penetration penalty when hitting an armoured target at long range, nor the +1 Pen for point-blank range. Note that the models removed as casualties can come from anywhere in the unit, not just from the models within the explosion radius
+
+HE VALUE TABLE
+Diamater | Pen | Pin | Hits vs Targets in Buildings
+1&quot; | +1 | D2 | D3
+2&quot; | +2 | D2 | D6
+3&quot; | +3 | D3 | 2D6
+4&quot; | +4 | D3 | 3D6
+
+The last column of the table is used for units by HE while occupying a building, as explained on page 156.
+
+When a unit capable of shooting HE or anti-tank shots is given an Ambush order, the player must specify the kind of round loaded. If this is forgotten then the default position is that anti-tank guns will load anti-tank rounds (and thus will not be able to Ambush-fire against infantry and artillery targets), whilst other guns will laod HE rounds. The unit cannot change from one type of round to another until a further order is issued, though this could be another Ambush order if desired.
+
+Multiple HE Hits
+Some units or wepaons are capable of firing a number of HE shots simultaneously -- a good example is an automatic cannon shooting two small HE shells every time it&apos;s fired. In these cases, roll all the dice to hit first, then for every hit scored place one template on the target unit is described above, and add together all hits scored, but keep in mind that each model can only be hit once, even if covered by more than one template. This means that the maximum number of hits you can score is equal to the number of models in the target unit (halved if the unit is Down).
+
+Units hit by multiple HE hits like this only suffer a single batch of multiplied pin markers, not several of them! For example, they would suffer D2 pins even if hit by two or more HE hits from a single automatic cannon (and not D2 pins per hit!).</description>
+    </rule>
+    <rule name="HE (2&quot;)" id="1e0e-4de7-4451-bd67" hidden="false" page="97" publicationId="6d3a-4ad3-2bb6-913e">
+      <description>The HE special rule refers to weapons that can fire a high-explosive shot. Some weapons can only fire HE shots and their Pen value is indicated as HE. Some weapons, for instance anti-tank guns, can fire either anti-tank shots (using the Pen value indicated) or HE shots. If the target is an infantry or artillery unit, the weapon MUST fire HE, but against vehicles (either armoured or soft-skins), the player must declare which type of shot the weapon is firing as they declare a target.
+
+The number in the bracket after the HE shows how powerful the shell is and therefore how large the explosion is going to be, rated from 1&quot; to 4&quot; in diameter (see the table on page 99).
+
+When firing an HE weapon, pick a target unit and roll to hit in the same way as for a normal shot.
+
+If the target is hit by an HE shot, you need to use the appropriate template to determine how many models in the unit have been hit. Templates are circles either 1&quot;, 2&quot;, 3&quot; or 4&quot; diameter. First pick a point to place the centre of the template on. This can be anywhere on top of, or between, the target unit&apos;s models. so that the template covers as many models as possible in the target unit (including a point that is out of sight and/or range), but the template cannot clip any friendly models. The easiest way to do this is to photocopy and cut out one of the templates from page 316, but you can also simply measure the range of the explosion from a point of your choice (remember that in such case, you will be using the radius of the template, which is half the given diameter). We shall assume you are going to use a template. Note that if a weapon team or artillery unit has been mounted on a single collective base, you should imagine that each model has an individual 25mm round base when placing the template.
+
+Once the template is in position, count the number of models whose bases are under the template (even partially) -- that is the number of hits caused on the target unit. It is of course possible, especially with large explosions, to clip models from other enemy units nearby. This is fine, but remember that you are trying to hit as many models as possible in the target unit and you cannot clip any friendly models -- once these two conditions are met, however, other enemy units nearby are fair game, even units that are out of sight! Each unit hit suffers a number of hits equal to the number of its models that are under the template. Note that a 1&quot; template placed between two models of the same unit that are spaced out as much as possible can always hit two models at a minimum (unless of course the unit has gaping holes in it due to having lost models in that same turn!).
+
+A unit shot at by HE can react by taking an immediate Down action in the usual manner. Once the unit has gone Down, roll to hit, place the template, and determine the number of HE hits caused normally, but then halve that number, rounding the result up. This represents the men who have &apos;hit the dirt&apos; and who might be lucky enough to avoid the blast and flying shrapnel.
+
+HE hits don&apos;t cause a single pin marker on the target, but rather a variable number of pin markers. This represents the terrifying effect of artillery shells exploding on and near the unit. The number of pin markers caused is generated randomly by rolling a D2 or D3 depending on the HE value of the shooter shown as on the Table below. For example, if hit by a shell with an HE value of 1&quot;, the target takes D2 pin markers - i.e roll a D6 with scores of 1, 2 or 3 = 1 and scores of 4, 5, or 6 = 2.
+
+Models hit get their saves as normal, including the Down modifier on top of cover from terrain or intervening models (except, of course, if the firer is in point-blank range). Take saves and then roll to damage as normal, starting from the target unit and then rolling for other units hit in any order you like. The penetration value of HE shells. which is also applied on the roll to damage for all targets hit, also varies with the HE values -- larger and more powerful shells having higher values. This is also shown on the Table below. However, HE shells don&apos;t rely on the kinetic energy of the shell itself to penetrate a target&apos;s armour, so they don&apos;t suffer the -1 penetration penalty when hitting an armoured target at long range, nor the +1 Pen for point-blank range. Note that the models removed as casualties can come from anywhere in the unit, not just from the models within the explosion radius
+
+HE VALUE TABLE
+Diamater | Pen | Pin | Hits vs Targets in Buildings
+1&quot; | +1 | D2 | D3
+2&quot; | +2 | D2 | D6
+3&quot; | +3 | D3 | 2D6
+4&quot; | +4 | D3 | 3D6
+
+The last column of the table is used for units by HE while occupying a building, as explained on page 156.
+
+When a unit capable of shooting HE or anti-tank shots is given an Ambush order, the player must specify the kind of round loaded. If this is forgotten then the default position is that anti-tank guns will load anti-tank rounds (and thus will not be able to Ambush-fire against infantry and artillery targets), whilst other guns will laod HE rounds. The unit cannot change from one type of round to another until a further order is issued, though this could be another Ambush order if desired.
+
+Multiple HE Hits
+Some units or wepaons are capable of firing a number of HE shots simultaneously -- a good example is an automatic cannon shooting two small HE shells every time it&apos;s fired. In these cases, roll all the dice to hit first, then for every hit scored place one template on the target unit is described above, and add together all hits scored, but keep in mind that each model can only be hit once, even if covered by more than one template. This means that the maximum number of hits you can score is equal to the number of models in the target unit (halved if the unit is Down).
+
+Units hit by multiple HE hits like this only suffer a single batch of multiplied pin markers, not several of them! For example, they would suffer D2 pins even if hit by two or more HE hits from a single automatic cannon (and not D2 pins per hit!).</description>
+    </rule>
+    <rule name="HE (3&quot;)" id="9722-1a95-2a66-c602" hidden="false" page="97" publicationId="6d3a-4ad3-2bb6-913e">
+      <description>The HE special rule refers to weapons that can fire a high-explosive shot. Some weapons can only fire HE shots and their Pen value is indicated as HE. Some weapons, for instance anti-tank guns, can fire either anti-tank shots (using the Pen value indicated) or HE shots. If the target is an infantry or artillery unit, the weapon MUST fire HE, but against vehicles (either armoured or soft-skins), the player must declare which type of shot the weapon is firing as they declare a target.
+
+The number in the bracket after the HE shows how powerful the shell is and therefore how large the explosion is going to be, rated from 1&quot; to 4&quot; in diameter (see the table on page 99).
+
+When firing an HE weapon, pick a target unit and roll to hit in the same way as for a normal shot.
+
+If the target is hit by an HE shot, you need to use the appropriate template to determine how many models in the unit have been hit. Templates are circles either 1&quot;, 2&quot;, 3&quot; or 4&quot; diameter. First pick a point to place the centre of the template on. This can be anywhere on top of, or between, the target unit&apos;s models. so that the template covers as many models as possible in the target unit (including a point that is out of sight and/or range), but the template cannot clip any friendly models. The easiest way to do this is to photocopy and cut out one of the templates from page 316, but you can also simply measure the range of the explosion from a point of your choice (remember that in such case, you will be using the radius of the template, which is half the given diameter). We shall assume you are going to use a template. Note that if a weapon team or artillery unit has been mounted on a single collective base, you should imagine that each model has an individual 25mm round base when placing the template.
+
+Once the template is in position, count the number of models whose bases are under the template (even partially) -- that is the number of hits caused on the target unit. It is of course possible, especially with large explosions, to clip models from other enemy units nearby. This is fine, but remember that you are trying to hit as many models as possible in the target unit and you cannot clip any friendly models -- once these two conditions are met, however, other enemy units nearby are fair game, even units that are out of sight! Each unit hit suffers a number of hits equal to the number of its models that are under the template. Note that a 1&quot; template placed between two models of the same unit that are spaced out as much as possible can always hit two models at a minimum (unless of course the unit has gaping holes in it due to having lost models in that same turn!).
+
+A unit shot at by HE can react by taking an immediate Down action in the usual manner. Once the unit has gone Down, roll to hit, place the template, and determine the number of HE hits caused normally, but then halve that number, rounding the result up. This represents the men who have &apos;hit the dirt&apos; and who might be lucky enough to avoid the blast and flying shrapnel.
+
+HE hits don&apos;t cause a single pin marker on the target, but rather a variable number of pin markers. This represents the terrifying effect of artillery shells exploding on and near the unit. The number of pin markers caused is generated randomly by rolling a D2 or D3 depending on the HE value of the shooter shown as on the Table below. For example, if hit by a shell with an HE value of 1&quot;, the target takes D2 pin markers - i.e roll a D6 with scores of 1, 2 or 3 = 1 and scores of 4, 5, or 6 = 2.
+
+Models hit get their saves as normal, including the Down modifier on top of cover from terrain or intervening models (except, of course, if the firer is in point-blank range). Take saves and then roll to damage as normal, starting from the target unit and then rolling for other units hit in any order you like. The penetration value of HE shells. which is also applied on the roll to damage for all targets hit, also varies with the HE values -- larger and more powerful shells having higher values. This is also shown on the Table below. However, HE shells don&apos;t rely on the kinetic energy of the shell itself to penetrate a target&apos;s armour, so they don&apos;t suffer the -1 penetration penalty when hitting an armoured target at long range, nor the +1 Pen for point-blank range. Note that the models removed as casualties can come from anywhere in the unit, not just from the models within the explosion radius
+
+HE VALUE TABLE
+Diamater | Pen | Pin | Hits vs Targets in Buildings
+1&quot; | +1 | D2 | D3
+2&quot; | +2 | D2 | D6
+3&quot; | +3 | D3 | 2D6
+4&quot; | +4 | D3 | 3D6
+
+The last column of the table is used for units by HE while occupying a building, as explained on page 156.
+
+When a unit capable of shooting HE or anti-tank shots is given an Ambush order, the player must specify the kind of round loaded. If this is forgotten then the default position is that anti-tank guns will load anti-tank rounds (and thus will not be able to Ambush-fire against infantry and artillery targets), whilst other guns will laod HE rounds. The unit cannot change from one type of round to another until a further order is issued, though this could be another Ambush order if desired.
+
+Multiple HE Hits
+Some units or wepaons are capable of firing a number of HE shots simultaneously -- a good example is an automatic cannon shooting two small HE shells every time it&apos;s fired. In these cases, roll all the dice to hit first, then for every hit scored place one template on the target unit is described above, and add together all hits scored, but keep in mind that each model can only be hit once, even if covered by more than one template. This means that the maximum number of hits you can score is equal to the number of models in the target unit (halved if the unit is Down).
+
+Units hit by multiple HE hits like this only suffer a single batch of multiplied pin markers, not several of them! For example, they would suffer D2 pins even if hit by two or more HE hits from a single automatic cannon (and not D2 pins per hit!).</description>
+    </rule>
+    <rule name="HE (4&quot;)" id="0f50-870a-cb5f-0fba" hidden="false" page="97" publicationId="6d3a-4ad3-2bb6-913e">
+      <description>The HE special rule refers to weapons that can fire a high-explosive shot. Some weapons can only fire HE shots and their Pen value is indicated as HE. Some weapons, for instance anti-tank guns, can fire either anti-tank shots (using the Pen value indicated) or HE shots. If the target is an infantry or artillery unit, the weapon MUST fire HE, but against vehicles (either armoured or soft-skins), the player must declare which type of shot the weapon is firing as they declare a target.
+
+The number in the bracket after the HE shows how powerful the shell is and therefore how large the explosion is going to be, rated from 1&quot; to 4&quot; in diameter (see the table on page 99).
+
+When firing an HE weapon, pick a target unit and roll to hit in the same way as for a normal shot.
+
+If the target is hit by an HE shot, you need to use the appropriate template to determine how many models in the unit have been hit. Templates are circles either 1&quot;, 2&quot;, 3&quot; or 4&quot; diameter. First pick a point to place the centre of the template on. This can be anywhere on top of, or between, the target unit&apos;s models. so that the template covers as many models as possible in the target unit (including a point that is out of sight and/or range), but the template cannot clip any friendly models. The easiest way to do this is to photocopy and cut out one of the templates from page 316, but you can also simply measure the range of the explosion from a point of your choice (remember that in such case, you will be using the radius of the template, which is half the given diameter). We shall assume you are going to use a template. Note that if a weapon team or artillery unit has been mounted on a single collective base, you should imagine that each model has an individual 25mm round base when placing the template.
+
+Once the template is in position, count the number of models whose bases are under the template (even partially) -- that is the number of hits caused on the target unit. It is of course possible, especially with large explosions, to clip models from other enemy units nearby. This is fine, but remember that you are trying to hit as many models as possible in the target unit and you cannot clip any friendly models -- once these two conditions are met, however, other enemy units nearby are fair game, even units that are out of sight! Each unit hit suffers a number of hits equal to the number of its models that are under the template. Note that a 1&quot; template placed between two models of the same unit that are spaced out as much as possible can always hit two models at a minimum (unless of course the unit has gaping holes in it due to having lost models in that same turn!).
+
+A unit shot at by HE can react by taking an immediate Down action in the usual manner. Once the unit has gone Down, roll to hit, place the template, and determine the number of HE hits caused normally, but then halve that number, rounding the result up. This represents the men who have &apos;hit the dirt&apos; and who might be lucky enough to avoid the blast and flying shrapnel.
+
+HE hits don&apos;t cause a single pin marker on the target, but rather a variable number of pin markers. This represents the terrifying effect of artillery shells exploding on and near the unit. The number of pin markers caused is generated randomly by rolling a D2 or D3 depending on the HE value of the shooter shown as on the Table below. For example, if hit by a shell with an HE value of 1&quot;, the target takes D2 pin markers - i.e roll a D6 with scores of 1, 2 or 3 = 1 and scores of 4, 5, or 6 = 2.
+
+Models hit get their saves as normal, including the Down modifier on top of cover from terrain or intervening models (except, of course, if the firer is in point-blank range). Take saves and then roll to damage as normal, starting from the target unit and then rolling for other units hit in any order you like. The penetration value of HE shells. which is also applied on the roll to damage for all targets hit, also varies with the HE values -- larger and more powerful shells having higher values. This is also shown on the Table below. However, HE shells don&apos;t rely on the kinetic energy of the shell itself to penetrate a target&apos;s armour, so they don&apos;t suffer the -1 penetration penalty when hitting an armoured target at long range, nor the +1 Pen for point-blank range. Note that the models removed as casualties can come from anywhere in the unit, not just from the models within the explosion radius
+
+HE VALUE TABLE
+Diamater | Pen | Pin | Hits vs Targets in Buildings
+1&quot; | +1 | D2 | D3
+2&quot; | +2 | D2 | D6
+3&quot; | +3 | D3 | 2D6
+4&quot; | +4 | D3 | 3D6
+
+The last column of the table is used for units by HE while occupying a building, as explained on page 156.
+
+When a unit capable of shooting HE or anti-tank shots is given an Ambush order, the player must specify the kind of round loaded. If this is forgotten then the default position is that anti-tank guns will load anti-tank rounds (and thus will not be able to Ambush-fire against infantry and artillery targets), whilst other guns will laod HE rounds. The unit cannot change from one type of round to another until a further order is issued, though this could be another Ambush order if desired.
+
+Multiple HE Hits
+Some units or wepaons are capable of firing a number of HE shots simultaneously -- a good example is an automatic cannon shooting two small HE shells every time it&apos;s fired. In these cases, roll all the dice to hit first, then for every hit scored place one template on the target unit is described above, and add together all hits scored, but keep in mind that each model can only be hit once, even if covered by more than one template. This means that the maximum number of hits you can score is equal to the number of models in the target unit (halved if the unit is Down).
+
+Units hit by multiple HE hits like this only suffer a single batch of multiplied pin markers, not several of them! For example, they would suffer D2 pins even if hit by two or more HE hits from a single automatic cannon (and not D2 pins per hit!).</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Rifle" hidden="false" id="6ce7-ab1d-78f6-abd4" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -909,12 +1044,7 @@ If an army is left with a number of units which all have the Slow Load special r
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Turret-mounted Light Anti-tank Gun" hidden="false" id="bef9-67c1-02ff-e895">
       <infoLinks>
-        <infoLink name="Light anti-tank gun" id="ff59-7b10-830a-ba48" hidden="false" type="profile" targetId="01bd-b6cb-a000-bad3"/>
-        <infoLink name="HE (X)" id="433e-6a93-673d-373e" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
-          <modifiers>
-            <modifier type="set" value="HE (1&quot;)" field="name"/>
-          </modifiers>
-        </infoLink>
+        <infoLink name="Turret-mounted Light Anti-tank Gun" id="3b9e-b391-2504-db75" hidden="false" type="profile" targetId="b7dc-2771-f4e0-efec"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Co-axial MMG" hidden="false" id="5c66-1865-fb99-4f89">
@@ -935,6 +1065,32 @@ If an army is left with a number of units which all have the Slow Load special r
     <selectionEntry type="upgrade" import="true" name=" Front, Left, Rear Arc Turret-mounted MMG" hidden="false" id="8ad3-05f1-31de-87e9">
       <infoLinks>
         <infoLink name=" Front, Left, Rear Arc Turret-mounted MMG" id="6aaa-c3a6-6e93-f24b" hidden="false" type="profile" targetId="2b10-5b89-06b5-e127"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="New Entry" hidden="false" id="bef1-8a51-dee2-b3d2"/>
+    <selectionEntry type="upgrade" import="true" name="Turret-mounted Flamethrower" hidden="false" id="9fe6-145b-33a4-a8e2">
+      <infoLinks>
+        <infoLink name="Flamethrower (vehicle)" id="530b-d867-3671-549e" hidden="false" type="profile" targetId="1a1f-97f0-f638-6924"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Turret-mounted Light Howitzer" hidden="false" id="55d3-45f9-53ed-77ab">
+      <infoLinks>
+        <infoLink name="Turret-mounted Light Howitzer" id="35ea-f8c5-be84-0574" hidden="false" type="profile" targetId="8081-f3c1-b2ff-faeb"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Turret-mounted MMG" hidden="false" id="2be0-5e72-41a1-6591">
+      <infoLinks>
+        <infoLink name="Turret-mounted MMG" id="b12b-2762-6e5c-62aa" hidden="false" type="profile" targetId="a2ec-980e-40a2-2c38"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Turret-mounted HMG" hidden="false" id="ec59-06f0-441c-58f3">
+      <infoLinks>
+        <infoLink name="Turret-mounted HMG" id="2615-3242-a180-ab6d" hidden="false" type="profile" targetId="646b-cb2e-5e2f-f348"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Turret-mounted Light Automatic Cannon" hidden="false" id="6e4d-d69a-8434-ffe7">
+      <infoLinks>
+        <infoLink name="Turret-mounted Light Automatic Cannon" id="00c0-c71f-9130-5940" hidden="false" type="profile" targetId="d793-bbbe-9995-8d41"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -1064,7 +1220,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+4</characteristic>
-        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile name="Medium anti-tank gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="8f96-d96f-6f60-6a04" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1104,7 +1260,7 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">12&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+2</characteristic>
-        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Flamethrower</characteristic>
       </characteristics>
     </profile>
     <profile name="Light mortar" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="fd4a-fe42-d51f-5eff" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1226,6 +1382,46 @@ as a direct hit by a 3” HE weapon against the vehicle instead of using the tem
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Turret-mounted Front Arc, Turret-mounted Right Arc, Turret-mounted Front Arc</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Turret-mounted Light Howitzer" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="8081-f3c1-b2ff-faeb">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot; OR (30-60&quot;)</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Howitzer, HE (2&quot;)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Turret-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="a2ec-980e-40a2-2c38">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">-</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Turret-mounted HMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="646b-cb2e-5e2f-f348">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">46&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+1</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">-</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Turret-mounted Light Automatic Cannon" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="d793-bbbe-9995-8d41">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+2</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">HE (1&quot;)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Turret-mounted Light Anti-tank Gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="b7dc-2771-f4e0-efec">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+4</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

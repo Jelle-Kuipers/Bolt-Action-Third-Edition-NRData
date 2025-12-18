@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="7c15-f6a9-718a-725c" name="Armies of the soviet union" gameSystemId="sys-aa0d-3b42-3f65-4d19" gameSystemRevision="1" revision="4" authorContact="Jelle-Kuipers, Jelle30kuipers at gmail dot com" authorName="Jelly" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="7c15-f6a9-718a-725c" name="Armies of the soviet union" gameSystemId="sys-aa0d-3b42-3f65-4d19" gameSystemRevision="1" revision="5" authorContact="Jelle-Kuipers, Jelle30kuipers at gmail dot com" authorName="Jelly" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Platoon Commander" hidden="false" id="a025-dcd6-d08c-4f3a">
       <selectionEntries>
@@ -5899,6 +5899,512 @@
           </entryLinks>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="94ea-9320-8627-3a3d" id="ed05-d6e9-78de-bbe3" primary="true" name="Vehicle"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="T-26B Light Tank" hidden="false" id="79f4-4dac-23d0-44d1">
+      <profiles>
+        <profile name="T-26B Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="111a-4d9a-8e49-f6c1">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured carrier)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="8497-b45c-a155-312e" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="ffd8-073e-a7c3-4f81" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="84"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="dd44-e7d7-5ec7-84de" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="105"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="8d78-f0fc-71e2-d795" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="126"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2f2c-b9bf-c288-6962" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="45c5-d4ba-12f1-33b1" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Turret-mounted weapons" id="910f-d40d-2dfb-d2f5" hidden="false" sortIndex="2">
+          <entryLinks>
+            <entryLink import="true" name="Turret Rear-mounted MMG" hidden="false" id="bef9-09f3-8df2-89bc" type="selectionEntry" targetId="cb0e-fd90-7aa6-dc9f" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1630-b26d-423a-d1b4" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="5"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Turret-mounted Light Anti-tank Gun" hidden="false" id="8ce1-63f6-3521-9120" type="selectionEntry" targetId="bef9-67c1-02ff-e895" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="89c6-aa9e-ee9a-df1d-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="89c6-aa9e-ee9a-df1d-max" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Co-axial MMG" hidden="false" id="5ecc-4409-ae48-f659" type="selectionEntry" targetId="5c66-1865-fb99-4f89" sortIndex="2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b7a3-1b44-dc00-c21e-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7a3-1b44-dc00-c21e-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="94ea-9320-8627-3a3d" id="542b-e60d-6222-edc3" primary="true" name="Vehicle"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="OT-26 And OT-133 Light Flamethrower Tank" hidden="false" id="12a2-5550-da59-b214">
+      <profiles>
+        <profile name="OT-26 and OT-133 Light Flamethrower Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="f594-f9e2-01d8-072c">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured carrier)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Internal volatile fuel tanks</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="866d-1bf0-8ab7-bd13" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="8b5b-6f46-3fd5-d949" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="84"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="655b-68b2-d6f3-6e81" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="105"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="0fb4-05a0-e4c3-9755" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="126"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="de70-a35d-159d-0fb1" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f98-dcef-a43c-8115" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Turret-mounted weapons" id="f3ed-8bcb-3e49-d9bf" hidden="false" sortIndex="2">
+          <entryLinks>
+            <entryLink import="true" name="Turret-mounted Flamethrower" hidden="false" id="82f3-5b62-e263-ebed" type="selectionEntry" targetId="9fe6-145b-33a4-a8e2" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="04dc-f140-2353-2fe0" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5885-3e15-341b-e278" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Co-axial MMG" hidden="false" id="425f-ae6f-7a99-735f" type="selectionEntry" targetId="5c66-1865-fb99-4f89" sortIndex="2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="73f1-b94a-bbbb-1551" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c5e-eb06-d41c-0a51" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="fb67-1f80-f9b3-26f6" targetId="94ea-9320-8627-3a3d" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="BT-5 And BT-7 Light Tank" hidden="false" id="8614-183d-c315-96d3">
+      <profiles>
+        <profile name="BT-5 And BT-7 Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="6807-8c58-6cd6-5ac5">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">8+ (Light Tank)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Fast</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="bd3b-4633-b15a-cc27" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="c8ff-9dbc-ec4a-8e32" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="108"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="06bb-f272-fb9e-724b" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="135"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="b82c-e00f-3ddf-fdf7" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="162"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0c8c-1c1d-2317-8eae" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ae4-3e36-7b1f-3565" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Turret-mounted weapons" id="0166-9b47-5e08-35c0" hidden="false" sortIndex="2">
+          <entryLinks>
+            <entryLink import="true" name="Co-axial MMG" hidden="false" id="13c3-b7ee-3181-3735" type="selectionEntry" targetId="5c66-1865-fb99-4f89" sortIndex="2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7fa5-b5fc-9834-60c8" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5212-8bcd-a9e5-4946" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Turret Rear-mounted MMG" hidden="false" id="98fa-b594-5248-0b5c" type="selectionEntry" targetId="cb0e-fd90-7aa6-dc9f" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="5"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a3bc-efc7-9fa7-5a86" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Main weapon" id="a842-a13c-5e4b-38fc" hidden="false" sortIndex="1" defaultSelectionEntryId="6388-1988-26da-e88e">
+              <entryLinks>
+                <entryLink import="true" name="Turret-mounted Light Anti-tank Gun" hidden="false" id="6388-1988-26da-e88e" type="selectionEntry" targetId="bef9-67c1-02ff-e895" sortIndex="1">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c52-d122-fcab-ddde" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Turret-mounted Light Howitzer" hidden="false" id="0574-2947-7563-d963" type="selectionEntry" targetId="55d3-45f9-53ed-77ab" sortIndex="2">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="15cc-d950-182e-1b92" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fb3a-45e7-b9db-f650-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb3a-45e7-b9db-f650-max" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="d6ec-0fca-4e69-5325" targetId="94ea-9320-8627-3a3d" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="T-37 Light Tank" hidden="false" id="1c65-514c-2c68-27ed">
+      <profiles>
+        <profile name="T-37 Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="a654-6e32-f3ff-1f15">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Carrier)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Amphibious</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="4560-27f8-a2cc-39c1" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="f055-c5b6-d19c-bbb3" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="48"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="fc2f-b5a4-ef8f-2ffe" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="60"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="ad41-1d18-a61e-bf4c" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="72"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8113-c631-b44c-4906" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a4f2-cb41-96b3-ee66" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Turret-mounted Weapons" id="7fe5-8d6f-57b9-8665" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Turret-mounted MMG" hidden="false" id="0354-3ff0-8d85-0e8f" type="selectionEntry" targetId="2be0-5e72-41a1-6591">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6af3-6d45-d25d-1a1b-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6af3-6d45-d25d-1a1b-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7edd-c480-c987-2dce-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7edd-c480-c987-2dce-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="a051-4a42-607c-197c" targetId="94ea-9320-8627-3a3d" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="T-40 Light Tank" hidden="false" id="6e2a-6262-9b23-f421">
+      <profiles>
+        <profile name="T-40 Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="8607-c3e5-eb14-3316">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Carrier)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Amphibious</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="d5a0-3368-1cc5-f6a6" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="2e7a-b184-3e6f-3dba" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="56"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="8979-dd60-4edc-0eaa" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="70"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="89f5-8764-755c-a013" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="84"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f1a7-1523-4848-416b" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b9be-93de-07ec-6bc0" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Turret-mounted Weapons" id="e7fc-e1f5-4162-f90c" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Heavy machine gun (HMG)" hidden="false" id="c0c7-5a94-f409-57fd" type="selectionEntry" targetId="d528-90c4-6bb6-6ab8">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6b94-72fb-2137-4db9-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6b94-72fb-2137-4db9-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Co-axial MMG" hidden="false" id="47e9-a95a-2953-64cb" type="selectionEntry" targetId="5c66-1865-fb99-4f89">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="7df8-dc97-2736-5d7d-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7df8-dc97-2736-5d7d-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="a5ff-b89e-5711-5c12-min" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="a5ff-b89e-5711-5c12-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="9e44-a722-3fcd-d65b" targetId="94ea-9320-8627-3a3d" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="T-50 Light Infantry Tank" hidden="false" id="37f0-6015-036f-66db">
+      <profiles>
+        <profile name="T-50 Light Infantry Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="abbf-9fbf-5aeb-579e">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">8+ (Light Tank)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="ae29-a31d-3807-4a1c" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="cd0d-ac25-d65e-e8e8" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="96"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="c304-5a73-9ec2-af19" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="120"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="3de8-e6ab-204f-8fb1" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="144"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="11aa-a959-0f21-4155" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ce6-5e3d-f02f-d169" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Turret-mounted Weapons" id="6332-7b01-8eb2-ab64" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Turret-mounted Light Anti-tank Gun" hidden="false" id="12be-cf0d-5413-0c87" type="selectionEntry" targetId="bef9-67c1-02ff-e895" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="409a-cbd0-ccff-8574-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="409a-cbd0-ccff-8574-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Co-axial MMG" hidden="false" id="22db-203e-9dc5-e43c" type="selectionEntry" targetId="5c66-1865-fb99-4f89" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4ee2-3e79-0550-321e" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="5"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0457-945f-4a86-0d2e" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="5c0a-da82-6a86-8684" targetId="94ea-9320-8627-3a3d" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="T-60 Light Tank" hidden="false" id="ec03-64d0-d671-1599">
+      <profiles>
+        <profile name="T-60 Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="1ca0-cb1a-b9e7-a967">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">8+ (Light Tank)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="5138-3e03-0607-ff86" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="67b1-b8f4-fb2a-fae0" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="84"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="cd7a-6bde-5072-484a" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="105"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="eb19-50b9-ce11-14c1" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="126"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c65d-8f97-eac5-59b8" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0020-9dae-b157-7165" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Turret-mounted Weapons" id="0373-05ca-35ba-dce6" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Turret-mounted Light Automatic Cannon" hidden="false" id="76f7-5baa-8623-3de7" type="selectionEntry" targetId="6e4d-d69a-8434-ffe7" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed6b-319f-62f6-ad69" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3351-3501-018a-3351" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Co-axial MMG" hidden="false" id="2f41-23a0-662e-03b2" type="selectionEntry" targetId="5c66-1865-fb99-4f89" sortIndex="2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4b74-8311-5532-4dcd-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4b74-8311-5532-4dcd-max" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="b2c2-413c-bc0e-1e5d" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="2195-97e6-46fe-e4ed" targetId="94ea-9320-8627-3a3d" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="T-70 Light Tank" hidden="false" id="61ef-0d91-a07e-f52f">
+      <profiles>
+        <profile name="T-70 Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="c2f1-4833-d0fa-3f0a">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">8+ (Light Tank)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52"/>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="a1b8-9b31-8691-6ea9" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="d945-b849-668a-e8d0" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="100"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="5893-7302-e9d0-5b68" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="125"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="0b50-8126-416c-f05f" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="150"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2a9a-1e9d-00b7-e26c" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2511-b976-704e-10ae" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Turret-mounted Weapons" id="2e5c-4c20-5c81-5dd1" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Turret-mounted Light Anti-tank Gun" hidden="false" id="0069-69a4-8214-ce74" type="selectionEntry" targetId="bef9-67c1-02ff-e895" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b03e-b0e1-cd78-3244" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="94cc-126e-acfc-ba31" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+            <entryLink import="true" name="Co-axial MMG" hidden="false" id="d13d-e670-4b77-cd68" type="selectionEntry" targetId="5c66-1865-fb99-4f89" sortIndex="2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bfa6-4532-10b1-a429-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bfa6-4532-10b1-a429-max" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="bcde-f751-c184-27e2" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="1481-a9af-2b9b-c88e" targetId="94ea-9320-8627-3a3d" primary="true"/>
+      </categoryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
@@ -5941,6 +6447,14 @@
     <entryLink import="true" name="Light Mortar Team" hidden="false" id="d8d7-3525-e7c9-aa77" targetId="9fd7-e83f-337b-3930" type="selectionEntry"/>
     <entryLink import="true" name="Medium Mortar Team" hidden="false" id="3171-60ac-c7af-e85d" targetId="8df2-22bf-a548-4d01" type="selectionEntry"/>
     <entryLink import="true" name="T-26A Light Tank" hidden="false" id="ebd4-6035-55b3-d700" targetId="ad24-0db6-7cca-70e7" type="selectionEntry"/>
+    <entryLink import="true" name="T-26B Light Tank" hidden="false" id="b9ca-7836-0186-f7d7" targetId="79f4-4dac-23d0-44d1" type="selectionEntry"/>
+    <entryLink import="true" name="OT-26 And OT-133 Light Flamethrower Tank" hidden="false" id="3995-4215-032f-9d36" targetId="12a2-5550-da59-b214" type="selectionEntry"/>
+    <entryLink import="true" name="BT-5 And BT-7 Light Tank" hidden="false" id="4846-4ce9-9291-5de5" targetId="8614-183d-c315-96d3" type="selectionEntry"/>
+    <entryLink import="true" name="T-37 Light Tank" hidden="false" id="824a-4794-4422-d76a" targetId="1c65-514c-2c68-27ed" type="selectionEntry"/>
+    <entryLink import="true" name="T-40 Light Tank" hidden="false" id="21a7-5d2b-02a0-84ad" targetId="6e2a-6262-9b23-f421" type="selectionEntry"/>
+    <entryLink import="true" name="T-50 Light Infantry Tank" hidden="false" id="e2a2-2dd7-6c9c-1e5f" targetId="37f0-6015-036f-66db" type="selectionEntry"/>
+    <entryLink import="true" name="T-60 Light Tank" hidden="false" id="3e9e-8cb6-2603-a17a" targetId="ec03-64d0-d671-1599" type="selectionEntry"/>
+    <entryLink import="true" name="T-70 Light Tank" hidden="false" id="3add-c803-aba8-eaff" targetId="61ef-0d91-a07e-f52f" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Weapons" id="3105-e6a4-eb4f-06c3" hidden="false" defaultSelectionEntryId="c3f8-1643-5672-eca3">
