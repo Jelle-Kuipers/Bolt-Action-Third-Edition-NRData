@@ -2,11 +2,11 @@
 <gameSystem id="sys-aa0d-3b42-3f65-4d19" name="Bolt Action: Third Edition" battleScribeVersion="2.03" revision="1" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Platoon Commander" id="5aa8-cdcf-903c-eef7" hidden="false"/>
-    <categoryEntry name="Infantry Squad" id="dc5d-8aeb-6591-b49b" hidden="false"/>
+    <categoryEntry name="Infantry Squads" id="dc5d-8aeb-6591-b49b" hidden="false"/>
     <categoryEntry name="Medic" id="c3cf-3e5d-f565-e692" hidden="false"/>
     <categoryEntry name="Foreward Observer" id="8302-0ded-0163-0a1e" hidden="false"/>
     <categoryEntry name="Sniper Team" id="bb3f-f878-512e-6853" hidden="false"/>
-    <categoryEntry name="Anti-Tank Team" id="573f-2b84-c891-5e1b" hidden="false"/>
+    <categoryEntry name="Anti-Tank Teams" id="573f-2b84-c891-5e1b" hidden="false"/>
     <categoryEntry name="Light Mortar Team" id="46b9-67df-e29a-cfe5" hidden="false"/>
     <categoryEntry name="Transport Vehicle" id="9cdf-c776-8161-5e87" hidden="false"/>
     <categoryEntry name="Mortar Team" id="ce86-e5af-5b82-d9d0" hidden="false"/>
@@ -22,7 +22,7 @@
     <categoryEntry name="Platoon command vehicle" id="d45c-33e4-1fa4-2c97" hidden="false"/>
     <categoryEntry name="Vehicle" id="94ea-9320-8627-3a3d" hidden="false"/>
     <categoryEntry name="Headquarters Units" id="6b53-28ad-d16f-2f00" hidden="false"/>
-    <categoryEntry name="Infantry Squads And Teams" id="cc10-b7f8-016c-e762" hidden="false"/>
+    <categoryEntry name="Heavy Weapons Teams" id="cc10-b7f8-016c-e762" hidden="false"/>
     <categoryEntry name="Tanks" id="171a-98f6-a773-8d80" hidden="false"/>
     <categoryEntry name="Tank Destroyers" id="fac9-2704-8e24-2272" hidden="false"/>
     <categoryEntry name="Self Propelled Artillery" id="bd9c-0849-ae15-81f2" hidden="false"/>
@@ -44,7 +44,7 @@
         <categoryLink name="Engineer Squads" hidden="false" id="269c-a91e-3fb5-c74a" targetId="efe3-cd28-c439-8765">
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="6bba-432c-6bbc-73db"/>
-            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="34f7-36cb-915c-3dfc"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="34f7-36cb-915c-3dfc"/>
           </constraints>
         </categoryLink>
         <categoryLink name="Flamethrower Teams" hidden="false" id="306e-6558-407c-c420" targetId="9bc5-52e5-81ff-d082">
@@ -64,6 +64,7 @@
             </modifier>
           </modifiers>
         </categoryLink>
+        <categoryLink name="Headquarters Units" hidden="false" id="cdf3-2739-dd94-0dc9" targetId="6b53-28ad-d16f-2f00"/>
       </categoryLinks>
     </forceEntry>
     <forceEntry name="Rifle Platoon" id="2de2-8df0-ebf4-b7de" hidden="false" publicationId="6d3a-4ad3-2bb6-913e" page="184">
@@ -204,6 +205,7 @@
             </modifier>
           </modifiers>
         </categoryLink>
+        <categoryLink name="Headquarters Units" hidden="false" id="406b-e781-9238-3ffc" targetId="6b53-28ad-d16f-2f00"/>
       </categoryLinks>
       <comment>CHECK MAND</comment>
     </forceEntry>
@@ -892,6 +894,18 @@ If an army is left with a number of units which all have the Slow Load special r
         <infoLink name="Unarmed" id="95bc-fb90-3d29-2d83" hidden="false" type="rule" targetId="a9f8-6896-7207-84ce"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Demolition Charge" hidden="false" id="f7f6-dc31-3120-b5cc">
+      <infoLinks>
+        <infoLink name="Demolition Charge" id="1451-8502-cc94-2a96" hidden="false" type="profile" targetId="8f52-8aa1-955b-e683"/>
+        <infoLink name="One-shot" id="be31-1c70-2248-7531" hidden="false" type="rule" targetId="1c40-2706-1b68-ad79"/>
+        <infoLink name="HE (X)" id="905a-2944-9b07-88d1" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
+          <modifiers>
+            <modifier type="set" value="HE (3&quot;)" field="name"/>
+          </modifiers>
+        </infoLink>
+        <infoLink name="Demolition Charges" id="fe82-cd25-3689-af37" hidden="false" type="profile" targetId="cc1f-9d18-9e2f-9289"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
     <profile name="Rifle" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="8f32-25d0-9493-e156" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1081,6 +1095,30 @@ If an army is left with a number of units which all have the Slow Load special r
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot; (or 42-84&quot;)</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Demolition Charge" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="8f52-8aa1-955b-e683">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">-</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Demolition Charges" typeId="bd89-e167-3562-59e1" typeName="Ability" hidden="false" id="cc1f-9d18-9e2f-9289">
+      <characteristics>
+        <characteristic name="Description" typeId="ca19-85ed-345c-a38d">A unit may place a demolition charge once per game by taking a Fire order. Place a marker (25mm in
+diameter) in base contact with a single man in the firing unit. Once placed, if the placing unit is assaulted by
+an enemy, or destroyed in any way, the marker is removed.
+
+To trigger the charge, the unit must make a Run order in a subsequent turn and move at least 3” away
+(this cannot be used to assault an enemy unit). After the Run move is complete, the demolition charge
+immediately explodes, with the 3” template centred on the marker.
+
+If the marker is placed in contact with a building, when it explodes treat it as a direct hit by a 3” HE
+weapon against the building (and any unit inside) instead of using the template.
+
+If the marker is placed in contact with a vehicle, and it explodes before the vehicle moves away, treat it
+as a direct hit by a 3” HE weapon against the vehicle instead of using the template.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
