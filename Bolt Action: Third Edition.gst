@@ -731,6 +731,24 @@ Some units or wepaons are capable of firing a number of HE shots simultaneously 
 
 Units hit by multiple HE hits like this only suffer a single batch of multiplied pin markers, not several of them! For example, they would suffer D2 pins even if hit by two or more HE hits from a single automatic cannon (and not D2 pins per hit!).</description>
     </rule>
+    <rule name="No Optics" id="cda7-bc1c-19e8-5d64" hidden="false">
+      <description>The main gun suffers an additional -1 to hit modifier.</description>
+    </rule>
+    <rule name="Hastily Repaired" id="5521-7883-8efe-3ea5" hidden="false">
+      <description>Some knocked-out vehicles were towed in to receive only the most rudimentary of repairs,
+and then were sent back out to fight. Whenever this vehicle would suffer Superficial Damage, it instead suffers Full Damage.</description>
+    </rule>
+    <rule name="Factory Worker Crew" id="6186-253a-4297-f617" hidden="false">
+      <description>With a shortage of tank crews available, some factory workers climbed into the tanks
+they’d just built and drove them into battle themselves. Without proper training, however, completing even simple manoeuvres
+could be a challenge. This unit must pass an order test to perform any action, even if it has no pin markers.</description>
+    </rule>
+    <rule name="Co-axial" id="7b17-73d6-057d-bb71" hidden="false">
+      <description>This weapon must be fired in the same direction as the turret faces.</description>
+    </rule>
+    <rule name="Improved HE" id="5032-4e15-2fe2-0edf" hidden="false">
+      <description>Instead of HE (2&quot;) the heavy anti-tank gun has HE (3&quot;)</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Rifle" hidden="false" id="6ce7-ab1d-78f6-abd4" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -1057,17 +1075,16 @@ Units hit by multiple HE hits like this only suffer a single batch of multiplied
         <infoLink name="Turret-mounted Rear-facing MMG" id="6c75-ea96-ec8c-2f39" hidden="false" type="profile" targetId="c413-28a1-5dc1-4d44"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name=" Front, Right, Rear Arc Turret-mounted MMG" hidden="false" id="95c4-bdb8-99db-b044">
+    <selectionEntry type="upgrade" import="true" name="Front, Right, Rear Arc Turret-mounted MMG" hidden="false" id="95c4-bdb8-99db-b044">
       <infoLinks>
-        <infoLink name=" Front, Right, Rear Arc Turret-mounted MMG" id="24c8-d7c8-1975-e3bf" hidden="false" type="profile" targetId="f3c8-7afb-246a-8108"/>
+        <infoLink name="Front, Right, Rear Arc Turret-mounted MMG" id="24c8-d7c8-1975-e3bf" hidden="false" type="profile" targetId="f3c8-7afb-246a-8108"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name=" Front, Left, Rear Arc Turret-mounted MMG" hidden="false" id="8ad3-05f1-31de-87e9">
+    <selectionEntry type="upgrade" import="true" name="Front, Left, Rear Arc Turret-mounted MMG" hidden="false" id="8ad3-05f1-31de-87e9">
       <infoLinks>
-        <infoLink name=" Front, Left, Rear Arc Turret-mounted MMG" id="6aaa-c3a6-6e93-f24b" hidden="false" type="profile" targetId="2b10-5b89-06b5-e127"/>
+        <infoLink name="Front, Left, Rear Arc Turret-mounted MMG" id="6aaa-c3a6-6e93-f24b" hidden="false" type="profile" targetId="2b10-5b89-06b5-e127"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="New Entry" hidden="false" id="bef1-8a51-dee2-b3d2"/>
     <selectionEntry type="upgrade" import="true" name="Turret-mounted Flamethrower" hidden="false" id="9fe6-145b-33a4-a8e2">
       <infoLinks>
         <infoLink name="Flamethrower (vehicle)" id="530b-d867-3671-549e" hidden="false" type="profile" targetId="1a1f-97f0-f638-6924"/>
@@ -1091,6 +1108,76 @@ Units hit by multiple HE hits like this only suffer a single batch of multiplied
     <selectionEntry type="upgrade" import="true" name="Turret-mounted Light Automatic Cannon" hidden="false" id="6e4d-d69a-8434-ffe7">
       <infoLinks>
         <infoLink name="Turret-mounted Light Automatic Cannon" id="00c0-c71f-9130-5940" hidden="false" type="profile" targetId="d793-bbbe-9995-8d41"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Front, Left Arc Turret-mounted MMG" hidden="false" id="63e2-a983-243a-bf9c">
+      <infoLinks>
+        <infoLink name="Front, Left Turret-mounted MMG" id="9c0c-7097-00aa-d77d" hidden="false" type="profile" targetId="683d-68b8-ad4d-5e11"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Front, Right Arc Turret-mounted MMG" hidden="false" id="451b-c081-7dba-c0f7">
+      <infoLinks>
+        <infoLink name="Front, Right Turret-mounted MMG" id="8794-1877-0102-06ae" hidden="false" type="profile" targetId="2b92-540f-7494-f398"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Pintle-mounted MMG" hidden="false" id="888c-d2b5-5876-0215">
+      <infoLinks>
+        <infoLink name="Pintle-mounted MMG" id="ccc6-c8be-123c-4e1f" hidden="false" type="profile" targetId="dc2b-b09b-b4f4-bdd0"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Turret-mounted Medium Anti-tank Gun" hidden="false" id="07f3-6190-58a7-d1e6">
+      <infoLinks>
+        <infoLink name="Turret-mounted Medium Anti-tank Gun" id="5cdf-5fae-a7fa-cc4f" hidden="false" type="profile" targetId="39b7-bd3f-c46e-caf1"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Forward-facing Hull-mounted MMG" hidden="false" id="7599-754c-2969-0e44">
+      <infoLinks>
+        <infoLink name="Forward-facing Hull-mounted MMG" id="d8ce-b574-5799-95ae" hidden="false" type="profile" targetId="28c0-a841-f9a9-e338"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Forward-facing Hull-mounted Flamethrower" hidden="false" id="d0c6-7cb6-64ef-27e8">
+      <infoLinks>
+        <infoLink name="Forward-facing Hull-mounted Flamethrower" id="e04d-cace-a88e-a0e1" hidden="false" type="profile" targetId="cc9a-2136-a956-b04c"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Turret-mounted Heavy Anti-tank Gun" hidden="false" id="abb4-4a55-1545-959c">
+      <infoLinks>
+        <infoLink name="Turret-mounted Heavy Anti-tank Gun" id="0ae9-0758-1a5b-a239" hidden="false" type="profile" targetId="08d9-337d-f794-955a"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Front, Right Turret-mounted Light Anti-tank Gun" hidden="false" id="115e-19a0-9db8-c9af">
+      <infoLinks>
+        <infoLink name="Front, Right Turret-mounted Light Anti-tank Gun" id="051e-9db5-9f7b-1035" hidden="false" type="profile" targetId="8d5c-d5a5-b5ee-6500"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rear, Left Turret-mounted Light Anti-tank Gun" hidden="false" id="4de4-9934-2207-0663">
+      <infoLinks>
+        <infoLink name="Rear, Left Turret-mounted Light Anti-tank Gun" id="1942-f32e-0675-3a75" hidden="false" type="profile" targetId="dc6c-fb67-438a-e911"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rear, Left Turret-mounted MMG" hidden="false" id="121d-2f0e-95cc-8bf9">
+      <infoLinks>
+        <infoLink name="Rear, Left Turret-mounted MMG" id="5a6e-d9fb-9592-7782" hidden="false" type="profile" targetId="173e-3a2b-1622-9b42"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rear, Right Turret-mounted MMG" hidden="false" id="e331-3806-b86f-af72">
+      <infoLinks>
+        <infoLink name="Rear, Right Turret-mounted MMG" id="65b3-60b8-4064-f89e" hidden="false" type="profile" targetId="3c9a-774f-c774-ca40"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Co-axial Flamethrower" hidden="false" id="0798-67a0-7a88-c08e">
+      <infoLinks>
+        <infoLink name="Co-axial Flamethrower" id="c2a5-8450-84ba-a558" hidden="false" type="profile" targetId="85fa-0134-200e-b448"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Turret-mounted Heavy Anti-tank Gun" hidden="false" id="9946-3eac-7d33-178d">
+      <infoLinks>
+        <infoLink name="Turret-mounted Heavy Anti-tank Gun" id="32cf-81f4-90a5-975a" hidden="false" type="profile" targetId="bc8e-369b-3274-34d2"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Pintle-mounted HMG" hidden="false" id="6ed7-2021-b3a1-2cfb">
+      <infoLinks>
+        <infoLink name="Pintle-mounted HMG" id="1b9e-786f-b187-257e" hidden="false" type="profile" targetId="ca26-08be-7a47-f720"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -1258,7 +1345,7 @@ Units hit by multiple HE hits like this only suffer a single batch of multiplied
     <profile name="Flamethrower (vehicle)" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="1a1f-97f0-f638-6924" publicationId="6d3a-4ad3-2bb6-913e" page="92">
       <characteristics>
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">12&quot;</characteristic>
-        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1(D6+1)</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+2</characteristic>
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Flamethrower</characteristic>
       </characteristics>
@@ -1341,7 +1428,7 @@ as a direct hit by a 3” HE weapon against the vehicle instead of using the tem
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
-        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Co-axial</characteristic>
       </characteristics>
     </profile>
     <profile name="Turret-mounted Rear-facing MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="c413-28a1-5dc1-4d44">
@@ -1368,15 +1455,15 @@ as a direct hit by a 3” HE weapon against the vehicle instead of using the tem
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Cavalry Carbine</characteristic>
       </characteristics>
     </profile>
-    <profile name=" Front, Left, Rear Arc Turret-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="2b10-5b89-06b5-e127">
+    <profile name="Front, Left, Rear Arc Turret-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="2b10-5b89-06b5-e127">
       <characteristics>
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
-        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Turret-mounted Front Arc, Turret-mounted Left Arc, Turret-mounted Front Arc</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Turret-mounted Front Arc, Turret-mounted Left Arc</characteristic>
       </characteristics>
     </profile>
-    <profile name=" Front, Right, Rear Arc Turret-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="f3c8-7afb-246a-8108">
+    <profile name="Front, Right, Rear Arc Turret-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="f3c8-7afb-246a-8108">
       <characteristics>
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
@@ -1422,6 +1509,118 @@ as a direct hit by a 3” HE weapon against the vehicle instead of using the tem
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+4</characteristic>
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">HE (1&quot;)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Front, Left Turret-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="683d-68b8-ad4d-5e11">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Turret-mounted Front Arc, Turret-mounted Left Arc,</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Front, Right Turret-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="2b92-540f-7494-f398">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Turret-mounted Front Arc, Turret-mounted Right Arc</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Pintle-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="dc2b-b09b-b4f4-bdd0">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Flak, 360-degree arc</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Turret-mounted Medium Anti-tank Gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="39b7-bd3f-c46e-caf1">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">60&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+5</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">HE (1&quot;)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Forward-facing Hull-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="28c0-a841-f9a9-e338">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Front Arc</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Forward-facing Hull-mounted Flamethrower" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="cc9a-2136-a956-b04c">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">12&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1(D6+1)</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+2</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Front Arc. Flamethrower</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Turret-mounted Heavy Anti-tank Gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="08d9-337d-f794-955a">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">6+</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">HE (2&quot;)</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rear, Left Turret-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="173e-3a2b-1622-9b42">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Turret-mounted Rear Arc, Turret-mounted Left Arc,</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rear, Right Turret-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="3c9a-774f-c774-ca40">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Turret-mounted Rear Arc, Turret-mounted Right Arc,</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Front, Right Turret-mounted Light Anti-tank Gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="8d5c-d5a5-b5ee-6500">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+4</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">HE (1&quot;), Turret-mounted Front Arc, Turret-mounted Right Arc</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rear, Left Turret-mounted Light Anti-tank Gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="dc6c-fb67-438a-e911">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+4</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">HE (1&quot;), Turret-mounted Rear Arc, Turret-mounted Left Arc</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Co-axial Flamethrower" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="85fa-0134-200e-b448">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">12&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1(D6+1)</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+2</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Co-axial, Flamethrower</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Turret-mounted Heavy Anti-tank Gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="bc8e-369b-3274-34d2">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">6+</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Slow Load, Improved HE</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Pintle-mounted HMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="ca26-08be-7a47-f720">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+1</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Flak, 360-degree arc</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
