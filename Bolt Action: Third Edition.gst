@@ -1260,9 +1260,25 @@ result rolled.</description>
         <infoLink name="Turret-mounted Twin HMG" id="f895-0101-185c-5948" hidden="false" type="profile" targetId="d19c-c817-e1cc-380e"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Turret-mounted Twin MMG" hidden="false" id="d2c8-0031-87e6-5471">
+    <selectionEntry type="upgrade" import="true" name="Turret-mounted Twin MMG" hidden="false" id="d2c8-0031-87e6-5471"/>
+    <selectionEntry type="upgrade" import="true" name="Turret-mounted LMG" hidden="false" id="13dc-c4bc-30ef-60e3">
       <infoLinks>
-        <infoLink name="Turret-mounted Twin MMG" id="e422-4ea7-01ba-e13f" hidden="false" type="profile" targetId="2154-dc17-672f-70cf"/>
+        <infoLink name="Turret-mounted LMG" id="6dbb-de40-0ddc-7f4f" hidden="false" type="profile" targetId="66bc-47c2-642a-c530"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Co-axial LMG" hidden="false" id="4127-b13d-2224-6fc7">
+      <infoLinks>
+        <infoLink name="Co-axial LMG" id="f886-daa5-cae3-0b04" hidden="false" type="profile" targetId="f596-8ebe-621f-613b"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Forward-facing Hull-mounted LMG" hidden="false" id="97ee-0d95-5ac2-7dee">
+      <infoLinks>
+        <infoLink name="Forward-facing Hull-mounted LMG" id="97e3-28e1-12f8-3f71" hidden="false" type="profile" targetId="3992-3a3d-bc76-1ff5"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Rear-facing Hull-mounted LMG" hidden="false" id="8fcc-3e73-e4dc-7729">
+      <infoLinks>
+        <infoLink name="Rear-facing Hull-mounted LMG" id="fe4f-1e1d-1ae4-b331" hidden="false" type="profile" targetId="ce1c-4625-490a-14f9"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -1574,7 +1590,7 @@ as a direct hit by a 3” HE weapon against the vehicle instead of using the tem
     </profile>
     <profile name="Turret-mounted HMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="646b-cb2e-5e2f-f348">
       <characteristics>
-        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">46&quot;</characteristic>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+1</characteristic>
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">-</characteristic>
@@ -1810,6 +1826,38 @@ as a direct hit by a 3” HE weapon against the vehicle instead of using the tem
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">6</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">-</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Turret-mounted LMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="66bc-47c2-642a-c530">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">-</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Co-axial LMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="f596-8ebe-621f-613b">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Co-axial</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Forward-facing Hull-mounted LMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="3992-3a3d-bc76-1ff5">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Front Arc</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Rear-facing Hull-mounted LMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="ce1c-4625-490a-14f9">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Front Arc</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
