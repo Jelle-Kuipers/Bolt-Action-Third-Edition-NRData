@@ -837,20 +837,16 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
       <categoryLinks>
         <categoryLink targetId="f613-cba9-0906-48ae" id="ce4f-0dfa-fbf0-279d" primary="true" name="Heavy Weapons"/>
       </categoryLinks>
+      <infoLinks>
+        <infoLink name="Heavy machine gun (HMG)" id="13ec-16a2-667b-d140" hidden="false" type="profile" targetId="eaf4-2622-6e88-8636"/>
+      </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Light automatic cannon" hidden="false" id="f6c6-6e07-ad5a-77d8" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
         <categoryLink name="Heavy Weapons" hidden="false" id="7ecc-e022-7f88-22e0" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="d827-7b13-e30a-aa66" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Light automatic cannon" id="bc63-07c6-349d-bc39" hidden="false" type="profile" targetId="0ed7-1d67-6c7e-0245"/>
-        <infoLink name="Fixed" id="7b63-f63d-a23e-1d92" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
-        <infoLink name="HE (X)" id="950b-8ae0-7bfb-9fd6" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
-          <modifiers>
-            <modifier type="set" value="HE (1&quot;)" field="name"/>
-          </modifiers>
-        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy automatic cannon" hidden="false" id="9f33-b251-e31d-430c" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -858,14 +854,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <categoryLink name="Heavy Weapons" hidden="false" id="0f41-f2b5-16bc-3f62" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="ad32-70f6-db62-69d6" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Heavy automatic cannon" id="0997-7058-a933-f43e" hidden="false" type="profile" targetId="2667-e751-e170-935d"/>
-        <infoLink name="Fixed" id="f8f1-4a9b-7804-7e84" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
-        <infoLink name="HE (X)" id="3b0b-bae3-0c28-c913" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
-          <modifiers>
-            <modifier type="set" value="HE (1&quot;)" field="name"/>
-          </modifiers>
-        </infoLink>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Anti-tank rifle" hidden="false" id="30ac-646a-b791-0c5f" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -919,14 +908,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <categoryLink name="Heavy Weapons" hidden="false" id="223d-ebc0-5363-2577" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="e5d1-c7d0-4b96-b5c9" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Light anti-tank gun" id="4e18-54dc-22e7-8bef" hidden="false" type="profile" targetId="01bd-b6cb-a000-bad3"/>
-        <infoLink name="HE (X)" id="0d05-8ad8-eff8-413c" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
-          <modifiers>
-            <modifier type="set" value="HE (1&quot;)" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Fixed" id="d122-f428-bb2c-576a" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Flamethrower (infantry)" hidden="false" id="95c2-71e7-b995-060b" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -951,14 +933,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <categoryLink name="Heavy Weapons" hidden="false" id="649b-f355-a096-d5f8" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="0287-9a21-feb6-6ba4" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Medium anti-tank gun" id="6498-b47e-e773-f6df" hidden="false" type="profile" targetId="8f96-d96f-6f60-6a04"/>
-        <infoLink name="HE (X)" id="be12-9768-28e5-e2ff" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
-          <modifiers>
-            <modifier type="set" value="HE (1&quot;)" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Fixed" id="c7ef-3908-d119-43ce" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy anti-tank gun" hidden="false" id="a73f-0b9c-cca3-6a74" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -966,14 +941,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <categoryLink name="Heavy Weapons" hidden="false" id="a154-5f74-cfe3-cad0" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="c33e-10f8-11b7-99b8" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Heavy anti-tank gun" id="15c4-afd5-dc7e-2fb6" hidden="false" type="profile" targetId="4793-e8ef-653d-fd6d"/>
-        <infoLink name="HE (X)" id="a6a0-245d-7992-8dc2" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
-          <modifiers>
-            <modifier type="set" value="HE (2&quot;)" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Fixed" id="32d9-861b-e30e-1fe6" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Super-heavy anti-tank gun" hidden="false" id="6fb0-aefb-3d17-78e6" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -981,14 +949,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <categoryLink name="Heavy Weapons" hidden="false" id="aec9-a1e7-1828-d694" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="a980-8277-dda6-bc4b" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Super-heavy anti-tank gun" id="230e-1312-7ba9-c766" hidden="false" type="profile" targetId="9d60-a884-81c9-88a7"/>
-        <infoLink name="HE (X)" id="cd4d-e720-a156-0f0e" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
-          <modifiers>
-            <modifier type="set" value="HE (3&quot;)" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Fixed" id="9aad-fd0e-f1e7-9859" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Light mortar" hidden="false" id="fa6b-c63c-bb89-d5ec" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -1012,15 +973,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <categoryLink name="Heavy Weapons" hidden="false" id="400a-c649-8120-35da" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="936d-9f87-7092-c5eb" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Heavy mortar" id="0d2b-a359-817e-4727" hidden="false" type="profile" targetId="9c91-e042-bc91-835d"/>
-        <infoLink name="Indirect Fire" id="36ba-37a7-97d0-9728" hidden="false" type="rule" targetId="c89c-bd90-9db3-bbcb"/>
-        <infoLink name="HE (X)" id="bcae-42be-24e9-8452" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
-          <modifiers>
-            <modifier type="set" value="HE (3&quot;)" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Fixed" id="1b36-8b4c-a84c-3250" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Light howitzer" hidden="false" id="6c79-6e0c-1eac-ef7b" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -1028,15 +981,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <categoryLink name="Heavy Weapons" hidden="false" id="aea9-6f6a-174f-486e" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="6ccc-58d0-9237-a5b3" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Light howitzer" id="3207-8c2c-3647-0fff" hidden="false" type="profile" targetId="f58e-9f23-25cf-785d"/>
-        <infoLink name="Howitzer" id="7f86-a214-1ca0-7884" hidden="false" type="rule" targetId="2ce0-db68-f5d1-6447"/>
-        <infoLink name="HE (X)" id="622e-d82e-035f-8713" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
-          <modifiers>
-            <modifier type="set" value="HE (2&quot;)" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Fixed" id="e9c9-a1b0-c514-e7a9" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Medium howitzer" hidden="false" id="f13d-6f0e-50fa-a6f4" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -1044,15 +989,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <categoryLink name="Heavy Weapons" hidden="false" id="ac7e-d094-888b-90a9" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="b404-c243-2c31-4547" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Medium howitzer" id="8ea0-5ada-9ef1-38b7" hidden="false" type="profile" targetId="dda3-7b15-6321-6f43"/>
-        <infoLink name="Howitzer" id="1ab3-99e0-44a3-cd59" hidden="false" type="rule" targetId="2ce0-db68-f5d1-6447"/>
-        <infoLink name="HE (X)" id="8dac-e1e1-ee22-de0b" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
-          <modifiers>
-            <modifier type="set" value="HE (3&quot;)" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Fixed" id="fabe-98d0-c9e8-f59d" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy howitzer" hidden="false" id="d378-00c4-6bf7-7451" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -1060,15 +997,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <categoryLink name="Heavy Weapons" hidden="false" id="4f83-4326-5792-b02c" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Team Weapon" id="d67e-29ea-085d-f3e5" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
         <infoLink name="Heavy howitzer" id="7323-178e-dbc5-1f79" hidden="false" type="profile" targetId="7c3a-fdac-1012-9fb6"/>
-        <infoLink name="Howitzer" id="f775-2746-61e7-6ef7" hidden="false" type="rule" targetId="2ce0-db68-f5d1-6447"/>
-        <infoLink name="HE (X)" id="9c9a-1377-f74d-476c" hidden="false" type="rule" targetId="4700-e5b3-f17c-09a4">
-          <modifiers>
-            <modifier type="set" value="HE (4&quot;)" field="name"/>
-          </modifiers>
-        </infoLink>
-        <infoLink name="Fixed" id="c721-5ddd-109c-b08d" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="ba6d-c909-e3c7-77c6">
@@ -1239,12 +1168,12 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Forward-facing Light howitzer" hidden="false" id="f47e-c3aa-a7a0-8960">
       <infoLinks>
-        <infoLink name="Foreward-facing Light howitzer" id="4326-f670-0c9d-64e2" hidden="false" type="profile" targetId="7a53-c2ff-c3de-64e5"/>
+        <infoLink name="Forward-facing Light howitzer" id="4326-f670-0c9d-64e2" hidden="false" type="profile" targetId="7a53-c2ff-c3de-64e5"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Forward-facing Medium howitzer" hidden="false" id="457e-25b0-3794-dcb9">
       <infoLinks>
-        <infoLink name="Foreward-facing Medium howitzer" id="a099-79c9-2949-36ea" hidden="false" type="profile" targetId="f39f-386d-78da-d928"/>
+        <infoLink name="Forward-facing Medium howitzer" id="a099-79c9-2949-36ea" hidden="false" type="profile" targetId="f39f-386d-78da-d928"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Turret-mounted Heavy Howitzer" hidden="false" id="0f5c-da70-42a3-dec5">
@@ -1277,7 +1206,11 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <infoLink name="Turret-mounted Twin HMG" id="f895-0101-185c-5948" hidden="false" type="profile" targetId="d19c-c817-e1cc-380e"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Turret-mounted Twin MMG" hidden="false" id="d2c8-0031-87e6-5471"/>
+    <selectionEntry type="upgrade" import="true" name="Turret-mounted Twin MMG" hidden="false" id="d2c8-0031-87e6-5471">
+      <infoLinks>
+        <infoLink name="Turret-mounted Twin MMG" id="d6be-281c-14b7-279c" hidden="false" type="profile" targetId="2154-dc17-672f-70cf"/>
+      </infoLinks>
+    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Turret-mounted LMG" hidden="false" id="13dc-c4bc-30ef-60e3">
       <infoLinks>
         <infoLink name="Turret-mounted LMG" id="6dbb-de40-0ddc-7f4f" hidden="false" type="profile" targetId="66bc-47c2-642a-c530"/>
@@ -1392,7 +1325,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+3</characteristic>
-        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Fixed, Team, HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile name="Anti-tank rifle" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="0d2d-1b2c-5105-1eff" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1440,7 +1373,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+4</characteristic>
-        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">HE (1&quot;)</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">HE (1&quot;), Fixed, Team</characteristic>
       </characteristics>
     </profile>
     <profile name="Medium anti-tank gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="8f96-d96f-6f60-6a04" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1448,7 +1381,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">60&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+5</characteristic>
-        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Fixed, Team, HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile name="Heavy anti-tank gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="4793-e8ef-653d-fd6d" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1456,7 +1389,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+6</characteristic>
-        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Fixed, Team, HE (2&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile name="Super-heavy anti-tank gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="9d60-a884-81c9-88a7" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1464,7 +1397,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">84&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+7</characteristic>
-        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, Fixed, HE (3&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile name="Flamethrower (infantry)" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="a99b-c4e0-682e-c877" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1504,7 +1437,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">12-72&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
-        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, Fixed, Indirect Fire, HE (3&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile name="Light howitzer" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="f58e-9f23-25cf-785d" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1512,7 +1445,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot; (or 30-60&quot;)</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
-        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Howitzer, HE (2&quot;)</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Howitzer, HE (2&quot;), Fixed, Indirect Fire</characteristic>
       </characteristics>
     </profile>
     <profile name="Medium howitzer" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="dda3-7b15-6321-6f43" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1520,7 +1453,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">60&quot; (or 32-72&quot;)</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
-        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Fixed, Howitzer, Team, HE (3&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile name="Heavy howitzer" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="7c3a-fdac-1012-9fb6" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1528,7 +1461,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot; (or 42-84&quot;)</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
-        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, Fixed, Howitzer, HE (4&quot;)</characteristic>
       </characteristics>
     </profile>
     <profile name="Demolition Charge" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="8f52-8aa1-955b-e683">
