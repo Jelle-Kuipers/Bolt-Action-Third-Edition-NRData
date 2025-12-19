@@ -1,41 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="7c15-f6a9-718a-725c" name="Armies of the soviet union" gameSystemId="sys-aa0d-3b42-3f65-4d19" gameSystemRevision="1" revision="2" authorContact="Jelle-Kuipers, Jelle30kuipers at gmail dot com" authorName="Jelly" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="7c15-f6a9-718a-725c" name="Armies of the soviet union" gameSystemId="sys-aa0d-3b42-3f65-4d19" gameSystemRevision="1" revision="4" authorContact="Jelle-Kuipers, Jelle30kuipers at gmail dot com" authorName="Jelly" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Platoon Commander" hidden="false" id="a025-dcd6-d08c-4f3a">
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Extra Men" hidden="false" id="b75a-e380-e79a-63b9" sortIndex="3">
-          <entryLinks>
-            <entryLink import="true" name="Weapons" hidden="false" id="0237-5e07-7ec5-8906" type="selectionEntryGroup" targetId="3105-e6a4-eb4f-06c3"/>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="962b-d25d-8cc5-5f1f" includeChildSelections="false"/>
-          </constraints>
-          <costs>
-            <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-          </costs>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="7" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="005f-4da6-4a7b-6722" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="10" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="67ae-4a56-bb6e-65d3" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="13" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="142f-184a-6027-3481" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </selectionEntry>
-      </selectionEntries>
       <categoryLinks>
         <categoryLink targetId="5aa8-cdcf-903c-eef7" id="0e44-acaf-fc15-3f2c" primary="false" name="Platoon Commander"/>
         <categoryLink targetId="6b53-28ad-d16f-2f00" id="cfa5-bb31-9083-a348" primary="true" name="Headquarters Units"/>
@@ -52,17 +18,17 @@
                   <modifiers>
                     <modifier type="set" value="21" field="ab8b-35f3-81bf-8563">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="005f-4da6-4a7b-6722" shared="true" includeChildSelections="false"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="17e0-54c5-2121-17d9" shared="true" includeChildSelections="false"/>
                       </conditions>
                     </modifier>
                     <modifier type="set" value="30" field="ab8b-35f3-81bf-8563">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="67ae-4a56-bb6e-65d3" shared="true" includeChildSelections="false"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="8102-9ec6-85f5-a685" shared="true" includeChildSelections="false"/>
                       </conditions>
                     </modifier>
                     <modifier type="set" value="39" field="ab8b-35f3-81bf-8563">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="142f-184a-6027-3481" shared="true" includeChildSelections="false"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="516a-ef78-1d1c-e03c" shared="true" includeChildSelections="false"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -106,22 +72,86 @@
           </constraints>
         </selectionEntryGroup>
         <selectionEntryGroup name="Veterancy" id="d630-1cae-45c1-62cc" hidden="false" defaultSelectionEntryId="005f-4da6-4a7b-6722" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5c0c-a2e2-0258-bdcc-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c0c-a2e2-0258-bdcc-max" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Inexperienced" hidden="false" id="bc18-67b3-74c7-041c" type="selectionEntry" targetId="17e0-54c5-2121-17d9"/>
+            <entryLink import="true" name="Regular" hidden="false" id="025e-260a-29c3-1c9a" type="selectionEntry" targetId="8102-9ec6-85f5-a685"/>
+            <entryLink import="true" name="Veteran" hidden="false" id="a75d-35d7-577f-5806" type="selectionEntry" targetId="516a-ef78-1d1c-e03c"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Army Special Rules" id="6850-e754-9d2e-566c" hidden="false" sortIndex="5">
+          <entryLinks>
+            <entryLink import="true" name="The Victory Banner" hidden="false" id="9767-4fef-8f12-a6a7" type="selectionEntry" targetId="6a09-5f4e-fa76-95f8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0c0c-f0fb-d67e-0ea4" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="20"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Hammer and Sickle" id="922f-21ff-ad45-efab" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Hammer and Sickle: Airborne" hidden="false" id="57d1-9f71-4012-c739" type="selectionEntry" targetId="bbeb-43c8-1704-8504">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6ff7-5fa0-f652-645e" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Hammer and Sickle: NKVD" hidden="false" id="d510-5b42-e7c2-12dd" type="selectionEntry" targetId="cf6b-03ec-c8be-bafd">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c0d-92c6-9890-b8c6" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Hammer and Sickle: Naval Brigade" hidden="false" id="9214-9a97-641c-4289" type="selectionEntry" targetId="d8f3-223b-b2c2-04c9">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a1fc-c50c-64ad-e6b5" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f361-d6e7-e493-8d78" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Extra men" id="7130-2373-9e22-f46c" hidden="false" sortIndex="3">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="67ae-4a56-bb6e-65d3" sortIndex="2">
+            <selectionEntry type="model" import="true" name="Extra Men" hidden="false" id="b75a-e380-e79a-63b9">
+              <entryLinks>
+                <entryLink import="true" name="Weapons" hidden="false" id="0237-5e07-7ec5-8906" type="selectionEntryGroup" targetId="3105-e6a4-eb4f-06c3"/>
+              </entryLinks>
               <costs>
                 <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
               </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="7" field="ab8b-35f3-81bf-8563">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="17e0-54c5-2121-17d9" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="10" field="ab8b-35f3-81bf-8563">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="8102-9ec6-85f5-a685" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="13" field="ab8b-35f3-81bf-8563">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="516a-ef78-1d1c-e03c" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="142f-184a-6027-3481" sortIndex="3">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="005f-4da6-4a7b-6722" sortIndex="1"/>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="11f5-d29e-08f9-3571-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="11f5-d29e-08f9-3571-max" includeChildSelections="false"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="1548-50bc-d84f-2ac9" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
@@ -166,7 +196,7 @@
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
-      <comment>check HQ choice shit</comment>
+      <comment>check HQ choice shit / Update to new standard</comment>
       <infoLinks>
         <infoLink name="Fanatics" id="8e04-86cc-322e-71df" hidden="false" type="rule" targetId="666a-4a42-a085-3d6a"/>
       </infoLinks>
@@ -175,150 +205,96 @@
       <categoryLinks>
         <categoryLink targetId="c3cf-3e5d-f565-e692" id="96b7-223c-b41f-e038" primary="true" name="Medic"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Extra Men" hidden="false" id="3d39-1787-4c23-557f" sortIndex="3">
-          <entryLinks>
-            <entryLink import="true" name="Weapons" hidden="false" id="590d-86c3-2e67-56bc" type="selectionEntryGroup" targetId="3105-e6a4-eb4f-06c3"/>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="a007-deb7-d1cd-9ef6" includeChildSelections="false"/>
-          </constraints>
-          <costs>
-            <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-          </costs>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="8" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="65cd-3b7f-21be-fc8d" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="11" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="062d-ac5d-ba5a-da23" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
         <selectionEntryGroup name="Medic" id="8dc0-2fa6-bd78-b23a" hidden="false" sortIndex="2" defaultSelectionEntryId="d1ee-a27e-a4df-4e6d">
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Medic" hidden="false" id="d1ee-a27e-a4df-4e6d">
-              <entryLinks>
-                <entryLink import="true" name="Weapons" hidden="false" id="c844-c181-7ea9-6ec0" type="selectionEntryGroup" targetId="3105-e6a4-eb4f-06c3"/>
-              </entryLinks>
               <modifierGroups>
                 <modifierGroup type="and">
                   <modifiers>
                     <modifier type="set" value="23" field="ab8b-35f3-81bf-8563">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="65cd-3b7f-21be-fc8d" shared="true" includeChildSelections="false"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="8102-9ec6-85f5-a685" shared="true" includeChildSelections="false"/>
                       </conditions>
                     </modifier>
                     <modifier type="set" value="30" field="ab8b-35f3-81bf-8563">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="062d-ac5d-ba5a-da23" shared="true" includeChildSelections="false"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="516a-ef78-1d1c-e03c" shared="true" includeChildSelections="false"/>
                       </conditions>
                     </modifier>
                   </modifiers>
                 </modifierGroup>
               </modifierGroups>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="aa6f-a058-6156-de10-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aa6f-a058-6156-de10-max" includeChildSelections="false"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b4ce-d72b-b478-312d-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b4ce-d72b-b478-312d-max" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="66ed-e996-94d6-9e49-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="66ed-e996-94d6-9e49-max" includeChildSelections="false"/>
           </constraints>
           <infoLinks>
             <infoLink name="Medic" id="212d-7908-8bb2-6514" hidden="false" type="rule" targetId="58b2-6edc-0259-220a"/>
           </infoLinks>
         </selectionEntryGroup>
-        <selectionEntryGroup name="Veterancy" id="698b-53f4-52c3-ec93" hidden="false" defaultSelectionEntryId="65cd-3b7f-21be-fc8d" sortIndex="1">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="65cd-3b7f-21be-fc8d">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="062d-ac5d-ba5a-da23">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f3fc-d9ac-09ce-5460" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4866-4052-7eb8-d9ed" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <comment>Add Medics Rule</comment>
-    </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Company Commander" hidden="false" id="e184-4534-fbb9-b931">
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Extra Men" hidden="false" id="6e27-72de-95fc-7630" sortIndex="3">
-          <entryLinks>
-            <entryLink import="true" name="Weapons" hidden="false" id="4246-4fc5-5a1f-38ec" type="selectionEntryGroup" targetId="3105-e6a4-eb4f-06c3"/>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="67d1-222c-278b-1d08" includeChildSelections="false"/>
-          </constraints>
-          <costs>
-            <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-          </costs>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="7" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="d864-68d3-8df0-6e98" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="10" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf82-e10a-2312-39dd" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="13" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="eec4-2326-f690-970a" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </selectionEntry>
-      </selectionEntries>
-      <categoryLinks>
-        <categoryLink name="Headquarters Units" hidden="false" id="77a8-37fd-15c3-2764" targetId="6b53-28ad-d16f-2f00" primary="true"/>
-      </categoryLinks>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Officer" id="358f-bcdc-1ea7-28d9" hidden="false" sortIndex="2">
-          <selectionEntries>
-            <selectionEntry type="model" import="true" name="Company Commander" hidden="false" id="057b-95e7-3027-d43f">
+        <selectionEntryGroup name="Army Special Rules" id="0240-c9e7-47fd-2b1f" hidden="false" sortIndex="4">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Hammer and Sickle" id="14d0-fc20-1ad2-d76d" hidden="false">
               <entryLinks>
-                <entryLink import="true" name="Weapons" hidden="false" id="eb04-ee10-9d76-6b1b" type="selectionEntryGroup" targetId="3105-e6a4-eb4f-06c3"/>
+                <entryLink import="true" name="Hammer and Sickle: Airborne" hidden="false" id="83cf-19b0-6368-408e" type="selectionEntry" targetId="bbeb-43c8-1704-8504">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7a0b-0ed6-9949-a4a5" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Hammer and Sickle: NKVD" hidden="false" id="ad76-aefd-28b9-31b2" type="selectionEntry" targetId="cf6b-03ec-c8be-bafd">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="30e4-6135-2c5c-0853" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Hammer and Sickle: Naval Brigade" hidden="false" id="6cc3-a7bb-a5b0-3ebb" type="selectionEntry" targetId="d8f3-223b-b2c2-04c9">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="10bd-bfd0-3b70-5103" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
               </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ed0-e001-7aa1-79ed" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Veterancy" id="eb72-b98d-7a36-acf3" hidden="false" defaultSelectionEntryId="005f-4da6-4a7b-6722" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b273-a321-5e29-7e7b" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a338-f0cb-e082-eb3b" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Regular" hidden="false" id="0ec4-9669-5228-7024" type="selectionEntry" targetId="8102-9ec6-85f5-a685"/>
+            <entryLink import="true" name="Veteran" hidden="false" id="f4ae-c5c7-75dd-7e7d" type="selectionEntry" targetId="516a-ef78-1d1c-e03c"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Extra Medics" id="a35c-f67f-e7a5-08fc" hidden="false" sortIndex="3">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Extra Medic" hidden="false" id="3d39-1787-4c23-557f">
+              <constraints>
+                <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="0cd8-4c69-0868-d9c8" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+              </costs>
               <modifierGroups>
                 <modifierGroup type="and">
                   <modifiers>
-                    <modifier type="set" value="42" field="ab8b-35f3-81bf-8563">
+                    <modifier type="set" value="8" field="ab8b-35f3-81bf-8563">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="d864-68d3-8df0-6e98" shared="true" includeChildSelections="false"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="8102-9ec6-85f5-a685" shared="true" includeChildSelections="false"/>
                       </conditions>
                     </modifier>
-                    <modifier type="set" value="60" field="ab8b-35f3-81bf-8563">
+                    <modifier type="set" value="11" field="ab8b-35f3-81bf-8563">
                       <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="cf82-e10a-2312-39dd" shared="true" includeChildSelections="false"/>
-                      </conditions>
-                    </modifier>
-                    <modifier type="set" value="78" field="ab8b-35f3-81bf-8563">
-                      <conditions>
-                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="eec4-2326-f690-970a" shared="true" includeChildSelections="false"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="516a-ef78-1d1c-e03c" shared="true" includeChildSelections="false"/>
                       </conditions>
                     </modifier>
                   </modifiers>
@@ -327,176 +303,174 @@
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d93e-468d-9b3a-466d" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="06aa-dd19-8cb7-b63a" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="HQ Options" id="d27b-ddf8-e03e-967d" hidden="false" sortIndex="4">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Any unit may be given horses for +3pts per model" hidden="false" id="ad69-1b23-07da-a2b0" sortIndex="1">
-              <modifiers>
-                <modifier type="set" value="0" field="ab8b-35f3-81bf-8563"/>
-                <modifier type="increment" value="3" field="ab8b-35f3-81bf-8563">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Any unit may be given motorcycles for +5pts per model" hidden="false" id="42af-fd39-3cc2-4fa2" sortIndex="2">
-              <modifiers>
-                <modifier type="set" value="0" field="ab8b-35f3-81bf-8563"/>
-                <modifier type="increment" value="5" field="ab8b-35f3-81bf-8563">
-                  <repeats>
-                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="false"/>
-                  </repeats>
-                </modifier>
-              </modifiers>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aaf2-80e6-6c4a-58c9" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Veterancy" id="a18c-b989-f98a-93d8" hidden="false" defaultSelectionEntryId="005f-4da6-4a7b-6722" sortIndex="1">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="cf82-e10a-2312-39dd" sortIndex="2">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="eec4-2326-f690-970a" sortIndex="3">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="d864-68d3-8df0-6e98" sortIndex="1"/>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f5c3-db31-d174-1c3c" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="70ee-2442-d1a0-a92f" includeChildSelections="false"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="0f17-222b-cf4e-e851" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <comment>Add Medics Rule</comment>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Forward Observer" hidden="false" id="662f-5081-7ea3-d1aa">
       <categoryLinks>
         <categoryLink targetId="8302-0ded-0163-0a1e" id="d61e-080c-3934-061b" primary="true" name="Foreward Observer"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="model" import="true" name="Forward Observer" hidden="false" id="f5c5-736b-be15-174c" defaultAmount="1" sortIndex="2">
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Observer Type" id="132b-fb20-8c4b-a3a2" hidden="false">
-              <selectionEntries>
-                <selectionEntry type="upgrade" import="true" name="Artillery" hidden="false" id="3b92-de94-7b6a-e269">
-                  <infoLinks>
-                    <infoLink name="Massed Batteries" id="0e0d-cb98-8401-5cd9" hidden="false" type="rule" targetId="faa6-9a6f-f884-9ce1"/>
-                  </infoLinks>
-                </selectionEntry>
-                <selectionEntry type="upgrade" import="true" name="Air" hidden="false" id="ff80-961d-df1c-c94c">
-                  <infoLinks>
-                    <infoLink name="Flying Tank" id="ca91-a159-a59a-10a0" hidden="false" type="rule" targetId="ff3d-bac0-0ec5-1083"/>
-                  </infoLinks>
-                </selectionEntry>
-              </selectionEntries>
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f268-9a2a-eef7-f151-min" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f268-9a2a-eef7-f151-max" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-          <entryLinks>
-            <entryLink import="true" name="Weapons" hidden="false" id="8627-ea3e-b3a7-e0ec" type="selectionEntryGroup" targetId="3105-e6a4-eb4f-06c3"/>
-          </entryLinks>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="75" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ed0b-389a-0b8d-e85a" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="90" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="c2f4-7985-f9f8-ddb9" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d642-419e-7fcf-68cf-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d642-419e-7fcf-68cf-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-        <selectionEntry type="model" import="true" name="Extra Men" hidden="false" id="dc85-dcdf-7083-6e64" sortIndex="3">
-          <entryLinks>
-            <entryLink import="true" name="Weapons" hidden="false" id="57b0-8fc1-9316-5c49" type="selectionEntryGroup" targetId="3105-e6a4-eb4f-06c3"/>
-          </entryLinks>
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="3f41-2caf-29a3-2ea9" includeChildSelections="false"/>
-          </constraints>
-          <costs>
-            <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-          </costs>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="11" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ed0b-389a-0b8d-e85a" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="14" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="c2f4-7985-f9f8-ddb9" shared="true" includeChildSelections="false"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
-        </selectionEntry>
-      </selectionEntries>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Veterancy" id="ad18-c880-9d99-ab14" hidden="false" defaultSelectionEntryId="65cd-3b7f-21be-fc8d" sortIndex="1">
+        <selectionEntryGroup name="Forward Observer" id="e938-570c-ec10-da44" hidden="false" sortIndex="2">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="ed0b-389a-0b8d-e85a">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="c2f4-7985-f9f8-ddb9">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-              </costs>
+            <selectionEntry type="model" import="true" name="Forward Observer" hidden="false" id="f5c5-736b-be15-174c" defaultAmount="1">
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Observer Type" id="132b-fb20-8c4b-a3a2" hidden="false">
+                  <selectionEntries>
+                    <selectionEntry type="upgrade" import="true" name="Artillery" hidden="false" id="3b92-de94-7b6a-e269">
+                      <infoLinks>
+                        <infoLink name="Massed Batteries" id="0e0d-cb98-8401-5cd9" hidden="false" type="rule" targetId="faa6-9a6f-f884-9ce1"/>
+                      </infoLinks>
+                    </selectionEntry>
+                    <selectionEntry type="upgrade" import="true" name="Air" hidden="false" id="ff80-961d-df1c-c94c">
+                      <infoLinks>
+                        <infoLink name="Flying Tank" id="ca91-a159-a59a-10a0" hidden="false" type="rule" targetId="ff3d-bac0-0ec5-1083"/>
+                      </infoLinks>
+                    </selectionEntry>
+                  </selectionEntries>
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f268-9a2a-eef7-f151-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f268-9a2a-eef7-f151-max" includeChildSelections="false"/>
+                  </constraints>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+              <entryLinks>
+                <entryLink import="true" name="Weapons" hidden="false" id="8627-ea3e-b3a7-e0ec" type="selectionEntryGroup" targetId="3105-e6a4-eb4f-06c3"/>
+              </entryLinks>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="75" field="ab8b-35f3-81bf-8563">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="8102-9ec6-85f5-a685" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="90" field="ab8b-35f3-81bf-8563">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="516a-ef78-1d1c-e03c" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="97ff-d3b2-4299-d7d2-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="97ff-d3b2-4299-d7d2-max" includeChildSelections="false"/>
+              </constraints>
+              <modifiers>
+                <modifier type="set" value="Air Force Forward Observer" field="name">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="ff80-961d-df1c-c94c" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="set" value="Artillery Forward Observer" field="name">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="3b92-de94-7b6a-e269" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="60c7-544d-4ab7-3d5a" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7ee2-f821-e41c-1199" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5281-c44d-5739-21a4-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5281-c44d-5739-21a4-max" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Extra Men" id="cda1-f9ef-debe-d609" hidden="false" sortIndex="3">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Extra Men" hidden="false" id="dc85-dcdf-7083-6e64">
+              <entryLinks>
+                <entryLink import="true" name="Weapons" hidden="false" id="57b0-8fc1-9316-5c49" type="selectionEntryGroup" targetId="3105-e6a4-eb4f-06c3"/>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4e1f-0fe7-a699-2b3a" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="11" field="ab8b-35f3-81bf-8563">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="8102-9ec6-85f5-a685" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="14" field="ab8b-35f3-81bf-8563">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="516a-ef78-1d1c-e03c" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="fb7d-f578-db6d-98aa" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Army Special Rules" id="e877-95cb-585f-3bf1" hidden="false" sortIndex="4">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Hammer and Sickle" id="6c69-f9f7-8356-619b" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Hammer and Sickle: Airborne" hidden="false" id="67a1-effb-c98a-3b71" type="selectionEntry" targetId="bbeb-43c8-1704-8504">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e333-bf95-1d31-7c8a" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Hammer and Sickle: NKVD" hidden="false" id="fc27-e8fc-433b-2539" type="selectionEntry" targetId="cf6b-03ec-c8be-bafd">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="cf5c-e93e-37d5-72e8" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Hammer and Sickle: Naval Brigade" hidden="false" id="7eaf-3948-502e-ecee" type="selectionEntry" targetId="d8f3-223b-b2c2-04c9">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1222-83e2-27e2-3c70" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="40d5-37a5-79b8-28a5" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Veterancy" id="4c03-5993-5ecc-12f6" hidden="false" defaultSelectionEntryId="005f-4da6-4a7b-6722" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4d77-eb56-89f0-0892" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="aff7-ed4e-b030-8f7c" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Regular" hidden="false" id="0380-dcf2-58c1-93f8" type="selectionEntry" targetId="8102-9ec6-85f5-a685"/>
+            <entryLink import="true" name="Veteran" hidden="false" id="bf6f-7606-1161-e6cd" type="selectionEntry" targetId="516a-ef78-1d1c-e03c"/>
+          </entryLinks>
+        </selectionEntryGroup>
       </selectionEntryGroups>
-      <modifiers>
-        <modifier type="set" value="Artillery Forward Observer" field="name">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="parent" childId="3b92-de94-7b6a-e269" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="Air Force Forward Observer" field="name">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="parent" childId="ff80-961d-df1c-c94c" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="set" value="false" field="hidden">
-          <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="2de2-8df0-ebf4-b7de" childId="any" shared="true"/>
-          </conditions>
-        </modifier>
-      </modifiers>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <modifiers>
+            <modifier type="set" value="false" field="hidden">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="2de2-8df0-ebf4-b7de" childId="any" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Air Force Forward Observer" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="ff80-961d-df1c-c94c" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Artillery Forward Observer" field="name">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="3b92-de94-7b6a-e269" shared="true" includeChildSelections="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Rifle Squad" hidden="false" id="04eb-9e10-318e-6d2f">
       <selectionEntryGroups>
@@ -657,7 +631,7 @@
                 <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Rifle" hidden="false" id="28c5-525e-ad86-5a39" type="selectionEntry" targetId="6ce7-ab1d-78f6-abd4">
+                <entryLink import="true" name="Rifle" hidden="false" id="28c5-525e-ad86-5a39" type="selectionEntry" targetId="6ce7-ab1d-78f6-abd4" collective="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="da3b-ed67-66dc-f668-min" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da3b-ed67-66dc-f668-max" includeChildSelections="false"/>
@@ -695,15 +669,15 @@
           <selectionEntryGroups>
             <selectionEntryGroup name="Light Machine Gun Teams" id="0e10-f40c-ed75-225b" hidden="false" sortIndex="2">
               <selectionEntries>
-                <selectionEntry type="unit" import="true" name="Light Machine Gun Team" hidden="false" id="6e29-b2f9-b648-9786">
+                <selectionEntry type="unit" import="true" name="Light Machine Gun Team" hidden="false" id="6e29-b2f9-b648-9786" collective="true">
                   <selectionEntries>
-                    <selectionEntry type="model" import="true" name="Loader" hidden="false" id="727b-482e-41cf-7975" defaultAmount="1">
+                    <selectionEntry type="model" import="true" name="Loader" hidden="false" id="727b-482e-41cf-7975" defaultAmount="1" collective="true">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="58fe-6797-ecc1-9b14-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58fe-6797-ecc1-9b14-max" includeChildSelections="false"/>
                       </constraints>
                       <entryLinks>
-                        <entryLink import="true" name="Rifle" hidden="false" id="a20a-1c6b-66ab-33a7" type="selectionEntry" targetId="6ce7-ab1d-78f6-abd4">
+                        <entryLink import="true" name="Rifle" hidden="false" id="a20a-1c6b-66ab-33a7" type="selectionEntry" targetId="6ce7-ab1d-78f6-abd4" collective="true">
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="739e-4435-5a43-4b5c-min" includeChildSelections="false"/>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="739e-4435-5a43-4b5c-max" includeChildSelections="false"/>
@@ -727,13 +701,13 @@
                         </modifierGroup>
                       </modifierGroups>
                     </selectionEntry>
-                    <selectionEntry type="model" import="true" name="Gunner" hidden="false" id="c686-2de8-b91e-723d">
+                    <selectionEntry type="model" import="true" name="Gunner" hidden="false" id="c686-2de8-b91e-723d" collective="true">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d47-3a94-d0ec-a4ed-min" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5d47-3a94-d0ec-a4ed-max" includeChildSelections="false"/>
                       </constraints>
                       <entryLinks>
-                        <entryLink import="true" name="Light machine gun (LMG)" hidden="false" id="1b1e-085e-8472-debb" type="selectionEntry" targetId="d7fb-eba4-e0e0-869e">
+                        <entryLink import="true" name="Light machine gun (LMG)" hidden="false" id="1b1e-085e-8472-debb" type="selectionEntry" targetId="d7fb-eba4-e0e0-869e" collective="true">
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3e44-ecbc-ffe9-2b89-min" includeChildSelections="false"/>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3e44-ecbc-ffe9-2b89-max" includeChildSelections="false"/>
@@ -9251,11 +9225,786 @@
         <categoryLink name="Armoured Cars" hidden="false" id="40c5-c598-c672-a24f" targetId="02b1-967a-5314-645f" primary="false"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Truck" hidden="false" id="5c4c-c298-0d4e-0ba1">
+      <profiles>
+        <profile name="Truck" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="7f8b-9b46-fd3f-b4bb">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">12</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="Amphibious" field="b5b7-688f-e6a8-1a52">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="33d7-26be-db13-cd8b" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="870c-d1b9-2500-8a20" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="8277-5896-7323-a0af" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="22"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="0a89-00a9-bc5e-1bac" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="27"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="04e5-a868-7e97-8f09" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="32"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b192-8c89-1b3f-4066" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de0f-9522-1865-ddde" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Upgrades" id="0d21-5055-945b-ea52" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Pintle-mounted LMG" hidden="false" id="6049-0fb6-d9ca-d036" type="selectionEntry" targetId="846e-7114-a448-d795" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ef6-c120-4929-dcce" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Amphibious" hidden="false" id="33d7-26be-db13-cd8b" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a131-36aa-bcc6-4981" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="2a63-c634-b4ac-bf19" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="b5d6-ced6-f1e2-3222" targetId="94ea-9320-8627-3a3d" primary="false"/>
+        <categoryLink targetId="9cdf-c776-8161-5e87" id="27c5-eec5-8b99-02a2" primary="true" name="Transport Vehicle"/>
+        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="6733-fb18-3c04-e944" primary="false" name="Tows"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tow" id="9f08-42e8-cba3-ac83" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
+          <modifiers>
+            <modifier type="set" value="Light howitzer; light anti-tank gun or medium anti-tank gun; light anti-aircraft gun" field="ca19-85ed-345c-a38d"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Half-tracked Truck" hidden="false" id="4c89-4e1b-1fdc-b071">
+      <profiles>
+        <profile name="Half-tracked Truck" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="cedf-bb6c-5b7e-18cf">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">12</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Half-track</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="1e9f-822d-0c52-d64d" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="ca76-c912-aeef-8acd" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="22"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="b3ba-83c6-8c97-d138" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="27"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="ebe2-eb8e-3e5d-ccc2" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="32"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2276-d655-fa34-dc3d" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d86f-7ab4-c5bf-687e" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="0703-f950-7ba8-b3fd" targetId="94ea-9320-8627-3a3d" primary="false"/>
+        <categoryLink name="Transport Vehicle" hidden="false" id="5398-d05a-c6f3-9a28" targetId="9cdf-c776-8161-5e87" primary="true"/>
+        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="0905-8e70-e270-baf4" primary="false" name="Tows"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tow" id="1485-87fc-1122-c3f2" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
+          <modifiers>
+            <modifier type="set" value="Light howitzer; light anti-tank gun or medium anti-tank gun; light anti-aircraft gun" field="ca19-85ed-345c-a38d"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Forward-facing Pintle-mounted LMG" hidden="false" id="48bc-9be1-b960-3696" type="selectionEntry" targetId="6474-aac9-57b1-cfa6"/>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Tracked Artillery Tractor" hidden="false" id="cf1d-c2d7-b9a2-9b8f">
+      <profiles>
+        <profile name="Tracked Artillery Tractor" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="7d85-4498-267a-147f">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
+          </characteristics>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="Open-Topped" field="b5b7-688f-e6a8-1a52"/>
+                <modifier type="set" value="7+ (Armoured Car)" field="28cf-9f74-5808-52b3"/>
+                <modifier type="set" value="Armoured Tracked Artillery Tractor" field="name"/>
+              </modifiers>
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="54d3-7f59-19d6-71fe" shared="true"/>
+              </conditions>
+            </modifierGroup>
+          </modifierGroups>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="acb5-7c66-da23-4dac" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="6626-2bef-c136-a298" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="12"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="d651-8352-0050-0b25" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="15"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="4d14-af4c-7e9a-058f" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="18"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ec0f-c9c3-8328-1211" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9907-ad5f-d721-688d" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Upgrades" id="ecbe-1461-ef31-e3ad" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Field as an armoured tractor (Damage Value to 7+, Open-Topped)" hidden="false" id="54d3-7f59-19d6-71fe" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="71d2-4f3d-4311-3ce3" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="20"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a825-6cd0-59df-7ba3" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="19f1-2273-cfdb-aa29" targetId="94ea-9320-8627-3a3d" primary="false"/>
+        <categoryLink name="Transport Vehicle" hidden="false" id="f9e6-93d4-4e2d-3c80" targetId="9cdf-c776-8161-5e87" primary="true"/>
+        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="1def-bb52-436b-0a8b" primary="false" name="Tows"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tow" id="f2a1-1673-06ce-4706" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
+          <modifiers>
+            <modifier type="set" value="Any Gun" field="ca19-85ed-345c-a38d"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="Armoured Tracked Artillery Tractor" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="54d3-7f59-19d6-71fe" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Gaz &apos;jeep&apos;" hidden="false" id="9f65-c1bc-ede7-d556">
+      <profiles>
+        <profile name="Gaz &apos;jeep&apos;" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="152b-2f86-6ab5-821c">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">3</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="Amphibious" field="b5b7-688f-e6a8-1a52">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c514-eeab-8f34-9086" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="0" field="fc92-518e-d558-16a1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="77dc-00e5-98e7-2b2d" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Recce" field="b5b7-688f-e6a8-1a52">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="77dc-00e5-98e7-2b2d" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Amphibious, Recce" field="b5b7-688f-e6a8-1a52">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="77dc-00e5-98e7-2b2d" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="c514-eeab-8f34-9086" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="91b4-3110-bdc3-7f79" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="56ee-c27e-8268-433c" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="14"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="a235-24db-a33b-88cd" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="18"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="68ad-29dd-9481-7a99" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="22"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e6b2-8963-815e-6216" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3565-a73b-c758-2bb8" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Upgrades" id="8628-ab2b-dedf-fe29" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Amphibious (making it a Lend-Lease Ford GPA)" hidden="false" id="c514-eeab-8f34-9086" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8cad-bc43-6077-ba44" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="May have a pintle-mounted LMG with 360-degree arc of fire for +15pts, losing all transport capacity and gaining Recce (counts as an armoured car choice)" hidden="false" id="77dc-00e5-98e7-2b2d" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="62ff-134f-dc30-9a8d" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="15"/>
+              </costs>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon" id="aa6d-e159-5ef6-deb0" hidden="false" sortIndex="1">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8435-b4bf-9d1a-c273-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8435-b4bf-9d1a-c273-max" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Pintle-mounted HMG" hidden="false" id="d2d1-434a-1f05-3865" type="selectionEntry" targetId="6ed7-2021-b3a1-2cfb" sortIndex="2">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1510-bb5b-65f2-0b5c" includeChildSelections="false"/>
+                      </constraints>
+                      <costs>
+                        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="15"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Pintle-mounted LMG" hidden="false" id="6ddf-0788-2886-ec31" type="selectionEntry" targetId="846e-7114-a448-d795" defaultAmount="1" sortIndex="1">
+                      <costs>
+                        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="db0e-13dc-f546-e19f" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="0653-7ec7-74b0-1d7c" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="7d44-df3d-9ea3-cafd" targetId="94ea-9320-8627-3a3d" primary="false"/>
+        <categoryLink name="Transport Vehicle" hidden="false" id="f663-c46a-2065-2194" targetId="9cdf-c776-8161-5e87" primary="true"/>
+        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="67eb-3856-dd50-1696" primary="false" name="Tows"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tow" id="13fb-f06f-d4f2-d3bf" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
+          <modifiers>
+            <modifier type="set" value="Light anti-tank gun; light anti-air gun" field="ca19-85ed-345c-a38d"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="77dc-00e5-98e7-2b2d" shared="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="add" value="02b1-967a-5314-645f" field="category"/>
+            <modifier type="remove" value="9cdf-c776-8161-5e87" field="category"/>
+            <modifier type="set-primary" value="02b1-967a-5314-645f" field="category"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="T-20 Komsomolets" hidden="false" id="f855-bdc9-816f-02f5">
+      <profiles>
+        <profile name="T-20 Komsomolets" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="bd26-60f8-4311-974d">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Car)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">6</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Open-Topped</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="5141-dec0-e9a6-76c3" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="5a7c-fe33-8713-9be9" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="37"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="190a-f4f1-631b-9b82" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="46"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="bbd8-c2e2-8e34-b944" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="55"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2fcd-1b72-fb49-fe58" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="53dc-e50f-3bbf-d469" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Hull-mounted Weapons" id="7fe4-7fa5-590f-b12e" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Forward-facing Hull-mounted LMG" hidden="false" id="2fde-2a5d-39ba-66b3" type="selectionEntry" targetId="97ee-0d95-5ac2-7dee">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fff1-ca6c-0e83-f139-min" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fff1-ca6c-0e83-f139-max" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="ac5b-d998-8f8e-f516" targetId="94ea-9320-8627-3a3d" primary="false"/>
+        <categoryLink name="Transport Vehicle" hidden="false" id="b712-7089-3b8c-5543" targetId="9cdf-c776-8161-5e87" primary="true"/>
+        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="2e9d-5bf0-1892-66a2" primary="false" name="Tows"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tow" id="d9b0-3873-86e0-0d65" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
+          <modifiers>
+            <modifier type="set" value="Any Gun" field="ca19-85ed-345c-a38d"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Aerosan" hidden="false" id="b8f3-a7db-cc27-4dad">
+      <profiles>
+        <profile name="Aerosan" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="7f28-394c-e0a2-5cef">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Car)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">4</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Whl/Trck</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Open-Topped, Winter Vehicle</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="0624-d1bd-4443-2eca" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="1622-9433-f4fc-0149" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="40"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="8c7c-0cf9-bf23-d38a" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="50"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="e0fb-65ec-3647-a531" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="60"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d4a6-213e-de19-820c" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ae41-fb2a-cf25-9679" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="8b43-0888-4e27-8ff0" targetId="94ea-9320-8627-3a3d" primary="false"/>
+        <categoryLink name="Transport Vehicle" hidden="false" id="4c78-23f5-b41f-1950" targetId="9cdf-c776-8161-5e87" primary="true"/>
+      </categoryLinks>
+      <entryLinks>
+        <entryLink import="true" name="Front, Left, Right Pintle-mounted LMG" hidden="false" id="d0bb-88ba-3636-a167" type="selectionEntry" targetId="59cf-68fc-b86c-f91f" sortIndex="2">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bb3c-abcc-f766-7283-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bb3c-abcc-f766-7283-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Horse-drawn Limber" hidden="false" id="ae58-5a5e-77ab-2db6">
+      <profiles>
+        <profile name="Horse-drawn Limber" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="d78b-0c7c-30c6-5c45">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">3+ (Literally Soft-skinned)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Slow (only when towing)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="1b2f-907e-38cc-6243" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="169e-a456-f9b0-0bff" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="8"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="5227-e8af-2740-6ecb" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="10"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="e809-2740-857c-a57a" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="12"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2028-6a2e-bbce-4718" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9866-761e-1722-ee3a" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="ba26-fcd5-e86b-9d91" targetId="94ea-9320-8627-3a3d" primary="false"/>
+        <categoryLink name="Tows" hidden="false" id="364f-8b5e-effe-c1d2" targetId="6a50-07f3-fc3d-fb3d" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tow" id="ae17-ca68-00ba-2ca1" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
+          <modifiers>
+            <modifier type="set" value="Any gun" field="ca19-85ed-345c-a38d"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Field Ambulance" hidden="false" id="70e7-e054-07f5-00b1">
+      <profiles>
+        <profile name="Field Ambulance" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="54e3-5a00-b014-e207">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">None. However, like empty transports, ambulances are destroyed if they end their turn closer to enemy units than to friendly units.</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Medical Vehicle</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="0052-70c7-0c0c-d57a" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="2bc4-c191-81b6-628b" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="38"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="c724-7cce-8f13-983b" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="46"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c792-3ca4-02bc-ff05" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3c17-37d8-b111-b243" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="245c-0af1-3e64-268f" targetId="94ea-9320-8627-3a3d" primary="false"/>
+        <categoryLink targetId="9cdf-c776-8161-5e87" id="8275-f903-067c-ae8f" primary="true" name="Transport Vehicle"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="The Victory Banner" hidden="false" id="6a09-5f4e-fa76-95f8">
+      <infoLinks>
+        <infoLink name="The Victory Banner" id="908c-4019-d32b-eaf3" hidden="false" type="profile" targetId="94f0-c748-031f-871b"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Hammer and Sickle: Naval Brigade" hidden="false" id="d8f3-223b-b2c2-04c9">
+      <infoLinks>
+        <infoLink name="Hammer And Sickle: Naval Brigade" id="c7e1-01e2-926d-a2e6" hidden="false" type="rule" targetId="aa0a-c67d-2bea-d7c0"/>
+        <infoLink name="Tough Fighters" id="7f60-acec-2a84-afd1" hidden="false" type="rule" targetId="2537-51bf-b55e-a78c"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" value="1" field="ab8b-35f3-81bf-8563">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Hammer and Sickle: Airborne" hidden="false" id="bbeb-43c8-1704-8504">
+      <infoLinks>
+        <infoLink name="Hammer And Sickle: Airborne" id="cae6-ba13-d0f4-6465" hidden="false" type="rule" targetId="9932-8730-9a57-e24b"/>
+        <infoLink name="Stubborn" id="5fe0-4771-a415-0394" hidden="false" type="rule" targetId="2cee-b9c2-ff16-d51a"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" value="1" field="ab8b-35f3-81bf-8563">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Hammer and Sickle: NKVD" hidden="false" id="cf6b-03ec-c8be-bafd">
+      <infoLinks>
+        <infoLink name="Hammer And Sickle: NKVD" id="2a63-c3d1-8bac-241e" hidden="false" type="rule" targetId="b33c-bbc8-90cf-684c"/>
+        <infoLink name="Fanatics" id="e7fb-ae74-6585-4855" hidden="false" type="rule" targetId="666a-4a42-a085-3d6a"/>
+      </infoLinks>
+      <modifiers>
+        <modifier type="increment" value="2" field="ab8b-35f3-81bf-8563">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="17e0-54c5-2121-17d9">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="bbeb-43c8-1704-8504" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9b21-4b51-a4ff-294b" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Regular" hidden="false" id="8102-9ec6-85f5-a685">
+      <modifiers>
+        <modifier type="set" value="true" field="hidden">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="bbeb-43c8-1704-8504" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="891f-9043-b109-066a" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="516a-ef78-1d1c-e03c">
+      <modifiers>
+        <modifier type="set" value="1" field="ac82-fb21-9c72-c989">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="bbeb-43c8-1704-8504" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+      <constraints>
+        <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="ac82-fb21-9c72-c989"/>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1938-b301-7dbd-1526"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Company Commander" hidden="false" id="95d9-0288-5df5-0342">
+      <categoryLinks>
+        <categoryLink name="Headquarters Units" hidden="false" id="ac3e-b175-2a74-bd8e" targetId="6b53-28ad-d16f-2f00" primary="true"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Officer" id="c6d8-0b8c-b85d-609d" hidden="false" sortIndex="2">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Company Commander" hidden="false" id="7859-d0af-cdee-ff9b">
+              <entryLinks>
+                <entryLink import="true" name="Weapons" hidden="false" id="192f-fe08-d416-35c4" type="selectionEntryGroup" targetId="3105-e6a4-eb4f-06c3"/>
+              </entryLinks>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="42" field="ab8b-35f3-81bf-8563">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="17e0-54c5-2121-17d9" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="60" field="ab8b-35f3-81bf-8563">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="8102-9ec6-85f5-a685" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="78" field="ab8b-35f3-81bf-8563">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="516a-ef78-1d1c-e03c" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4943-4e80-7afd-72a3" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4768-7dfe-6c46-8070" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="HQ Options" id="acc7-19cc-53e9-2620" hidden="false" sortIndex="4">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Any unit may be given horses for +3pts per model" hidden="false" id="10ed-f8cf-36a2-bacc" sortIndex="1">
+              <modifiers>
+                <modifier type="set" value="0" field="ab8b-35f3-81bf-8563"/>
+                <modifier type="increment" value="3" field="ab8b-35f3-81bf-8563">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Any unit may be given motorcycles for +5pts per model" hidden="false" id="fc64-7f61-01c2-b10f" sortIndex="2">
+              <modifiers>
+                <modifier type="set" value="0" field="ab8b-35f3-81bf-8563"/>
+                <modifier type="increment" value="5" field="ab8b-35f3-81bf-8563">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7f05-dad5-e62f-009b" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Veterancy" id="3f57-5d9b-9221-098c" hidden="false" defaultSelectionEntryId="005f-4da6-4a7b-6722" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="236b-c5b5-f06c-82b2" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4a6a-e8f6-b23f-4ee9" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Inexperienced" hidden="false" id="a1a8-6636-adac-e203" type="selectionEntry" targetId="17e0-54c5-2121-17d9"/>
+            <entryLink import="true" name="Regular" hidden="false" id="1046-dcdd-1d63-de07" type="selectionEntry" targetId="8102-9ec6-85f5-a685"/>
+            <entryLink import="true" name="Veteran" hidden="false" id="2525-d033-f4e8-21ff" type="selectionEntry" targetId="516a-ef78-1d1c-e03c"/>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Army Special Rules" id="a5d8-c2ae-33ca-fdee" hidden="false" sortIndex="5">
+          <entryLinks>
+            <entryLink import="true" name="The Victory Banner" hidden="false" id="d22a-fad4-0972-5e55" type="selectionEntry" targetId="6a09-5f4e-fa76-95f8">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e78b-1b32-c0b4-6001" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="20"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Hammer and Sickle" id="bb8d-7941-4778-3d80" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Hammer and Sickle: Airborne" hidden="false" id="25c4-5a6c-3bd7-e4f1" type="selectionEntry" targetId="bbeb-43c8-1704-8504">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="42ac-d5a9-0f9b-f9cb" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Hammer and Sickle: NKVD" hidden="false" id="f5eb-bce1-40b9-0f34" type="selectionEntry" targetId="cf6b-03ec-c8be-bafd">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1225-c280-5ecd-29bc" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Hammer and Sickle: Naval Brigade" hidden="false" id="2549-7ae1-5d2d-8834" type="selectionEntry" targetId="d8f3-223b-b2c2-04c9">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="106e-39f8-b9e5-f54d" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="66f7-1653-bb55-5b03" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Extra men" id="de56-c845-7bc3-32f6" hidden="false" sortIndex="3">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Extra Men" hidden="false" id="0971-18c0-380d-65b0">
+              <entryLinks>
+                <entryLink import="true" name="Weapons" hidden="false" id="af3d-37f5-2dbe-bf1e" type="selectionEntryGroup" targetId="3105-e6a4-eb4f-06c3"/>
+              </entryLinks>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+              </costs>
+              <modifierGroups>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="set" value="7" field="ab8b-35f3-81bf-8563">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="17e0-54c5-2121-17d9" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="10" field="ab8b-35f3-81bf-8563">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="8102-9ec6-85f5-a685" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                    <modifier type="set" value="13" field="ab8b-35f3-81bf-8563">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="516a-ef78-1d1c-e03c" shared="true" includeChildSelections="false"/>
+                      </conditions>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
+              </modifierGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="9b84-4cde-a481-1c3c" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Platoon Commander" hidden="false" id="560a-17b2-a0a6-c6c1" targetId="a025-dcd6-d08c-4f3a" type="selectionEntry"/>
     <entryLink import="true" name="Commisar" hidden="false" id="c846-3415-ae4e-cbbb" targetId="b88f-74d1-d220-0b8c" type="selectionEntry"/>
-    <entryLink import="true" name="Company Commander" hidden="false" id="c83e-a154-8faf-f806" targetId="e184-4534-fbb9-b931" type="selectionEntry"/>
     <entryLink import="true" name="Forward Observer" hidden="false" id="e98e-1fa5-aaa8-5ca0" targetId="662f-5081-7ea3-d1aa" type="selectionEntry"/>
     <entryLink import="true" name="Rifle Squad" hidden="false" id="0512-8764-d4a4-0d0c" targetId="04eb-9e10-318e-6d2f" type="selectionEntry">
       <categoryLinks>
@@ -9328,6 +10077,14 @@
     <entryLink import="true" name="BA-3/6 Heavy Armoured Car" hidden="false" id="90f5-4c69-3d51-a769" targetId="3af8-4cf6-000a-c3d3" type="selectionEntry"/>
     <entryLink import="true" name="D-8 Light Armoured Car" hidden="false" id="7346-7317-1264-3bc1" targetId="e559-de66-77d1-79a0" type="selectionEntry"/>
     <entryLink import="true" name="FAI Light Armoured Car" hidden="false" id="a30c-05e5-2c32-d688" targetId="9940-f505-b935-6f19" type="selectionEntry"/>
+    <entryLink import="true" name="Truck" hidden="false" id="1ece-1cae-6723-16d4" targetId="5c4c-c298-0d4e-0ba1" type="selectionEntry"/>
+    <entryLink import="true" name="Half-tracked Truck" hidden="false" id="cb6a-4f9c-0cd2-eeaf" targetId="4c89-4e1b-1fdc-b071" type="selectionEntry"/>
+    <entryLink import="true" name="Tracked Artillery Tractor" hidden="false" id="8b60-a762-efdd-a909" targetId="cf1d-c2d7-b9a2-9b8f" type="selectionEntry"/>
+    <entryLink import="true" name="Gaz &apos;jeep&apos;" hidden="false" id="0e3e-5313-f77b-6061" targetId="9f65-c1bc-ede7-d556" type="selectionEntry"/>
+    <entryLink import="true" name="T-20 Komsomolets" hidden="false" id="990e-45d8-004b-2c4a" targetId="f855-bdc9-816f-02f5" type="selectionEntry"/>
+    <entryLink import="true" name="Aerosan" hidden="false" id="c8f3-168d-e621-4533" targetId="b8f3-a7db-cc27-4dad" type="selectionEntry"/>
+    <entryLink import="true" name="Horse-drawn Limber" hidden="false" id="2367-ab1c-0631-64cf" targetId="ae58-5a5e-77ab-2db6" type="selectionEntry"/>
+    <entryLink import="true" name="Company Commander" hidden="false" id="7604-3738-21ee-fa6a" targetId="95d9-0288-5df5-0342" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Weapons" id="3105-e6a4-eb4f-06c3" hidden="false" defaultSelectionEntryId="c3f8-1643-5672-eca3">
@@ -9444,6 +10201,153 @@ apply).</description>
 unusually low Damage Value, and every time it suffers one or more pin markers as a result of an enemy attack, it automatically
 suffers one additional pin marker.</description>
     </rule>
+    <rule name="The Great Patriotic War" id="fcf2-a977-d7bd-9338" hidden="false">
+      <description>Throughout the war Russian forces endured a casualty rate
+unimaginable in the west and which would undoubtedly have
+broken a people less inured to hardship and sacrifice.
+
+Whenever a unit of infantry (including HQ) or artillery
+models, fails a morale check and would be destroyed as a
+consequence, take the test again and apply the second result.</description>
+    </rule>
+    <rule name="For The Motherland!" id="981c-b803-2f7b-5499" hidden="false">
+      <description>The masses of soldiers recruited from all across the vast
+territory of the Soviet Union often lacked in training, but
+made up for that with their unparalleled fighting spirit.
+
+Every Inexperienced unit that has one or more pin
+markers can attempt to lose one pin marker if there are any
+enemy units within 12” immediately before an order is given
+to it.
+
+Roll a die: on a roll of 4, 5, or 6 the test is passed and the
+unit loses one pin marker; on a 1, 2, or 3 the test is failed and
+the unit retains the pin markers it has. Once this has been
+done, continue to test to see if the unit obeys its order in
+the usual way, even if they have lost their last pin marker (in
+which case the order test is taken without negative modifiers
+from pin markers).</description>
+    </rule>
+    <rule name="Lack Of Radios" id="d8f8-db74-545d-189e" hidden="false">
+      <description>Soviet tanks lacked quality communications equipment,
+initially relying on rudimentary communication such as
+semaphore.
+
+When you give the Command Vehicle special rule to a
+vehicle that does not have it in its entry for the purposes
+of choosing a command vehicle for an Armoured Platoon,
+you can give it the rule for free instead of paying the normal
++10pts. If you do so, however, the vehicle reduces the radius
+of its Command Vehicle rule from 12” to 6”. This represents
+communication by means of flags or hand signals.</description>
+    </rule>
+    <rule name="Hammer And Sickle" id="e40e-c6d5-e709-40cf" hidden="false">
+      <description>Certain infantry and artillery units in this book may have
+additional options to represent the different distinct forces of
+the Airborne, NKVD, or the Naval Brigade. A unit entry
+may contain options to take that unit as one of those forces.
+If a unit is eligible to be taken as that force, its unit entry will
+say so. It may also enable that unit to take further options not
+available to the unit ordinarily.
+
+Vehicles might also belong to any of these distinct forces,
+but this makes no difference in rules terms and is normally
+just a matter of using the right painting/marking scheme.
+
+Such unit entries that are eligible have the option for
+“Hammer and Sickle” and then some or all of the three
+options. Once an option is selected, the following rules and
+costs each apply.
+
+Airborne
+- Units must be taken as Veteran
+- Units must be upgraded to Stubborn for +1pt per model.
+
+NKVD
+- Unit must be upgraded to Fanatics for +2pts per model.
+
+Naval Brigade
+- Units must be upgraded to Tough Fighters for +1pt pet model.</description>
+    </rule>
+    <rule name="Not One Step Back!" id="98bc-9410-0bb2-ad25" hidden="false">
+      <description>Commissars are political officers and do not confer a morale
+bonus to nearby troops. If soldiers show signs of disobeying
+orders the commissars will not hesitate to shoot them.
+
+When a friendly infantry unit fails an order test within 6’’
+of a commissar, remove one model from the unit and re-roll
+the dice. Note that there is no choice in the matter – if the
+commissar is within 6” of the unit he will shoot dissenters
+whether you want him to or not! The second result stands
+as normal – the commissar can only make a single re-roll for
+each unit affected. This rule only applies to infantry units of
+three or more models. If a unit has an initial size of, or has
+been reduced to, one or two models, this rule does not apply.</description>
+    </rule>
+    <rule name="Hammer And Sickle: Airborne" id="9932-8730-9a57-e24b" hidden="false">
+      <description>Certain infantry and artillery units in this book may have
+additional options to represent the different distinct forces of
+the Airborne, NKVD, or the Naval Brigade. A unit entry
+may contain options to take that unit as one of those forces.
+If a unit is eligible to be taken as that force, its unit entry will
+say so. It may also enable that unit to take further options not
+available to the unit ordinarily.
+
+Vehicles might also belong to any of these distinct forces,
+but this makes no difference in rules terms and is normally
+just a matter of using the right painting/marking scheme.
+
+Such unit entries that are eligible have the option for
+“Hammer and Sickle” and then some or all of the three
+options. Once an option is selected, the following rules and
+costs each apply.
+
+Airborne
+- Units must be taken as Veteran
+- Units must be upgraded to Stubborn for +1pt per model.</description>
+    </rule>
+    <rule name="Hammer And Sickle: Naval Brigade" id="aa0a-c67d-2bea-d7c0" hidden="false">
+      <description>Certain infantry and artillery units in this book may have
+additional options to represent the different distinct forces of
+the Airborne, NKVD, or the Naval Brigade. A unit entry
+may contain options to take that unit as one of those forces.
+If a unit is eligible to be taken as that force, its unit entry will
+say so. It may also enable that unit to take further options not
+available to the unit ordinarily.
+
+Vehicles might also belong to any of these distinct forces,
+but this makes no difference in rules terms and is normally
+just a matter of using the right painting/marking scheme.
+
+Such unit entries that are eligible have the option for
+“Hammer and Sickle” and then some or all of the three
+options. Once an option is selected, the following rules and
+costs each apply.
+
+Naval Brigade
+- Units must be upgraded to Tough Fighters for +1pt pet model.</description>
+    </rule>
+    <rule name="Hammer And Sickle: NKVD" id="b33c-bbc8-90cf-684c" hidden="false">
+      <description>Certain infantry and artillery units in this book may have
+additional options to represent the different distinct forces of
+the Airborne, NKVD, or the Naval Brigade. A unit entry
+may contain options to take that unit as one of those forces.
+If a unit is eligible to be taken as that force, its unit entry will
+say so. It may also enable that unit to take further options not
+available to the unit ordinarily.
+
+Vehicles might also belong to any of these distinct forces,
+but this makes no difference in rules terms and is normally
+just a matter of using the right painting/marking scheme.
+
+Such unit entries that are eligible have the option for
+“Hammer and Sickle” and then some or all of the three
+options. Once an option is selected, the following rules and
+costs each apply.
+
+NKVD
+- Unit must be upgraded to Fanatics for +2pts per model.</description>
+    </rule>
   </sharedRules>
   <publications>
     <publication name="Bolt Action : Armies of the soviet union" id="d4ea-8d41-12ad-6705" hidden="false" shortName="Armies of the soviet union" publisher="Bolt Action - World War II Wargames Rules: Rulebook Third edition."/>
@@ -9462,6 +10366,16 @@ enemies at 24&quot; rather than the normal 12&quot;.</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Ampulomet</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="The Victory Banner" typeId="bd89-e167-3562-59e1" typeName="Ability" hidden="false" id="94f0-c748-031f-871b">
+      <characteristics>
+        <characteristic name="Description" typeId="ca19-85ed-345c-a38d">Any Infantry or Artillery unit within 12” and line of sight to The Victory Banner adds +1 to its morale value.
+Only one Victory Banner may be included in a force. A model equipped with the Victory Banner exchanges all
+of their weapons for a pistol.
+
+The Victory Banner cannot be given to a unit’s leader (e.g. NCOs, officers, etc), so the unit must consist of
+at least two figures.</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>

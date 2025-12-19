@@ -31,6 +31,7 @@
     <categoryEntry name="Transports" id="e136-a9c1-1008-a521" hidden="false"/>
     <categoryEntry name="Ambulances" id="be8b-7a11-fc57-4555" hidden="false"/>
     <categoryEntry name="Lend-lease Vehicles" id="079c-b917-f17a-02ac" hidden="false"/>
+    <categoryEntry name="Army Special Rules" id="7137-830a-72de-6d81" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Engineer Platoon" id="c1f4-d905-fb7d-17ab" hidden="false" page="186" publicationId="6d3a-4ad3-2bb6-913e">
@@ -769,6 +770,10 @@ could be a challenge. This unit must pass an order test to perform any action, e
 Value, the result on the Damage Results on Armoured Vehicles table is always considered to be a 1, regardless of the actual
 result rolled.</description>
     </rule>
+    <rule name="Winter Vehicle" id="40ee-f36a-ac19-f12c" hidden="false">
+      <description>The vehicle can only travel over snow or flat ice – when doing so it is treated as a wheeled vehicle moving
+over open ground, and therefore cannot pass through obstacles. All Occupants must be equipped with skis</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Rifle" hidden="false" id="6ce7-ab1d-78f6-abd4" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -1066,9 +1071,21 @@ result rolled.</description>
         <infoLink name="Fixed" id="c721-5ddd-109c-b08d" hidden="false" type="rule" targetId="c87e-2e83-e52f-b639"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="ba6d-c909-e3c7-77c6"/>
-    <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="3f9f-f0b3-2ed7-5a0f"/>
-    <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="9bac-4afd-b230-6650"/>
+    <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="ba6d-c909-e3c7-77c6">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce18-0008-4f9d-f394" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Regular" hidden="false" id="3f9f-f0b3-2ed7-5a0f">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b0f7-ec92-7441-897c" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="9bac-4afd-b230-6650">
+      <constraints>
+        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7094-be05-f416-04b6" includeChildSelections="false"/>
+      </constraints>
+    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Cavalry Carbine" hidden="false" id="87f3-ea06-5f88-f882"/>
     <selectionEntry type="upgrade" import="true" name="Unarmed" hidden="false" id="9bbb-3619-c95a-b206">
       <infoLinks>
@@ -1279,6 +1296,21 @@ result rolled.</description>
     <selectionEntry type="upgrade" import="true" name="Rear-facing Hull-mounted LMG" hidden="false" id="8fcc-3e73-e4dc-7729">
       <infoLinks>
         <infoLink name="Rear-facing Hull-mounted LMG" id="fe4f-1e1d-1ae4-b331" hidden="false" type="profile" targetId="ce1c-4625-490a-14f9"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Pintle-mounted LMG" hidden="false" id="846e-7114-a448-d795">
+      <infoLinks>
+        <infoLink name="Pintle-mounted LMG" id="8184-8aa3-166f-e2d8" hidden="false" type="profile" targetId="86c4-8c02-3ae2-f2cb"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Forward-facing Pintle-mounted LMG" hidden="false" id="6474-aac9-57b1-cfa6">
+      <infoLinks>
+        <infoLink name="Forward-facing Pintle-mounted LMG" id="f143-1d24-fb5b-e943" hidden="false" type="profile" targetId="1a01-124d-a89f-e989"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Front, Left, Right Pintle-mounted LMG" hidden="false" id="59cf-68fc-b86c-f91f">
+      <infoLinks>
+        <infoLink name="Front, Left, Right Pintle-mounted LMG" id="182b-6a30-2ae1-ed64" hidden="false" type="profile" targetId="755e-b6f7-3bf9-42b8"/>
       </infoLinks>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -1858,6 +1890,35 @@ as a direct hit by a 3” HE weapon against the vehicle instead of using the tem
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Front Arc</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Tow" typeId="bd89-e167-3562-59e1" typeName="Ability" hidden="false" id="465b-f5a2-e0b5-fc66">
+      <characteristics>
+        <characteristic name="Description" typeId="ca19-85ed-345c-a38d"/>
+      </characteristics>
+    </profile>
+    <profile name="Pintle-mounted LMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="86c4-8c02-3ae2-f2cb">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Flak, 360-degree arc</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Forward-facing Pintle-mounted LMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="1a01-124d-a89f-e989">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Flak, Front Arc</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Front, Left, Right Pintle-mounted LMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="755e-b6f7-3bf9-42b8">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Flak, Front Arc, Left Arc, Right Arc</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
