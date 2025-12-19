@@ -11065,6 +11065,142 @@
         <categoryLink name="Anti-tank Guns" hidden="false" id="fc83-6c94-f3a1-e597" targetId="d50e-669d-f60a-4849" primary="true"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Gaz &apos;jeep&apos; (No Transport)" hidden="false" id="8f45-d51b-61d4-6a24">
+      <profiles>
+        <profile name="Gaz &apos;jeep&apos;" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="3842-a6af-0b30-382c">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
+            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">3</characteristic>
+            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="Amphibious" field="b5b7-688f-e6a8-1a52">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="8ed3-1d0a-83bf-39bc" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="0" field="fc92-518e-d558-16a1">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="2d26-8c7e-05bc-c730" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Recce" field="b5b7-688f-e6a8-1a52">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="2d26-8c7e-05bc-c730" shared="true"/>
+              </conditions>
+            </modifier>
+            <modifier type="set" value="Amphibious, Recce" field="b5b7-688f-e6a8-1a52">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="2d26-8c7e-05bc-c730" shared="true"/>
+              </conditions>
+              <conditionGroups>
+                <conditionGroup type="and">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="8ed3-1d0a-83bf-39bc" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="da35-7216-e405-d3fb" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="823b-114d-95ce-5abe" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="14"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="e1b2-2c79-c1fe-4b35" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="18"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="d8c1-5870-700b-cce8" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="22"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="119a-0b95-c1b1-d173" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c2a6-c9f0-64ba-7546" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Upgrades" id="2a48-91eb-2236-066e" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Amphibious (making it a Lend-Lease Ford GPA)" hidden="false" id="8ed3-1d0a-83bf-39bc" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b813-c2cc-6fdf-0a72" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="May have a pintle-mounted LMG with 360-degree arc of fire for +15pts, losing all transport capacity and gaining Recce (counts as an armoured car choice)" hidden="false" id="2d26-8c7e-05bc-c730" sortIndex="1" defaultAmount="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="bf7b-82b7-e485-1961" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="15"/>
+              </costs>
+              <selectionEntryGroups>
+                <selectionEntryGroup name="Weapon" id="db81-b5b4-cbe1-a1f8" hidden="false" sortIndex="1">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4ed1-fe46-ae63-3eab" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="eb93-860b-460f-ae72" includeChildSelections="false"/>
+                  </constraints>
+                  <entryLinks>
+                    <entryLink import="true" name="Pintle-mounted HMG" hidden="false" id="ce9f-0d71-e55e-0ae8" type="selectionEntry" targetId="6ed7-2021-b3a1-2cfb" sortIndex="2">
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="687b-c630-d506-13a0" includeChildSelections="false"/>
+                      </constraints>
+                      <costs>
+                        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="15"/>
+                      </costs>
+                    </entryLink>
+                    <entryLink import="true" name="Pintle-mounted LMG" hidden="false" id="a599-62a2-34bf-97aa" type="selectionEntry" targetId="846e-7114-a448-d795" defaultAmount="1" sortIndex="1">
+                      <costs>
+                        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+                      </costs>
+                      <constraints>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d74e-2dd1-e187-8f62" includeChildSelections="false"/>
+                      </constraints>
+                    </entryLink>
+                  </entryLinks>
+                </selectionEntryGroup>
+              </selectionEntryGroups>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ed57-f8e6-87c3-7d7a" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="bba9-629a-babe-9c18" targetId="94ea-9320-8627-3a3d" primary="false"/>
+        <categoryLink name="Tows" hidden="false" id="354a-b869-68f3-d5f8" targetId="6a50-07f3-fc3d-fb3d" primary="false"/>
+        <categoryLink targetId="02b1-967a-5314-645f" id="1703-b81e-c6d7-42a2" primary="true" name="Armoured Cars"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tow" id="d0e2-1682-09e5-e42b" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
+          <modifiers>
+            <modifier type="set" value="Light anti-tank gun; light anti-air gun" field="ca19-85ed-345c-a38d"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <modifierGroups>
+        <modifierGroup type="and">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="2d26-8c7e-05bc-c730" shared="true"/>
+          </conditions>
+          <modifiers>
+            <modifier type="remove" value="02b1-967a-5314-645f" field="category"/>
+            <modifier type="add" value="9cdf-c776-8161-5e87" field="category"/>
+            <modifier type="set-primary" value="9cdf-c776-8161-5e87" field="category"/>
+          </modifiers>
+        </modifierGroup>
+      </modifierGroups>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Platoon Commander" hidden="false" id="560a-17b2-a0a6-c6c1" targetId="a025-dcd6-d08c-4f3a" type="selectionEntry"/>
