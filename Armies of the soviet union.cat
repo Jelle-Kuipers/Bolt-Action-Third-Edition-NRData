@@ -568,7 +568,7 @@
         <selectionEntryGroup name="Veterancy" id="5b27-75b4-ef2d-e2a9" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="9f35-ed97-7f7e-f3b7" sortIndex="1"/>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="f24a-a89b-9867-788f" sortIndex="2"/>
+            <selectionEntry type="upgrade" import="true" name="Regular" hidden="false" id="f24a-a89b-9867-788f" sortIndex="2"/>
           </selectionEntries>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2310-af51-18b9-3cb3-min" includeChildSelections="false"/>
@@ -624,8 +624,8 @@
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Riflemen" hidden="false" id="580e-731f-c06f-0154" sortIndex="1">
               <constraints>
-                <constraint type="max" value="11" field="selections" scope="parent" shared="true" id="1a32-3dbe-45e3-b0fd" includeChildSelections="false"/>
-                <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="3089-cd55-ef35-f04e" includeChildSelections="false"/>
+                <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="3054-44c0-f5b6-ef50" includeChildSelections="false"/>
+                <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="14e8-c567-b29e-f481" includeChildSelections="false"/>
               </constraints>
               <costs>
                 <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
@@ -664,6 +664,18 @@
                   </modifiers>
                 </modifierGroup>
               </modifierGroups>
+              <modifiers>
+                <modifier type="decrement" value="2" field="3054-44c0-f5b6-ef50">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="6e29-b2f9-b648-9786" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="decrement" value="2" field="14e8-c567-b29e-f481">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="6e29-b2f9-b648-9786" shared="true" roundUp="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
@@ -742,6 +754,22 @@
               </selectionEntries>
             </selectionEntryGroup>
           </selectionEntryGroups>
+          <constraints>
+            <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="8077-da3e-8cb3-03ae" includeChildSelections="false"/>
+            <constraint type="max" value="10" field="selections" scope="parent" shared="true" id="8d81-cf9f-fe39-0031" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="decrement" value="2" field="8077-da3e-8cb3-03ae">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="6e29-b2f9-b648-9786" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="decrement" value="2" field="8d81-cf9f-fe39-0031">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="6e29-b2f9-b648-9786" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Upgrades" id="257c-c147-a7ae-139a" hidden="false" sortIndex="4">
           <selectionEntries>
@@ -774,7 +802,7 @@
         <selectionEntryGroup name="Veterancy" id="67bb-b0de-f7ff-8449" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="ed84-671d-b9eb-820c" sortIndex="1"/>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="1e16-e184-fa4f-bac3" sortIndex="2"/>
+            <selectionEntry type="upgrade" import="true" name="Regular" hidden="false" id="1e16-e184-fa4f-bac3" sortIndex="2"/>
           </selectionEntries>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bfdd-a520-9122-a11f" includeChildSelections="false"/>
@@ -798,6 +826,10 @@
                       <costs>
                         <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
                       </costs>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="0952-76b2-8798-ce58-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0952-76b2-8798-ce58-max" includeChildSelections="false"/>
+                      </constraints>
                     </entryLink>
                   </entryLinks>
                   <constraints>
@@ -846,11 +878,25 @@
                     </modifier>
                   </modifiers>
                 </modifierGroup>
+                <modifierGroup type="and">
+                  <modifiers>
+                    <modifier type="decrement" value="2" field="2312-4430-24b0-6d66">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="parent" childId="7d7a-1130-2ab4-7750" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                    <modifier type="decrement" value="2" field="57fd-4422-e7a0-3ec1">
+                      <repeats>
+                        <repeat value="1" repeats="1" field="selections" scope="parent" childId="7d7a-1130-2ab4-7750" shared="true" roundUp="false"/>
+                      </repeats>
+                    </modifier>
+                  </modifiers>
+                </modifierGroup>
               </modifierGroups>
               <selectionEntryGroups>
                 <selectionEntryGroup name="Weapons" id="0ef0-7553-cbe5-8a0b" hidden="false">
                   <entryLinks>
-                    <entryLink import="true" name="Submachine gun (SMG)" hidden="false" id="e49b-990f-b063-75cc" type="selectionEntry" targetId="fff8-007f-a304-2bc1">
+                    <entryLink import="true" name="Submachine gun (SMG)" hidden="false" id="e49b-990f-b063-75cc" type="selectionEntry" targetId="fff8-007f-a304-2bc1" collective="true">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cece-77fd-f2a7-7ac6" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ec4e-5d24-d17e-2858" includeChildSelections="false"/>
@@ -863,6 +909,10 @@
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
+              <constraints>
+                <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="2312-4430-24b0-6d66" includeChildSelections="false"/>
+                <constraint type="max" value="11" field="selections" scope="parent" shared="true" id="57fd-4422-e7a0-3ec1" includeChildSelections="false"/>
+              </constraints>
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
@@ -948,12 +998,12 @@
           <modifierGroups>
             <modifierGroup type="and">
               <modifiers>
-                <modifier type="decrement" value="1" field="c782-2472-b873-282a">
+                <modifier type="decrement" value="2" field="c782-2472-b873-282a">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="7d7a-1130-2ab4-7750" shared="true" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="decrement" value="1" field="2aec-3db5-f497-7131">
+                <modifier type="decrement" value="2" field="2aec-3db5-f497-7131">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="7d7a-1130-2ab4-7750" shared="true" roundUp="false"/>
                   </repeats>
@@ -993,7 +1043,7 @@
         <selectionEntryGroup name="Veterancy" id="03ca-72f3-d0f4-d9d3" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="5435-4321-1a63-b404" sortIndex="2"/>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="cdc5-a2a6-7d0e-67ac" sortIndex="1"/>
+            <selectionEntry type="upgrade" import="true" name="Regular" hidden="false" id="cdc5-a2a6-7d0e-67ac" sortIndex="1"/>
           </selectionEntries>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e5ab-4c09-3513-8580" includeChildSelections="false"/>
@@ -1017,11 +1067,15 @@
                       <costs>
                         <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
                       </costs>
+                      <constraints>
+                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e006-c8d4-fb73-98b9-min" includeChildSelections="false"/>
+                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e006-c8d4-fb73-98b9-max" includeChildSelections="false"/>
+                      </constraints>
                     </entryLink>
                   </entryLinks>
                   <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9c97-dceb-7f78-e007-min" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9c97-dceb-7f78-e007-max" includeChildSelections="false"/>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6bc1-1ca0-4204-cf06-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6bc1-1ca0-4204-cf06-max" includeChildSelections="false"/>
                   </constraints>
                 </selectionEntryGroup>
               </selectionEntryGroups>
@@ -1218,7 +1272,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Veterancy" id="aab9-696d-726c-fa24" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="d7f5-37f6-62f7-8eb4" sortIndex="2">
+            <selectionEntry type="upgrade" import="true" name="Regular" hidden="false" id="d7f5-37f6-62f7-8eb4" sortIndex="2">
               <constraints>
                 <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bc61-43ae-310a-62e7" includeChildSelections="false"/>
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="044f-92e8-a9b6-6f61" includeChildSelections="false"/>
@@ -1432,12 +1486,12 @@
           <modifierGroups>
             <modifierGroup type="and">
               <modifiers>
-                <modifier type="decrement" value="1" field="07a1-94b5-81a4-6c3c">
+                <modifier type="decrement" value="2" field="07a1-94b5-81a4-6c3c">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="222f-130c-a773-6d38" shared="true" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="decrement" value="1" field="d8a3-30e4-05ab-28db">
+                <modifier type="decrement" value="2" field="d8a3-30e4-05ab-28db">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="222f-130c-a773-6d38" shared="true" roundUp="false"/>
                   </repeats>
@@ -1610,11 +1664,11 @@
             </selectionEntry>
           </selectionEntries>
           <selectionEntryGroups>
-            <selectionEntryGroup name="Light Machine Gun Teams" id="fa3f-4886-e0aa-55f4" hidden="false" sortIndex="3">
+            <selectionEntryGroup name="Light Machine Gun Teams" id="fa3f-4886-e0aa-55f4" hidden="false" sortIndex="3" collective="true">
               <selectionEntries>
-                <selectionEntry type="unit" import="true" name="Light Machine Gun Team" hidden="false" id="18a4-bab3-5892-7265">
+                <selectionEntry type="unit" import="true" name="Light Machine Gun Team" hidden="false" id="18a4-bab3-5892-7265" collective="true">
                   <selectionEntries>
-                    <selectionEntry type="model" import="true" name="Loader" hidden="false" id="1739-757f-592f-f98c" defaultAmount="1">
+                    <selectionEntry type="model" import="true" name="Loader" hidden="false" id="1739-757f-592f-f98c" defaultAmount="1" collective="true">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c78a-4ae0-1bfa-cee8" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3dac-614f-70ef-461f" includeChildSelections="false"/>
@@ -1647,13 +1701,13 @@
                         </selectionEntryGroup>
                       </selectionEntryGroups>
                     </selectionEntry>
-                    <selectionEntry type="model" import="true" name="Gunner" hidden="false" id="8f3a-e1b3-e66d-ddd1">
+                    <selectionEntry type="model" import="true" name="Gunner" hidden="false" id="8f3a-e1b3-e66d-ddd1" collective="true">
                       <constraints>
                         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a6dd-a006-01ad-682e" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2329-2b86-c0c2-9cac" includeChildSelections="false"/>
                       </constraints>
                       <entryLinks>
-                        <entryLink import="true" name="Light machine gun (LMG)" hidden="false" id="afd2-7fad-85ed-d6a4" type="selectionEntry" targetId="d7fb-eba4-e0e0-869e">
+                        <entryLink import="true" name="Light machine gun (LMG)" hidden="false" id="afd2-7fad-85ed-d6a4" type="selectionEntry" targetId="d7fb-eba4-e0e0-869e" collective="true">
                           <constraints>
                             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="daf6-392e-2275-81c9" includeChildSelections="false"/>
                             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f83e-2cbf-8129-e13a" includeChildSelections="false"/>
@@ -1747,7 +1801,7 @@
         <selectionEntryGroup name="Veterancy" id="2011-1971-78bf-877e" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="3747-483a-4fb4-dd58" sortIndex="1"/>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="8184-b570-650d-80da" sortIndex="2"/>
+            <selectionEntry type="upgrade" import="true" name="Regular" hidden="false" id="8184-b570-650d-80da" sortIndex="2"/>
           </selectionEntries>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="34cd-fd09-ac75-4513" includeChildSelections="false"/>
@@ -2092,7 +2146,7 @@
                 <cost name="points" typeId="ab8b-35f3-81bf-8563" value="5"/>
               </costs>
               <entryLinks>
-                <entryLink import="true" name="Rifle" hidden="false" id="6e69-0b9a-5ca3-7063" type="selectionEntry" targetId="6ce7-ab1d-78f6-abd4">
+                <entryLink import="true" name="Rifle" hidden="false" id="6e69-0b9a-5ca3-7063" type="selectionEntry" targetId="6ce7-ab1d-78f6-abd4" collective="true">
                   <constraints>
                     <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2e00-6f17-9a9a-f36e" includeChildSelections="false"/>
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7b56-fb88-0149-c124" includeChildSelections="false"/>
@@ -2119,7 +2173,7 @@
         <selectionEntryGroup name="Veterancy" id="eb29-913d-d67d-40a0" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="2035-84eb-4d57-31ee" sortIndex="2"/>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="ab4b-0ba4-840c-82e7" sortIndex="1"/>
+            <selectionEntry type="upgrade" import="true" name="Regular" hidden="false" id="ab4b-0ba4-840c-82e7" sortIndex="1"/>
           </selectionEntries>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f295-8b5c-29f8-4f8c" includeChildSelections="false"/>
@@ -2371,12 +2425,12 @@
           <modifierGroups>
             <modifierGroup type="and">
               <modifiers>
-                <modifier type="decrement" value="1" field="65f8-519e-0740-f963">
+                <modifier type="decrement" value="2" field="65f8-519e-0740-f963">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="4776-ded4-63d9-4f16" shared="true" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="decrement" value="1" field="b7ad-1e93-f574-3427">
+                <modifier type="decrement" value="2" field="b7ad-1e93-f574-3427">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="4776-ded4-63d9-4f16" shared="true" roundUp="false"/>
                   </repeats>
@@ -2420,7 +2474,7 @@
         <selectionEntryGroup name="Veterancy" id="69ec-dec4-0616-5baf" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
           <selectionEntries>
             <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="844f-27f7-26b7-429e" sortIndex="2"/>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="466b-8260-0892-41c4" sortIndex="1"/>
+            <selectionEntry type="upgrade" import="true" name="Regular" hidden="false" id="466b-8260-0892-41c4" sortIndex="1"/>
           </selectionEntries>
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="490b-c895-5273-0c71" includeChildSelections="false"/>
@@ -2442,7 +2496,6 @@
                   <entryLinks>
                     <entryLink import="true" name="Submachine gun (SMG)" hidden="false" id="2904-7140-dc84-eab4" type="selectionEntry" targetId="fff8-007f-a304-2bc1">
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5890-7329-4761-3720" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="564b-f86f-8ddd-29bc" includeChildSelections="false"/>
                       </constraints>
                       <costs>
@@ -2451,7 +2504,6 @@
                     </entryLink>
                     <entryLink import="true" name="Cavalry Carbine" hidden="false" id="2db4-74cd-e3d7-da21" type="selectionEntry" targetId="87f3-ea06-5f88-f882">
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="67d0-5aa9-b4c5-c1a4" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="62a9-9e27-0dca-61ee" includeChildSelections="false"/>
                       </constraints>
                       <infoLinks>
@@ -2512,7 +2564,6 @@
                   <entryLinks>
                     <entryLink import="true" name="Submachine gun (SMG)" hidden="false" id="c0e3-e873-97dc-0300" type="selectionEntry" targetId="fff8-007f-a304-2bc1">
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2429-7224-ee0b-1e33" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6ebf-f404-7575-60d9" includeChildSelections="false"/>
                       </constraints>
                       <costs>
@@ -2521,7 +2572,6 @@
                     </entryLink>
                     <entryLink import="true" name="Cavalry Carbine" hidden="false" id="28d3-43b7-89f5-f1fb" type="selectionEntry" targetId="87f3-ea06-5f88-f882">
                       <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="9eb8-d5df-551c-bf96" includeChildSelections="false"/>
                         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="508e-398c-e7c2-8de7" includeChildSelections="false"/>
                       </constraints>
                       <infoLinks>
@@ -2638,12 +2688,12 @@
           <modifierGroups>
             <modifierGroup type="and">
               <modifiers>
-                <modifier type="decrement" value="1" field="2e90-eb8b-ccb2-d2c5">
+                <modifier type="decrement" value="2" field="2e90-eb8b-ccb2-d2c5">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="cccf-f134-384d-3d26" shared="true" roundUp="false"/>
                   </repeats>
                 </modifier>
-                <modifier type="decrement" value="1" field="6930-a50a-e0f6-3fb7">
+                <modifier type="decrement" value="2" field="6930-a50a-e0f6-3fb7">
                   <repeats>
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="cccf-f134-384d-3d26" shared="true" roundUp="false"/>
                   </repeats>
@@ -2741,7 +2791,7 @@
         </selectionEntryGroup>
         <selectionEntryGroup name="Riflemen" id="68d7-b94e-fede-59f9" hidden="false" defaultSelectionEntryId="1f04-3340-a07c-b45e" sortIndex="3">
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Rifleman" hidden="false" id="d4de-17f8-decd-592a" collective="true">
+            <selectionEntry type="model" import="true" name="Rifleman" hidden="false" id="d4de-17f8-decd-592a">
               <constraints>
                 <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="a8ca-c51e-f98e-4f1d-min" includeChildSelections="false"/>
                 <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="a8ca-c51e-f98e-4f1d-max" includeChildSelections="false"/>
@@ -3282,7 +3332,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Veterancy" id="9ef4-91eb-7fe2-6839" hidden="false" defaultSelectionEntryId="5ac8-7691-d287-5be9" sortIndex="1">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="de93-4a66-64fb-17a9" sortIndex="1"/>
+            <selectionEntry type="upgrade" import="true" name="Regular" hidden="false" id="de93-4a66-64fb-17a9" sortIndex="1"/>
             <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="6f21-9e9f-a7f5-d822" sortIndex="2"/>
           </selectionEntries>
           <constraints>
@@ -3537,7 +3587,7 @@
       <selectionEntryGroups>
         <selectionEntryGroup name="Veterancy" id="47af-aebf-a7e2-e422" hidden="false" defaultSelectionEntryId="5ac8-7691-d287-5be9" sortIndex="1">
           <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="cb1f-0c11-3bbd-9672" sortIndex="1"/>
+            <selectionEntry type="upgrade" import="true" name="Regular" hidden="false" id="cb1f-0c11-3bbd-9672" sortIndex="1"/>
             <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="d70b-a24e-600d-33f7" sortIndex="2"/>
           </selectionEntries>
           <constraints>
@@ -3726,12 +3776,12 @@
             <constraint type="min" value="4" field="selections" scope="parent" shared="true" id="4ad1-d076-c3ab-5406"/>
           </constraints>
           <modifiers>
-            <modifier type="decrement" value="1" field="4ad1-d076-c3ab-5406">
+            <modifier type="decrement" value="2" field="4ad1-d076-c3ab-5406">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="a2d1-ebd9-6ce8-b10e" shared="true"/>
               </conditions>
             </modifier>
-            <modifier type="decrement" value="1" field="d7ac-d8b5-cba9-181c">
+            <modifier type="decrement" value="2" field="d7ac-d8b5-cba9-181c">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="a2d1-ebd9-6ce8-b10e" shared="true"/>
               </conditions>
@@ -4067,103 +4117,10 @@
               </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Light Machine Gun Teams" id="1150-0d8d-63a0-3f04" hidden="false" sortIndex="3">
-              <selectionEntries>
-                <selectionEntry type="unit" import="true" name="Light Machine Gun Team" hidden="false" id="f9e6-045d-fdf5-170c">
-                  <selectionEntries>
-                    <selectionEntry type="model" import="true" name="Loader" hidden="false" id="8c0a-8a2a-aff5-eedb" defaultAmount="1">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1e81-c82a-6cac-ba47" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c332-43fa-909d-98c5" includeChildSelections="false"/>
-                      </constraints>
-                      <modifierGroups>
-                        <modifierGroup type="and">
-                          <modifiers>
-                            <modifier type="set" value="15" field="ab8b-35f3-81bf-8563">
-                              <conditions>
-                                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="3182-b97b-d7f2-16c6" shared="true" includeChildSelections="false"/>
-                              </conditions>
-                            </modifier>
-                          </modifiers>
-                        </modifierGroup>
-                      </modifierGroups>
-                      <selectionEntryGroups>
-                        <selectionEntryGroup name="Weapons" id="baaa-9abc-81fa-af83" hidden="false" defaultSelectionEntryId="605a-effe-9c6e-dfb4">
-                          <entryLinks>
-                            <entryLink import="true" name="Submachine gun (SMG)" hidden="false" id="55e0-4d26-8837-aee8" type="selectionEntry" targetId="fff8-007f-a304-2bc1">
-                              <costs>
-                                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="4"/>
-                              </costs>
-                              <constraints>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b796-8b3b-8523-7fd6" includeChildSelections="false"/>
-                              </constraints>
-                            </entryLink>
-                            <entryLink import="true" name="Rifle" hidden="false" id="af13-2ce6-4121-9077" type="selectionEntry" targetId="6ce7-ab1d-78f6-abd4">
-                              <constraints>
-                                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4b2b-0fa9-d51b-40d5" includeChildSelections="false"/>
-                              </constraints>
-                            </entryLink>
-                          </entryLinks>
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6939-84cb-500b-694c" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6ed6-116c-f709-9837" includeChildSelections="false"/>
-                          </constraints>
-                        </selectionEntryGroup>
-                      </selectionEntryGroups>
-                    </selectionEntry>
-                    <selectionEntry type="model" import="true" name="Gunner" hidden="false" id="403a-2247-ce0e-5329">
-                      <constraints>
-                        <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="011b-77bd-fe40-936c" includeChildSelections="false"/>
-                        <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="02e9-a2e1-2de6-bc56" includeChildSelections="false"/>
-                      </constraints>
-                      <entryLinks>
-                        <entryLink import="true" name="Light machine gun (LMG)" hidden="false" id="948a-8c37-de23-ef1b" type="selectionEntry" targetId="d7fb-eba4-e0e0-869e">
-                          <constraints>
-                            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c7dc-f1a5-f59f-edca" includeChildSelections="false"/>
-                            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5c28-650e-b07a-2c75" includeChildSelections="false"/>
-                          </constraints>
-                          <costs>
-                            <cost name="points" typeId="ab8b-35f3-81bf-8563" value="15"/>
-                          </costs>
-                        </entryLink>
-                      </entryLinks>
-                      <modifierGroups>
-                        <modifierGroup type="and">
-                          <modifiers>
-                            <modifier type="set" value="15" field="ab8b-35f3-81bf-8563">
-                              <conditions>
-                                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="3182-b97b-d7f2-16c6" shared="true" includeChildSelections="false"/>
-                              </conditions>
-                            </modifier>
-                          </modifiers>
-                        </modifierGroup>
-                      </modifierGroups>
-                    </selectionEntry>
-                  </selectionEntries>
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ffea-90d6-5e08-016d" includeChildSelections="false"/>
-                  </constraints>
-                </selectionEntry>
-              </selectionEntries>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
           <constraints>
             <constraint type="max" value="6" field="selections" scope="parent" shared="true" id="ab7d-a8f9-1a0f-82c4" includeChildSelections="false"/>
             <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="b1c2-3c49-5e7b-9470"/>
           </constraints>
-          <modifiers>
-            <modifier type="decrement" value="1" field="b1c2-3c49-5e7b-9470">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="f9e6-045d-fdf5-170c" shared="true"/>
-              </conditions>
-            </modifier>
-            <modifier type="decrement" value="1" field="ab7d-a8f9-1a0f-82c4">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="parent" childId="f9e6-045d-fdf5-170c" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
         </selectionEntryGroup>
         <selectionEntryGroup name="Upgrades" id="438d-3b33-40b3-3ced" hidden="false" sortIndex="4">
           <selectionEntries>
