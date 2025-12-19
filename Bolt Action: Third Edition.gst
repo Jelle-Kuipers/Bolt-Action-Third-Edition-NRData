@@ -553,7 +553,7 @@ If an army is left with a number of units which all have the Slow Load special r
     <rule name="Cavalry Carbine" id="fcea-76e8-3bd4-2d96" hidden="false">
       <description>Cavalry units can carry infantry small arms, but the only weapon that can be fired whilst mounted is a pistol or carbine (which is treated as a pistol). Note that carbines are treated as rifles when used by troops on foot. All other weaponry can only be fired if dismounted.</description>
     </rule>
-    <rule name="Unarmed" id="a9f8-6896-7207-84ce" hidden="false">
+    <rule name="Unarmed!" id="a9f8-6896-7207-84ce" hidden="false">
       <description>TODO CHECK ERRATA!</description>
     </rule>
     <rule name="Skis" id="6115-5f5d-01fd-5ce0" hidden="false">
@@ -774,6 +774,24 @@ result rolled.</description>
       <description>The vehicle can only travel over snow or flat ice – when doing so it is treated as a wheeled vehicle moving
 over open ground, and therefore cannot pass through obstacles. All Occupants must be equipped with skis</description>
     </rule>
+    <rule name="Super-Heavy Mortar" id="d0d4-1879-39a8-8106" hidden="false">
+      <description>Treat this weapon as a heavy howitzer, except that it may only fire indirectly, and has a range of 12–72”</description>
+    </rule>
+    <rule name=" Heavy Rocket Launcher" id="bb41-edd5-2f7f-b84f" hidden="false">
+      <description>This heavy rocket launcher fires HE (4”) rockets rather than the usual HE (3”) rockets. However, to represent the fact that it is so slow to reload, after it has fired, it must then be given a successful Rally order before it can be ordered to Fire again.</description>
+    </rule>
+    <rule name="Improved Ballistics (+4 -&gt; +5)" id="b24a-9010-4b0f-cf92" hidden="false">
+      <description>Against targets within half of its range, the weapon with this special rule has a base Pen value of +5 instead of +4</description>
+    </rule>
+    <rule name="Improved Ballistics (+5 -&gt; +6)" id="1d29-22ee-6530-7af9" hidden="false">
+      <description>Against targets within half of its range, the weapon with this special rule has a base Pen value of +6 instead of +5</description>
+    </rule>
+    <rule name="Versatile (Medium)" id="Versatile-A-19" hidden="false">
+      <description>The Weapon with this special rule can also fire as a medium howitzer.</description>
+    </rule>
+    <rule name="Versatile (Light)" id="1d88-88a7-faf3-3930" hidden="false">
+      <description>The Weapon with this special rule can also fire as a light howitzer.</description>
+    </rule>
   </sharedRules>
   <sharedSelectionEntries>
     <selectionEntry type="upgrade" import="true" name="Rifle" hidden="false" id="6ce7-ab1d-78f6-abd4" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -841,20 +859,20 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <infoLink name="Heavy machine gun (HMG)" id="13ec-16a2-667b-d140" hidden="false" type="profile" targetId="eaf4-2622-6e88-8636"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Light automatic cannon" hidden="false" id="f6c6-6e07-ad5a-77d8" publicationId="6d3a-4ad3-2bb6-913e" page="93">
+    <selectionEntry type="upgrade" import="true" name="Light Automatic Cannon" hidden="false" id="f6c6-6e07-ad5a-77d8" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
         <categoryLink name="Heavy Weapons" hidden="false" id="7ecc-e022-7f88-22e0" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Light automatic cannon" id="bc63-07c6-349d-bc39" hidden="false" type="profile" targetId="0ed7-1d67-6c7e-0245"/>
+        <infoLink name="Light Automatic Cannon" id="bc63-07c6-349d-bc39" hidden="false" type="profile" targetId="0ed7-1d67-6c7e-0245"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Heavy automatic cannon" hidden="false" id="9f33-b251-e31d-430c" publicationId="6d3a-4ad3-2bb6-913e" page="93">
+    <selectionEntry type="upgrade" import="true" name="Heavy Automatic Cannon" hidden="false" id="9f33-b251-e31d-430c" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
         <categoryLink name="Heavy Weapons" hidden="false" id="0f41-f2b5-16bc-3f62" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Heavy automatic cannon" id="0997-7058-a933-f43e" hidden="false" type="profile" targetId="2667-e751-e170-935d"/>
+        <infoLink name="Heavy Automatic Cannon" id="0997-7058-a933-f43e" hidden="false" type="profile" targetId="2667-e751-e170-935d"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Anti-tank rifle" hidden="false" id="30ac-646a-b791-0c5f" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -903,12 +921,12 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <infoLink name="Panzerfaust" id="7a04-1f05-ff7c-c444" hidden="false" type="profile" targetId="9d00-d119-d721-50fe"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Light anti-tank gun" hidden="false" id="c83f-2485-b692-0273" publicationId="6d3a-4ad3-2bb6-913e" page="93">
+    <selectionEntry type="upgrade" import="true" name="Light Anti-tank Gun" hidden="false" id="c83f-2485-b692-0273" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
         <categoryLink name="Heavy Weapons" hidden="false" id="223d-ebc0-5363-2577" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Light anti-tank gun" id="4e18-54dc-22e7-8bef" hidden="false" type="profile" targetId="01bd-b6cb-a000-bad3"/>
+        <infoLink name="Light Anti-tank Gun" id="4e18-54dc-22e7-8bef" hidden="false" type="profile" targetId="01bd-b6cb-a000-bad3"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Flamethrower (infantry)" hidden="false" id="95c2-71e7-b995-060b" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -936,20 +954,20 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <infoLink name="Medium anti-tank gun" id="6498-b47e-e773-f6df" hidden="false" type="profile" targetId="8f96-d96f-6f60-6a04"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Heavy anti-tank gun" hidden="false" id="a73f-0b9c-cca3-6a74" publicationId="6d3a-4ad3-2bb6-913e" page="93">
+    <selectionEntry type="upgrade" import="true" name="Heavy Anti-tank Gun" hidden="false" id="a73f-0b9c-cca3-6a74" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
         <categoryLink name="Heavy Weapons" hidden="false" id="a154-5f74-cfe3-cad0" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Heavy anti-tank gun" id="15c4-afd5-dc7e-2fb6" hidden="false" type="profile" targetId="4793-e8ef-653d-fd6d"/>
+        <infoLink name="Heavy Anti-tank Gun" id="15c4-afd5-dc7e-2fb6" hidden="false" type="profile" targetId="4793-e8ef-653d-fd6d"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Super-heavy anti-tank gun" hidden="false" id="6fb0-aefb-3d17-78e6" publicationId="6d3a-4ad3-2bb6-913e" page="93">
+    <selectionEntry type="upgrade" import="true" name="Super-heavy Anti-tank Gun" hidden="false" id="6fb0-aefb-3d17-78e6" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
         <categoryLink name="Heavy Weapons" hidden="false" id="aec9-a1e7-1828-d694" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
-        <infoLink name="Super-heavy anti-tank gun" id="230e-1312-7ba9-c766" hidden="false" type="profile" targetId="9d60-a884-81c9-88a7"/>
+        <infoLink name="Super-heavy Anti-tank Gun" id="230e-1312-7ba9-c766" hidden="false" type="profile" targetId="9d60-a884-81c9-88a7"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Light mortar" hidden="false" id="fa6b-c63c-bb89-d5ec" publicationId="6d3a-4ad3-2bb6-913e" page="93">
@@ -1016,11 +1034,6 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
       </constraints>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Cavalry Carbine" hidden="false" id="87f3-ea06-5f88-f882"/>
-    <selectionEntry type="upgrade" import="true" name="Unarmed" hidden="false" id="9bbb-3619-c95a-b206">
-      <infoLinks>
-        <infoLink name="Unarmed" id="95bc-fb90-3d29-2d83" hidden="false" type="rule" targetId="a9f8-6896-7207-84ce"/>
-      </infoLinks>
-    </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Demolition Charge" hidden="false" id="f7f6-dc31-3120-b5cc">
       <infoLinks>
         <infoLink name="Demolition Charge" id="1451-8502-cc94-2a96" hidden="false" type="profile" targetId="8f52-8aa1-955b-e683"/>
@@ -1156,14 +1169,14 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <infoLink name="Forward-facing medium anti-tank gun" id="1ddd-915e-18fe-6180" hidden="false" type="profile" targetId="2c3c-f1a5-7536-28a4"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Forward-facing heavy anti-tank gun" hidden="false" id="876e-de79-43d7-9221">
+    <selectionEntry type="upgrade" import="true" name="Forward-facing Heavy Anti-tank Gun" hidden="false" id="876e-de79-43d7-9221">
       <infoLinks>
-        <infoLink name="Forward-facing heavy anti-tank gun" id="6026-31c2-3e0e-e496" hidden="false" type="profile" targetId="9148-cb56-5c74-8191"/>
+        <infoLink name="Forward-facing Heavy Anti-tank Gun" id="6026-31c2-3e0e-e496" hidden="false" type="profile" targetId="9148-cb56-5c74-8191"/>
       </infoLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Forward-facing super-heavy anti-tank gun" hidden="false" id="6900-0301-854e-47bf">
+    <selectionEntry type="upgrade" import="true" name="Forward-facing Super-heavy Anti-tank Gun" hidden="false" id="6900-0301-854e-47bf">
       <infoLinks>
-        <infoLink name="Forward-facing super-heavy anti-tank gun" id="9950-4ca1-f763-b6fe" hidden="false" type="profile" targetId="738c-97f1-aae4-e6b0"/>
+        <infoLink name="Forward-facing Super-heavy Anti-tank Gun" id="9950-4ca1-f763-b6fe" hidden="false" type="profile" targetId="738c-97f1-aae4-e6b0"/>
       </infoLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Forward-facing Light howitzer" hidden="false" id="f47e-c3aa-a7a0-8960">
@@ -1246,6 +1259,49 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <infoLink name="Front, Left, Right Pintle-mounted LMG" id="182b-6a30-2ae1-ed64" hidden="false" type="profile" targetId="755e-b6f7-3bf9-42b8"/>
       </infoLinks>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Unarmed" hidden="false" id="c73b-56cd-dfbd-931b">
+      <infoLinks>
+        <infoLink name="Unarmed" id="1d69-6c1e-667b-6913" hidden="false" type="profile" targetId="0785-dddf-d24d-3cb1"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Spotter" hidden="false" id="a81d-9a34-e7b0-ab35">
+      <entryLinks>
+        <entryLink import="true" name="Unarmed" hidden="false" id="1964-49e8-d92a-9243" type="selectionEntry" targetId="c73b-56cd-dfbd-931b">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d4ef-3c77-f537-6593-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d4ef-3c77-f537-6593-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
+      <infoLinks>
+        <infoLink name="Spotter" id="e18c-3d38-8836-de32" hidden="false" type="rule" targetId="1b62-7298-1a6a-9c66"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Super-heavy Mortar" hidden="false" id="eb6f-2795-e8ec-86cc">
+      <infoLinks>
+        <infoLink name="Super-heavy Mortar" id="832f-f391-1f82-47af" hidden="false" type="profile" targetId="14ab-0142-51f5-4ffa"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Multiple Rocket Launcher" hidden="false" id="aff4-a027-7e76-4d24">
+      <infoLinks>
+        <infoLink name="Multiple Rocket Launcher" id="8349-9d8d-f38d-d6e2" hidden="false" type="profile" targetId="7712-5a7a-3896-c658"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Automatic Cannon On Rotating Platform" hidden="false" id="cd8c-d082-b77b-2f5d">
+      <infoLinks>
+        <infoLink name="Heavy Automatic Cannon On Rotating Platform" id="3948-b715-54d6-6d9e" hidden="false" type="profile" targetId="a6d3-e993-ec2c-9166"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Light Automatic Cannon On Rotating Platform" hidden="false" id="dc37-b0fc-f164-4daf">
+      <infoLinks>
+        <infoLink name="Light Automatic Cannon On Rotating Platform" id="a9d9-29cc-596c-fc58" hidden="false" type="profile" targetId="e36d-78d7-ee85-54c1"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Heavy Anti-tank Gun On Rotating Platform" hidden="false" id="4e11-4544-b3f7-73bc">
+      <infoLinks>
+        <infoLink name="Heavy Anti-tank Gun On Rotating Platform" id="e3dd-80ac-075f-cbe4" hidden="false" type="profile" targetId="b566-f551-803a-19c9"/>
+      </infoLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
     <profile name="Rifle" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="8f32-25d0-9493-e156" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -1312,7 +1368,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, Fixed</characteristic>
       </characteristics>
     </profile>
-    <profile name="Light automatic cannon" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="0ed7-1d67-6c7e-0245" publicationId="6d3a-4ad3-2bb6-913e" page="92">
+    <profile name="Light Automatic Cannon" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="0ed7-1d67-6c7e-0245" publicationId="6d3a-4ad3-2bb6-913e" page="92">
       <characteristics>
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
@@ -1320,7 +1376,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, Fixed. HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
-    <profile name="Heavy automatic cannon" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="2667-e751-e170-935d" publicationId="6d3a-4ad3-2bb6-913e" page="92">
+    <profile name="Heavy Automatic Cannon" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="2667-e751-e170-935d" publicationId="6d3a-4ad3-2bb6-913e" page="92">
       <characteristics>
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
@@ -1368,7 +1424,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0"/>
       </characteristics>
     </profile>
-    <profile name="Light anti-tank gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="01bd-b6cb-a000-bad3" publicationId="6d3a-4ad3-2bb6-913e" page="92">
+    <profile name="Light Anti-tank Gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="01bd-b6cb-a000-bad3" publicationId="6d3a-4ad3-2bb6-913e" page="92">
       <characteristics>
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
@@ -1384,7 +1440,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Fixed, Team, HE (1&quot;)</characteristic>
       </characteristics>
     </profile>
-    <profile name="Heavy anti-tank gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="4793-e8ef-653d-fd6d" publicationId="6d3a-4ad3-2bb6-913e" page="92">
+    <profile name="Heavy Anti-tank Gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="4793-e8ef-653d-fd6d" publicationId="6d3a-4ad3-2bb6-913e" page="92">
       <characteristics>
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
@@ -1392,7 +1448,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Fixed, Team, HE (2&quot;)</characteristic>
       </characteristics>
     </profile>
-    <profile name="Super-heavy anti-tank gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="9d60-a884-81c9-88a7" publicationId="6d3a-4ad3-2bb6-913e" page="92">
+    <profile name="Super-heavy Anti-tank Gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="9d60-a884-81c9-88a7" publicationId="6d3a-4ad3-2bb6-913e" page="92">
       <characteristics>
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">84&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
@@ -1705,7 +1761,7 @@ as a direct hit by a 3” HE weapon against the vehicle instead of using the tem
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">HE (1&quot;), Front Arc</characteristic>
       </characteristics>
     </profile>
-    <profile name="Forward-facing heavy anti-tank gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="9148-cb56-5c74-8191" publicationId="6d3a-4ad3-2bb6-913e" page="92">
+    <profile name="Forward-facing Heavy Anti-tank Gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="9148-cb56-5c74-8191" publicationId="6d3a-4ad3-2bb6-913e" page="92">
       <characteristics>
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
@@ -1713,7 +1769,7 @@ as a direct hit by a 3” HE weapon against the vehicle instead of using the tem
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">HE (2&quot;), Front Arc</characteristic>
       </characteristics>
     </profile>
-    <profile name="Forward-facing super-heavy anti-tank gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="738c-97f1-aae4-e6b0" publicationId="6d3a-4ad3-2bb6-913e" page="92">
+    <profile name="Forward-facing Super-heavy Anti-tank Gun" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="738c-97f1-aae4-e6b0" publicationId="6d3a-4ad3-2bb6-913e" page="92">
       <characteristics>
         <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">84&quot;</characteristic>
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
@@ -1852,6 +1908,54 @@ as a direct hit by a 3” HE weapon against the vehicle instead of using the tem
         <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
         <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Flak, Front Arc, Left Arc, Right Arc</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Unarmed" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="0785-dddf-d24d-3cb1">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">-</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">-</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Unarmed!</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Super-heavy Mortar" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="14ab-0142-51f5-4ffa">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">12&quot;-72&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, Fixed, Howitzer, HE (4&quot;), Super-Heavy Mortar</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Multiple Rocket Launcher" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="7712-5a7a-3896-c658">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;-72&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">HE</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Indirect Fire, HE (4&quot;), Team, Fixed, Multiple Launcher, Heavy Rocket Launcher</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Light Automatic Cannon On Rotating Platform" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="e36d-78d7-ee85-54c1" publicationId="6d3a-4ad3-2bb6-913e" page="92">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">48&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+2</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, HE (1&quot;), Flak, 360-degree arc of fire, Gun Shield</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Heavy Automatic Cannon On Rotating Platform" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="a6d3-e993-ec2c-9166" publicationId="6d3a-4ad3-2bb6-913e" page="92">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">2</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+3</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, HE (1&quot;), Flak, 360-degree arc of fire</characteristic>
+      </characteristics>
+    </profile>
+    <profile name="Heavy Anti-tank Gun On Rotating Platform" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="b566-f551-803a-19c9" publicationId="6d3a-4ad3-2bb6-913e" page="92">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">72&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">1</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">+6</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, HE (2&quot;), 360-degree arc of fire, Flak</characteristic>
       </characteristics>
     </profile>
   </sharedProfiles>
