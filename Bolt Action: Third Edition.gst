@@ -32,6 +32,9 @@
     <categoryEntry name="Ambulances" id="be8b-7a11-fc57-4555" hidden="false"/>
     <categoryEntry name="Lend-lease Vehicles" id="079c-b917-f17a-02ac" hidden="false"/>
     <categoryEntry name="Army Special Rules" id="7137-830a-72de-6d81" hidden="false"/>
+    <categoryEntry name="Company Commander" id="5e5a-6a55-edc8-468f" hidden="false"/>
+    <categoryEntry name="Commisar" id="f880-7070-5ff7-6f5b" hidden="false"/>
+    <categoryEntry name="Configuration" id="9f43-cba0-0236-299a" hidden="false"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Engineer Platoon" id="c1f4-d905-fb7d-17ab" hidden="false" page="186" publicationId="6d3a-4ad3-2bb6-913e">
@@ -67,17 +70,16 @@
         </categoryLink>
         <categoryLink name="Headquarters Units" hidden="false" id="cdf3-2739-dd94-0dc9" targetId="6b53-28ad-d16f-2f00"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="f8d9-ebb9-a66b-0a8f" includeChildSelections="true"/>
+      </constraints>
     </forceEntry>
     <forceEntry name="Rifle Platoon" id="2de2-8df0-ebf4-b7de" hidden="false" publicationId="6d3a-4ad3-2bb6-913e" page="184">
       <categoryLinks>
-        <categoryLink name="Anti-Tank Teams" hidden="false" id="cd0a-729a-c046-8ed2" targetId="573f-2b84-c891-5e1b">
+        <categoryLink name="Platoon Commander" hidden="false" id="6540-e85a-63c3-00d5" targetId="5aa8-cdcf-903c-eef7">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8393-fd9a-ab02-1b1e"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Foreward Observer" hidden="false" id="d082-ea9a-e7cf-539d" targetId="8302-0ded-0163-0a1e">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c84-0a20-4049-572b"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e17a-8a3e-774b-06d4-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e17a-8a3e-774b-06d4-max"/>
           </constraints>
         </categoryLink>
         <categoryLink name="Infantry Squads" hidden="false" id="94cf-e5bf-f0b6-e2be" targetId="dc5d-8aeb-6591-b49b">
@@ -86,14 +88,9 @@
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="45fd-b998-955c-a80e"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Light Mortar Team" hidden="false" id="59ad-2241-e60a-1612" targetId="46b9-67df-e29a-cfe5">
+        <categoryLink name="Commisar" hidden="false" id="c82e-09d5-4b8d-6727" targetId="f880-7070-5ff7-6f5b">
           <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="1ce2-94b7-8b45-8d67"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Medic" hidden="false" id="403e-f204-74b6-28dd" targetId="c3cf-3e5d-f565-e692">
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="62a7-bc8c-f93c-0fe0"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ba7b-b946-a4e4-c24f" includeChildSelections="false"/>
           </constraints>
         </categoryLink>
         <categoryLink name="Sniper Team" hidden="false" id="bbe8-c01f-5c61-58b6" targetId="bb3f-f878-512e-6853">
@@ -101,9 +98,24 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="71c3-ecd0-200f-b11d"/>
           </constraints>
         </categoryLink>
+        <categoryLink name="Foreward Observer" hidden="false" id="d082-ea9a-e7cf-539d" targetId="8302-0ded-0163-0a1e">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8c84-0a20-4049-572b"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="Medic" hidden="false" id="403e-f204-74b6-28dd" targetId="c3cf-3e5d-f565-e692">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="62a7-bc8c-f93c-0fe0"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="Light Mortar Team" hidden="false" id="59ad-2241-e60a-1612" targetId="46b9-67df-e29a-cfe5">
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="1ce2-94b7-8b45-8d67"/>
+          </constraints>
+        </categoryLink>
         <categoryLink name="Transport Vehicle" hidden="false" id="8589-6575-9446-dbc9" targetId="9cdf-c776-8161-5e87">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1b03-a1ad-3b87-6412" automatic="false" includeChildSelections="false"/>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="1b03-a1ad-3b87-6412" automatic="false" includeChildSelections="false"/>
           </constraints>
           <modifiers>
             <modifier type="increment" value="1" field="1b03-a1ad-3b87-6412">
@@ -113,14 +125,10 @@
             </modifier>
           </modifiers>
         </categoryLink>
-        <categoryLink name="Platoon Commander" hidden="false" id="6540-e85a-63c3-00d5" targetId="5aa8-cdcf-903c-eef7">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e17a-8a3e-774b-06d4-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e17a-8a3e-774b-06d4-max"/>
-          </constraints>
-        </categoryLink>
-        <categoryLink name="Headquarters Units" hidden="false" id="7cdb-58dc-445f-d32f" targetId="6b53-28ad-d16f-2f00"/>
       </categoryLinks>
+      <constraints>
+        <constraint type="min" value="1" field="forces" scope="roster" shared="true" id="d5d9-14e6-d294-0992" includeChildSelections="true"/>
+      </constraints>
     </forceEntry>
     <forceEntry name="Armoured Platoon" id="04ef-9159-7b76-6c3e" hidden="false" page="188" publicationId="6d3a-4ad3-2bb6-913e">
       <categoryLinks>
@@ -137,6 +145,9 @@
           </constraints>
         </categoryLink>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="54f2-b887-b2c2-141d" includeChildSelections="true"/>
+      </constraints>
     </forceEntry>
     <forceEntry name="Recce Infantry Platoon" id="9ea2-18da-2a4c-60bc" hidden="false" page="189" publicationId="6d3a-4ad3-2bb6-913e">
       <categoryLinks>
@@ -170,6 +181,9 @@
           </constraints>
         </categoryLink>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="d569-0641-e4fa-120b" includeChildSelections="true"/>
+      </constraints>
     </forceEntry>
     <forceEntry name="Heavy Weapon Platoon" id="7784-cd86-9802-e5fd" hidden="false" page="185" publicationId="6d3a-4ad3-2bb6-913e">
       <categoryLinks>
@@ -209,6 +223,9 @@
         <categoryLink name="Headquarters Units" hidden="false" id="406b-e781-9238-3ffc" targetId="6b53-28ad-d16f-2f00"/>
       </categoryLinks>
       <comment>CHECK MAND</comment>
+      <constraints>
+        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="4038-f8c3-71a7-25ed" includeChildSelections="true"/>
+      </constraints>
     </forceEntry>
     <forceEntry name="Artillery Platoon" id="8b2e-7e32-0adc-db86" hidden="false" page="187" publicationId="6d3a-4ad3-2bb6-913e">
       <categoryLinks>
@@ -249,6 +266,36 @@
           </constraints>
         </categoryLink>
       </categoryLinks>
+      <constraints>
+        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="f3f6-84af-cb3f-24bb" includeChildSelections="true"/>
+      </constraints>
+    </forceEntry>
+    <forceEntry name="Configuration" id="6862-9e64-3947-7750" hidden="false">
+      <constraints>
+        <constraint type="min" value="1" field="forces" scope="roster" shared="true" id="d3e6-40a2-0840-5603-min" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="d3e6-40a2-0840-5603-max" includeChildSelections="true"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Configuration" hidden="false" id="98c0-4ae8-de14-8340" targetId="9f43-cba0-0236-299a"/>
+      </categoryLinks>
+    </forceEntry>
+    <forceEntry name="Company Commander" id="765a-e8cb-6fc6-6867" hidden="false">
+      <constraints>
+        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="b86c-fbeb-e6b7-eb86" includeChildSelections="true"/>
+      </constraints>
+      <categoryLinks>
+        <categoryLink name="Company Commander" hidden="false" id="3557-8b0f-5d1b-0542" targetId="5e5a-6a55-edc8-468f">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="80fd-3286-599c-9b71-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="80fd-3286-599c-9b71-max"/>
+          </constraints>
+        </categoryLink>
+        <categoryLink name="Transport Vehicle" hidden="false" id="2168-4bf0-89d6-7283" targetId="9cdf-c776-8161-5e87">
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="58c3-b293-df68-8f6f"/>
+          </constraints>
+        </categoryLink>
+      </categoryLinks>
     </forceEntry>
   </forceEntries>
   <costTypes>
@@ -266,8 +313,8 @@
     <profileType name="Vehicle" id="2726-bc10-a0e6-6b0b" hidden="false" kind="model">
       <characteristicTypes>
         <characteristicType name="Damage Value" id="28cf-9f74-5808-52b3"/>
-        <characteristicType name="Trans Shots" id="fc92-518e-d558-16a1"/>
-        <characteristicType name="Type Ranged" id="37d0-58a9-4b21-5e3b"/>
+        <characteristicType name="Transport Slots" id="fc92-518e-d558-16a1"/>
+        <characteristicType name="Movement Type" id="37d0-58a9-4b21-5e3b"/>
         <characteristicType name="Special Rules" id="b5b7-688f-e6a8-1a52"/>
       </characteristicTypes>
     </profileType>
@@ -791,6 +838,9 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </rule>
     <rule name="Versatile (Light)" id="1d88-88a7-faf3-3930" hidden="false">
       <description>The Weapon with this special rule can also fire as a light howitzer.</description>
+    </rule>
+    <rule name="Company Commander" id="6ed1-5874-9da5-df23" hidden="false">
+      <description>In Addition to the platoon commanders that are included in each platoon selector, a force can also include a single company commander (plus a transport vehicle), who is not part of any of the platoon selectors.</description>
     </rule>
   </sharedRules>
   <sharedSelectionEntries>

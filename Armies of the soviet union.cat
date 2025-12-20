@@ -3,8 +3,8 @@
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Platoon Commander" hidden="false" id="a025-dcd6-d08c-4f3a">
       <categoryLinks>
-        <categoryLink targetId="5aa8-cdcf-903c-eef7" id="0e44-acaf-fc15-3f2c" primary="false" name="Platoon Commander"/>
-        <categoryLink targetId="6b53-28ad-d16f-2f00" id="cfa5-bb31-9083-a348" primary="true" name="Headquarters Units"/>
+        <categoryLink targetId="5aa8-cdcf-903c-eef7" id="0e44-acaf-fc15-3f2c" primary="true" name="Platoon Commander"/>
+        <categoryLink targetId="6b53-28ad-d16f-2f00" id="cfa5-bb31-9083-a348" primary="false" name="Headquarters Units"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Officer" id="358c-e3fd-17ff-b9b5" hidden="false" sortIndex="2">
@@ -158,7 +158,8 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Commisar" hidden="false" id="b88f-74d1-d220-0b8c">
       <categoryLinks>
-        <categoryLink targetId="6b53-28ad-d16f-2f00" id="a591-f3eb-552d-c824" primary="true" name="Headquarters Units"/>
+        <categoryLink targetId="6b53-28ad-d16f-2f00" id="a591-f3eb-552d-c824" primary="false" name="Headquarters Units"/>
+        <categoryLink targetId="f880-7070-5ff7-6f5b" id="2a3d-c25c-be06-e3d8" primary="true" name="Commisar"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Veterancy" id="234a-a157-a634-c8fd" hidden="false" defaultSelectionEntryId="ffa6-8cc5-42a0-7324" sortIndex="1">
@@ -453,11 +454,6 @@
       <modifierGroups>
         <modifierGroup type="and">
           <modifiers>
-            <modifier type="set" value="false" field="hidden">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="2de2-8df0-ebf4-b7de" childId="any" shared="true"/>
-              </conditions>
-            </modifier>
             <modifier type="set" value="Air Force Forward Observer" field="name">
               <conditions>
                 <condition type="atLeast" value="1" field="selections" scope="parent" childId="ff80-961d-df1c-c94c" shared="true" includeChildSelections="true"/>
@@ -5619,68 +5615,78 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Light Mortar Team" hidden="false" id="9fd7-e83f-337b-3930">
       <selectionEntryGroups>
-        <selectionEntryGroup name="Veterancy" id="b8df-22b7-2c4a-5332" hidden="false" defaultSelectionEntryId="a969-0a0d-1b56-5d50" sortIndex="1">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="4e63-5eb8-3dde-b288" sortIndex="3">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="b6fa-9cc2-18a8-3f91" sortIndex="2">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="5fde-8d3e-b428-7039" sortIndex="1">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
+        <selectionEntryGroup name="Veterancy" id="d333-9ed4-6503-a1be" hidden="false" defaultSelectionEntryId="005f-4da6-4a7b-6722" sortIndex="1">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a9c7-f803-d0b3-7d26" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e7cc-2b07-b3fb-ea15" includeChildSelections="false"/>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e447-6705-0ddd-f581" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8276-c589-ecd7-2038" includeChildSelections="false"/>
           </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Inexperienced" hidden="false" id="092e-63e3-6a10-9e62" type="selectionEntry" targetId="17e0-54c5-2121-17d9">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="21"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Regular" hidden="false" id="0c2b-f654-a160-5a82" type="selectionEntry" targetId="8102-9ec6-85f5-a685">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="30"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Veteran" hidden="false" id="d079-7fe6-fbd1-df0b" type="selectionEntry" targetId="516a-ef78-1d1c-e03c">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="39"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
         </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink targetId="ce86-e5af-5b82-d9d0" id="4c3a-5480-f8d9-18a2" primary="true" name="Mortar Team"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Mortar Crew" hidden="false" id="852a-d911-693d-5d9a" sortIndex="2">
+        <selectionEntryGroup name="Army Special Rules" id="5a61-0c2e-d334-0235" hidden="false" sortIndex="4">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Hammer and Sickle" id="9376-c02d-e341-8507" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Hammer and Sickle: Airborne" hidden="false" id="7a1d-0ea8-49b6-dbb8" type="selectionEntry" targetId="bbeb-43c8-1704-8504">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="14e3-d396-5635-fa11" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Hammer and Sickle: NKVD" hidden="false" id="e732-1598-44f5-dac4" type="selectionEntry" targetId="cf6b-03ec-c8be-bafd">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fbcb-dd2a-3e9e-51a2" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Hammer and Sickle: Naval Brigade" hidden="false" id="e63e-2e06-e92a-cc05" type="selectionEntry" targetId="d8f3-223b-b2c2-04c9">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9f37-9fbf-877c-f3e2" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="30f6-55a9-9654-5ae4" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Mortar Crew" id="0388-1083-0096-897a" hidden="false" sortIndex="2">
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Crewman" hidden="false" id="a191-d5fb-e528-86b2" sortIndex="2">
+            <selectionEntry type="model" import="true" name="Crewman" hidden="false" id="a191-d5fb-e528-86b2">
               <constraints>
                 <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="1009-e47a-f937-6375-min" includeChildSelections="false"/>
                 <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="1009-e47a-f937-6375-max" includeChildSelections="false"/>
               </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Unarmed" hidden="false" id="9126-5645-4f32-8ca9" type="selectionEntry" targetId="c73b-56cd-dfbd-931b" collective="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c9ff-8040-127b-00d0-min" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c9ff-8040-127b-00d0-max" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
             </selectionEntry>
           </selectionEntries>
-          <modifierGroups>
-            <modifierGroup type="and">
-              <modifiers>
-                <modifier type="set" value="30" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="b6fa-9cc2-18a8-3f91" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="39" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="4e63-5eb8-3dde-b288" shared="true"/>
-                  </conditions>
-                </modifier>
-                <modifier type="set" value="21" field="ab8b-35f3-81bf-8563">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="5fde-8d3e-b428-7039" shared="true"/>
-                  </conditions>
-                </modifier>
-              </modifiers>
-            </modifierGroup>
-          </modifierGroups>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a5a3-6464-5ed9-56d3-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a5a3-6464-5ed9-56d3-max" includeChildSelections="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="fc9c-d076-bc27-94d2-min" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="fc9c-d076-bc27-94d2-max" includeChildSelections="false"/>
           </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Mortar" id="18f2-f971-6ae4-0050" hidden="false" sortIndex="3">
           <entryLinks>
             <entryLink import="true" name="Light mortar" hidden="false" id="e192-ed76-06a6-0b63" type="selectionEntry" targetId="fa6b-c63c-bb89-d5ec">
               <constraints>
@@ -5689,11 +5695,15 @@
               </constraints>
             </entryLink>
           </entryLinks>
-        </selectionEntry>
-      </selectionEntries>
-      <entryLinks>
-        <entryLink import="true" name="Light Automatic Cannon" hidden="false" id="b242-6266-96d2-e9bb" type="selectionEntry" targetId="f6c6-6e07-ad5a-77d8"/>
-      </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="27fb-3207-c654-f1b1-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="27fb-3207-c654-f1b1-max" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="46b9-67df-e29a-cfe5" id="e2ba-6938-15ed-7581" primary="true" name="Light Mortar Team"/>
+      </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Medium Mortar Team" hidden="false" id="8df2-22bf-a548-4d01">
       <selectionEntryGroups>
@@ -5783,8 +5793,8 @@
         <profile name="T-26a Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="99fe-d326-1ea1-b5a8">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured carrier)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
           </characteristics>
         </profile>
@@ -5840,8 +5850,8 @@
         <profile name="T-26b Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="111a-4d9a-8e49-f6c1">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured carrier)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
           </characteristics>
         </profile>
@@ -5908,8 +5918,8 @@
         <profile name="OT-26 and OT-133 Light Flamethrower Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="f594-f9e2-01d8-072c">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured carrier)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Internal volatile fuel tanks</characteristic>
           </characteristics>
         </profile>
@@ -5968,8 +5978,8 @@
         <profile name="BT-5 And BT-7 Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="6807-8c58-6cd6-5ac5">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">8+ (Light Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Fast</characteristic>
           </characteristics>
         </profile>
@@ -6047,8 +6057,8 @@
         <profile name="T-37 Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="a654-6e32-f3ff-1f15">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Carrier)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Amphibious</characteristic>
           </characteristics>
         </profile>
@@ -6102,8 +6112,8 @@
         <profile name="T-40 Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="8607-c3e5-eb14-3316">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Carrier)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Amphibious</characteristic>
           </characteristics>
         </profile>
@@ -6163,8 +6173,8 @@
         <profile name="T-50 Light Infantry Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="abbf-9fbf-5aeb-579e">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">8+ (Light Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52"/>
           </characteristics>
         </profile>
@@ -6225,8 +6235,8 @@
         <profile name="T-60 Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="1ca0-cb1a-b9e7-a967">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">8+ (Light Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52"/>
           </characteristics>
         </profile>
@@ -6288,8 +6298,8 @@
         <profile name="T-70 Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="c2f1-4833-d0fa-3f0a">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">8+ (Light Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52"/>
           </characteristics>
         </profile>
@@ -6351,8 +6361,8 @@
         <profile name="T-28 Light Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="7107-9bd6-4dd8-141d">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">8+ (Light Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52"/>
           </characteristics>
           <modifiers>
@@ -6482,8 +6492,8 @@
         <profile name="T34/76 Medium Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="432f-f87d-2415-590d">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">9+ (medium tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
           </characteristics>
           <modifiers>
@@ -6574,8 +6584,8 @@
         <profile name="T34/85 Medium Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="5c2c-70df-2a34-7703">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">9+ (medium tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
           </characteristics>
           <modifiers>
@@ -6666,8 +6676,8 @@
         <profile name="Tractor Factory T-34" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="fd8f-76cb-28fc-e7c4">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">9+ (medium tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
           </characteristics>
           <modifierGroups>
@@ -6775,8 +6785,8 @@
         <profile name="T-35 Heavy Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="db4f-55ed-59fd-77c7">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">9+ (Medium Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Unreliable</characteristic>
           </characteristics>
         </profile>
@@ -6906,8 +6916,8 @@
         <profile name="KV-1 Heavy Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="91d9-a62c-dd1f-e7cf">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">10+ (Heavy Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Slow, Armoured All Round</characteristic>
           </characteristics>
           <modifierGroups>
@@ -7076,8 +7086,8 @@
         <profile name="KV-85 And IS-1 Heavy Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="879f-6e30-e6cc-aa2d">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">10+ (Heavy Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
           </characteristics>
         </profile>
@@ -7157,8 +7167,8 @@
         <profile name="IS-2 Heavy Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="aff2-d91c-42cc-68ad">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">10+ (Heavy Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
           </characteristics>
         </profile>
@@ -7253,8 +7263,8 @@
         <profile name="IS-3 Heavy Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="b666-6b77-a4e0-a767">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">11+ (Super-heavy Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Reinforced Front Armour</characteristic>
           </characteristics>
         </profile>
@@ -7332,8 +7342,8 @@
         <profile name="ZiS-30" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="92b1-2f1e-1ea9-23bc">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Carrier)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Open-Topped</characteristic>
           </characteristics>
         </profile>
@@ -7387,8 +7397,8 @@
         <profile name="SU-85" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="d1ac-1bcf-cc91-cb4b">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">9+ (Medium Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52"/>
           </characteristics>
         </profile>
@@ -7441,8 +7451,8 @@
         <profile name="SU-100" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="4e78-30cb-94b1-24aa">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">9+ (Medium Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52"/>
           </characteristics>
         </profile>
@@ -7495,8 +7505,8 @@
         <profile name="ISU-122" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="1875-7e56-fd9d-257f">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">10+ (Heavy Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Improved HE</characteristic>
           </characteristics>
         </profile>
@@ -7557,8 +7567,8 @@
         <profile name="SU-76" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="29fc-4dd7-f32f-e0b4">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">8+ (Light Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Open-Topped</characteristic>
           </characteristics>
           <modifiers>
@@ -7628,8 +7638,8 @@
         <profile name="SU-76i" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="1dbe-f5f6-2e51-9d3d">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">8+ (Light Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52"/>
           </characteristics>
           <modifiers>
@@ -7699,8 +7709,8 @@
         <profile name="SU-122" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="df9d-8fe6-ff7a-6dad">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">9+ (Medium Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52"/>
           </characteristics>
         </profile>
@@ -7753,8 +7763,8 @@
         <profile name="KV-2" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="0833-0dc1-b8b6-9316">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">10+ (Heavy Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Slow, Slow Load</characteristic>
           </characteristics>
         </profile>
@@ -7850,8 +7860,8 @@
         <profile name="SU-152 And ISU-152" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="fa30-f2de-980b-f774">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">10+ (Heavy Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Slow Load, Big Shell</characteristic>
           </characteristics>
         </profile>
@@ -7914,8 +7924,8 @@
         <profile name="Katyusha" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="70d5-a421-0412-3436">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-Skinned</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Stationary Firing Platform</characteristic>
           </characteristics>
         </profile>
@@ -7968,8 +7978,8 @@
         <profile name="Tachanka" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="7fcb-7fff-b65b-62e9">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">3+ (Literally Soft-Skinned!)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Just a Cart, Ancillary</characteristic>
           </characteristics>
         </profile>
@@ -8021,8 +8031,8 @@
         <profile name="The Bronekater - Soviet Riverine Craft" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="3130-d979-eaa5-4d47">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">9+ (Medium Tank)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">12</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">12</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Armoured All Round, Armoured Gun Boat, Waterborne</characteristic>
           </characteristics>
         </profile>
@@ -8615,8 +8625,8 @@
         <profile name="Tokarev 4m Quad Maxim On Gaz-AA Truck" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="9205-eb56-3656-950b">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft Skinned)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Stationary Firing Platform, Flak</characteristic>
           </characteristics>
         </profile>
@@ -8670,8 +8680,8 @@
         <profile name="BA-64" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="da4a-ac2a-4a2f-897c">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Car)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Recce, Open-topped, Flak</characteristic>
           </characteristics>
           <modifierGroups>
@@ -8806,8 +8816,8 @@
         <profile name="BA-20" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="1215-d1dc-6430-f458">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Car)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Recce</characteristic>
           </characteristics>
         </profile>
@@ -8861,8 +8871,8 @@
         <profile name="BA-10" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="2b81-211a-683a-0fcd">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Car)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Recce</characteristic>
           </characteristics>
         </profile>
@@ -8936,8 +8946,8 @@
         <profile name="BA-3/6 Heavy Armoured Car" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="be44-76d7-57c0-e8df">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Car)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Recce</characteristic>
           </characteristics>
         </profile>
@@ -9011,8 +9021,8 @@
         <profile name="D-8 Light Armoured Car" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="2a1e-2149-dd69-89b9">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Car)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Recce</characteristic>
           </characteristics>
           <modifierGroups>
@@ -9132,8 +9142,8 @@
         <profile name="FAI Light Armoured Car" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="29fc-5d10-4a33-399a">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Car)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Recce</characteristic>
           </characteristics>
         </profile>
@@ -9187,8 +9197,8 @@
         <profile name="Truck" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="7f8b-9b46-fd3f-b4bb">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">12</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">12</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
           </characteristics>
           <modifiers>
@@ -9265,8 +9275,8 @@
         <profile name="Half-tracked Truck" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="cedf-bb6c-5b7e-18cf">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">12</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Half-track</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">12</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Half-track</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
           </characteristics>
         </profile>
@@ -9317,8 +9327,8 @@
         <profile name="Tracked Artillery Tractor" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="7d85-4498-267a-147f">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
           </characteristics>
           <modifierGroups>
@@ -9400,8 +9410,8 @@
         <profile name="Gaz &apos;jeep&apos;" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="152b-2f86-6ab5-821c">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">3</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">3</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
           </characteristics>
           <modifiers>
@@ -9536,8 +9546,8 @@
         <profile name="T-20 Komsomolets" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="bd26-60f8-4311-974d">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Car)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">6</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">6</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Tracked</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Open-Topped</characteristic>
           </characteristics>
         </profile>
@@ -9595,8 +9605,8 @@
         <profile name="Aerosan" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="7f28-394c-e0a2-5cef">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">7+ (Armoured Car)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">4</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Whl/Trck</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">4</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Whl/Trck</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Open-Topped, Winter Vehicle</characteristic>
           </characteristics>
         </profile>
@@ -9644,8 +9654,8 @@
         <profile name="Horse-drawn Limber" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="d78b-0c7c-30c6-5c45">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">3+ (Literally Soft-skinned)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Slow (only when towing)</characteristic>
           </characteristics>
         </profile>
@@ -9692,8 +9702,8 @@
         <profile name="Field Ambulance" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="54e3-5a00-b014-e207">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">None. However, like empty transports, ambulances are destroyed if they end their turn closer to enemy units than to friendly units.</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">None. However, like empty transports, ambulances are destroyed if they end their turn closer to enemy units than to friendly units.</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Medical Vehicle</characteristic>
           </characteristics>
         </profile>
@@ -9806,7 +9816,8 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Company Commander" hidden="false" id="95d9-0288-5df5-0342">
       <categoryLinks>
-        <categoryLink name="Headquarters Units" hidden="false" id="ac3e-b175-2a74-bd8e" targetId="6b53-28ad-d16f-2f00" primary="true"/>
+        <categoryLink name="Headquarters Units" hidden="false" id="ac3e-b175-2a74-bd8e" targetId="6b53-28ad-d16f-2f00" primary="false"/>
+        <categoryLink targetId="5e5a-6a55-edc8-468f" id="344f-8630-1fe9-a0a4" primary="true" name="Company Commander"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Officer" id="c6d8-0b8c-b85d-609d" hidden="false" sortIndex="2">
@@ -11070,8 +11081,8 @@
         <profile name="Gaz &apos;jeep&apos;" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="3842-a6af-0b30-382c">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
-            <characteristic name="Trans Shots" typeId="fc92-518e-d558-16a1">3</characteristic>
-            <characteristic name="Type Ranged" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">3</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
             <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
           </characteristics>
           <modifiers>
@@ -11201,6 +11212,198 @@
         </modifierGroup>
       </modifierGroups>
     </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Configuration" hidden="false" id="eef5-df6f-8d0d-be3e-soviet">
+      <constraints>
+        <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="9c8a-5fbd-4b48-6f0c-min" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="9c8a-5fbd-4b48-6f0c-max" includeChildSelections="true"/>
+      </constraints>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="War Period" id="1a4d-7c4d-b7fc-d87f" hidden="false" defaultSelectionEntryId="082a-f53b-a1d7-bb3c-soviet">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Early" hidden="false" id="0610-40ea-6d66-5b8c-soviet" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b7f2-6e24-6526-76e9" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Late" hidden="false" id="082a-f53b-a1d7-bb3c-soviet" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="215c-57c1-f16f-1fbb" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Mid" hidden="false" id="3329-614c-d667-aa4f-soviet" sortIndex="2">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5823-d3eb-9fc3-c6d5" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="a375-5026-3784-be13-min" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="a375-5026-3784-be13-max" includeChildSelections="true"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="9f43-cba0-0236-299a" id="5357-668e-964b-4638" primary="true" name="Configuration"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Heavy Mortar Team" hidden="false" id="2e65-df00-c584-85a0">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="bb74-0126-310d-c001" hidden="false" defaultSelectionEntryId="a969-0a0d-1b56-5d50" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="3d0e-4ec7-37e6-9ddb" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="78"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="6853-051a-abba-7872" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="60"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="ade2-9e45-4c89-4dee" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="42"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5ee3-05c4-04b2-c22b" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5eb7-0c2b-9440-3e1f" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Mortar Team" hidden="false" id="70ee-987e-2737-4b3c" targetId="ce86-e5af-5b82-d9d0" primary="true"/>
+      </categoryLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Mortar Crew" hidden="false" id="8e01-c6f7-5426-5613" sortIndex="2">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Crewman" hidden="false" id="4850-61ad-3c1a-1647" sortIndex="1">
+              <constraints>
+                <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="e447-e319-1b95-4d53" includeChildSelections="false"/>
+                <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="5e0d-6388-990d-2171" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+            <selectionEntry type="model" import="true" name="Spotter" hidden="false" id="8b7f-d41c-6101-5355" sortIndex="3">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="537a-e4f8-fd8c-7344" includeChildSelections="false"/>
+              </constraints>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="10"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Spotter" id="da3f-93b1-37e9-fdaa" hidden="false" type="rule" targetId="1b62-7298-1a6a-9c66"/>
+              </infoLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5236-168d-eb12-5044" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4251-3f0b-48b7-b6b3" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Heavy mortar" hidden="false" id="f838-9b50-4359-5393" type="selectionEntry" targetId="0eea-f379-fa00-7f11" sortIndex="2">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8a4a-6bbc-42b6-a72c" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7826-bd9e-4e74-6b0d" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntry>
+      </selectionEntries>
+    </selectionEntry>
+    <selectionEntry type="unit" import="true" name="Light Mortar Team" hidden="false" id="76b6-5428-188e-1c44">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="ae78-15f7-e2dc-7611" hidden="false" defaultSelectionEntryId="005f-4da6-4a7b-6722" sortIndex="1">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4fe8-4d5a-dac4-0e6b" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce0e-2263-14e5-d077" includeChildSelections="false"/>
+          </constraints>
+          <entryLinks>
+            <entryLink import="true" name="Inexperienced" hidden="false" id="fe18-c992-6433-a11b" type="selectionEntry" targetId="17e0-54c5-2121-17d9">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="21"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Regular" hidden="false" id="1aa7-5530-b392-c783" type="selectionEntry" targetId="8102-9ec6-85f5-a685">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="30"/>
+              </costs>
+            </entryLink>
+            <entryLink import="true" name="Veteran" hidden="false" id="caac-35e0-ab0f-995f" type="selectionEntry" targetId="516a-ef78-1d1c-e03c">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="39"/>
+              </costs>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Army Special Rules" id="5c8c-fcd0-ecf1-d074" hidden="false" sortIndex="4">
+          <selectionEntryGroups>
+            <selectionEntryGroup name="Hammer and Sickle" id="92a6-6c8a-3a37-1992" hidden="false">
+              <entryLinks>
+                <entryLink import="true" name="Hammer and Sickle: Airborne" hidden="false" id="ad16-d2a5-2340-0559" type="selectionEntry" targetId="bbeb-43c8-1704-8504">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1aa8-ad0c-3005-8553" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Hammer and Sickle: NKVD" hidden="false" id="e7b1-1faa-c8e1-4598" type="selectionEntry" targetId="cf6b-03ec-c8be-bafd">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4963-55ef-664c-a0aa" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+                <entryLink import="true" name="Hammer and Sickle: Naval Brigade" hidden="false" id="ae8b-87d3-a2b2-397e" type="selectionEntry" targetId="d8f3-223b-b2c2-04c9">
+                  <constraints>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="26a7-3a55-0c34-80e3" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3f76-7a24-08f0-87fd" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntryGroup>
+          </selectionEntryGroups>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Mortar Crew" id="c971-16e1-e71a-c465" hidden="false" sortIndex="2">
+          <selectionEntries>
+            <selectionEntry type="model" import="true" name="Crewman" hidden="false" id="4fc3-85f5-7c03-eafe">
+              <constraints>
+                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="ff75-ee96-090d-37ee" includeChildSelections="false"/>
+                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4710-29b0-8583-375d" includeChildSelections="false"/>
+              </constraints>
+              <entryLinks>
+                <entryLink import="true" name="Unarmed" hidden="false" id="3b11-6962-e02a-0954" type="selectionEntry" targetId="c73b-56cd-dfbd-931b" collective="true">
+                  <constraints>
+                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4cdb-2a39-9970-1e12" includeChildSelections="false"/>
+                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2ecc-d355-12c8-f79b" includeChildSelections="false"/>
+                  </constraints>
+                </entryLink>
+              </entryLinks>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="c3af-725b-d92d-d195" includeChildSelections="false"/>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8fa0-bd6f-a34a-51d3" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Mortar" id="97c7-3892-c100-dd2a" hidden="false" sortIndex="3">
+          <entryLinks>
+            <entryLink import="true" name="Light mortar" hidden="false" id="d3a3-3f1a-bc8f-1336" type="selectionEntry" targetId="fa6b-c63c-bb89-d5ec">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="35de-9e9b-c18f-dfe5" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9426-df4e-1be4-78cf" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d12-bca9-8785-31fd" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c0f3-4016-e56a-e9ea" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="ce86-e5af-5b82-d9d0" id="9b78-f118-23d4-6adb" primary="true" name="Mortar Team"/>
+        <categoryLink targetId="46b9-67df-e29a-cfe5" id="8712-2eab-2cd4-02b2" primary="false" name="Light Mortar Team"/>
+      </categoryLinks>
+    </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
     <entryLink import="true" name="Platoon Commander" hidden="false" id="560a-17b2-a0a6-c6c1" targetId="a025-dcd6-d08c-4f3a" type="selectionEntry"/>
@@ -11238,7 +11441,12 @@
     <entryLink import="true" name="Dog Mines Anti-tank Team" hidden="false" id="f91d-e148-0cd0-47da" targetId="e1b7-7308-c217-cfc8" type="selectionEntry"/>
     <entryLink import="true" name="Sniper Team" hidden="false" id="48d9-84a0-8436-0734" targetId="690f-b03d-8cfa-19b0" type="selectionEntry"/>
     <entryLink import="true" name="Flamethrower Team" hidden="false" id="6fe1-4055-5764-2cb2" targetId="3416-fc23-976c-c5d1" type="selectionEntry"/>
-    <entryLink import="true" name="Light Mortar Team" hidden="false" id="d8d7-3525-e7c9-aa77" targetId="9fd7-e83f-337b-3930" type="selectionEntry"/>
+    <entryLink import="true" name="Light Mortar Team" hidden="false" id="d8d7-3525-e7c9-aa77" targetId="9fd7-e83f-337b-3930" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="46b9-67df-e29a-cfe5" id="6bfd-e092-826c-91ea" primary="true" name="Light Mortar Team"/>
+        <categoryLink targetId="ce86-e5af-5b82-d9d0" id="fcb9-175c-7149-f900" primary="false" name="Mortar Team"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink import="true" name="Medium Mortar Team" hidden="false" id="3171-60ac-c7af-e85d" targetId="8df2-22bf-a548-4d01" type="selectionEntry"/>
     <entryLink import="true" name="T-26a Light Tank" hidden="false" id="ebd4-6035-55b3-d700" targetId="ad24-0db6-7cca-70e7" type="selectionEntry"/>
     <entryLink import="true" name="T-26b Light Tank" hidden="false" id="b9ca-7836-0186-f7d7" targetId="79f4-4dac-23d0-44d1" type="selectionEntry"/>
@@ -11299,6 +11507,9 @@
     <entryLink import="true" name="ZiS-3 Divisional Gun" hidden="false" id="a66f-fc26-80da-70cc" targetId="9ff0-7d0e-d6e1-20d4" type="selectionEntry"/>
     <entryLink import="true" name="A-19 Field Gun" hidden="false" id="0401-802d-772c-2e4c" targetId="0511-6dfb-bc48-489c" type="selectionEntry"/>
     <entryLink import="true" name="BS-3 Anti-tank Gun" hidden="false" id="56ab-c184-7357-3075" targetId="eda7-1752-a0ae-9bed" type="selectionEntry"/>
+    <entryLink import="true" name="Configuration" hidden="false" id="0229-bd3e-e0f0-53b8-soviet" targetId="eef5-df6f-8d0d-be3e-soviet" type="selectionEntry"/>
+    <entryLink import="true" name="Heavy Mortar Team" hidden="false" id="d13b-00c7-df66-c07a" targetId="2e65-df00-c584-85a0" type="selectionEntry"/>
+    <entryLink import="true" name="Light Mortar Team" hidden="false" id="1d04-7fdf-a819-75df" targetId="76b6-5428-188e-1c44" type="selectionEntry"/>
   </entryLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Weapons" id="3105-e6a4-eb4f-06c3" hidden="false" defaultSelectionEntryId="c3f8-1643-5672-eca3">
