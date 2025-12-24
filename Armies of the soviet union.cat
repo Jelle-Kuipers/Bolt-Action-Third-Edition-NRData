@@ -3,8 +3,8 @@
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Platoon Commander" hidden="false" id="a025-dcd6-d08c-4f3a">
       <categoryLinks>
-        <categoryLink targetId="5aa8-cdcf-903c-eef7" id="0e44-acaf-fc15-3f2c" primary="true" name="Platoon Commander"/>
-        <categoryLink targetId="6b53-28ad-d16f-2f00" id="cfa5-bb31-9083-a348" primary="false" name="Headquarters Units"/>
+        <categoryLink targetId="5aa8-cdcf-903c-eef7" id="0e44-acaf-fc15-3f2c" primary="false" name="Platoon Commander"/>
+        <categoryLink targetId="6b53-28ad-d16f-2f00" id="cfa5-bb31-9083-a348" primary="true" name="Headquarters Units"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Officer" id="358c-e3fd-17ff-b9b5" hidden="false" sortIndex="2">
@@ -158,8 +158,8 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Commisar" hidden="false" id="b88f-74d1-d220-0b8c">
       <categoryLinks>
-        <categoryLink targetId="6b53-28ad-d16f-2f00" id="a591-f3eb-552d-c824" primary="false" name="Headquarters Units"/>
-        <categoryLink targetId="f880-7070-5ff7-6f5b" id="2a3d-c25c-be06-e3d8" primary="true" name="Commisar"/>
+        <categoryLink targetId="6b53-28ad-d16f-2f00" id="a591-f3eb-552d-c824" primary="true" name="Headquarters Units"/>
+        <categoryLink targetId="f880-7070-5ff7-6f5b" id="2a3d-c25c-be06-e3d8" primary="false" name="Commisar"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Veterancy" id="234a-a157-a634-c8fd" hidden="false" defaultSelectionEntryId="ffa6-8cc5-42a0-7324" sortIndex="1">
@@ -204,7 +204,8 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Medic" hidden="false" id="3eda-9320-2f49-e13b">
       <categoryLinks>
-        <categoryLink targetId="c3cf-3e5d-f565-e692" id="96b7-223c-b41f-e038" primary="true" name="Medic"/>
+        <categoryLink targetId="c3cf-3e5d-f565-e692" id="96b7-223c-b41f-e038" primary="false" name="Medic"/>
+        <categoryLink targetId="6b53-28ad-d16f-2f00" id="341f-c996-ece0-1cb1" primary="true" name="Headquarters Units"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Medic" id="8dc0-2fa6-bd78-b23a" hidden="false" sortIndex="2" defaultSelectionEntryId="d1ee-a27e-a4df-4e6d">
@@ -312,7 +313,8 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Forward Observer" hidden="false" id="662f-5081-7ea3-d1aa">
       <categoryLinks>
-        <categoryLink targetId="8302-0ded-0163-0a1e" id="d61e-080c-3934-061b" primary="true" name="Foreward Observer"/>
+        <categoryLink targetId="8302-0ded-0163-0a1e" id="d61e-080c-3934-061b" primary="false" name="Foreward Observer"/>
+        <categoryLink targetId="6b53-28ad-d16f-2f00" id="d649-c076-b181-d63b" primary="true" name="Headquarters Units"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Forward Observer" id="e938-570c-ec10-da44" hidden="false" sortIndex="2">
@@ -789,7 +791,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink targetId="bc7e-847f-365a-f118" id="e217-9c8d-3acc-4f9b" primary="false" name="Machine Gun Team"/>
+        <categoryLink targetId="bc7e-847f-365a-f118" id="e217-9c8d-3acc-4f9b" primary="false" name="Machine Gun Teams"/>
         <categoryLink targetId="dc5d-8aeb-6591-b49b" id="3947-0218-a226-fea3" primary="true" name="Infantry Squads"/>
       </categoryLinks>
     </selectionEntry>
@@ -1030,7 +1032,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Machine Gun Team" hidden="false" id="d0ca-2194-65d6-44b4" targetId="bc7e-847f-365a-f118" primary="false"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="d0ca-2194-65d6-44b4" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squads" hidden="false" id="5a88-084a-9d43-e12e" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
     </selectionEntry>
@@ -1257,7 +1259,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Machine Gun Team" hidden="false" id="46d2-c946-cb7f-b78f" targetId="bc7e-847f-365a-f118" primary="false"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="46d2-c946-cb7f-b78f" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squads" hidden="false" id="104f-dd13-b89c-75a4" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
       <infoLinks>
@@ -1518,7 +1520,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Machine Gun Team" hidden="false" id="872f-07e1-aa68-6ba9" targetId="bc7e-847f-365a-f118" primary="false"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="872f-07e1-aa68-6ba9" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squads" hidden="false" id="cffe-6cdd-4dc3-24a0" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
     </selectionEntry>
@@ -1788,7 +1790,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Machine Gun Team" hidden="false" id="357d-e1cd-c4c2-5832" targetId="bc7e-847f-365a-f118" primary="false"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="357d-e1cd-c4c2-5832" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squads" hidden="false" id="81c4-eca2-b17d-cef7" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
     </selectionEntry>
@@ -2049,7 +2051,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Machine Gun Team" hidden="false" id="5d4a-a7e5-a162-a32b" targetId="bc7e-847f-365a-f118" primary="false"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="5d4a-a7e5-a162-a32b" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squads" hidden="false" id="27d5-4ef8-504e-6ba0" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
       <infoLinks>
@@ -2457,7 +2459,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Machine Gun Team" hidden="false" id="24b1-7999-4c84-69eb" targetId="bc7e-847f-365a-f118" primary="false"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="24b1-7999-4c84-69eb" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squads" hidden="false" id="03bd-ed60-fc71-d097" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
       <infoLinks>
@@ -2720,7 +2722,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Machine Gun Team" hidden="false" id="4a2e-0da0-ec5c-4fbc" targetId="bc7e-847f-365a-f118" primary="false"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="4a2e-0da0-ec5c-4fbc" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squads" hidden="false" id="eac7-e02f-c610-a86e" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
     </selectionEntry>
@@ -3083,7 +3085,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Machine Gun Team" hidden="false" id="f3ab-e7af-1189-bb25" targetId="bc7e-847f-365a-f118" primary="false"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="f3ab-e7af-1189-bb25" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squads" hidden="false" id="1804-477f-1a03-0951" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
       <infoLinks>
@@ -3317,7 +3319,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Machine Gun Team" hidden="false" id="7de5-c2ee-3edf-4078" targetId="bc7e-847f-365a-f118" primary="false"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="7de5-c2ee-3edf-4078" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squads" hidden="false" id="9aa0-5334-bffc-3d99" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
       <infoLinks>
@@ -3575,7 +3577,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Machine Gun Team" hidden="false" id="84fe-44f6-4057-f537" targetId="bc7e-847f-365a-f118" primary="false"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="84fe-44f6-4057-f537" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squads" hidden="false" id="bfac-ce03-4e41-d003" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
     </selectionEntry>
@@ -3806,7 +3808,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Machine Gun Team" hidden="false" id="a94e-9d81-7496-9108" targetId="bc7e-847f-365a-f118" primary="false"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="a94e-9d81-7496-9108" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squads" hidden="false" id="25ad-8c7d-fb08-7120" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
       <infoLinks>
@@ -4019,7 +4021,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Machine Gun Team" hidden="false" id="4d92-c839-76cc-10bf" targetId="bc7e-847f-365a-f118" primary="false"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="4d92-c839-76cc-10bf" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squads" hidden="false" id="68dc-2a63-44bd-3728" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
       <infoLinks>
@@ -4153,7 +4155,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Machine Gun Team" hidden="false" id="9aaa-9fc9-6805-cd08" targetId="bc7e-847f-365a-f118" primary="false"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="9aaa-9fc9-6805-cd08" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squads" hidden="false" id="2881-cca9-70fc-7239" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
       <infoLinks>
@@ -4335,12 +4337,12 @@
                     <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b46-2883-74ff-4055" includeChildSelections="false"/>
                   </constraints>
                   <categoryLinks>
-                    <categoryLink targetId="bc7e-847f-365a-f118" id="8ecc-0e00-0432-771c" primary="false" name="Machine Gun Team"/>
+                    <categoryLink targetId="bc7e-847f-365a-f118" id="8ecc-0e00-0432-771c" primary="false" name="Machine Gun Teams"/>
                   </categoryLinks>
                 </selectionEntry>
               </selectionEntries>
               <categoryLinks>
-                <categoryLink targetId="bc7e-847f-365a-f118" id="dd69-41cf-d4d8-7044" primary="false" name="Machine Gun Team"/>
+                <categoryLink targetId="bc7e-847f-365a-f118" id="dd69-41cf-d4d8-7044" primary="false" name="Machine Gun Teams"/>
               </categoryLinks>
             </selectionEntryGroup>
           </selectionEntryGroups>
@@ -4788,7 +4790,7 @@
         <categoryLink targetId="efe3-cd28-c439-8765" id="a365-1355-d162-4d41" primary="true" name="Engineer Squads"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Medium Machine Gun Team" hidden="false" id="62a4-21fd-fe99-1618">
+    <selectionEntry type="unit" import="true" name=" Medium Machine Gun Team TEST" hidden="false" id="62a4-21fd-fe99-1618">
       <selectionEntryGroups>
         <selectionEntryGroup name="Veterancy" id="c9d7-041f-0e00-d1ad" hidden="false" defaultSelectionEntryId="f05d-7667-1e2f-ac23" sortIndex="1">
           <selectionEntries>
@@ -4815,8 +4817,9 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink targetId="f613-cba9-0906-48ae" id="78f3-5f21-a4f1-9c06" primary="false" name="Heavy Weapons"/>
-        <categoryLink targetId="bc7e-847f-365a-f118" id="57f2-8b4f-6fdc-365d" primary="true" name="Machine Gun Team"/>
+        <categoryLink targetId="bc7e-847f-365a-f118" id="57f2-8b4f-6fdc-365d" primary="true" name="Machine Gun Teams"/>
+        <categoryLink targetId="9ad0-07ad-d8f1-414c" id="78be-2f6a-879d-2306" primary="false" name="Mandatory Heavy Weapons Team"/>
+        <categoryLink targetId="ba7e-8a36-5678-1032" id="8a4f-eb6e-f1b1-c3c5" primary="false" name="MG_OR_MORTAR_FORCE_ORG"/>
       </categoryLinks>
       <comment>GUN SHIELD</comment>
       <selectionEntries>
@@ -4909,7 +4912,8 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Heavy Weapons" hidden="false" id="a08e-2529-8c54-276f" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink name="Machine Gun Team" hidden="false" id="e976-66e1-ef73-f49a" targetId="bc7e-847f-365a-f118" primary="true"/>
+        <categoryLink name="Machine Gun Teams" hidden="false" id="e976-66e1-ef73-f49a" targetId="bc7e-847f-365a-f118" primary="true"/>
+        <categoryLink targetId="ba7e-8a36-5678-1032" id="7809-996b-3cec-e54e" primary="false" name="MG_OR_MORTAR_FORCE_ORG"/>
       </categoryLinks>
       <comment>GUN SHIELD / PINTLE</comment>
       <selectionEntries>
@@ -5702,7 +5706,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink targetId="46b9-67df-e29a-cfe5" id="e2ba-6938-15ed-7581" primary="true" name="Light Mortar Team"/>
+        <categoryLink targetId="46b9-67df-e29a-cfe5" id="e2ba-6938-15ed-7581" primary="false" name="Light Mortar Team"/>
+        <categoryLink targetId="ce86-e5af-5b82-d9d0" id="95d3-8d1b-dc6d-f6c9" primary="true" name="Mortar Team"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Medium Mortar Team" hidden="false" id="8df2-22bf-a548-4d01">
@@ -5733,6 +5738,7 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Mortar Team" hidden="false" id="998d-8962-63e2-235e" targetId="ce86-e5af-5b82-d9d0" primary="true"/>
+        <categoryLink targetId="cc10-b7f8-016c-e762" id="1a19-de75-09c7-04bb" primary="false" name="Heavy Weapons Teams"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Mortar Crew" hidden="false" id="cc68-e5d7-5f7f-cc5c" sortIndex="2">
@@ -9816,8 +9822,8 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Company Commander" hidden="false" id="95d9-0288-5df5-0342">
       <categoryLinks>
-        <categoryLink name="Headquarters Units" hidden="false" id="ac3e-b175-2a74-bd8e" targetId="6b53-28ad-d16f-2f00" primary="false"/>
-        <categoryLink targetId="5e5a-6a55-edc8-468f" id="344f-8630-1fe9-a0a4" primary="true" name="Company Commander"/>
+        <categoryLink name="Headquarters Units" hidden="false" id="ac3e-b175-2a74-bd8e" targetId="6b53-28ad-d16f-2f00" primary="true"/>
+        <categoryLink targetId="5e5a-6a55-edc8-468f" id="344f-8630-1fe9-a0a4" primary="false" name="Company Commander"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Officer" id="c6d8-0b8c-b85d-609d" hidden="false" sortIndex="2">
@@ -10326,8 +10332,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Field Artillery" hidden="false" id="6bd7-10d6-10ff-c5f3" targetId="8e40-50fc-3394-8d05" primary="true"/>
-        <categoryLink name="Heavy Weapons" hidden="false" id="d2dd-8f06-bbb9-2611" targetId="f613-cba9-0906-48ae" primary="false"/>
+        <categoryLink name="Field Artillery" hidden="false" id="6bd7-10d6-10ff-c5f3" targetId="8e40-50fc-3394-8d05" primary="false"/>
+        <categoryLink targetId="cc10-b7f8-016c-e762" id="a95f-dedd-8050-97e7" primary="true" name="Heavy Weapons Teams"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="M-30 Heavy Rocket Launcher" hidden="false" id="6231-3f0a-2635-2b6c">
@@ -11274,6 +11280,9 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Mortar Team" hidden="false" id="70ee-987e-2737-4b3c" targetId="ce86-e5af-5b82-d9d0" primary="true"/>
+        <categoryLink targetId="cc10-b7f8-016c-e762" id="e8b6-94fa-7a0a-9e2d" primary="false" name="Heavy Weapons Teams"/>
+        <categoryLink targetId="9ad0-07ad-d8f1-414c" id="59e5-68ed-8dbe-6ace" primary="false" name="Mandatory Heavy Weapons Team"/>
+        <categoryLink targetId="ba7e-8a36-5678-1032" id="3b62-5a91-ea0c-0a00" primary="false" name="MG_OR_MORTAR_FORCE_ORG"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Mortar Crew" hidden="false" id="8e01-c6f7-5426-5613" sortIndex="2">
@@ -11402,6 +11411,7 @@
       <categoryLinks>
         <categoryLink targetId="ce86-e5af-5b82-d9d0" id="9b78-f118-23d4-6adb" primary="true" name="Mortar Team"/>
         <categoryLink targetId="46b9-67df-e29a-cfe5" id="8712-2eab-2cd4-02b2" primary="false" name="Light Mortar Team"/>
+        <categoryLink targetId="cc10-b7f8-016c-e762" id="4a2c-a155-6f08-1f72" primary="false" name="Heavy Weapons Teams"/>
       </categoryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
@@ -11433,7 +11443,7 @@
     <entryLink import="true" name="Motorcycle Squad" hidden="false" id="a885-43c2-d1b1-e510" targetId="295f-e992-d247-b0bf" type="selectionEntry"/>
     <entryLink import="true" name="Medic" hidden="false" id="624d-96d5-d1e4-7461" targetId="3eda-9320-2f49-e13b" type="selectionEntry"/>
     <entryLink import="true" name="Assault Engineer Squad" hidden="false" id="ef1f-f3da-4c17-29a3" targetId="9070-1473-0325-541d" type="selectionEntry"/>
-    <entryLink import="true" name="Medium Machine Gun Team" hidden="false" id="2b99-1e05-0533-2605" targetId="62a4-21fd-fe99-1618" type="selectionEntry"/>
+    <entryLink import="true" name=" Medium Machine Gun Team TEST" hidden="false" id="2b99-1e05-0533-2605" targetId="62a4-21fd-fe99-1618" type="selectionEntry"/>
     <entryLink import="true" name="DSHK Heavy Machine Gun Team" hidden="false" id="0bc2-347d-a904-f91c" targetId="7fe5-c074-baaa-d786" type="selectionEntry"/>
     <entryLink import="true" name="Anti-tank Rifle Team" hidden="false" id="c33f-3b5d-122a-fa9e" targetId="81e9-f9c1-f866-18e0" type="selectionEntry"/>
     <entryLink import="true" name="Ampulomet &apos;Molotov Launcher&apos; Anti-tank Team" hidden="false" id="5ee8-2ec0-57b1-d9e5" targetId="d68e-19c6-48d7-f58f" type="selectionEntry"/>

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<gameSystem id="sys-aa0d-3b42-3f65-4d19" name="Bolt Action: Third Edition" battleScribeVersion="2.03" revision="1" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
+<gameSystem id="sys-aa0d-3b42-3f65-4d19" name="Bolt Action: Third Edition" battleScribeVersion="2.03" revision="2" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Platoon Commander" id="5aa8-cdcf-903c-eef7" hidden="false"/>
     <categoryEntry name="Infantry Squads" id="dc5d-8aeb-6591-b49b" hidden="false"/>
@@ -10,7 +10,7 @@
     <categoryEntry name="Light Mortar Team" id="46b9-67df-e29a-cfe5" hidden="false"/>
     <categoryEntry name="Transport Vehicle" id="9cdf-c776-8161-5e87" hidden="false"/>
     <categoryEntry name="Mortar Team" id="ce86-e5af-5b82-d9d0" hidden="false"/>
-    <categoryEntry name="Machine Gun Team" id="bc7e-847f-365a-f118" hidden="false"/>
+    <categoryEntry name="Machine Gun Teams" id="bc7e-847f-365a-f118" hidden="false"/>
     <categoryEntry name="Flamethrower Teams" id="9bc5-52e5-81ff-d082" hidden="false"/>
     <categoryEntry name="Engineer Squads" id="efe3-cd28-c439-8765" hidden="false"/>
     <categoryEntry name="Small Arms" id="32ca-d61e-c2c4-f901" hidden="false" publicationId="6d3a-4ad3-2bb6-913e" page="92"/>
@@ -35,6 +35,10 @@
     <categoryEntry name="Company Commander" id="5e5a-6a55-edc8-468f" hidden="false"/>
     <categoryEntry name="Commisar" id="f880-7070-5ff7-6f5b" hidden="false"/>
     <categoryEntry name="Configuration" id="9f43-cba0-0236-299a" hidden="false"/>
+    <categoryEntry name="Mandatory Heavy Weapons Team" id="9ad0-07ad-d8f1-414c" hidden="false"/>
+    <categoryEntry id="ba7e-8a36-5678-1032" hidden="true" name="MG_OR_MORTAR_FORCE_ORG">
+      <description>Hidden category for force org checking</description>
+    </categoryEntry>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Engineer Platoon" id="c1f4-d905-fb7d-17ab" hidden="false" page="186" publicationId="6d3a-4ad3-2bb6-913e">
@@ -56,19 +60,18 @@
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="5b18-9153-0d10-f22b"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Transport Vehicle" hidden="false" id="48db-9c6a-d762-0b33" targetId="9cdf-c776-8161-5e87">
+        <categoryLink name="Transport Vehicle" hidden="false" id="6e1f-2e8a-8927-0521" targetId="9cdf-c776-8161-5e87">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="82ab-c4bf-7b98-c5b9" automatic="false" includeChildSelections="false"/>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="576e-d8dd-f01b-2e49" automatic="false" includeChildSelections="false"/>
           </constraints>
           <modifiers>
-            <modifier type="increment" value="1" field="82ab-c4bf-7b98-c5b9">
+            <modifier type="increment" value="1" field="576e-d8dd-f01b-2e49">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
         </categoryLink>
-        <categoryLink name="Headquarters Units" hidden="false" id="cdf3-2739-dd94-0dc9" targetId="6b53-28ad-d16f-2f00"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="f8d9-ebb9-a66b-0a8f" includeChildSelections="true"/>
@@ -120,10 +123,16 @@
           <modifiers>
             <modifier type="increment" value="1" field="1b03-a1ad-3b87-6412">
               <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+                <repeat value="1" repeats="1" field="selections" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false"/>
               </repeats>
             </modifier>
           </modifiers>
+        </categoryLink>
+        <categoryLink name="Headquarters Units" hidden="false" id="bcb4-1e39-d8c7-7cd9" targetId="6b53-28ad-d16f-2f00"/>
+        <categoryLink name="Company Commander" hidden="false" id="f710-aadc-8d34-edac" targetId="5e5a-6a55-edc8-468f">
+          <constraints>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="085a-a093-55e3-0aec"/>
+          </constraints>
         </categoryLink>
       </categoryLinks>
       <constraints>
@@ -148,6 +157,7 @@
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="54f2-b887-b2c2-141d" includeChildSelections="true"/>
       </constraints>
+      <comment>Force ROG</comment>
     </forceEntry>
     <forceEntry name="Recce Infantry Platoon" id="9ea2-18da-2a4c-60bc" hidden="false" page="189" publicationId="6d3a-4ad3-2bb6-913e">
       <categoryLinks>
@@ -193,39 +203,77 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="14d3-6862-bb8d-1186-max"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Anti-Tank Teams" hidden="false" id="7453-1ac4-9a5c-7367" targetId="573f-2b84-c891-5e1b">
+        <categoryLink name="Machine Gun Teams" hidden="false" id="0959-7ec7-1779-ff22" targetId="bc7e-847f-365a-f118">
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="7ec6-6fb0-7711-bb84"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="b7f3-8920-b130-95cc"/>
           </constraints>
-        </categoryLink>
-        <categoryLink name="Machine Gun Team" hidden="false" id="0959-7ec7-1779-ff22" targetId="bc7e-847f-365a-f118">
-          <constraints>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="b7f3-8920-b130-95cc"/>
-          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="decrement" value="2" field="b7f3-8920-b130-95cc">
+                  <conditions>
+                    <condition type="equalTo" value="5" field="selections" scope="force" childId="ce86-e5af-5b82-d9d0" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" value="1" field="b7f3-8920-b130-95cc">
+                  <conditions>
+                    <condition type="equalTo" value="4" field="selections" scope="force" childId="ce86-e5af-5b82-d9d0" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
         <categoryLink name="Mortar Team" hidden="false" id="4b71-5b8e-892a-d632" targetId="ce86-e5af-5b82-d9d0">
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="a271-67f7-cf77-dde6"/>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="a271-67f7-cf77-dde6"/>
+          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="decrement" value="2" field="a271-67f7-cf77-dde6">
+                  <conditions>
+                    <condition type="equalTo" value="5" field="selections" scope="force" childId="bc7e-847f-365a-f118" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+                <modifier type="decrement" value="1" field="a271-67f7-cf77-dde6">
+                  <conditions>
+                    <condition type="equalTo" value="4" field="selections" scope="force" childId="bc7e-847f-365a-f118" shared="true" includeChildSelections="true"/>
+                  </conditions>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </categoryLink>
+        <categoryLink name="Anti-Tank Teams" hidden="false" id="7453-1ac4-9a5c-7367" targetId="573f-2b84-c891-5e1b">
+          <constraints>
+            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="7ec6-6fb0-7711-bb84"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Transport Vehicle" hidden="false" id="9678-300b-2509-2a37" targetId="9cdf-c776-8161-5e87">
+        <categoryLink name="Transport Vehicle" hidden="false" id="ec5b-2461-1cce-ce9d" targetId="9cdf-c776-8161-5e87">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d62b-23f9-b535-b8da" automatic="false" includeChildSelections="false"/>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="2cf9-5380-66bd-a6cb" automatic="false" includeChildSelections="false"/>
           </constraints>
           <modifiers>
-            <modifier type="increment" value="1" field="d62b-23f9-b535-b8da">
+            <modifier type="increment" value="1" field="2cf9-5380-66bd-a6cb">
               <repeats>
                 <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
               </repeats>
             </modifier>
           </modifiers>
         </categoryLink>
-        <categoryLink name="Headquarters Units" hidden="false" id="406b-e781-9238-3ffc" targetId="6b53-28ad-d16f-2f00"/>
       </categoryLinks>
       <comment>CHECK MAND</comment>
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="4038-f8c3-71a7-25ed" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="add" value="ERROR!" field="error">
+          <conditions>
+            <condition type="atLeast" value="2" field="selections" scope="force" childId="ba7e-8a36-5678-1032" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </forceEntry>
     <forceEntry name="Artillery Platoon" id="8b2e-7e32-0adc-db86" hidden="false" page="187" publicationId="6d3a-4ad3-2bb6-913e">
       <categoryLinks>
@@ -237,7 +285,6 @@
         </categoryLink>
         <categoryLink name="Anti-aircraft Guns" hidden="false" id="2c41-245f-8cb1-7231" targetId="bbd5-a33b-9eeb-50a1">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="88b8-79d4-5b47-c222"/>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="353b-2a41-24dc-3788"/>
           </constraints>
         </categoryLink>
@@ -255,28 +302,68 @@
         </categoryLink>
         <categoryLink name="Anti-tank Guns" hidden="false" id="3923-fa20-68bc-b501" targetId="d50e-669d-f60a-4849">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="bbcc-b5b2-6e05-3540"/>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="91df-1be8-6d7f-c46d"/>
           </constraints>
         </categoryLink>
         <categoryLink name="Field Artillery" hidden="false" id="0b20-16b8-7153-a8d6" targetId="8e40-50fc-3394-8d05">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f9e7-feaa-88ee-f5bb"/>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="98b2-8766-f859-899a"/>
           </constraints>
+        </categoryLink>
+        <categoryLink name="Transport Vehicle" hidden="false" id="93e9-f673-8e67-d33e" targetId="9cdf-c776-8161-5e87">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8144-5842-d4f0-6d19" automatic="false" includeChildSelections="false"/>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="b89f-227c-50dd-fc90" automatic="false" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="b89f-227c-50dd-fc90">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="8144-5842-d4f0-6d19">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="primary-catalogue" childId="6a50-07f3-fc3d-fb3d" shared="true" roundUp="false" includeChildSelections="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
+        </categoryLink>
+        <categoryLink name="Tows" hidden="false" id="f496-e2cd-3516-71c4" targetId="6a50-07f3-fc3d-fb3d">
+          <constraints>
+            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8653-a41a-c560-77ad" automatic="false" includeChildSelections="false"/>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="ee33-53ae-97f3-b9c2" automatic="false" includeChildSelections="false"/>
+          </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="ee33-53ae-97f3-b9c2">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="8653-a41a-c560-77ad">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="primary-catalogue" childId="9cdf-c776-8161-5e87" shared="true" roundUp="false" includeChildSelections="false"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="f3f6-84af-cb3f-24bb" includeChildSelections="true"/>
       </constraints>
+      <comment>FORCE ORG</comment>
     </forceEntry>
     <forceEntry name="Configuration" id="6862-9e64-3947-7750" hidden="false">
       <constraints>
-        <constraint type="min" value="1" field="forces" scope="roster" shared="true" id="d3e6-40a2-0840-5603-min" includeChildSelections="true"/>
-        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="d3e6-40a2-0840-5603-max" includeChildSelections="true"/>
+        <constraint type="min" value="1" field="forces" scope="roster" shared="true" id="915f-7265-13ba-8670-min" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="915f-7265-13ba-8670-max" includeChildSelections="true"/>
       </constraints>
       <categoryLinks>
-        <categoryLink name="Configuration" hidden="false" id="98c0-4ae8-de14-8340" targetId="9f43-cba0-0236-299a"/>
+        <categoryLink name="Configuration" hidden="false" id="98c0-4ae8-de14-8340" targetId="9f43-cba0-0236-299a">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="23ba-f947-48ab-7d31-min" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="23ba-f947-48ab-7d31-max" includeChildSelections="true" includeChildForces="true"/>
+          </constraints>
+        </categoryLink>
       </categoryLinks>
     </forceEntry>
     <forceEntry name="Company Commander" id="765a-e8cb-6fc6-6867" hidden="false">
