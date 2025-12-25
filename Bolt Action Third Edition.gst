@@ -268,9 +268,9 @@
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="4038-f8c3-71a7-25ed" includeChildSelections="true"/>
       </constraints>
       <modifiers>
-        <modifier type="add" value="ERROR!" field="error">
+        <modifier type="add" value="{self} must have atleast 2 units of {Machine Gun Teams} or {Mortar Teams} (any mix)" field="error">
           <conditions>
-            <condition type="atLeast" value="2" field="selections" scope="force" childId="ba7e-8a36-5678-1032" shared="true" includeChildSelections="true"/>
+            <condition type="lessThan" value="2" field="selections" scope="force" childId="ba7e-8a36-5678-1032" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
