@@ -2,35 +2,34 @@
 <gameSystem id="sys-aa0d-3b42-3f65-4d19" name="Bolt Action: Third Edition" battleScribeVersion="2.03" revision="2" type="gameSystem" xmlns="http://www.battlescribe.net/schema/gameSystemSchema">
   <categoryEntries>
     <categoryEntry name="Platoon Commander" id="5aa8-cdcf-903c-eef7" hidden="false"/>
-    <categoryEntry name="Infantry Squads" id="dc5d-8aeb-6591-b49b" hidden="false"/>
+    <categoryEntry name="Infantry Squad" id="dc5d-8aeb-6591-b49b" hidden="false"/>
     <categoryEntry name="Medic" id="c3cf-3e5d-f565-e692" hidden="false"/>
     <categoryEntry name="Foreward Observer" id="8302-0ded-0163-0a1e" hidden="false"/>
     <categoryEntry name="Sniper Team" id="bb3f-f878-512e-6853" hidden="false"/>
-    <categoryEntry name="Anti-Tank Teams" id="573f-2b84-c891-5e1b" hidden="false"/>
+    <categoryEntry name="Anti-Tank Team" id="573f-2b84-c891-5e1b" hidden="false"/>
     <categoryEntry name="Light Mortar Team" id="46b9-67df-e29a-cfe5" hidden="false"/>
     <categoryEntry name="Transport Vehicle" id="9cdf-c776-8161-5e87" hidden="false"/>
     <categoryEntry name="Mortar Team" id="ce86-e5af-5b82-d9d0" hidden="false"/>
-    <categoryEntry name="Machine Gun Teams" id="bc7e-847f-365a-f118" hidden="false"/>
-    <categoryEntry name="Flamethrower Teams" id="9bc5-52e5-81ff-d082" hidden="false"/>
-    <categoryEntry name="Engineer Squads" id="efe3-cd28-c439-8765" hidden="false"/>
+    <categoryEntry name="Machine Gun Team" id="bc7e-847f-365a-f118" hidden="false"/>
+    <categoryEntry name="Flamethrower Team" id="9bc5-52e5-81ff-d082" hidden="false"/>
+    <categoryEntry name="Engineer Squad" id="efe3-cd28-c439-8765" hidden="false"/>
     <categoryEntry name="Small Arms" id="32ca-d61e-c2c4-f901" hidden="false" publicationId="6d3a-4ad3-2bb6-913e" page="92"/>
-    <categoryEntry name="Heavy Weapons" id="f613-cba9-0906-48ae" hidden="false" publicationId="6d3a-4ad3-2bb6-913e" page="92"/>
-    <categoryEntry name="Tows" id="6a50-07f3-fc3d-fb3d" hidden="false"/>
+    <categoryEntry name="Heavy Weapon" id="f613-cba9-0906-48ae" hidden="false" publicationId="6d3a-4ad3-2bb6-913e" page="92"/>
+    <categoryEntry name="Tow" id="6a50-07f3-fc3d-fb3d" hidden="false"/>
     <categoryEntry name="Field Artillery" id="8e40-50fc-3394-8d05" hidden="false"/>
-    <categoryEntry name="Anti-aircraft Guns" id="bbd5-a33b-9eeb-50a1" hidden="false"/>
-    <categoryEntry name="Anti-tank Guns" id="d50e-669d-f60a-4849" hidden="false"/>
+    <categoryEntry name="Anti-aircraft Gun" id="bbd5-a33b-9eeb-50a1" hidden="false"/>
+    <categoryEntry name="Anti-tank Gun" id="d50e-669d-f60a-4849" hidden="false"/>
     <categoryEntry name="Platoon command vehicle" id="d45c-33e4-1fa4-2c97" hidden="false"/>
     <categoryEntry name="Vehicle" id="94ea-9320-8627-3a3d" hidden="false"/>
-    <categoryEntry name="Headquarters Units" id="6b53-28ad-d16f-2f00" hidden="false"/>
-    <categoryEntry name="Heavy Weapons Teams" id="cc10-b7f8-016c-e762" hidden="false"/>
-    <categoryEntry name="Tanks" id="171a-98f6-a773-8d80" hidden="false"/>
-    <categoryEntry name="Tank Destroyers" id="fac9-2704-8e24-2272" hidden="false"/>
-    <categoryEntry name="Self Propelled Artillery" id="bd9c-0849-ae15-81f2" hidden="false"/>
-    <categoryEntry name="Anti-aircraft Vehicles" id="4389-e01e-f9a0-f937" hidden="false"/>
-    <categoryEntry name="Armoured Cars" id="02b1-967a-5314-645f" hidden="false"/>
-    <categoryEntry name="Transports" id="e136-a9c1-1008-a521" hidden="false"/>
+    <categoryEntry name="Headquarters Unit" id="6b53-28ad-d16f-2f00" hidden="false"/>
+    <categoryEntry name="Heavy Weapons Team" id="cc10-b7f8-016c-e762" hidden="false"/>
+    <categoryEntry name="Tank" id="171a-98f6-a773-8d80" hidden="false"/>
+    <categoryEntry name="Tank Destroyer" id="fac9-2704-8e24-2272" hidden="false"/>
+    <categoryEntry name="Anti-aircraft Vehicle" id="4389-e01e-f9a0-f937" hidden="false"/>
+    <categoryEntry name="Armoured Car" id="02b1-967a-5314-645f" hidden="false"/>
+    <categoryEntry name="Transport" id="e136-a9c1-1008-a521" hidden="false"/>
     <categoryEntry name="Ambulances" id="be8b-7a11-fc57-4555" hidden="false"/>
-    <categoryEntry name="Lend-lease Vehicles" id="079c-b917-f17a-02ac" hidden="false"/>
+    <categoryEntry name="Lend-lease Vehicle" id="079c-b917-f17a-02ac" hidden="false"/>
     <categoryEntry name="Army Special Rules" id="7137-830a-72de-6d81" hidden="false"/>
     <categoryEntry name="Company Commander" id="5e5a-6a55-edc8-468f" hidden="false"/>
     <categoryEntry name="Commisar" id="f880-7070-5ff7-6f5b" hidden="false"/>
@@ -39,6 +38,11 @@
     <categoryEntry id="ba7e-8a36-5678-1032" hidden="true" name="MG_OR_MORTAR_FORCE_ORG">
       <description>Hidden category for force org checking</description>
     </categoryEntry>
+    <categoryEntry name="AT_OR_AA_OR_FA_FORCE_ORG" id="1095-5147-12e7-1c18" hidden="true"/>
+    <categoryEntry name="Assault Gun" id="fd1d-1ad3-c351-ec4c" hidden="false"/>
+    <categoryEntry name="Self-propelled Artillery" id="31a5-e1dc-8d85-fb4b" hidden="false"/>
+    <categoryEntry name="Mounted" id="5b9b-50c0-f20d-a4bc" hidden="false"/>
+    <categoryEntry name="Transport Seat" id="23eb-25d5-c294-d333" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Engineer Platoon" id="c1f4-d905-fb7d-17ab" hidden="false" page="186" publicationId="6d3a-4ad3-2bb6-913e">
@@ -49,28 +53,38 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="47a7-6f79-3ad8-2194-max"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Engineer Squads" hidden="false" id="269c-a91e-3fb5-c74a" targetId="efe3-cd28-c439-8765">
+        <categoryLink name="Engineer Squad" hidden="false" id="269c-a91e-3fb5-c74a" targetId="efe3-cd28-c439-8765">
           <constraints>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="6bba-432c-6bbc-73db"/>
             <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="34f7-36cb-915c-3dfc"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Flamethrower Teams" hidden="false" id="306e-6558-407c-c420" targetId="9bc5-52e5-81ff-d082">
+        <categoryLink name="Flamethrower Team" hidden="false" id="306e-6558-407c-c420" targetId="9bc5-52e5-81ff-d082">
           <constraints>
             <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="5b18-9153-0d10-f22b"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Transport Vehicle" hidden="false" id="6e1f-2e8a-8927-0521" targetId="9cdf-c776-8161-5e87">
+        <categoryLink name="Transport Vehicle" hidden="false" id="cf00-f974-7bc9-9fec" targetId="9cdf-c776-8161-5e87">
           <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="576e-d8dd-f01b-2e49" automatic="false" includeChildSelections="false"/>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="8bfd-c4c4-d636-ebd5" automatic="false" includeChildSelections="false"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="576e-d8dd-f01b-2e49">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="decrement" value="1" field="8bfd-c4c4-d636-ebd5">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="force" childId="9cdf-c776-8161-5e87" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" value="1" field="8bfd-c4c4-d636-ebd5">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <comment>Increase for each NON Transport Vehicle Unit.</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
       </categoryLinks>
       <constraints>
@@ -85,7 +99,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e17a-8a3e-774b-06d4-max"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Infantry Squads" hidden="false" id="94cf-e5bf-f0b6-e2be" targetId="dc5d-8aeb-6591-b49b">
+        <categoryLink name="Infantry Squad" hidden="false" id="94cf-e5bf-f0b6-e2be" targetId="dc5d-8aeb-6591-b49b">
           <constraints>
             <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="76ab-5461-0631-2b4e"/>
             <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="45fd-b998-955c-a80e"/>
@@ -120,18 +134,27 @@
           <constraints>
             <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="1b03-a1ad-3b87-6412" automatic="false" includeChildSelections="false"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="1b03-a1ad-3b87-6412">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="decrement" value="1" field="1b03-a1ad-3b87-6412">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="force" childId="9cdf-c776-8161-5e87" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" value="1" field="1b03-a1ad-3b87-6412">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <comment>Increase for each NON Transport Vehicle Unit.</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
-        <categoryLink name="Headquarters Units" hidden="false" id="bcb4-1e39-d8c7-7cd9" targetId="6b53-28ad-d16f-2f00"/>
-        <categoryLink name="Company Commander" hidden="false" id="f710-aadc-8d34-edac" targetId="5e5a-6a55-edc8-468f">
+        <categoryLink name="Anti-Tank Team" hidden="false" id="d316-70d1-a03e-46cc" targetId="573f-2b84-c891-5e1b">
           <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="085a-a093-55e3-0aec"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8b7b-ae1a-d727-b30a"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -143,16 +166,16 @@
       <categoryLinks>
         <categoryLink name="Platoon command vehicle" hidden="false" id="0fbe-2ee2-24fc-d25c" targetId="d45c-33e4-1fa4-2c97">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="450f-baec-a0f7-8d07-min"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="450f-baec-a0f7-8d07-max"/>
+            <constraint type="min" value="1" field="selections" scope="force" shared="true" id="450f-baec-a0f7-8d07-min" includeChildSelections="true"/>
+            <constraint type="max" value="1" field="selections" scope="force" shared="true" id="450f-baec-a0f7-8d07-max" includeChildSelections="true"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Vehicle" hidden="false" id="6e73-476e-f859-9a29" targetId="94ea-9320-8627-3a3d">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="34f5-8a23-0844-f0f2"/>
-            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="0b5f-deee-841f-c408"/>
-          </constraints>
-        </categoryLink>
+        <categoryLink name="Tank" hidden="false" id="92dc-ed1a-a732-583f" targetId="171a-98f6-a773-8d80"/>
+        <categoryLink name="Armoured Car" hidden="false" id="90b6-380d-7dbc-f143" targetId="02b1-967a-5314-645f"/>
+        <categoryLink name="Assault Gun" hidden="false" id="dc58-f793-08e5-0bdd" targetId="fd1d-1ad3-c351-ec4c"/>
+        <categoryLink name="Tank Destroyer" hidden="false" id="5f29-70f6-2565-dc36" targetId="fac9-2704-8e24-2272"/>
+        <categoryLink name="Anti-aircraft Vehicle" hidden="false" id="1728-65ff-8959-22df" targetId="4389-e01e-f9a0-f937"/>
+        <categoryLink name="Self-propelled Artillery" hidden="false" id="b224-7cfb-fe93-6035" targetId="31a5-e1dc-8d85-fb4b"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="54f2-b887-b2c2-141d" includeChildSelections="true"/>
@@ -166,8 +189,32 @@
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c086-7c27-8fe0-6c32-min"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c086-7c27-8fe0-6c32-max"/>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="c086-7c27-8fe0-6c32-max">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
+              </repeats>
+            </modifier>
+            <modifier type="increment" value="1" field="c086-7c27-8fe0-6c32-min">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="parent" childId="e136-a9c1-1008-a521" shared="true" roundUp="false"/>
+              </repeats>
+              <conditionGroups>
+                <conditionGroup type="count">
+                  <conditions>
+                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="any" shared="true"/>
+                  </conditions>
+                </conditionGroup>
+              </conditionGroups>
+            </modifier>
+            <modifier type="decrement" value="1" field="c086-7c27-8fe0-6c32-max">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="model" childId="any" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
-        <categoryLink name="Infantry Squads" hidden="false" id="1506-4800-9307-d9e2" targetId="dc5d-8aeb-6591-b49b">
+        <categoryLink name="Infantry Squad" hidden="false" id="1506-4800-9307-d9e2" targetId="dc5d-8aeb-6591-b49b">
           <constraints>
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6c11-d350-5320-7126"/>
             <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="7269-bd0a-4a45-7c50"/>
@@ -178,24 +225,43 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4e02-ab73-aeac-e930"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Anti-Tank Teams" hidden="false" id="c7d7-7538-e38b-0908" targetId="573f-2b84-c891-5e1b">
+        <categoryLink name="Anti-Tank Team" hidden="false" id="c7d7-7538-e38b-0908" targetId="573f-2b84-c891-5e1b">
           <constraints>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f41c-6b16-efde-5245"/>
           </constraints>
         </categoryLink>
         <categoryLink name="Transport Vehicle" hidden="false" id="0691-2a23-a31a-0622" targetId="9cdf-c776-8161-5e87">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="719e-7d1c-9818-3d9e" automatic="false" includeChildSelections="false">
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="719e-7d1c-9818-3d9e" automatic="false" includeChildSelections="false">
               <comment>CHECK BOOK</comment>
             </constraint>
           </constraints>
+          <modifiers>
+            <modifier type="increment" value="1" field="719e-7d1c-9818-3d9e">
+              <repeats>
+                <repeat value="1" repeats="1" field="selections" scope="force" childId="23eb-25d5-c294-d333" shared="true" roundUp="false" includeChildSelections="true"/>
+              </repeats>
+            </modifier>
+          </modifiers>
         </categoryLink>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="d569-0641-e4fa-120b" includeChildSelections="true"/>
       </constraints>
+      <modifiers>
+        <modifier type="increment" value="0" field="ab8b-35f3-81bf-8563">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="force" childId="model" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="need more transport seats bitchass hoe" field="error">
+          <conditions>
+            <condition type="greaterThan" value="1" field="selections" scope="parent" childId="any" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </forceEntry>
-    <forceEntry name="Heavy Weapon Platoon" id="7784-cd86-9802-e5fd" hidden="false" page="185" publicationId="6d3a-4ad3-2bb6-913e">
+    <forceEntry name="Heavy Weapons Platoon" id="7784-cd86-9802-e5fd" hidden="false" page="185" publicationId="6d3a-4ad3-2bb6-913e">
       <categoryLinks>
         <categoryLink name="Platoon Commander" hidden="false" id="95bd-2f9a-e394-7619" targetId="5aa8-cdcf-903c-eef7">
           <constraints>
@@ -203,7 +269,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="14d3-6862-bb8d-1186-max"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Machine Gun Teams" hidden="false" id="0959-7ec7-1779-ff22" targetId="bc7e-847f-365a-f118">
+        <categoryLink name="Machine Gun Team" hidden="false" id="0959-7ec7-1779-ff22" targetId="bc7e-847f-365a-f118">
           <constraints>
             <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="b7f3-8920-b130-95cc"/>
           </constraints>
@@ -245,30 +311,39 @@
             </modifierGroup>
           </modifierGroups>
         </categoryLink>
-        <categoryLink name="Anti-Tank Teams" hidden="false" id="7453-1ac4-9a5c-7367" targetId="573f-2b84-c891-5e1b">
+        <categoryLink name="Anti-Tank Team" hidden="false" id="7453-1ac4-9a5c-7367" targetId="573f-2b84-c891-5e1b">
           <constraints>
-            <constraint type="max" value="5" field="selections" scope="parent" shared="true" id="7ec6-6fb0-7711-bb84"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="7ec6-6fb0-7711-bb84"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Transport Vehicle" hidden="false" id="ec5b-2461-1cce-ce9d" targetId="9cdf-c776-8161-5e87">
+        <categoryLink name="Transport Vehicle" hidden="false" id="ec3e-c1ff-78bc-b5fa" targetId="9cdf-c776-8161-5e87">
           <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="2cf9-5380-66bd-a6cb" automatic="false" includeChildSelections="false"/>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="0464-5e1a-3074-93e9" automatic="false" includeChildSelections="false"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="2cf9-5380-66bd-a6cb">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="decrement" value="1" field="0464-5e1a-3074-93e9">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="force" childId="9cdf-c776-8161-5e87" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" value="1" field="0464-5e1a-3074-93e9">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <comment>Increase for each NON Transport Vehicle Unit.</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
       </categoryLinks>
-      <comment>CHECK MAND</comment>
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="4038-f8c3-71a7-25ed" includeChildSelections="true"/>
       </constraints>
       <modifiers>
-        <modifier type="add" value="{self} must have atleast 2 units of {Machine Gun Teams} or {Mortar Teams} (any mix)" field="error">
+        <modifier type="add" value="{self} must have atleast 2 units of {Machine Gun Team} or {Mortar Team} (any mix)" field="error">
           <conditions>
             <condition type="lessThan" value="2" field="selections" scope="force" childId="ba7e-8a36-5678-1032" shared="true" includeChildSelections="true"/>
           </conditions>
@@ -283,74 +358,230 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb3b-3651-f56a-1663-max"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Anti-aircraft Guns" hidden="false" id="2c41-245f-8cb1-7231" targetId="bbd5-a33b-9eeb-50a1">
+        <categoryLink name="Anti-aircraft Gun" hidden="false" id="2c41-245f-8cb1-7231" targetId="bbd5-a33b-9eeb-50a1">
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="353b-2a41-24dc-3788"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="353b-2a41-24dc-3788"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="3" field="353b-2a41-24dc-3788">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="8e40-50fc-3394-8d05" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="d50e-669d-f60a-4849" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="1" field="353b-2a41-24dc-3788">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="2" field="selections" scope="parent" childId="8e40-50fc-3394-8d05" shared="true"/>
+                        <condition type="atLeast" value="2" field="selections" scope="parent" childId="d50e-669d-f60a-4849" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="0" field="353b-2a41-24dc-3788">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="4" field="selections" scope="parent" childId="8e40-50fc-3394-8d05" shared="true"/>
+                        <condition type="equalTo" value="4" field="selections" scope="parent" childId="d50e-669d-f60a-4849" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="8e40-50fc-3394-8d05" shared="true"/>
+                            <condition type="equalTo" value="3" field="selections" scope="parent" childId="bbd5-a33b-9eeb-50a1" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="3" field="selections" scope="parent" childId="8e40-50fc-3394-8d05" shared="true"/>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="bbd5-a33b-9eeb-50a1" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
-        <categoryLink name="Transport Vehicle" hidden="false" id="5088-42ac-185c-67b8" targetId="9cdf-c776-8161-5e87">
+        <categoryLink name="Anti-tank Gun" hidden="false" id="3923-fa20-68bc-b501" targetId="d50e-669d-f60a-4849">
           <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8ab2-5486-066c-e3b7" automatic="false" includeChildSelections="false"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="91df-1be8-6d7f-c46d"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="8ab2-5486-066c-e3b7">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
-        </categoryLink>
-        <categoryLink name="Anti-tank Guns" hidden="false" id="3923-fa20-68bc-b501" targetId="d50e-669d-f60a-4849">
-          <constraints>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="91df-1be8-6d7f-c46d"/>
-          </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="3" field="91df-1be8-6d7f-c46d">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="8e40-50fc-3394-8d05" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="bbd5-a33b-9eeb-50a1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="1" field="91df-1be8-6d7f-c46d">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="2" field="selections" scope="parent" childId="8e40-50fc-3394-8d05" shared="true"/>
+                        <condition type="atLeast" value="2" field="selections" scope="parent" childId="bbd5-a33b-9eeb-50a1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="0" field="91df-1be8-6d7f-c46d">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="4" field="selections" scope="parent" childId="8e40-50fc-3394-8d05" shared="true"/>
+                        <condition type="equalTo" value="4" field="selections" scope="parent" childId="bbd5-a33b-9eeb-50a1" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="8e40-50fc-3394-8d05" shared="true"/>
+                            <condition type="equalTo" value="3" field="selections" scope="parent" childId="bbd5-a33b-9eeb-50a1" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="3" field="selections" scope="parent" childId="8e40-50fc-3394-8d05" shared="true"/>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="bbd5-a33b-9eeb-50a1" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
         <categoryLink name="Field Artillery" hidden="false" id="0b20-16b8-7153-a8d6" targetId="8e40-50fc-3394-8d05">
           <constraints>
-            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="98b2-8766-f859-899a"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="98b2-8766-f859-899a"/>
           </constraints>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="set" value="3" field="98b2-8766-f859-899a">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="bbd5-a33b-9eeb-50a1" shared="true"/>
+                        <condition type="atLeast" value="1" field="selections" scope="parent" childId="d50e-669d-f60a-4849" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="1" field="98b2-8766-f859-899a">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="atLeast" value="2" field="selections" scope="parent" childId="d50e-669d-f60a-4849" shared="true"/>
+                        <condition type="atLeast" value="2" field="selections" scope="parent" childId="bbd5-a33b-9eeb-50a1" shared="true"/>
+                      </conditions>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+                <modifier type="set" value="0" field="98b2-8766-f859-899a">
+                  <conditionGroups>
+                    <conditionGroup type="or">
+                      <conditions>
+                        <condition type="equalTo" value="4" field="selections" scope="parent" childId="bbd5-a33b-9eeb-50a1" shared="true"/>
+                        <condition type="equalTo" value="4" field="selections" scope="parent" childId="d50e-669d-f60a-4849" shared="true"/>
+                      </conditions>
+                      <conditionGroups>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="bbd5-a33b-9eeb-50a1" shared="true"/>
+                            <condition type="equalTo" value="3" field="selections" scope="parent" childId="bbd5-a33b-9eeb-50a1" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                        <conditionGroup type="and">
+                          <conditions>
+                            <condition type="equalTo" value="3" field="selections" scope="parent" childId="d50e-669d-f60a-4849" shared="true"/>
+                            <condition type="equalTo" value="1" field="selections" scope="parent" childId="bbd5-a33b-9eeb-50a1" shared="true"/>
+                          </conditions>
+                        </conditionGroup>
+                      </conditionGroups>
+                    </conditionGroup>
+                  </conditionGroups>
+                </modifier>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+          <modifiers>
+            <modifier type="set" value="Bigger Gun" field="name"/>
+            <modifier type="set" value="Big Gun" field="name"/>
+          </modifiers>
         </categoryLink>
         <categoryLink name="Transport Vehicle" hidden="false" id="93e9-f673-8e67-d33e" targetId="9cdf-c776-8161-5e87">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8144-5842-d4f0-6d19" automatic="false" includeChildSelections="false"/>
             <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="b89f-227c-50dd-fc90" automatic="false" includeChildSelections="false"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="b89f-227c-50dd-fc90">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" value="1" field="8144-5842-d4f0-6d19">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="primary-catalogue" childId="6a50-07f3-fc3d-fb3d" shared="true" roundUp="false" includeChildSelections="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="decrement" value="1" field="b89f-227c-50dd-fc90">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="force" childId="6a50-07f3-fc3d-fb3d" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" value="1" field="b89f-227c-50dd-fc90">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <comment>Increase for each NON Tow Unit.</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
-        <categoryLink name="Tows" hidden="false" id="f496-e2cd-3516-71c4" targetId="6a50-07f3-fc3d-fb3d">
+        <categoryLink name="Tow" hidden="false" id="f496-e2cd-3516-71c4" targetId="6a50-07f3-fc3d-fb3d">
           <constraints>
-            <constraint type="min" value="0" field="selections" scope="parent" shared="true" id="8653-a41a-c560-77ad" automatic="false" includeChildSelections="false"/>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="ee33-53ae-97f3-b9c2" automatic="false" includeChildSelections="false"/>
+            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="7611-b624-0c93-7ecd"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="ee33-53ae-97f3-b9c2">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" value="1" field="8653-a41a-c560-77ad">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="primary-catalogue" childId="9cdf-c776-8161-5e87" shared="true" roundUp="false" includeChildSelections="false"/>
-              </repeats>
-            </modifier>
-          </modifiers>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <modifiers>
+                <modifier type="decrement" value="1" field="7611-b624-0c93-7ecd">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="force" childId="9cdf-c776-8161-5e87" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+                <modifier type="increment" value="1" field="7611-b624-0c93-7ecd">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="force" childId="any" shared="true" roundUp="false" includeChildSelections="false"/>
+                  </repeats>
+                </modifier>
+              </modifiers>
+              <comment>Increase for each NON Tow Unit.</comment>
+            </modifierGroup>
+          </modifierGroups>
         </categoryLink>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="f3f6-84af-cb3f-24bb" includeChildSelections="true"/>
       </constraints>
-      <comment>FORCE ORG</comment>
+      <modifiers>
+        <modifier type="add" value="{self} must have atleast 1 unit of {Field Artillery} or {Anti-aircraft Gun} or {Anti-tank Gun}" field="error">
+          <conditions>
+            <condition type="lessThan" value="2" field="selections" scope="force" childId="1095-5147-12e7-1c18" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </forceEntry>
     <forceEntry name="Configuration" id="6862-9e64-3947-7750" hidden="false">
       <constraints>
@@ -990,7 +1221,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy machine gun (HMG)" hidden="false" id="d528-90c4-6bb6-6ab8" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink targetId="f613-cba9-0906-48ae" id="ce4f-0dfa-fbf0-279d" primary="true" name="Heavy Weapons"/>
+        <categoryLink targetId="f613-cba9-0906-48ae" id="ce4f-0dfa-fbf0-279d" primary="true" name="Heavy Weapon"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Heavy machine gun (HMG)" id="13ec-16a2-667b-d140" hidden="false" type="profile" targetId="eaf4-2622-6e88-8636"/>
@@ -998,7 +1229,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Light Automatic Cannon" hidden="false" id="f6c6-6e07-ad5a-77d8" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="7ecc-e022-7f88-22e0" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="7ecc-e022-7f88-22e0" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Light Automatic Cannon" id="bc63-07c6-349d-bc39" hidden="false" type="profile" targetId="0ed7-1d67-6c7e-0245"/>
@@ -1006,7 +1237,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy Automatic Cannon" hidden="false" id="9f33-b251-e31d-430c" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="0f41-f2b5-16bc-3f62" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="0f41-f2b5-16bc-3f62" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Heavy Automatic Cannon" id="0997-7058-a933-f43e" hidden="false" type="profile" targetId="2667-e751-e170-935d"/>
@@ -1014,7 +1245,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Anti-tank rifle" hidden="false" id="30ac-646a-b791-0c5f" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="3c9a-8b5d-ee24-3604" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="3c9a-8b5d-ee24-3604" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Anti-tank rifle" id="7030-d6df-cc53-d5e2" hidden="false" type="profile" targetId="0d2d-1b2c-5105-1eff"/>
@@ -1022,7 +1253,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="PIAT (Projector, Infantry, Anti-Tank)" hidden="false" id="d728-1977-3b12-3eb0" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="98e0-97af-e971-53c2" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="98e0-97af-e971-53c2" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Team Weapon" id="bd9c-8cba-7bb2-a436" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
@@ -1032,7 +1263,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Bazooka" hidden="false" id="cd55-e37f-79d7-86a1" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="5656-f93c-441d-7a1c" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="5656-f93c-441d-7a1c" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Team Weapon" id="c72c-8311-1284-d4de" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
@@ -1042,7 +1273,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Panzerschreck" hidden="false" id="7c27-9881-c157-dd4d" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="77fc-3fbf-7793-ba53" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="77fc-3fbf-7793-ba53" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Team Weapon" id="b7ac-6238-32e6-7690" hidden="false" type="rule" targetId="f133-78f7-5200-6e3d"/>
@@ -1052,7 +1283,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Panzerfaust" hidden="false" id="fa3c-d892-e97b-35e8" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="816c-3eb9-8f8e-b46c" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="816c-3eb9-8f8e-b46c" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Panzerfaust" id="7a04-1f05-ff7c-c444" hidden="false" type="profile" targetId="9d00-d119-d721-50fe"/>
@@ -1060,7 +1291,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Light Anti-tank Gun" hidden="false" id="c83f-2485-b692-0273" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="223d-ebc0-5363-2577" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="223d-ebc0-5363-2577" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Light Anti-tank Gun" id="4e18-54dc-22e7-8bef" hidden="false" type="profile" targetId="01bd-b6cb-a000-bad3"/>
@@ -1068,7 +1299,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Flamethrower (infantry)" hidden="false" id="95c2-71e7-b995-060b" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="ec3f-b103-0043-733a" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="ec3f-b103-0043-733a" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Flamethrower (infantry)" id="75d7-0c3c-25ca-f092" hidden="false" type="profile" targetId="a99b-c4e0-682e-c877"/>
@@ -1076,7 +1307,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Flamethrower (vehicle)" hidden="false" id="df21-c75d-1fe8-682c" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="db13-6b4f-6dfa-f497" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="db13-6b4f-6dfa-f497" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Flamethrower" id="e241-7454-056d-854f" hidden="false" type="rule" targetId="2012-07f1-439d-b424"/>
@@ -1085,7 +1316,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Medium anti-tank gun" hidden="false" id="3dd4-cef9-295f-6dcd" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="649b-f355-a096-d5f8" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="649b-f355-a096-d5f8" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Medium anti-tank gun" id="6498-b47e-e773-f6df" hidden="false" type="profile" targetId="8f96-d96f-6f60-6a04"/>
@@ -1093,7 +1324,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy Anti-tank Gun" hidden="false" id="a73f-0b9c-cca3-6a74" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="a154-5f74-cfe3-cad0" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="a154-5f74-cfe3-cad0" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Heavy Anti-tank Gun" id="15c4-afd5-dc7e-2fb6" hidden="false" type="profile" targetId="4793-e8ef-653d-fd6d"/>
@@ -1101,7 +1332,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Super-heavy Anti-tank Gun" hidden="false" id="6fb0-aefb-3d17-78e6" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="aec9-a1e7-1828-d694" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="aec9-a1e7-1828-d694" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Super-heavy Anti-tank Gun" id="230e-1312-7ba9-c766" hidden="false" type="profile" targetId="9d60-a884-81c9-88a7"/>
@@ -1109,7 +1340,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Light mortar" hidden="false" id="fa6b-c63c-bb89-d5ec" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="2aa3-65f8-75a7-25ab" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="2aa3-65f8-75a7-25ab" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Light mortar" id="2586-78ba-c328-0ae7" hidden="false" type="profile" targetId="fd4a-fe42-d51f-5eff"/>
@@ -1117,7 +1348,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Medium mortar" hidden="false" id="d853-2809-a2a6-3db8" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="a5d3-4f90-d5a2-e9fc" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="a5d3-4f90-d5a2-e9fc" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Medium mortar" id="e1c4-0a2c-4811-2174" hidden="false" type="profile" targetId="ec83-02a0-5922-5406"/>
@@ -1125,7 +1356,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy mortar" hidden="false" id="0eea-f379-fa00-7f11" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="400a-c649-8120-35da" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="400a-c649-8120-35da" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Heavy mortar" id="0d2b-a359-817e-4727" hidden="false" type="profile" targetId="9c91-e042-bc91-835d"/>
@@ -1133,7 +1364,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Light howitzer" hidden="false" id="6c79-6e0c-1eac-ef7b" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="aea9-6f6a-174f-486e" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="aea9-6f6a-174f-486e" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Light howitzer" id="3207-8c2c-3647-0fff" hidden="false" type="profile" targetId="f58e-9f23-25cf-785d"/>
@@ -1141,7 +1372,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Medium howitzer" hidden="false" id="f13d-6f0e-50fa-a6f4" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="ac7e-d094-888b-90a9" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="ac7e-d094-888b-90a9" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Medium howitzer" id="8ea0-5ada-9ef1-38b7" hidden="false" type="profile" targetId="dda3-7b15-6321-6f43"/>
@@ -1149,7 +1380,7 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy howitzer" hidden="false" id="d378-00c4-6bf7-7451" publicationId="6d3a-4ad3-2bb6-913e" page="93">
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="4f83-4326-5792-b02c" targetId="f613-cba9-0906-48ae" primary="true"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="4f83-4326-5792-b02c" targetId="f613-cba9-0906-48ae" primary="true"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Heavy howitzer" id="7323-178e-dbc5-1f79" hidden="false" type="profile" targetId="7c3a-fdac-1012-9fb6"/>
@@ -1438,6 +1669,11 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
       <infoLinks>
         <infoLink name="Heavy Anti-tank Gun On Rotating Platform" id="e3dd-80ac-075f-cbe4" hidden="false" type="profile" targetId="b566-f551-803a-19c9"/>
       </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Transport Seat" hidden="false" id="4483-7fbd-0a2f-80cb">
+      <categoryLinks>
+        <categoryLink targetId="23eb-25d5-c294-d333" id="cfd7-2d35-7006-96c8" primary="true" name="Transport Seat"/>
+      </categoryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
