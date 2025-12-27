@@ -200,6 +200,13 @@
       <infoLinks>
         <infoLink name="Fanatics" id="8e04-86cc-322e-71df" hidden="false" type="rule" targetId="666a-4a42-a085-3d6a"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Medic" hidden="false" id="3eda-9320-2f49-e13b">
       <categoryLinks>
@@ -557,6 +564,13 @@
       <infoLinks>
         <infoLink name="Green" id="d994-061f-027f-c027" hidden="false" type="rule" targetId="c397-64e1-1d9f-5df3"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Light Machine Gun Squad" hidden="false" id="b02b-4507-5e54-a12a">
       <selectionEntryGroups>
@@ -1034,6 +1048,13 @@
         <categoryLink name="Infantry Squad" hidden="false" id="5a88-084a-9d43-e12e" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
         <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="7500-12ac-a646-ddf3" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Tank Rider Squad" hidden="false" id="1e9b-b005-1c5a-b36e">
       <selectionEntryGroups>
@@ -1265,6 +1286,13 @@
       <infoLinks>
         <infoLink name="Tank Riders" id="da44-1fd2-1f31-2eb3" hidden="false" type="rule" targetId="73ae-78fc-14c2-b60f"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Guard Squad" hidden="false" id="86c3-06f5-a551-5498">
       <selectionEntryGroups>
@@ -1794,6 +1822,13 @@
         <categoryLink name="Machine Gun Team" hidden="false" id="357d-e1cd-c4c2-5832" targetId="bc7e-847f-365a-f118" primary="false"/>
         <categoryLink name="Infantry Squad" hidden="false" id="81c4-eca2-b17d-cef7" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="NKVD Squad" hidden="false" id="3615-3de8-7c6c-a926">
       <selectionEntryGroups>
@@ -2167,6 +2202,13 @@
       <categoryLinks>
         <categoryLink targetId="dc5d-8aeb-6591-b49b" id="fd55-07bb-6e51-e550" primary="true" name="Infantry Squad"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Cossacks" hidden="false" id="5486-27d0-7463-d857">
       <selectionEntryGroups>
@@ -2469,6 +2511,13 @@
         <infoLink name="Skilled Riders" id="d100-c4a3-d494-1099" hidden="false" type="rule" targetId="020a-b269-9b6c-6722"/>
         <infoLink name="Behind Enemy Lines" id="4f41-58cf-eb86-18b8" hidden="false" type="rule" targetId="512f-6b9d-dc3e-c309"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Cavalry Squad" hidden="false" id="4f28-e9f3-119b-86b5">
       <selectionEntryGroups>
@@ -2729,6 +2778,13 @@
         <categoryLink name="Infantry Squad" hidden="false" id="eac7-e02f-c610-a86e" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
         <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="e33c-5a14-4624-317c" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="People&apos;s Militia Squad" hidden="false" id="8292-74d4-f85d-59e0">
       <selectionEntryGroups>
@@ -3096,6 +3152,13 @@
       <infoLinks>
         <infoLink name="Stubborn" id="540c-2352-042e-6f4b" hidden="false" type="rule" targetId="2cee-b9c2-ff16-d51a"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ski Troops Squad" hidden="false" id="22b3-69e6-e50f-7e50">
       <selectionEntryGroups>
@@ -3331,6 +3394,13 @@
       <infoLinks>
         <infoLink name="Skis" id="d3cd-6c0c-750d-7f17" hidden="false" type="rule" targetId="6115-5f5d-01fd-5ce0"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Siberian Squad" hidden="false" id="773b-560b-6832-0a7a">
       <selectionEntryGroups>
@@ -3587,6 +3657,13 @@
         <categoryLink name="Infantry Squad" hidden="false" id="bfac-ce03-4e41-d003" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
         <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="8266-13d3-7e53-2139" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Naval Squad" hidden="false" id="e650-fa1c-4fa3-ad64">
       <selectionEntryGroups>
@@ -4189,6 +4266,13 @@
           </modifiers>
         </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Motorcycle Squad" hidden="false" id="295f-e992-d247-b0bf">
       <selectionEntryGroups>
@@ -5409,6 +5493,13 @@
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Sniper Team" hidden="false" id="690f-b03d-8cfa-19b0">
       <selectionEntryGroups>
@@ -5533,6 +5624,13 @@
       <infoLinks>
         <infoLink name="Infiltrator" id="67a8-20ac-239e-3613" hidden="false" type="rule" targetId="7619-1248-8866-a39b"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Flamethrower Team" hidden="false" id="3416-fc23-976c-c5d1">
       <selectionEntryGroups>
@@ -5624,6 +5722,13 @@
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Light Mortar Team" hidden="false" id="9fd7-e83f-337b-3930">
       <selectionEntryGroups>
@@ -9249,6 +9354,10 @@
           </modifiers>
         </infoLink>
       </infoLinks>
+      <costs>
+        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+        <cost name="Transport Cost" typeId="e610-392e-56b6-c03c" value="12"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Half-tracked Truck" hidden="false" id="4c89-4e1b-1fdc-b071">
       <profiles>
@@ -9942,6 +10051,13 @@
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Light Artillery" hidden="false" id="878e-3ec4-f86c-10a6">
       <selectionEntryGroups>

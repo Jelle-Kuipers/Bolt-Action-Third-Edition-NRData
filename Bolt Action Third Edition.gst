@@ -189,30 +189,6 @@
             <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c086-7c27-8fe0-6c32-min"/>
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c086-7c27-8fe0-6c32-max"/>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="c086-7c27-8fe0-6c32-max">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="any" shared="true" roundUp="false"/>
-              </repeats>
-            </modifier>
-            <modifier type="increment" value="1" field="c086-7c27-8fe0-6c32-min">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="parent" childId="e136-a9c1-1008-a521" shared="true" roundUp="false"/>
-              </repeats>
-              <conditionGroups>
-                <conditionGroup type="count">
-                  <conditions>
-                    <condition type="atLeast" value="1" field="selections" scope="parent" childId="any" shared="true"/>
-                  </conditions>
-                </conditionGroup>
-              </conditionGroups>
-            </modifier>
-            <modifier type="decrement" value="1" field="c086-7c27-8fe0-6c32-max">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="model" childId="any" shared="true" roundUp="false" includeChildSelections="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
         </categoryLink>
         <categoryLink name="Infantry Squad" hidden="false" id="1506-4800-9307-d9e2" targetId="dc5d-8aeb-6591-b49b">
           <constraints>
@@ -232,31 +208,19 @@
         </categoryLink>
         <categoryLink name="Transport Vehicle" hidden="false" id="0691-2a23-a31a-0622" targetId="9cdf-c776-8161-5e87">
           <constraints>
-            <constraint type="max" value="0" field="selections" scope="parent" shared="true" id="719e-7d1c-9818-3d9e" automatic="false" includeChildSelections="false">
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="719e-7d1c-9818-3d9e" automatic="false" includeChildSelections="false">
               <comment>CHECK BOOK</comment>
             </constraint>
           </constraints>
-          <modifiers>
-            <modifier type="increment" value="1" field="719e-7d1c-9818-3d9e">
-              <repeats>
-                <repeat value="1" repeats="1" field="selections" scope="force" childId="23eb-25d5-c294-d333" shared="true" roundUp="false" includeChildSelections="true"/>
-              </repeats>
-            </modifier>
-          </modifiers>
         </categoryLink>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="d569-0641-e4fa-120b" includeChildSelections="true"/>
       </constraints>
       <modifiers>
-        <modifier type="increment" value="0" field="ab8b-35f3-81bf-8563">
+        <modifier type="add" value="{this} must have a {Transport Slots} value of 0 or more." field="error">
           <conditions>
-            <condition type="atLeast" value="1" field="selections" scope="force" childId="model" shared="true" includeChildSelections="true"/>
-          </conditions>
-        </modifier>
-        <modifier type="add" value="need more transport seats bitchass hoe" field="error">
-          <conditions>
-            <condition type="greaterThan" value="1" field="selections" scope="parent" childId="any" shared="true"/>
+            <condition type="lessThan" value="0" field="e610-392e-56b6-c03c" scope="force" childId="any" shared="true" includeChildSelections="true"/>
           </conditions>
         </modifier>
       </modifiers>
@@ -618,6 +582,16 @@
   </forceEntries>
   <costTypes>
     <costType name="points" id="ab8b-35f3-81bf-8563" defaultCostLimit="-1"/>
+    <costType name="Transport Slots" id="e610-392e-56b6-c03c" defaultCostLimit="-1" hidden="true">
+      <comment>Must be -1 for model, or X for transport vehicles, where X equals the amount of transport slots in the vehicle profile.</comment>
+      <modifiers>
+        <modifier type="set" value="false" field="hidden">
+          <conditions>
+            <condition type="instanceOf" value="1" field="selections" scope="parent" childId="9ea2-18da-2a4c-60bc" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </costType>
   </costTypes>
   <profileTypes>
     <profileType name="Weapon" id="e048-196b-a4ec-e408" hidden="false" kind="weapon">
