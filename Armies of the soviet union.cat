@@ -203,7 +203,6 @@
           </entryLinks>
         </selectionEntry>
       </selectionEntries>
-      <comment>check HQ choice shit / Update to new standard</comment>
       <infoLinks>
         <infoLink name="Fanatics" id="8e04-86cc-322e-71df" hidden="false" type="rule" targetId="666a-4a42-a085-3d6a"/>
       </infoLinks>
@@ -4992,7 +4991,6 @@
         <categoryLink targetId="bc7e-847f-365a-f118" id="57f2-8b4f-6fdc-365d" primary="true" name="Machine Gun Team"/>
         <categoryLink targetId="ba7e-8a36-5678-1032" id="8a4f-eb6e-f1b1-c3c5" primary="false" name="MG_OR_MORTAR_FORCE_ORG"/>
       </categoryLinks>
-      <comment>GUN SHIELD</comment>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Machinegunners" hidden="false" id="4959-12ea-7aee-87d2">
           <selectionEntries>
@@ -5085,7 +5083,6 @@
         <categoryLink name="Machine Gun Team" hidden="false" id="e976-66e1-ef73-f49a" targetId="bc7e-847f-365a-f118" primary="true"/>
         <categoryLink targetId="ba7e-8a36-5678-1032" id="7809-996b-3cec-e54e" primary="false" name="MG_OR_MORTAR_FORCE_ORG"/>
       </categoryLinks>
-      <comment>GUN SHIELD / PINTLE</comment>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Machinegunners" hidden="false" id="0d1d-f4c7-1b52-fa15" sortIndex="2">
           <modifierGroups>
@@ -6662,24 +6659,29 @@
             </selectionEntryGroup>
           </selectionEntryGroups>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Upgrades" id="4c04-4317-641a-0cb8" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Add Reinforced Front Armour and Slow to represent the T-28c" hidden="false" id="1a32-49ba-d66c-fd64">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="10"/>
+              </costs>
+              <infoLinks>
+                <infoLink name="Reinforced Front Armour" id="6636-f6cc-7e3d-96b6" hidden="false" type="rule" targetId="24e0-480f-be69-25da"/>
+                <infoLink name="Slow" id="724e-35f9-8383-fa9e" hidden="false" type="rule" targetId="c98b-8002-56cd-da6c"/>
+              </infoLinks>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acbb-d748-48bb-ac40" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3fe6-5223-aa5b-304c" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink targetId="171a-98f6-a773-8d80" id="a430-6e0c-0fea-98fe" primary="true" name="Tank"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Add Reinforced Front Armour and Slow to represent the T-28c" hidden="false" id="1a32-49ba-d66c-fd64" sortIndex="3">
-          <costs>
-            <cost name="points" typeId="ab8b-35f3-81bf-8563" value="10"/>
-          </costs>
-          <infoLinks>
-            <infoLink name="Reinforced Front Armour" id="6636-f6cc-7e3d-96b6" hidden="false" type="rule" targetId="24e0-480f-be69-25da"/>
-            <infoLink name="Slow" id="724e-35f9-8383-fa9e" hidden="false" type="rule" targetId="c98b-8002-56cd-da6c"/>
-          </infoLinks>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acbb-d748-48bb-ac40" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
       <modifiers>
         <modifier type="set" value="T-28c Medium Tank" field="name">
           <conditions>
@@ -8210,7 +8212,7 @@
         <categoryLink targetId="31a5-e1dc-8d85-fb4b" id="061a-691b-9c8d-52c2" primary="true" name="Self-propelled Artillery"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="The Bronekater - Soviet Riverine Craft" hidden="false" id="1887-04fa-3136-63d5">
+    <selectionEntry type="model" import="true" name="The Bronekater" hidden="false" id="1887-04fa-3136-63d5">
       <profiles>
         <profile name="The Bronekater - Soviet Riverine Craft" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="3130-d979-eaa5-4d47">
           <characteristics>
@@ -8797,13 +8799,17 @@
       <categoryLinks>
         <categoryLink targetId="31a5-e1dc-8d85-fb4b" id="fc04-027f-655c-c1c2" primary="true" name="Self-propelled Artillery"/>
       </categoryLinks>
+      <comment>This thing was a pain to work on and a headache to follow when editing, I highly suggest going turret for turret.</comment>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Upgrade 1 turret-mounted MMG to a medium anti-tank gun with co-axial MMG" hidden="false" id="38a7-decc-7ee0-12d7">
       <costs>
         <cost name="points" typeId="ab8b-35f3-81bf-8563" value="65"/>
       </costs>
+      <comment>Bronekater turret option</comment>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="Replace 1 turret-mounted medium anti-tank gun and co-axial MMG with 1 multiple launcher" hidden="false" id="970c-36d6-76ce-4632"/>
+    <selectionEntry type="upgrade" import="true" name="Replace 1 turret-mounted medium anti-tank gun and co-axial MMG with 1 multiple launcher" hidden="false" id="970c-36d6-76ce-4632">
+      <comment>Bronekater turret option</comment>
+    </selectionEntry>
     <selectionEntry type="model" import="true" name="Tokarev 4m Quad Maxim On Gaz-AA Truck" hidden="false" id="1348-05ec-6344-c689">
       <profiles>
         <profile name="Tokarev 4m Quad Maxim On Gaz-AA Truck" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="9205-eb56-3656-950b">
@@ -9293,20 +9299,25 @@
             </entryLink>
           </entryLinks>
         </selectionEntryGroup>
+        <selectionEntryGroup name="Upgrades" id="85d0-89b7-58e8-9460" hidden="false" sortIndex="4">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Replace the rear-mounted LMG with a turret mounted LMG and add the Open-Topped special rule (representing the D-12)" hidden="false" id="e8e7-1d12-4947-ec88">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="-5"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="41db-3096-10bb-e567" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="71ee-9034-32e2-2990" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Armoured Car" hidden="false" id="f0d6-cc64-eb7f-ddb6" targetId="02b1-967a-5314-645f" primary="true"/>
       </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Replace the rear-mounted LMG with a turret mounted LMG and add the Open-Topped special rule (representing the D-12)" hidden="false" id="e8e7-1d12-4947-ec88" sortIndex="4">
-          <costs>
-            <cost name="points" typeId="ab8b-35f3-81bf-8563" value="-5"/>
-          </costs>
-          <constraints>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="41db-3096-10bb-e567" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
       <modifiers>
         <modifier type="set" value="D-12 Light Armoured Car" field="name">
           <conditions>
