@@ -43,6 +43,8 @@
     <categoryEntry name="Self-propelled Artillery" id="31a5-e1dc-8d85-fb4b" hidden="false"/>
     <categoryEntry name="Mounted" id="5b9b-50c0-f20d-a4bc" hidden="false"/>
     <categoryEntry name="Transport Seat" id="23eb-25d5-c294-d333" hidden="true"/>
+    <categoryEntry name="Transport Vehicle (Recce)" id="2c69-2f60-928f-be51 Recce" hidden="false"/>
+    <categoryEntry name="ARMOURED_FORCE_ORG" id="ca48-ccc0-2b1e-9e30" hidden="true"/>
   </categoryEntries>
   <forceEntries>
     <forceEntry name="Engineer Platoon" id="c1f4-d905-fb7d-17ab" hidden="false" page="186" publicationId="6d3a-4ad3-2bb6-913e">
@@ -181,6 +183,18 @@
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="54f2-b887-b2c2-141d" includeChildSelections="true"/>
       </constraints>
       <comment>Force ROG</comment>
+      <modifiers>
+        <modifier type="add" value="{this} needs atleast 1 vehicle from tank, tank destroyer, assault gun, self-propelled artillery, anti-aircraft vehicle or armoured car." field="error">
+          <conditions>
+            <condition type="lessThan" value="1" field="selections" scope="force" childId="ca48-ccc0-2b1e-9e30" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+        <modifier type="add" value="{this} can only have 4 total vehicles from tank, tank destroyer, assault gun, self-propelled artillery, anti-aircraft vehicle or armoured car." field="error">
+          <conditions>
+            <condition type="greaterThan" value="4" field="selections" scope="force" childId="ca48-ccc0-2b1e-9e30" shared="true" includeChildSelections="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
     </forceEntry>
     <forceEntry name="Recce Infantry Platoon" id="9ea2-18da-2a4c-60bc" hidden="false" page="189" publicationId="6d3a-4ad3-2bb6-913e">
       <categoryLinks>
@@ -206,13 +220,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f41c-6b16-efde-5245"/>
           </constraints>
         </categoryLink>
-        <categoryLink name="Transport Vehicle" hidden="false" id="0691-2a23-a31a-0622" targetId="9cdf-c776-8161-5e87">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="719e-7d1c-9818-3d9e" automatic="false" includeChildSelections="false">
-              <comment>CHECK BOOK</comment>
-            </constraint>
-          </constraints>
-        </categoryLink>
+        <categoryLink name="Transport Vehicle (Recce)" hidden="false" id="4204-bf0d-f4d6-d67f" targetId="2c69-2f60-928f-be51 Recce"/>
       </categoryLinks>
       <constraints>
         <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="d569-0641-e4fa-120b" includeChildSelections="true"/>
@@ -549,14 +557,14 @@
     </forceEntry>
     <forceEntry name="Configuration" id="6862-9e64-3947-7750" hidden="false">
       <constraints>
-        <constraint type="min" value="1" field="forces" scope="roster" shared="true" id="915f-7265-13ba-8670-min" includeChildSelections="true"/>
-        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="915f-7265-13ba-8670-max" includeChildSelections="true"/>
+        <constraint type="min" value="1" field="forces" scope="roster" shared="true" id="6478-c7d5-ac64-78e6-min" includeChildSelections="true"/>
+        <constraint type="max" value="1" field="forces" scope="roster" shared="true" id="6478-c7d5-ac64-78e6-max" includeChildSelections="true"/>
       </constraints>
       <categoryLinks>
         <categoryLink name="Configuration" hidden="false" id="98c0-4ae8-de14-8340" targetId="9f43-cba0-0236-299a">
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="23ba-f947-48ab-7d31-min" includeChildSelections="true" includeChildForces="true"/>
-            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="23ba-f947-48ab-7d31-max" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="min" value="1" field="selections" scope="roster" shared="true" id="0070-953a-22b9-8e96-min" includeChildSelections="true" includeChildForces="true"/>
+            <constraint type="max" value="1" field="selections" scope="roster" shared="true" id="0070-953a-22b9-8e96-max" includeChildSelections="true" includeChildForces="true"/>
           </constraints>
         </categoryLink>
       </categoryLinks>
@@ -1649,6 +1657,433 @@ over open ground, and therefore cannot pass through obstacles. All Occupants mus
         <categoryLink targetId="23eb-25d5-c294-d333" id="cfd7-2d35-7006-96c8" primary="true" name="Transport Seat"/>
       </categoryLinks>
     </selectionEntry>
+    <selectionEntry type="model" import="true" name="Truck" hidden="false" id="20d3-4042-5771-e95d">
+      <profiles>
+        <profile name="Truck" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="1b54-22bf-822f-142a">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">12</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
+          </characteristics>
+          <modifiers>
+            <modifier type="set" value="Amphibious" field="b5b7-688f-e6a8-1a52">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="d73a-fbfd-fe53-baa4" shared="true"/>
+              </conditions>
+            </modifier>
+          </modifiers>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="d769-831b-6eb4-09f0" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="a714-efe8-2bdd-8bdc" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="22"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="990f-5501-e159-24f1" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="27"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="083b-185e-9539-09f9" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="32"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="df95-a5e5-896e-e279" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a937-d8cc-da67-4499" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Upgrades" id="fb41-e482-0e31-8f5b" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Pintle-mounted LMG" hidden="false" id="1b4f-32e0-1705-e628" type="selectionEntry" targetId="846e-7114-a448-d795" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a391-83d4-4d3d-9842" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Amphibious" hidden="false" id="d73a-fbfd-fe53-baa4" sortIndex="1">
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="53af-062f-db80-1c03" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="ed0f-c825-b65c-5f32" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Transport Vehicle" hidden="false" id="f8b5-bab5-22cd-ebc5" targetId="9cdf-c776-8161-5e87" primary="true"/>
+        <categoryLink name="Tow" hidden="false" id="9c98-ff42-6ed4-657c" targetId="6a50-07f3-fc3d-fb3d" primary="false"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tow" id="fa90-2bbd-0232-5385" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
+          <modifiers>
+            <modifier type="set" value="Light howitzer; light anti-tank gun or medium anti-tank gun; light anti-aircraft gun" field="ca19-85ed-345c-a38d"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <costs>
+        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+        <cost name="Transport Cost" typeId="e610-392e-56b6-c03c" value="12"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Horse-drawn Limber" hidden="false" id="e27f-32b5-5a48-1374">
+      <profiles>
+        <profile name="Horse-drawn Limber" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="57f3-fdd7-48f5-a980">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">3+ (Literally Soft-skinned)</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Slow (only when towing)</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="5867-baac-00f8-da00" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="e723-6669-46b1-2111" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="8"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="cb52-1131-1683-c18a" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="10"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="b4c5-fcc0-f42f-bb45" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="12"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4ced-3208-ef2a-c756" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="acff-c14c-1b30-9d02" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Vehicle" hidden="false" id="01af-37fe-47b2-a202" targetId="94ea-9320-8627-3a3d" primary="false"/>
+        <categoryLink name="Tow" hidden="false" id="c01a-e36f-a3ea-2507" targetId="6a50-07f3-fc3d-fb3d" primary="true"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tow" id="f365-3fad-e7fd-a355" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
+          <modifiers>
+            <modifier type="set" value="Any gun" field="ca19-85ed-345c-a38d"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Field Ambulance" hidden="false" id="61ce-cdb6-35bd-1c42">
+      <profiles>
+        <profile name="Field Ambulance" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="b256-a7a4-f5c3-17d9">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">None. However, like empty transports, ambulances are destroyed if they end their turn closer to enemy units than to friendly units.</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Medical Vehicle</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="d373-8751-aa52-3d82" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="0e3e-0c24-7125-23df" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="38"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="8559-855f-6918-72bb" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="46"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="43db-ce0d-362d-d469" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1c8e-1094-e6ce-8531" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Medic" hidden="false" id="228b-64e0-fba6-d000" targetId="c3cf-3e5d-f565-e692" primary="true"/>
+      </categoryLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Wheeled Artillery Tractor" hidden="false" id="8040-ed04-7993-92f1">
+      <profiles>
+        <profile name="Wheeled Artillery Tractor" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="c8a9-1ee2-c0a5-1aeb">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">None. However, like empty transports, ambulances are destroyed if they end their turn closer to enemy units than to friendly units.</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
+          </characteristics>
+          <modifierGroups>
+            <modifierGroup type="and">
+              <conditions>
+                <condition type="atLeast" value="1" field="selections" scope="parent" childId="6c63-c7e5-643e-00a2" shared="true"/>
+              </conditions>
+              <modifiers>
+                <modifier type="set" value="Tracked" field="37d0-58a9-4b21-5e3b"/>
+                <modifier type="set" value="7+ (Armoured Carrier)" field="28cf-9f74-5808-52b3"/>
+                <modifier type="set" value="Open-topped" field="b5b7-688f-e6a8-1a52"/>
+                <modifier type="set" value="Armoured, Tracked Artillery Tractor" field="name"/>
+              </modifiers>
+            </modifierGroup>
+          </modifierGroups>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="09c2-8a92-89e7-2c21" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="0ebc-0ae0-b344-dfbd" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="15"/>
+                <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="ec60-66b7-ea23-18e7" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="18"/>
+                <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="129c-4efe-0965-69d0" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="12"/>
+                <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2e87-4bfe-3fe5-b73e" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb3a-c25e-09d1-c08b" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Upgrades" id="5e48-11c0-be94-c05f" hidden="false">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Field as Fully Tracked, Open-topped, Armoured Tractor with a Damage value of 7+" hidden="false" id="6c63-c7e5-643e-00a2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="20"/>
+                <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d2b3-2299-39f5-97c6" includeChildSelections="false"/>
+              </constraints>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="82e7-723e-4589-21bf" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="e064-5874-62b6-10bc" primary="true" name="Tow"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tow" id="dbb9-23b6-cd05-20c0" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
+          <modifiers>
+            <modifier type="set" value="Any anti-tank gun, anti-aircraft gun, light or medium howitzer" field="ca19-85ed-345c-a38d"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <modifiers>
+        <modifier type="set" value="Armoured, Tracked Artillery Tractor" field="name">
+          <conditions>
+            <condition type="atLeast" value="1" field="selections" scope="parent" childId="6c63-c7e5-643e-00a2" shared="true"/>
+          </conditions>
+        </modifier>
+      </modifiers>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Half-tracked Truck" hidden="false" id="6585-904b-d589-dcc5">
+      <profiles>
+        <profile name="Half-tracked Truck" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="a0e4-1716-47da-f1f2">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">12</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Half-track</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="fb39-ef3c-a901-3f55" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="da26-cf66-41e7-03c0" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="22"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="22b5-9764-780e-9649" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="27"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="a100-9904-880c-deea" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="32"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a4ff-0593-b824-9b6b" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f009-177f-4ce5-9d19" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Transport Vehicle" hidden="false" id="6556-58e2-370f-c50a" targetId="9cdf-c776-8161-5e87" primary="true"/>
+        <categoryLink name="Tow" hidden="false" id="2a91-6603-4dc5-4140" targetId="6a50-07f3-fc3d-fb3d" primary="false"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tow" id="6a97-c9ee-86f7-a4a0" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
+          <modifiers>
+            <modifier type="set" value="Light howitzer; light anti-tank gun or medium anti-tank gun; light anti-aircraft gun" field="ca19-85ed-345c-a38d"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <entryLinks>
+        <entryLink import="true" name="Forward-facing Pintle-mounted LMG" hidden="false" id="aa81-3ee0-0038-4f4b" type="selectionEntry" targetId="6474-aac9-57b1-cfa6"/>
+      </entryLinks>
+      <costs>
+        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+        <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="12"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Light Truck" hidden="false" id="9698-5673-2ba8-25e9">
+      <profiles>
+        <profile name="Light Truck" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="234e-849e-2909-551e">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">8</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="63e8-11b5-c929-7c6a" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="37b0-683a-faf2-e486" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="18"/>
+                <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="1f4a-bdf6-190a-a0f2" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="23"/>
+                <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="22aa-fa2e-b7bf-2e12" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="28"/>
+                <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e008-e76d-1e78-c752" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="949d-1017-a6ec-5fc2" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+        <selectionEntryGroup name="Upgrades" id="646e-82eb-4e41-7f39" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Forward Facing, Pintle-mounted MMG" hidden="false" id="dfc7-bbf3-0416-b63b" type="selectionEntry" targetId="24cc-7dde-8c37-dab3" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="15"/>
+              </costs>
+              <constraints>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6ce8-73a3-7443-2aa0" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+          <constraints>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="26cb-2b91-0e5e-29dc" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Transport Vehicle" hidden="false" id="6ed2-d9d0-b079-822a" targetId="9cdf-c776-8161-5e87" primary="true"/>
+        <categoryLink name="Tow" hidden="false" id="d45c-f470-fede-7fec" targetId="6a50-07f3-fc3d-fb3d" primary="false"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Tow" id="11e4-8f45-8141-f068" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
+          <modifiers>
+            <modifier type="set" value="Light howitzer; light anti-tank gun or medium anti-tank gun; light anti-aircraft gun" field="ca19-85ed-345c-a38d"/>
+          </modifiers>
+        </infoLink>
+      </infoLinks>
+      <costs>
+        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+        <cost name="Transport Cost" typeId="e610-392e-56b6-c03c" value="8"/>
+      </costs>
+    </selectionEntry>
+    <selectionEntry type="upgrade" import="true" name="Forward Facing, Pintle-mounted MMG" hidden="false" id="24cc-7dde-8c37-dab3">
+      <infoLinks>
+        <infoLink name="Forward Facing, Pintle-mounted MMG" id="07f7-ecf0-24f4-24c0" hidden="false" type="profile" targetId="4d91-1099-9cf4-8e41"/>
+      </infoLinks>
+    </selectionEntry>
+    <selectionEntry type="model" import="true" name="Civilian Car" hidden="false" id="f4d8-c092-f310-1b01">
+      <profiles>
+        <profile name="Civilian Car" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="2e79-e40e-7ef5-46f5">
+          <characteristics>
+            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
+            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">3</characteristic>
+            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
+            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
+          </characteristics>
+        </profile>
+      </profiles>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Veterancy" id="af29-caeb-b759-bd85" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
+          <selectionEntries>
+            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="4331-218d-b8c8-85e9" sortIndex="1">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="14"/>
+                <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="651e-3465-9309-5d12" sortIndex="2">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="18"/>
+                <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+              </costs>
+            </selectionEntry>
+            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="f720-fd8a-1da2-94e8" sortIndex="3">
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="22"/>
+                <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+              </costs>
+            </selectionEntry>
+          </selectionEntries>
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5627-5496-17ff-26c8" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7fb6-43da-a077-5990" includeChildSelections="false"/>
+          </constraints>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Transport Vehicle" hidden="false" id="b684-ab5f-646c-4d04" targetId="9cdf-c776-8161-5e87" primary="true"/>
+      </categoryLinks>
+      <costs>
+        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+        <cost name="Transport Cost" typeId="e610-392e-56b6-c03c" value="3"/>
+      </costs>
+    </selectionEntry>
   </sharedSelectionEntries>
   <sharedProfiles>
     <profile name="Rifle" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="8f32-25d0-9493-e156" publicationId="6d3a-4ad3-2bb6-913e" page="92">
@@ -2305,8 +2740,105 @@ as a direct hit by a 3” HE weapon against the vehicle instead of using the tem
         <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Team, HE (2&quot;), 360-degree arc of fire, Flak</characteristic>
       </characteristics>
     </profile>
+    <profile name="Forward Facing, Pintle-mounted MMG" typeId="e048-196b-a4ec-e408" typeName="Weapon" hidden="false" id="4d91-1099-9cf4-8e41">
+      <characteristics>
+        <characteristic name="Range" typeId="eb7e-7ebc-1a0e-68be">36&quot;</characteristic>
+        <characteristic name="Shots" typeId="88f2-c7fc-8a84-1851">3</characteristic>
+        <characteristic name="Pen" typeId="27a4-048c-375a-0a88">-</characteristic>
+        <characteristic name="Special Rules" typeId="f4d7-272b-2c65-a2f0">Flak, Front Arc</characteristic>
+      </characteristics>
+    </profile>
   </sharedProfiles>
   <publications>
     <publication name="Bolt Action Rulebook Third Edition" id="6d3a-4ad3-2bb6-913e" hidden="false" shortName="Core Rulebook" publisher="Bolt Action - World War II Wargames Rules: Rulebook Third edition." publicationDate="September 26, 2024" publisherUrl="https://warlord-community.warlordgames.com/bolt-action-third-edition-september-2024/"/>
   </publications>
+  <entryLinks>
+    <entryLink import="true" name="Horse-drawn Limber" hidden="false" id="25f4-e4ed-f74f-107e" targetId="e27f-32b5-5a48-1374" type="selectionEntry"/>
+    <entryLink import="true" name="Truck" hidden="false" id="fec8-50f3-26a4-b113" targetId="20d3-4042-5771-e95d" type="selectionEntry"/>
+    <entryLink import="true" name="Field Ambulance" hidden="false" id="35ee-00e7-3424-f0ad" targetId="61ce-cdb6-35bd-1c42" type="selectionEntry"/>
+    <entryLink import="true" name="Wheeled Artillery Tractor" hidden="false" id="38f3-768c-a61d-c3e0" targetId="8040-ed04-7993-92f1" type="selectionEntry"/>
+    <entryLink import="true" name="Half-tracked Truck" hidden="false" id="80b3-bff0-92f7-91ac" targetId="6585-904b-d589-dcc5" type="selectionEntry"/>
+    <entryLink import="true" name="Light Truck" hidden="false" id="7840-a9f3-477a-42bc" targetId="9698-5673-2ba8-25e9" type="selectionEntry"/>
+    <entryLink import="true" name="Civilian Car" hidden="false" id="58e0-e646-5168-fa20" targetId="f4d8-c092-f310-1b01" type="selectionEntry"/>
+    <entryLink import="true" name="Civilian Car" hidden="false" id="e0f0-c8f4-6f3f-48ac" targetId="f4d8-c092-f310-1b01" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="2c69-2f60-928f-be51 Recce" id="70f9-ea0c-4659-c9d1" primary="true" name="Transport Vehicle (Recce)"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Recce" id="5558-9a50-fece-186d" hidden="false" type="rule" targetId="d2b8-a835-dee8-36ac"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Must Have Recce if it does not have Recce by default." hidden="false" id="71d9-24ef-bd20-f9f3">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6310-fa0f-47e7-5e8d-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6310-fa0f-47e7-5e8d-max"/>
+          </constraints>
+          <costs>
+            <cost name="points" typeId="ab8b-35f3-81bf-8563" value="10"/>
+            <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </entryLink>
+    <entryLink import="true" name="Half-tracked Truck" hidden="false" id="020b-b418-f8e2-7fa5" targetId="6585-904b-d589-dcc5" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="2c69-2f60-928f-be51 Recce" id="3ae1-0fea-2851-52ed" primary="true" name="Transport Vehicle (Recce)"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Recce" id="52e1-0a93-fa64-a356" hidden="false" type="rule" targetId="d2b8-a835-dee8-36ac"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Must Have Recce if it does not have Recce by default." hidden="false" id="e5df-e457-a3ef-8d9c">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3fd8-c96a-cb2c-6a70-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3fd8-c96a-cb2c-6a70-max"/>
+          </constraints>
+          <costs>
+            <cost name="points" typeId="ab8b-35f3-81bf-8563" value="10"/>
+            <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </entryLink>
+    <entryLink import="true" name="Light Truck" hidden="false" id="ccf9-328b-3d33-695f" targetId="9698-5673-2ba8-25e9" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="2c69-2f60-928f-be51 Recce" id="dd49-c408-f156-0483" primary="true" name="Transport Vehicle (Recce)"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Recce" id="9fa5-b477-e2e9-752b" hidden="false" type="rule" targetId="d2b8-a835-dee8-36ac"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Must Have Recce if it does not have Recce by default." hidden="false" id="76c5-47b0-57a3-06d3">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="09d0-bb85-144b-14fd-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="09d0-bb85-144b-14fd-max"/>
+          </constraints>
+          <costs>
+            <cost name="points" typeId="ab8b-35f3-81bf-8563" value="10"/>
+            <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </entryLink>
+    <entryLink import="true" name="Truck" hidden="false" id="5150-2498-67e9-2199" targetId="20d3-4042-5771-e95d" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="2c69-2f60-928f-be51 Recce" id="7447-2376-5308-6cb1" primary="true" name="Transport Vehicle (Recce)"/>
+      </categoryLinks>
+      <infoLinks>
+        <infoLink name="Recce" id="d980-9f57-c4e0-a852" hidden="false" type="rule" targetId="d2b8-a835-dee8-36ac"/>
+      </infoLinks>
+      <selectionEntries>
+        <selectionEntry type="upgrade" import="true" name="Must Have Recce if it does not have Recce by default." hidden="false" id="240a-4fb3-f611-d0eb">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8597-8361-62e6-5ca7-min"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8597-8361-62e6-5ca7-max"/>
+          </constraints>
+          <costs>
+            <cost name="points" typeId="ab8b-35f3-81bf-8563" value="10"/>
+            <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+          </costs>
+        </selectionEntry>
+      </selectionEntries>
+    </entryLink>
+  </entryLinks>
 </gameSystem>
