@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<catalogue library="false" id="7c15-f6a9-718a-725c" name="Armies of the soviet union" gameSystemId="sys-aa0d-3b42-3f65-4d19" gameSystemRevision="1" revision="1" authorContact="Jelle-Kuipers, Jelle30kuipers at gmail dot com" authorName="Jelly" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
+<catalogue library="false" id="7c15-f6a9-718a-725c" name="Armies of the soviet union" gameSystemId="sys-aa0d-3b42-3f65-4d19" gameSystemRevision="1" revision="2" authorContact="Jelle-Kuipers, Jelle30kuipers at gmail dot com" authorName="Jelly" battleScribeVersion="2.03" type="catalogue" xmlns="http://www.battlescribe.net/schema/catalogueSchema">
   <sharedSelectionEntries>
     <selectionEntry type="unit" import="true" name="Platoon Commander" hidden="false" id="a025-dcd6-d08c-4f3a">
       <categoryLinks>
-        <categoryLink targetId="5aa8-cdcf-903c-eef7" id="0e44-acaf-fc15-3f2c" primary="true" name="Platoon Commander"/>
-        <categoryLink targetId="6b53-28ad-d16f-2f00" id="cfa5-bb31-9083-a348" primary="false" name="Headquarters Units"/>
+        <categoryLink targetId="5aa8-cdcf-903c-eef7" id="0e44-acaf-fc15-3f2c" primary="false" name="Platoon Commander"/>
+        <categoryLink targetId="6b53-28ad-d16f-2f00" id="cfa5-bb31-9083-a348" primary="true" name="Headquarters Unit"/>
       </categoryLinks>
       <selectionEntryGroups>
         <selectionEntryGroup name="Officer" id="358c-e3fd-17ff-b9b5" hidden="false" sortIndex="2">
@@ -155,10 +155,16 @@
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Commisar" hidden="false" id="b88f-74d1-d220-0b8c">
       <categoryLinks>
-        <categoryLink targetId="6b53-28ad-d16f-2f00" id="a591-f3eb-552d-c824" primary="false" name="Headquarters Units"/>
         <categoryLink targetId="f880-7070-5ff7-6f5b" id="2a3d-c25c-be06-e3d8" primary="true" name="Commisar"/>
       </categoryLinks>
       <selectionEntryGroups>
@@ -201,6 +207,13 @@
       <infoLinks>
         <infoLink name="Fanatics" id="8e04-86cc-322e-71df" hidden="false" type="rule" targetId="666a-4a42-a085-3d6a"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Medic" hidden="false" id="3eda-9320-2f49-e13b">
       <categoryLinks>
@@ -467,6 +480,13 @@
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Rifle Squad" hidden="false" id="04eb-9e10-318e-6d2f">
       <selectionEntryGroups>
@@ -558,6 +578,13 @@
       <infoLinks>
         <infoLink name="Green" id="d994-061f-027f-c027" hidden="false" type="rule" targetId="c397-64e1-1d9f-5df3"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Light Machine Gun Squad" hidden="false" id="b02b-4507-5e54-a12a">
       <selectionEntryGroups>
@@ -790,8 +817,16 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink targetId="bc7e-847f-365a-f118" id="e217-9c8d-3acc-4f9b" primary="false" name="Machine Gun Team"/>
-        <categoryLink targetId="dc5d-8aeb-6591-b49b" id="3947-0218-a226-fea3" primary="true" name="Infantry Squads"/>
+        <categoryLink targetId="dc5d-8aeb-6591-b49b" id="3947-0218-a226-fea3" primary="true" name="Infantry Squad"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="a992-aef9-3062-f761" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Submachine Gun Squad" hidden="false" id="5cad-cdee-d3ce-07f5">
       <selectionEntryGroups>
@@ -1031,8 +1066,16 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Machine Gun Team" hidden="false" id="d0ca-2194-65d6-44b4" targetId="bc7e-847f-365a-f118" primary="false"/>
-        <categoryLink name="Infantry Squads" hidden="false" id="5a88-084a-9d43-e12e" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="5a88-084a-9d43-e12e" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="7500-12ac-a646-ddf3" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Tank Rider Squad" hidden="false" id="1e9b-b005-1c5a-b36e">
       <selectionEntryGroups>
@@ -1258,11 +1301,19 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Machine Gun Team" hidden="false" id="46d2-c946-cb7f-b78f" targetId="bc7e-847f-365a-f118" primary="false"/>
-        <categoryLink name="Infantry Squads" hidden="false" id="104f-dd13-b89c-75a4" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="104f-dd13-b89c-75a4" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="193a-4557-cbdf-b463" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Tank Riders" id="da44-1fd2-1f31-2eb3" hidden="false" type="rule" targetId="73ae-78fc-14c2-b60f"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Guard Squad" hidden="false" id="86c3-06f5-a551-5498">
       <selectionEntryGroups>
@@ -1519,8 +1570,16 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Machine Gun Team" hidden="false" id="872f-07e1-aa68-6ba9" targetId="bc7e-847f-365a-f118" primary="false"/>
-        <categoryLink name="Infantry Squads" hidden="false" id="cffe-6cdd-4dc3-24a0" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="cffe-6cdd-4dc3-24a0" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="db6c-4399-1377-1c80" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Veteran Squad" hidden="false" id="3fea-3a17-9e0b-39d4">
       <selectionEntryGroups>
@@ -1789,8 +1848,15 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Machine Gun Team" hidden="false" id="357d-e1cd-c4c2-5832" targetId="bc7e-847f-365a-f118" primary="false"/>
-        <categoryLink name="Infantry Squads" hidden="false" id="81c4-eca2-b17d-cef7" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="81c4-eca2-b17d-cef7" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="NKVD Squad" hidden="false" id="3615-3de8-7c6c-a926">
       <selectionEntryGroups>
@@ -2050,11 +2116,19 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Machine Gun Team" hidden="false" id="5d4a-a7e5-a162-a32b" targetId="bc7e-847f-365a-f118" primary="false"/>
-        <categoryLink name="Infantry Squads" hidden="false" id="27d5-4ef8-504e-6ba0" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="27d5-4ef8-504e-6ba0" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="f11c-cb4f-6da2-b6e8" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Fanatics" id="6385-9858-1cca-83ff" hidden="false" type="rule" targetId="666a-4a42-a085-3d6a"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Guard Dog" hidden="false" id="fcff-a82c-cef7-0743" page="29" publicationId="d4ea-8d41-12ad-6705">
       <infoLinks>
@@ -2161,8 +2235,15 @@
         <infoLink name="Shirkers" id="8bcb-cc2f-f363-0a7a" hidden="false" type="rule" targetId="e26e-1023-372b-c1ff"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink targetId="dc5d-8aeb-6591-b49b" id="fd55-07bb-6e51-e550" primary="true" name="Infantry Squads"/>
+        <categoryLink targetId="dc5d-8aeb-6591-b49b" id="fd55-07bb-6e51-e550" primary="true" name="Infantry Squad"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Cossacks" hidden="false" id="5486-27d0-7463-d857">
       <selectionEntryGroups>
@@ -2451,6 +2532,11 @@
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
                   </repeats>
                 </modifier>
+                <modifier type="increment" value="1" field="e610-392e-56b6-c03c">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
@@ -2458,12 +2544,20 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Machine Gun Team" hidden="false" id="24b1-7999-4c84-69eb" targetId="bc7e-847f-365a-f118" primary="false"/>
-        <categoryLink name="Infantry Squads" hidden="false" id="03bd-ed60-fc71-d097" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="03bd-ed60-fc71-d097" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="0ab3-d285-6312-1f81" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Skilled Riders" id="d100-c4a3-d494-1099" hidden="false" type="rule" targetId="020a-b269-9b6c-6722"/>
         <infoLink name="Behind Enemy Lines" id="4f41-58cf-eb86-18b8" hidden="false" type="rule" targetId="512f-6b9d-dc3e-c309"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Cavalry Squad" hidden="false" id="4f28-e9f3-119b-86b5">
       <selectionEntryGroups>
@@ -2714,6 +2808,11 @@
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
                   </repeats>
                 </modifier>
+                <modifier type="increment" value="1" field="e610-392e-56b6-c03c">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
@@ -2721,8 +2820,16 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Machine Gun Team" hidden="false" id="4a2e-0da0-ec5c-4fbc" targetId="bc7e-847f-365a-f118" primary="false"/>
-        <categoryLink name="Infantry Squads" hidden="false" id="eac7-e02f-c610-a86e" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="eac7-e02f-c610-a86e" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="e33c-5a14-4624-317c" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="People&apos;s Militia Squad" hidden="false" id="8292-74d4-f85d-59e0">
       <selectionEntryGroups>
@@ -2858,8 +2965,15 @@
         <infoLink name="Green" id="908a-a55c-0319-1405" hidden="false" type="rule" targetId="c397-64e1-1d9f-5df3"/>
       </infoLinks>
       <categoryLinks>
-        <categoryLink targetId="dc5d-8aeb-6591-b49b" id="0d4f-8af4-8605-d700" primary="true" name="Infantry Squads"/>
+        <categoryLink targetId="dc5d-8aeb-6591-b49b" id="0d4f-8af4-8605-d700" primary="true" name="Infantry Squad"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Airborne Squad" hidden="false" id="41a1-fbf9-6901-5036">
       <selectionEntryGroups>
@@ -3084,11 +3198,19 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Machine Gun Team" hidden="false" id="f3ab-e7af-1189-bb25" targetId="bc7e-847f-365a-f118" primary="false"/>
-        <categoryLink name="Infantry Squads" hidden="false" id="1804-477f-1a03-0951" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="1804-477f-1a03-0951" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="0a0f-0ad0-41e2-5c43" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Stubborn" id="540c-2352-042e-6f4b" hidden="false" type="rule" targetId="2cee-b9c2-ff16-d51a"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ski Troops Squad" hidden="false" id="22b3-69e6-e50f-7e50">
       <selectionEntryGroups>
@@ -3318,11 +3440,19 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Machine Gun Team" hidden="false" id="7de5-c2ee-3edf-4078" targetId="bc7e-847f-365a-f118" primary="false"/>
-        <categoryLink name="Infantry Squads" hidden="false" id="9aa0-5334-bffc-3d99" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="9aa0-5334-bffc-3d99" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="1f3e-5dc2-035e-2eaa" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Skis" id="d3cd-6c0c-750d-7f17" hidden="false" type="rule" targetId="6115-5f5d-01fd-5ce0"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Siberian Squad" hidden="false" id="773b-560b-6832-0a7a">
       <selectionEntryGroups>
@@ -3576,8 +3706,16 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Machine Gun Team" hidden="false" id="84fe-44f6-4057-f537" targetId="bc7e-847f-365a-f118" primary="false"/>
-        <categoryLink name="Infantry Squads" hidden="false" id="bfac-ce03-4e41-d003" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="bfac-ce03-4e41-d003" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="8266-13d3-7e53-2139" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Naval Squad" hidden="false" id="e650-fa1c-4fa3-ad64">
       <selectionEntryGroups>
@@ -3807,11 +3945,19 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Machine Gun Team" hidden="false" id="a94e-9d81-7496-9108" targetId="bc7e-847f-365a-f118" primary="false"/>
-        <categoryLink name="Infantry Squads" hidden="false" id="25ad-8c7d-fb08-7120" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="25ad-8c7d-fb08-7120" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="80ab-9615-1d8d-d860" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Tough Fighters" id="50a0-dee1-84f9-1c00" hidden="false" type="rule" targetId="2537-51bf-b55e-a78c"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Partisan Squad" hidden="false" id="1f24-b47d-586e-b455">
       <selectionEntryGroups>
@@ -4020,12 +4166,20 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Machine Gun Team" hidden="false" id="4d92-c839-76cc-10bf" targetId="bc7e-847f-365a-f118" primary="false"/>
-        <categoryLink name="Infantry Squads" hidden="false" id="68dc-2a63-44bd-3728" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="68dc-2a63-44bd-3728" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="c096-2d8a-cca1-dde5" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Green" id="cbc8-673d-69f1-b9c9" hidden="false" type="rule" targetId="c397-64e1-1d9f-5df3"/>
         <infoLink name="Vengeance" id="9f69-8aec-022b-1da6" hidden="false" type="rule" targetId="1026-e6d6-761e-1d4c"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Scout Squad" hidden="false" id="23b5-deaf-ceb0-2e12">
       <selectionEntryGroups>
@@ -4154,7 +4308,8 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Machine Gun Team" hidden="false" id="9aaa-9fc9-6805-cd08" targetId="bc7e-847f-365a-f118" primary="false"/>
-        <categoryLink name="Infantry Squads" hidden="false" id="2881-cca9-70fc-7239" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="2881-cca9-70fc-7239" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="7dbf-231b-2fc2-1a86" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Behind Enemy Lines" id="3fa3-9ec4-45c1-463c" hidden="false" type="rule" targetId="512f-6b9d-dc3e-c309"/>
@@ -4177,6 +4332,13 @@
           </modifiers>
         </infoLink>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Motorcycle Squad" hidden="false" id="295f-e992-d247-b0bf">
       <selectionEntryGroups>
@@ -4381,14 +4543,26 @@
                     <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
                   </repeats>
                 </modifier>
+                <modifier type="increment" value="1" field="e610-392e-56b6-c03c">
+                  <repeats>
+                    <repeat value="1" repeats="1" field="selections" scope="parent" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+                  </repeats>
+                </modifier>
               </modifiers>
             </selectionEntry>
           </selectionEntries>
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Infantry Squads" hidden="false" id="917b-5dd7-07f6-3d6a" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
+        <categoryLink name="Infantry Squad" hidden="false" id="917b-5dd7-07f6-3d6a" targetId="dc5d-8aeb-6591-b49b" primary="true"/>
       </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false" includeChildSelections="true"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Assault Engineer Squad" hidden="false" id="9070-1473-0325-541d">
       <selectionEntryGroups>
@@ -4785,7 +4959,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink targetId="efe3-cd28-c439-8765" id="a365-1355-d162-4d41" primary="true" name="Engineer Squads"/>
+        <categoryLink targetId="efe3-cd28-c439-8765" id="a365-1355-d162-4d41" primary="true" name="Engineer Squad"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Medium Machine Gun Team" hidden="false" id="62a4-21fd-fe99-1618">
@@ -4815,8 +4989,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink targetId="f613-cba9-0906-48ae" id="78f3-5f21-a4f1-9c06" primary="false" name="Heavy Weapons"/>
         <categoryLink targetId="bc7e-847f-365a-f118" id="57f2-8b4f-6fdc-365d" primary="true" name="Machine Gun Team"/>
+        <categoryLink targetId="ba7e-8a36-5678-1032" id="8a4f-eb6e-f1b1-c3c5" primary="false" name="MG_OR_MORTAR_FORCE_ORG"/>
       </categoryLinks>
       <comment>GUN SHIELD</comment>
       <selectionEntries>
@@ -4908,8 +5082,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="a08e-2529-8c54-276f" targetId="f613-cba9-0906-48ae" primary="false"/>
         <categoryLink name="Machine Gun Team" hidden="false" id="e976-66e1-ef73-f49a" targetId="bc7e-847f-365a-f118" primary="true"/>
+        <categoryLink targetId="ba7e-8a36-5678-1032" id="7809-996b-3cec-e54e" primary="false" name="MG_OR_MORTAR_FORCE_ORG"/>
       </categoryLinks>
       <comment>GUN SHIELD / PINTLE</comment>
       <selectionEntries>
@@ -5010,14 +5184,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0a32-d908-3cde-fc7c" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="6998-871d-4fe3-8c55" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink targetId="573f-2b84-c891-5e1b" id="0e62-cf18-839b-3110" primary="true" name="Anti-Tank Teams"/>
-      </categoryLinks>
-      <comment>REGIMENTAL SUPPORT RULE</comment>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Anti-tank gunners" hidden="false" id="6406-5085-63ba-f1f4" sortIndex="2">
+        <selectionEntryGroup name="Anti-tank Gunners" id="ad1c-0d93-838f-3582" hidden="false" sortIndex="2">
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Gunner" hidden="false" id="09b9-00b6-5297-04a1" sortIndex="1">
               <constraints>
@@ -5039,7 +5206,7 @@
                 <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e732-e5ac-edb6-8fe0-max" includeChildSelections="false"/>
               </constraints>
             </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Additional Crewman" hidden="false" id="d969-0159-665f-330c">
+            <selectionEntry type="upgrade" import="true" name="Additional Crewman" hidden="false" id="d969-0159-665f-330c" sortIndex="3">
               <costs>
                 <cost name="points" typeId="ab8b-35f3-81bf-8563" value="5"/>
               </costs>
@@ -5056,6 +5223,10 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <constraints>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="ae7f-81d3-69d9-6b65-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="ae7f-81d3-69d9-6b65-max" includeChildSelections="false"/>
+          </constraints>
           <modifierGroups>
             <modifierGroup type="and">
               <modifiers>
@@ -5077,12 +5248,20 @@
               </modifiers>
             </modifierGroup>
           </modifierGroups>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ae7f-81d3-69d9-6b65-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ae7f-81d3-69d9-6b65-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Heavy Weapon" hidden="false" id="6998-871d-4fe3-8c55" targetId="f613-cba9-0906-48ae" primary="false"/>
+        <categoryLink targetId="573f-2b84-c891-5e1b" id="0e62-cf18-839b-3110" primary="true" name="Anti-Tank Team"/>
+      </categoryLinks>
+      <comment>REGIMENTAL SUPPORT RULE</comment>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Ampulomet &apos;Molotov Launcher&apos; Anti-tank Team" hidden="false" id="d68e-19c6-48d7-f58f">
       <selectionEntryGroups>
@@ -5109,13 +5288,7 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6fe2-cbd3-6b4a-b756" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="6ae0-1ac9-b99a-6e2d" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink name="Anti-Tank Teams" hidden="false" id="375c-418d-69bf-29e9" targetId="573f-2b84-c891-5e1b" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Anti-tank gunners" hidden="false" id="158a-4c06-df6a-08c6" sortIndex="2">
+        <selectionEntryGroup name="Anti-tank gunners" id="fb25-69c2-2a26-99cf" hidden="false" sortIndex="2">
           <selectionEntries>
             <selectionEntry type="model" import="true" name="Gunner" hidden="false" id="1a3f-9ff0-59a3-daab" sortIndex="1">
               <constraints>
@@ -5138,6 +5311,10 @@
               </constraints>
             </selectionEntry>
           </selectionEntries>
+          <constraints>
+            <constraint type="min" value="3" field="selections" scope="parent" shared="true" id="a9ae-ee54-375e-0ee0-min" includeChildSelections="false"/>
+            <constraint type="max" value="3" field="selections" scope="parent" shared="true" id="a9ae-ee54-375e-0ee0-max" includeChildSelections="false"/>
+          </constraints>
           <modifierGroups>
             <modifierGroup type="and">
               <modifiers>
@@ -5159,12 +5336,19 @@
               </modifiers>
             </modifierGroup>
           </modifierGroups>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="a9ae-ee54-375e-0ee0-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a9ae-ee54-375e-0ee0-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Heavy Weapon" hidden="false" id="6ae0-1ac9-b99a-6e2d" targetId="f613-cba9-0906-48ae" primary="false"/>
+        <categoryLink name="Anti-Tank Team" hidden="false" id="375c-418d-69bf-29e9" targetId="573f-2b84-c891-5e1b" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Ampulomet" hidden="false" id="39d4-c077-717c-0f18">
       <infoLinks>
@@ -5196,15 +5380,9 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c8c8-0339-6e08-f326" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="54b3-3178-c140-f9a8" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink name="Anti-Tank Teams" hidden="false" id="307e-9be2-dfef-cd99" targetId="573f-2b84-c891-5e1b" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Anti-tank gunners" hidden="false" id="46d4-24bf-cd28-5b7e" sortIndex="2">
+        <selectionEntryGroup name="Anti-tank gunners" id="ba44-4d47-5657-1db3" hidden="false" sortIndex="2">
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Tank Hunter" hidden="false" id="14d8-d56a-7473-3063" sortIndex="1">
+            <selectionEntry type="model" import="true" name="Tank Hunter" hidden="false" id="14d8-d56a-7473-3063">
               <constraints>
                 <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="3a35-ba0e-a531-b295" includeChildSelections="false"/>
                 <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="245b-3621-5b64-27dc" includeChildSelections="false"/>
@@ -5276,16 +5454,27 @@
               </selectionEntryGroups>
             </selectionEntry>
           </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="fc14-f985-8ebd-81fe-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fc14-f985-8ebd-81fe-max" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntry>
-      </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Heavy Weapon" hidden="false" id="54b3-3178-c140-f9a8" targetId="f613-cba9-0906-48ae" primary="false"/>
+        <categoryLink name="Anti-Tank Team" hidden="false" id="307e-9be2-dfef-cd99" targetId="573f-2b84-c891-5e1b" primary="true"/>
+      </categoryLinks>
       <infoLinks>
         <infoLink name="Tough Tank Hunters" id="da90-a4de-b430-67e0" hidden="false" type="rule" targetId="ebb5-5b94-6dbf-1e01"/>
         <infoLink name="Infiltrator" id="c416-c4c1-3f52-7114" hidden="false" type="rule" targetId="7619-1248-8866-a39b"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
+      <costs>
+        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+        <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="0"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Dog Mines Anti-tank Team" hidden="false" id="e1b7-7308-c217-cfc8">
       <selectionEntryGroups>
@@ -5312,15 +5501,9 @@
             <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="8274-1e41-714e-402e" includeChildSelections="false"/>
           </constraints>
         </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="41ed-16b0-e5d2-e365" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink name="Anti-Tank Teams" hidden="false" id="3998-670f-7a46-760f" targetId="573f-2b84-c891-5e1b" primary="true"/>
-      </categoryLinks>
-      <selectionEntries>
-        <selectionEntry type="upgrade" import="true" name="Dog Handlers" hidden="false" id="ebe0-66fc-83a3-67a5" sortIndex="2">
+        <selectionEntryGroup name="Dog Handlers" id="ef20-8860-9ab3-b3dd" hidden="false" sortIndex="2">
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Dog Handler" hidden="false" id="5f2a-54d2-bb4f-267c" sortIndex="1">
+            <selectionEntry type="model" import="true" name="Dog Handler" hidden="false" id="5f2a-54d2-bb4f-267c">
               <constraints>
                 <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="0973-6c06-67b2-3bd4" includeChildSelections="false"/>
                 <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="1ff5-3348-8281-dd22" includeChildSelections="false"/>
@@ -5392,11 +5575,22 @@
             </selectionEntry>
           </selectionEntries>
           <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e38f-c0e3-68ef-41df-min" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="e38f-c0e3-68ef-41df-max" includeChildSelections="false"/>
+            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="e38f-c0e3-68ef-41df-min" includeChildSelections="false"/>
+            <constraint type="max" value="4" field="selections" scope="parent" shared="true" id="e38f-c0e3-68ef-41df-max" includeChildSelections="false"/>
           </constraints>
-        </selectionEntry>
-      </selectionEntries>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink name="Heavy Weapon" hidden="false" id="41ed-16b0-e5d2-e365" targetId="f613-cba9-0906-48ae" primary="false"/>
+        <categoryLink name="Anti-Tank Team" hidden="false" id="3998-670f-7a46-760f" targetId="573f-2b84-c891-5e1b" primary="true"/>
+      </categoryLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Sniper Team" hidden="false" id="690f-b03d-8cfa-19b0">
       <selectionEntryGroups>
@@ -5521,6 +5715,13 @@
       <infoLinks>
         <infoLink name="Infiltrator" id="67a8-20ac-239e-3613" hidden="false" type="rule" targetId="7619-1248-8866-a39b"/>
       </infoLinks>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Flamethrower Team" hidden="false" id="3416-fc23-976c-c5d1">
       <selectionEntryGroups>
@@ -5564,7 +5765,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink targetId="9bc5-52e5-81ff-d082" id="d521-7fec-1b8b-d10b" primary="true" name="Flamethrower Teams"/>
+        <categoryLink targetId="9bc5-52e5-81ff-d082" id="d521-7fec-1b8b-d10b" primary="true" name="Flamethrower Team"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Flamethrowers" hidden="false" id="2ed6-cb21-595d-f469" sortIndex="2">
@@ -5612,6 +5813,13 @@
           </constraints>
         </selectionEntry>
       </selectionEntries>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Light Mortar Team" hidden="false" id="9fd7-e83f-337b-3930">
       <selectionEntryGroups>
@@ -5702,7 +5910,9 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink targetId="46b9-67df-e29a-cfe5" id="e2ba-6938-15ed-7581" primary="true" name="Light Mortar Team"/>
+        <categoryLink targetId="46b9-67df-e29a-cfe5" id="e2ba-6938-15ed-7581" primary="false" name="Light Mortar Team"/>
+        <categoryLink targetId="ce86-e5af-5b82-d9d0" id="95d3-8d1b-dc6d-f6c9" primary="true" name="Mortar Team"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="d221-ae91-214d-645a" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Medium Mortar Team" hidden="false" id="8df2-22bf-a548-4d01">
@@ -5733,6 +5943,7 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Mortar Team" hidden="false" id="998d-8962-63e2-235e" targetId="ce86-e5af-5b82-d9d0" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="47c8-90b5-e529-b7f6" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Mortar Crew" hidden="false" id="cc68-e5d7-5f7f-cc5c" sortIndex="2">
@@ -5841,8 +6052,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink targetId="94ea-9320-8627-3a3d" id="ed05-d6e9-78de-bbe3" primary="true" name="Vehicle"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="9511-5440-ff93-b531" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="9511-5440-ff93-b531" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="T-26b Light Tank" hidden="false" id="79f4-4dac-23d0-44d1">
@@ -5909,8 +6119,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink targetId="94ea-9320-8627-3a3d" id="542b-e60d-6222-edc3" primary="true" name="Vehicle"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="606b-8881-baf3-39f5" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="606b-8881-baf3-39f5" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="OT-26 And OT-133 Light Flamethrower Tank" hidden="false" id="12a2-5550-da59-b214">
@@ -5969,8 +6178,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="fb67-1f80-f9b3-26f6" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="7f13-6da6-351f-c333" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="7f13-6da6-351f-c333" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="BT-5 And BT-7 Light Tank" hidden="false" id="8614-183d-c315-96d3">
@@ -6048,8 +6256,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="d6ec-0fca-4e69-5325" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="bf0a-605a-5914-282a" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="bf0a-605a-5914-282a" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="T-37 Light Tank" hidden="false" id="1c65-514c-2c68-27ed">
@@ -6103,8 +6310,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="a051-4a42-607c-197c" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="cb96-b79d-3416-1870" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="cb96-b79d-3416-1870" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="T-40 Light Tank" hidden="false" id="6e2a-6262-9b23-f421">
@@ -6164,8 +6370,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="9e44-a722-3fcd-d65b" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="4094-0a2f-9510-137c" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="4094-0a2f-9510-137c" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="T-50 Light Infantry Tank" hidden="false" id="37f0-6015-036f-66db">
@@ -6226,8 +6431,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="5c0a-da82-6a86-8684" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="961b-dcba-4e92-7747" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="961b-dcba-4e92-7747" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="T-60 Light Tank" hidden="false" id="ec03-64d0-d671-1599">
@@ -6289,8 +6493,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="2195-97e6-46fe-e4ed" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="1b7b-2905-b7af-fbb9" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="1b7b-2905-b7af-fbb9" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="T-70 Light Tank" hidden="false" id="61ef-0d91-a07e-f52f">
@@ -6352,8 +6555,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="1481-a9af-2b9b-c88e" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="d1aa-46b7-d58a-0500" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="d1aa-46b7-d58a-0500" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="T-28 Medium Tank" hidden="false" id="f8c7-1512-0bc1-d536">
@@ -6462,8 +6664,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="6a43-e063-e923-69dd" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="a430-6e0c-0fea-98fe" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="a430-6e0c-0fea-98fe" primary="true" name="Tank"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Add Reinforced Front Armour and Slow to represent the T-28c" hidden="false" id="1a32-49ba-d66c-fd64" sortIndex="3">
@@ -6487,9 +6688,9 @@
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="T34/76 Medium Tank" hidden="false" id="5cf5-58c5-6f39-0e1b">
+    <selectionEntry type="model" import="true" name="T-34/76 Medium Tank" hidden="false" id="5cf5-58c5-6f39-0e1b">
       <profiles>
-        <profile name="T34/76 Medium Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="432f-f87d-2415-590d">
+        <profile name="T-34/76 Medium Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="432f-f87d-2415-590d">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">9+ (medium tank)</characteristic>
             <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
@@ -6568,8 +6769,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink targetId="94ea-9320-8627-3a3d" id="9afc-26fe-91fc-f33c" primary="true" name="Vehicle"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="5df1-7cc9-1411-c1b5" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="5df1-7cc9-1411-c1b5" primary="true" name="Tank"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="OT-34/76 Medium Tank" field="name">
@@ -6579,9 +6779,9 @@
         </modifier>
       </modifiers>
     </selectionEntry>
-    <selectionEntry type="model" import="true" name="T34/85 Medium Tank" hidden="false" id="b29d-a9b8-287e-3e9f">
+    <selectionEntry type="model" import="true" name="T-34/85 Medium Tank" hidden="false" id="b29d-a9b8-287e-3e9f">
       <profiles>
-        <profile name="T34/85 Medium Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="5c2c-70df-2a34-7703">
+        <profile name="T-34/85 Medium Tank" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="5c2c-70df-2a34-7703">
           <characteristics>
             <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">9+ (medium tank)</characteristic>
             <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
@@ -6660,8 +6860,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="f1c0-e8cb-11e9-5d5a" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="fb01-04f4-a31f-79fc" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="fb01-04f4-a31f-79fc" primary="true" name="Tank"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="OT-34/85 Medium Tank" field="name">
@@ -6776,8 +6975,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="14df-d8e5-b187-ef3d" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="6958-3f51-c6b7-4eee" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="6958-3f51-c6b7-4eee" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="T-35 Heavy Tank" hidden="false" id="c80d-34c9-8948-6f85">
@@ -6907,8 +7105,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="e90c-fe41-cedc-2129" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="b7ea-2759-afe3-8840" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="b7ea-2759-afe3-8840" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="KV-1 Heavy Tank" hidden="false" id="24eb-4112-4cbe-bd43">
@@ -7061,8 +7258,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="9e16-114e-3a23-3529" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="c291-5758-5c86-98b5" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="c291-5758-5c86-98b5" primary="true" name="Tank"/>
       </categoryLinks>
       <modifierGroups>
         <modifierGroup type="and">
@@ -7080,6 +7276,7 @@
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <comment>check KV-8S and forced guns.</comment>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="KV-85 And IS-1 Heavy Tank" hidden="false" id="64ab-7d84-fb2f-51b1">
       <profiles>
@@ -7158,8 +7355,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="c5e7-1011-a65e-75a8" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="8e56-f4bc-4ce3-1d76" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="8e56-f4bc-4ce3-1d76" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="IS-2 Heavy Tank" hidden="false" id="3b11-63a7-a6aa-9b12">
@@ -7254,8 +7450,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="24e3-c493-fd66-9cbf" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="15a6-c2e3-451a-90fb" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="15a6-c2e3-451a-90fb" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="IS-3 Heavy Tank" hidden="false" id="70f1-75b7-296e-6339">
@@ -7333,8 +7528,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="0a8c-ed07-cae2-bd8c" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="171a-98f6-a773-8d80" id="f4a9-4a1c-bcc5-808d" primary="false" name="Tanks"/>
+        <categoryLink targetId="171a-98f6-a773-8d80" id="f4a9-4a1c-bcc5-808d" primary="true" name="Tank"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="ZiS-30" hidden="false" id="c521-5b31-d69a-4757">
@@ -7388,8 +7582,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="ac6d-1d35-14f7-4e73" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="fac9-2704-8e24-2272" id="ead1-5fd2-530d-973f" primary="false" name="Tank Destroyers"/>
+        <categoryLink targetId="fac9-2704-8e24-2272" id="ead1-5fd2-530d-973f" primary="true" name="Tank Destroyer"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="SU-85" hidden="false" id="5b3a-682e-afd9-3fab">
@@ -7442,8 +7635,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="2350-91ac-1ffb-f1a9" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="fac9-2704-8e24-2272" id="c386-c311-89b7-3df3" primary="false" name="Tank Destroyers"/>
+        <categoryLink targetId="fac9-2704-8e24-2272" id="c386-c311-89b7-3df3" primary="true" name="Tank Destroyer"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="SU-100" hidden="false" id="eeb1-397b-07bc-4fbf">
@@ -7496,8 +7688,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="f19b-c777-7108-923a" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="fac9-2704-8e24-2272" id="5ff9-7dc4-a684-5b20" primary="false" name="Tank Destroyers"/>
+        <categoryLink targetId="fac9-2704-8e24-2272" id="5ff9-7dc4-a684-5b20" primary="true" name="Tank Destroyer"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="ISU-122" hidden="false" id="ecfe-bcb8-9525-701a">
@@ -7558,8 +7749,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="3b2e-2adc-baad-38d7" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink name="Tank Destroyers" hidden="false" id="e819-4dec-636b-fa9f" targetId="fac9-2704-8e24-2272" primary="false"/>
+        <categoryLink name="Tank Destroyer" hidden="false" id="e819-4dec-636b-fa9f" targetId="fac9-2704-8e24-2272" primary="true"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="SU-76" hidden="false" id="f487-f7d8-d69f-fb26">
@@ -7629,8 +7819,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="2b67-eee9-8e6b-8148" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="bd9c-0849-ae15-81f2" id="fca8-2794-3390-3f1b" primary="false" name="Self Propelled Artillery"/>
+        <categoryLink targetId="31a5-e1dc-8d85-fb4b" id="ef99-33b6-13d7-7ad9" primary="true" name="Self-propelled Artillery"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="SU-76i" hidden="false" id="38d1-7d2a-0cba-6fc4">
@@ -7700,8 +7889,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="f3a0-bf01-0a91-9730" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink name="Self Propelled Artillery" hidden="false" id="bdd4-8517-41e9-4526" targetId="bd9c-0849-ae15-81f2" primary="false"/>
+        <categoryLink targetId="31a5-e1dc-8d85-fb4b" id="67da-67be-3f72-eebd" primary="true" name="Self-propelled Artillery"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="SU-122" hidden="false" id="fea7-1142-e832-9f0a">
@@ -7754,8 +7942,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="eaf1-efe2-e0d0-bbb9" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink name="Self Propelled Artillery" hidden="false" id="9b01-1da0-efd3-0107" targetId="bd9c-0849-ae15-81f2" primary="false"/>
+        <categoryLink targetId="31a5-e1dc-8d85-fb4b" id="1f9c-6450-ad96-b4a5" primary="true" name="Self-propelled Artillery"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="KV-2" hidden="false" id="1531-6e67-8e48-44d1">
@@ -7851,8 +8038,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="fd6e-9b6d-279e-6a52" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink name="Self Propelled Artillery" hidden="false" id="2b62-095a-a04d-946e" targetId="bd9c-0849-ae15-81f2" primary="false"/>
+        <categoryLink targetId="31a5-e1dc-8d85-fb4b" id="1c36-b4c3-ab9c-cc51" primary="true" name="Self-propelled Artillery"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="SU-152 And ISU-152" hidden="false" id="af60-bcff-4e45-e8f7">
@@ -7905,8 +8091,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="0337-0150-45ff-a4f7" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink name="Self Propelled Artillery" hidden="false" id="b1b3-bb04-23d0-9a0e" targetId="bd9c-0849-ae15-81f2" primary="false"/>
+        <categoryLink targetId="31a5-e1dc-8d85-fb4b" id="a93d-8603-507d-c373" primary="true" name="Self-propelled Artillery"/>
       </categoryLinks>
       <entryLinks>
         <entryLink import="true" name="Pintle-mounted HMG" hidden="false" id="e0cf-f488-e937-2fd0" type="selectionEntry" targetId="6ed7-2021-b3a1-2cfb">
@@ -7969,8 +8154,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="2ca9-7aee-c53f-fc1e" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink name="Self Propelled Artillery" hidden="false" id="ca3a-a32b-1764-c8e1" targetId="bd9c-0849-ae15-81f2" primary="false"/>
+        <categoryLink targetId="31a5-e1dc-8d85-fb4b" id="0143-ff74-6e49-2871" primary="true" name="Self-propelled Artillery"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Tachanka" hidden="false" id="941a-bc30-5e18-00d9">
@@ -8023,7 +8207,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="1a2c-3aa4-0513-a1c4" targetId="94ea-9320-8627-3a3d" primary="true"/>
+        <categoryLink targetId="31a5-e1dc-8d85-fb4b" id="061a-691b-9c8d-52c2" primary="true" name="Self-propelled Artillery"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="The Bronekater - Soviet Riverine Craft" hidden="false" id="1887-04fa-3136-63d5">
@@ -8611,7 +8795,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="3b32-0c66-18cb-8ead" targetId="94ea-9320-8627-3a3d" primary="true"/>
+        <categoryLink targetId="31a5-e1dc-8d85-fb4b" id="fc04-027f-655c-c1c2" primary="true" name="Self-propelled Artillery"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Upgrade 1 turret-mounted MMG to a medium anti-tank gun with co-axial MMG" hidden="false" id="38a7-decc-7ee0-12d7">
@@ -8671,8 +8855,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="f2d4-eda1-5a90-b7ed" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="4389-e01e-f9a0-f937" id="7a2d-c950-d076-97a3" primary="false" name="Anti-aircraft Vehicles"/>
+        <categoryLink targetId="4389-e01e-f9a0-f937" id="7a2d-c950-d076-97a3" primary="true" name="Anti-aircraft Vehicle"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="BA-64" hidden="false" id="e306-4218-e302-c274">
@@ -8795,8 +8978,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="d1a4-ce98-7f3d-6837" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink targetId="02b1-967a-5314-645f" id="ae30-f7fd-fa2b-ba26" primary="false" name="Armoured Cars"/>
+        <categoryLink targetId="02b1-967a-5314-645f" id="ae30-f7fd-fa2b-ba26" primary="true" name="Armoured Car"/>
       </categoryLinks>
       <modifiers>
         <modifier type="set" value="BA-64B" field="name">
@@ -8862,8 +9044,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="acad-a985-5311-45cc" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink name="Armoured Cars" hidden="false" id="c1ff-97b0-acaf-c085" targetId="02b1-967a-5314-645f" primary="false"/>
+        <categoryLink name="Armoured Car" hidden="false" id="c1ff-97b0-acaf-c085" targetId="02b1-967a-5314-645f" primary="true"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="BA-10" hidden="false" id="ae67-235b-299c-6055">
@@ -8937,8 +9118,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="9c55-b112-fdc2-3ec9" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink name="Armoured Cars" hidden="false" id="f0a4-f8f9-5065-9fe6" targetId="02b1-967a-5314-645f" primary="false"/>
+        <categoryLink name="Armoured Car" hidden="false" id="f0a4-f8f9-5065-9fe6" targetId="02b1-967a-5314-645f" primary="true"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="BA-3/6 Heavy Armoured Car" hidden="false" id="3af8-4cf6-000a-c3d3">
@@ -9012,8 +9192,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="1245-8857-45f3-1b44" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink name="Armoured Cars" hidden="false" id="09fe-999f-2d1c-fc71" targetId="02b1-967a-5314-645f" primary="false"/>
+        <categoryLink name="Armoured Car" hidden="false" id="09fe-999f-2d1c-fc71" targetId="02b1-967a-5314-645f" primary="true"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="D-8 Light Armoured Car" hidden="false" id="e559-de66-77d1-79a0">
@@ -9116,8 +9295,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="81bd-07e6-23fc-cc67" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink name="Armoured Cars" hidden="false" id="f0d6-cc64-eb7f-ddb6" targetId="02b1-967a-5314-645f" primary="false"/>
+        <categoryLink name="Armoured Car" hidden="false" id="f0d6-cc64-eb7f-ddb6" targetId="02b1-967a-5314-645f" primary="true"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Replace the rear-mounted LMG with a turret mounted LMG and add the Open-Topped special rule (representing the D-12)" hidden="false" id="e8e7-1d12-4947-ec88" sortIndex="4">
@@ -9188,139 +9366,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="5902-c903-bb74-b4d1" targetId="94ea-9320-8627-3a3d" primary="true"/>
-        <categoryLink name="Armoured Cars" hidden="false" id="40c5-c598-c672-a24f" targetId="02b1-967a-5314-645f" primary="false"/>
+        <categoryLink name="Armoured Car" hidden="false" id="40c5-c598-c672-a24f" targetId="02b1-967a-5314-645f" primary="true"/>
       </categoryLinks>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Truck" hidden="false" id="5c4c-c298-0d4e-0ba1">
-      <profiles>
-        <profile name="Truck" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="7f8b-9b46-fd3f-b4bb">
-          <characteristics>
-            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
-            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">12</characteristic>
-            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
-            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
-          </characteristics>
-          <modifiers>
-            <modifier type="set" value="Amphibious" field="b5b7-688f-e6a8-1a52">
-              <conditions>
-                <condition type="atLeast" value="1" field="selections" scope="root-entry" childId="33d7-26be-db13-cd8b" shared="true"/>
-              </conditions>
-            </modifier>
-          </modifiers>
-        </profile>
-      </profiles>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Veterancy" id="870c-d1b9-2500-8a20" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="8277-5896-7323-a0af" sortIndex="1">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="22"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="0a89-00a9-bc5e-1bac" sortIndex="2">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="27"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="04e5-a868-7e97-8f09" sortIndex="3">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="32"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b192-8c89-1b3f-4066" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="de0f-9522-1865-ddde" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Upgrades" id="0d21-5055-945b-ea52" hidden="false">
-          <entryLinks>
-            <entryLink import="true" name="Pintle-mounted LMG" hidden="false" id="6049-0fb6-d9ca-d036" type="selectionEntry" targetId="846e-7114-a448-d795" sortIndex="2">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="15"/>
-              </costs>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ef6-c120-4929-dcce" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Amphibious" hidden="false" id="33d7-26be-db13-cd8b" sortIndex="1">
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a131-36aa-bcc6-4981" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="2a63-c634-b4ac-bf19" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="b5d6-ced6-f1e2-3222" targetId="94ea-9320-8627-3a3d" primary="false"/>
-        <categoryLink targetId="9cdf-c776-8161-5e87" id="27c5-eec5-8b99-02a2" primary="true" name="Transport Vehicle"/>
-        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="6733-fb18-3c04-e944" primary="false" name="Tows"/>
-      </categoryLinks>
-      <infoLinks>
-        <infoLink name="Tow" id="9f08-42e8-cba3-ac83" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
-          <modifiers>
-            <modifier type="set" value="Light howitzer; light anti-tank gun or medium anti-tank gun; light anti-aircraft gun" field="ca19-85ed-345c-a38d"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Half-tracked Truck" hidden="false" id="4c89-4e1b-1fdc-b071">
-      <profiles>
-        <profile name="Half-tracked Truck" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="cedf-bb6c-5b7e-18cf">
-          <characteristics>
-            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
-            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">12</characteristic>
-            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Half-track</characteristic>
-            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">-</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Veterancy" id="1e9f-822d-0c52-d64d" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="ca76-c912-aeef-8acd" sortIndex="1">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="22"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="b3ba-83c6-8c97-d138" sortIndex="2">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="27"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="ebe2-eb8e-3e5d-ccc2" sortIndex="3">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="32"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2276-d655-fa34-dc3d" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d86f-7ab4-c5bf-687e" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="0703-f950-7ba8-b3fd" targetId="94ea-9320-8627-3a3d" primary="false"/>
-        <categoryLink name="Transport Vehicle" hidden="false" id="5398-d05a-c6f3-9a28" targetId="9cdf-c776-8161-5e87" primary="true"/>
-        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="0905-8e70-e270-baf4" primary="false" name="Tows"/>
-      </categoryLinks>
-      <infoLinks>
-        <infoLink name="Tow" id="1485-87fc-1122-c3f2" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
-          <modifiers>
-            <modifier type="set" value="Light howitzer; light anti-tank gun or medium anti-tank gun; light anti-aircraft gun" field="ca19-85ed-345c-a38d"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-      <entryLinks>
-        <entryLink import="true" name="Forward-facing Pintle-mounted LMG" hidden="false" id="48bc-9be1-b960-3696" type="selectionEntry" targetId="6474-aac9-57b1-cfa6"/>
-      </entryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Tracked Artillery Tractor" hidden="false" id="cf1d-c2d7-b9a2-9b8f">
       <profiles>
@@ -9386,9 +9433,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="19f1-2273-cfdb-aa29" targetId="94ea-9320-8627-3a3d" primary="false"/>
-        <categoryLink name="Transport Vehicle" hidden="false" id="f9e6-93d4-4e2d-3c80" targetId="9cdf-c776-8161-5e87" primary="true"/>
-        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="1def-bb52-436b-0a8b" primary="false" name="Tows"/>
+        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="1def-bb52-436b-0a8b" primary="true" name="Tow"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Tow" id="f2a1-1673-06ce-4706" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
@@ -9517,9 +9562,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="7d44-df3d-9ea3-cafd" targetId="94ea-9320-8627-3a3d" primary="false"/>
         <categoryLink name="Transport Vehicle" hidden="false" id="f663-c46a-2065-2194" targetId="9cdf-c776-8161-5e87" primary="true"/>
-        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="67eb-3856-dd50-1696" primary="false" name="Tows"/>
+        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="67eb-3856-dd50-1696" primary="false" name="Tow"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Tow" id="13fb-f06f-d4f2-d3bf" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
@@ -9540,6 +9584,10 @@
           </modifiers>
         </modifierGroup>
       </modifierGroups>
+      <costs>
+        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+        <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="3"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="T-20 Komsomolets" hidden="false" id="f855-bdc9-816f-02f5">
       <profiles>
@@ -9588,9 +9636,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="ac5b-d998-8f8e-f516" targetId="94ea-9320-8627-3a3d" primary="false"/>
         <categoryLink name="Transport Vehicle" hidden="false" id="b712-7089-3b8c-5543" targetId="9cdf-c776-8161-5e87" primary="true"/>
-        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="2e9d-5bf0-1892-66a2" primary="false" name="Tows"/>
+        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="2e9d-5bf0-1892-66a2" primary="false" name="Tow"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Tow" id="d9b0-3873-86e0-0d65" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
@@ -9599,6 +9646,10 @@
           </modifiers>
         </infoLink>
       </infoLinks>
+      <costs>
+        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+        <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="6"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Aerosan" hidden="false" id="b8f3-a7db-cc27-4dad">
       <profiles>
@@ -9648,90 +9699,10 @@
           </constraints>
         </entryLink>
       </entryLinks>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Horse-drawn Limber" hidden="false" id="ae58-5a5e-77ab-2db6">
-      <profiles>
-        <profile name="Horse-drawn Limber" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="d78b-0c7c-30c6-5c45">
-          <characteristics>
-            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">3+ (Literally Soft-skinned)</characteristic>
-            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">-</characteristic>
-            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
-            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Slow (only when towing)</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Veterancy" id="1b2f-907e-38cc-6243" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Inexperienced" hidden="false" id="169e-a456-f9b0-0bff" sortIndex="1">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="8"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="5227-e8af-2740-6ecb" sortIndex="2">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="10"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="e809-2740-857c-a57a" sortIndex="3">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="12"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2028-6a2e-bbce-4718" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9866-761e-1722-ee3a" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="ba26-fcd5-e86b-9d91" targetId="94ea-9320-8627-3a3d" primary="false"/>
-        <categoryLink name="Tows" hidden="false" id="364f-8b5e-effe-c1d2" targetId="6a50-07f3-fc3d-fb3d" primary="true"/>
-      </categoryLinks>
-      <infoLinks>
-        <infoLink name="Tow" id="ae17-ca68-00ba-2ca1" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
-          <modifiers>
-            <modifier type="set" value="Any gun" field="ca19-85ed-345c-a38d"/>
-          </modifiers>
-        </infoLink>
-      </infoLinks>
-    </selectionEntry>
-    <selectionEntry type="model" import="true" name="Field Ambulance" hidden="false" id="70e7-e054-07f5-00b1">
-      <profiles>
-        <profile name="Field Ambulance" typeId="2726-bc10-a0e6-6b0b" typeName="Vehicle" hidden="false" id="54e3-5a00-b014-e207">
-          <characteristics>
-            <characteristic name="Damage Value" typeId="28cf-9f74-5808-52b3">6+ (Soft-skinned)</characteristic>
-            <characteristic name="Transport Slots" typeId="fc92-518e-d558-16a1">None. However, like empty transports, ambulances are destroyed if they end their turn closer to enemy units than to friendly units.</characteristic>
-            <characteristic name="Movement Type" typeId="37d0-58a9-4b21-5e3b">Wheeled</characteristic>
-            <characteristic name="Special Rules" typeId="b5b7-688f-e6a8-1a52">Medical Vehicle</characteristic>
-          </characteristics>
-        </profile>
-      </profiles>
-      <selectionEntryGroups>
-        <selectionEntryGroup name="Veterancy" id="0052-70c7-0c0c-d57a" hidden="false" defaultSelectionEntryId="9f35-ed97-7f7e-f3b7" sortIndex="1">
-          <selectionEntries>
-            <selectionEntry type="upgrade" import="true" name="Experienced" hidden="false" id="2bc4-c191-81b6-628b" sortIndex="2">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="38"/>
-              </costs>
-            </selectionEntry>
-            <selectionEntry type="upgrade" import="true" name="Veteran" hidden="false" id="c724-7cce-8f13-983b" sortIndex="3">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="46"/>
-              </costs>
-            </selectionEntry>
-          </selectionEntries>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c792-3ca4-02bc-ff05" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3c17-37d8-b111-b243" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-      </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="245c-0af1-3e64-268f" targetId="94ea-9320-8627-3a3d" primary="false"/>
-        <categoryLink targetId="9cdf-c776-8161-5e87" id="8275-f903-067c-ae8f" primary="true" name="Transport Vehicle"/>
-      </categoryLinks>
+      <costs>
+        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="0"/>
+        <cost name="Transport Slots" typeId="e610-392e-56b6-c03c" value="4"/>
+      </costs>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="The Victory Banner" hidden="false" id="6a09-5f4e-fa76-95f8">
       <infoLinks>
@@ -9816,7 +9787,6 @@
     </selectionEntry>
     <selectionEntry type="unit" import="true" name="Company Commander" hidden="false" id="95d9-0288-5df5-0342">
       <categoryLinks>
-        <categoryLink name="Headquarters Units" hidden="false" id="ac3e-b175-2a74-bd8e" targetId="6b53-28ad-d16f-2f00" primary="false"/>
         <categoryLink targetId="5e5a-6a55-edc8-468f" id="344f-8630-1fe9-a0a4" primary="true" name="Company Commander"/>
       </categoryLinks>
       <selectionEntryGroups>
@@ -9968,6 +9938,13 @@
           </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
+      <modifiers>
+        <modifier type="decrement" value="1" field="e610-392e-56b6-c03c">
+          <repeats>
+            <repeat value="1" repeats="1" field="selections" scope="root-entry" childId="model" shared="true" roundUp="false"/>
+          </repeats>
+        </modifier>
+      </modifiers>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Light Artillery" hidden="false" id="878e-3ec4-f86c-10a6">
       <selectionEntryGroups>
@@ -10062,7 +10039,7 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink targetId="8e40-50fc-3394-8d05" id="f5ae-2aa9-c89f-08c8" primary="true" name="Field Artillery"/>
-        <categoryLink targetId="f613-cba9-0906-48ae" id="e439-a7f7-212d-d5af" primary="false" name="Heavy Weapons"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="de3b-0b18-9f0c-9644" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Medium Artillery" hidden="false" id="36a2-b518-9be9-b1b1">
@@ -10147,7 +10124,7 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Field Artillery" hidden="false" id="ce20-1560-f3dd-0212" targetId="8e40-50fc-3394-8d05" primary="true"/>
-        <categoryLink name="Heavy Weapons" hidden="false" id="d378-9ceb-725d-97d0" targetId="f613-cba9-0906-48ae" primary="false"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="8b18-9307-3898-e960" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="Heavy Artillery" hidden="false" id="193a-f3ad-8a01-346f">
@@ -10245,7 +10222,7 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Field Artillery" hidden="false" id="6e93-7ff6-6063-72b2" targetId="8e40-50fc-3394-8d05" primary="true"/>
-        <categoryLink name="Heavy Weapons" hidden="false" id="64b7-bc8c-0ce0-5351" targetId="f613-cba9-0906-48ae" primary="false"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="19b1-5c8d-6901-0df5" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="MT-13 Mortar" hidden="false" id="9857-676d-22c0-4ef7">
@@ -10327,7 +10304,7 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Field Artillery" hidden="false" id="6bd7-10d6-10ff-c5f3" targetId="8e40-50fc-3394-8d05" primary="true"/>
-        <categoryLink name="Heavy Weapons" hidden="false" id="d2dd-8f06-bbb9-2611" targetId="f613-cba9-0906-48ae" primary="false"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="709b-9261-cd4f-17c4" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="M-30 Heavy Rocket Launcher" hidden="false" id="6231-3f0a-2635-2b6c">
@@ -10394,7 +10371,7 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Field Artillery" hidden="false" id="935f-9b01-804f-9494" targetId="8e40-50fc-3394-8d05" primary="true"/>
-        <categoryLink name="Heavy Weapons" hidden="false" id="2837-57e9-bf38-32b2" targetId="f613-cba9-0906-48ae" primary="false"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="5581-58fa-281c-e469" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="37mm 61-K Model 1939" hidden="false" id="7722-dfbd-02b1-f9a2">
@@ -10460,8 +10437,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="e0cd-b42b-ddf1-e65a" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink targetId="bbd5-a33b-9eeb-50a1" id="11a7-8ee7-0c13-85fc" primary="true" name="Anti-aircraft Guns"/>
+        <categoryLink targetId="bbd5-a33b-9eeb-50a1" id="11a7-8ee7-0c13-85fc" primary="true" name="Anti-aircraft Gun"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="23af-f640-4249-28b3" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="25mm 72-K Model 1940" hidden="false" id="900b-b98e-1ca1-585c">
@@ -10527,8 +10504,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="8e6f-e195-7872-5ddd" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink targetId="bbd5-a33b-9eeb-50a1" id="dd4a-8d45-6d35-f1d7" primary="true" name="Anti-aircraft Guns"/>
+        <categoryLink targetId="bbd5-a33b-9eeb-50a1" id="dd4a-8d45-6d35-f1d7" primary="true" name="Anti-aircraft Gun"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="c148-49cc-39e3-4a2e" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="85mm Model 1939" hidden="false" id="3d14-eaca-85b6-0a0a">
@@ -10607,8 +10584,9 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="e81c-23fc-5da8-78e3" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink targetId="bbd5-a33b-9eeb-50a1" id="5a23-ad87-34e6-80e0" primary="true" name="Anti-aircraft Guns"/>
+        <categoryLink name="Heavy Weapon" hidden="false" id="e81c-23fc-5da8-78e3" targetId="f613-cba9-0906-48ae" primary="false"/>
+        <categoryLink targetId="bbd5-a33b-9eeb-50a1" id="5a23-ad87-34e6-80e0" primary="true" name="Anti-aircraft Gun"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="1e41-a515-f2eb-03cf" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="45mm Model 1937 Anti-tank Gun" hidden="false" id="f4c6-c51a-8b0a-333a">
@@ -10693,11 +10671,11 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="0624-5995-1073-a9e8" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink name="Anti-tank Guns" hidden="false" id="7936-84fe-edd0-ee45" targetId="d50e-669d-f60a-4849" primary="true"/>
+        <categoryLink name="Anti-tank Gun" hidden="false" id="7936-84fe-edd0-ee45" targetId="d50e-669d-f60a-4849" primary="true"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="074d-b78c-1125-0d78" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
-    <selectionEntry type="upgrade" import="true" name="42mm Anti-tank Gun" hidden="false" id="f015-9f72-0642-d390">
+    <selectionEntry type="upgrade" import="true" name="M-42 Anti-tank Gun" hidden="false" id="f015-9f72-0642-d390">
       <selectionEntryGroups>
         <selectionEntryGroup name="Veterancy" id="3671-9088-6484-f7c7" hidden="false" defaultSelectionEntryId="005f-4da6-4a7b-6722" sortIndex="1">
           <constraints>
@@ -10766,8 +10744,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="1171-6dc2-82e3-f7df" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink name="Anti-tank Guns" hidden="false" id="a430-1f14-447a-fd31" targetId="d50e-669d-f60a-4849" primary="true"/>
+        <categoryLink name="Anti-tank Gun" hidden="false" id="a430-1f14-447a-fd31" targetId="d50e-669d-f60a-4849" primary="true"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="63e3-259e-1d16-c447" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="ZiS-2 Anti-tank Gun" hidden="false" id="44d1-ceb5-6a82-400d">
@@ -10839,8 +10817,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="6290-ef81-b07c-e713" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink name="Anti-tank Guns" hidden="false" id="5313-dfcd-f324-b785" targetId="d50e-669d-f60a-4849" primary="true"/>
+        <categoryLink name="Anti-tank Gun" hidden="false" id="5313-dfcd-f324-b785" targetId="d50e-669d-f60a-4849" primary="true"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="90db-a5cf-96d1-693c" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="ZiS-3 Divisional Gun" hidden="false" id="9ff0-7d0e-d6e1-20d4">
@@ -10929,8 +10907,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="beca-71c0-70ac-59db" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink name="Anti-tank Guns" hidden="false" id="1328-87cb-3e30-7405" targetId="d50e-669d-f60a-4849" primary="true"/>
+        <categoryLink name="Anti-tank Gun" hidden="false" id="1328-87cb-3e30-7405" targetId="d50e-669d-f60a-4849" primary="true"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="ab9a-6904-7cd0-4093" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="A-19 Field Gun" hidden="false" id="0511-6dfb-bc48-489c">
@@ -11002,8 +10980,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="b558-dd84-5fa5-fb75" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink name="Anti-tank Guns" hidden="false" id="f1b7-610c-039e-5454" targetId="d50e-669d-f60a-4849" primary="true"/>
+        <categoryLink name="Anti-tank Gun" hidden="false" id="f1b7-610c-039e-5454" targetId="d50e-669d-f60a-4849" primary="true"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="9dd1-b248-d554-ec0d" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="upgrade" import="true" name="BS-3 Anti-tank Gun" hidden="false" id="eda7-1752-a0ae-9bed">
@@ -11072,8 +11050,8 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Heavy Weapons" hidden="false" id="9a6e-d921-c43e-d039" targetId="f613-cba9-0906-48ae" primary="false"/>
-        <categoryLink name="Anti-tank Guns" hidden="false" id="fc83-6c94-f3a1-e597" targetId="d50e-669d-f60a-4849" primary="true"/>
+        <categoryLink name="Anti-tank Gun" hidden="false" id="fc83-6c94-f3a1-e597" targetId="d50e-669d-f60a-4849" primary="true"/>
+        <categoryLink targetId="1095-5147-12e7-1c18" id="5b08-4b20-9101-321c" primary="false" name="AT_OR_AA_OR_FA_FORCE_ORG"/>
       </categoryLinks>
     </selectionEntry>
     <selectionEntry type="model" import="true" name="Gaz &apos;jeep&apos; (No Transport)" hidden="false" id="8f45-d51b-61d4-6a24">
@@ -11188,9 +11166,7 @@
         </selectionEntryGroup>
       </selectionEntryGroups>
       <categoryLinks>
-        <categoryLink name="Vehicle" hidden="false" id="bba9-629a-babe-9c18" targetId="94ea-9320-8627-3a3d" primary="false"/>
-        <categoryLink name="Tows" hidden="false" id="354a-b869-68f3-d5f8" targetId="6a50-07f3-fc3d-fb3d" primary="false"/>
-        <categoryLink targetId="02b1-967a-5314-645f" id="1703-b81e-c6d7-42a2" primary="true" name="Armoured Cars"/>
+        <categoryLink targetId="02b1-967a-5314-645f" id="1703-b81e-c6d7-42a2" primary="true" name="Armoured Car"/>
       </categoryLinks>
       <infoLinks>
         <infoLink name="Tow" id="d0e2-1682-09e5-e42b" hidden="false" type="profile" targetId="465b-f5a2-e0b5-fc66">
@@ -11274,6 +11250,8 @@
       </selectionEntryGroups>
       <categoryLinks>
         <categoryLink name="Mortar Team" hidden="false" id="70ee-987e-2737-4b3c" targetId="ce86-e5af-5b82-d9d0" primary="true"/>
+        <categoryLink targetId="ba7e-8a36-5678-1032" id="3b62-5a91-ea0c-0a00" primary="false" name="MG_OR_MORTAR_FORCE_ORG"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="3144-32d8-6439-4328" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
       <selectionEntries>
         <selectionEntry type="upgrade" import="true" name="Mortar Crew" hidden="false" id="8e01-c6f7-5426-5613" sortIndex="2">
@@ -11311,107 +11289,43 @@
         </selectionEntry>
       </selectionEntries>
     </selectionEntry>
-    <selectionEntry type="unit" import="true" name="Light Mortar Team" hidden="false" id="76b6-5428-188e-1c44">
+    <selectionEntry type="upgrade" import="true" name="Platoon Command Vehicle" hidden="false" id="074b-5aa2-bdbc-5674">
+      <costs>
+        <cost name="points" typeId="ab8b-35f3-81bf-8563" value="10"/>
+      </costs>
+      <infoLinks>
+        <infoLink name="Command vehicle" id="1f35-07b4-9090-da43" hidden="false" type="rule" targetId="26c1-aa0f-7263-d618"/>
+      </infoLinks>
       <selectionEntryGroups>
-        <selectionEntryGroup name="Veterancy" id="ae78-15f7-e2dc-7611" hidden="false" defaultSelectionEntryId="005f-4da6-4a7b-6722" sortIndex="1">
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4fe8-4d5a-dac4-0e6b" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ce0e-2263-14e5-d077" includeChildSelections="false"/>
-          </constraints>
-          <entryLinks>
-            <entryLink import="true" name="Inexperienced" hidden="false" id="fe18-c992-6433-a11b" type="selectionEntry" targetId="17e0-54c5-2121-17d9">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="21"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Regular" hidden="false" id="1aa7-5530-b392-c783" type="selectionEntry" targetId="8102-9ec6-85f5-a685">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="30"/>
-              </costs>
-            </entryLink>
-            <entryLink import="true" name="Veteran" hidden="false" id="caac-35e0-ab0f-995f" type="selectionEntry" targetId="516a-ef78-1d1c-e03c">
-              <costs>
-                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="39"/>
-              </costs>
-            </entryLink>
-          </entryLinks>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Army Special Rules" id="5c8c-fcd0-ecf1-d074" hidden="false" sortIndex="4">
-          <selectionEntryGroups>
-            <selectionEntryGroup name="Hammer and Sickle" id="92a6-6c8a-3a37-1992" hidden="false">
-              <entryLinks>
-                <entryLink import="true" name="Hammer and Sickle: Airborne" hidden="false" id="ad16-d2a5-2340-0559" type="selectionEntry" targetId="bbeb-43c8-1704-8504">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="1aa8-ad0c-3005-8553" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Hammer and Sickle: NKVD" hidden="false" id="e7b1-1faa-c8e1-4598" type="selectionEntry" targetId="cf6b-03ec-c8be-bafd">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4963-55ef-664c-a0aa" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-                <entryLink import="true" name="Hammer and Sickle: Naval Brigade" hidden="false" id="ae8b-87d3-a2b2-397e" type="selectionEntry" targetId="d8f3-223b-b2c2-04c9">
-                  <constraints>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="26a7-3a55-0c34-80e3" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
-              <constraints>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3f76-7a24-08f0-87fd" includeChildSelections="false"/>
-              </constraints>
-            </selectionEntryGroup>
-          </selectionEntryGroups>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Mortar Crew" id="c971-16e1-e71a-c465" hidden="false" sortIndex="2">
+        <selectionEntryGroup name="Soviet Special Rule" id="1ff1-a400-6ce1-4d9f" hidden="false">
           <selectionEntries>
-            <selectionEntry type="model" import="true" name="Crewman" hidden="false" id="4fc3-85f5-7c03-eafe">
+            <selectionEntry type="upgrade" import="true" name="Lack of radios" hidden="false" id="8a94-d37d-9779-cfbd">
+              <infoLinks>
+                <infoLink name="Lack Of Radios" id="9346-f48d-a6ef-ad46" hidden="false" type="rule" targetId="d8f8-db74-545d-189e"/>
+              </infoLinks>
               <constraints>
-                <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="ff75-ee96-090d-37ee" includeChildSelections="false"/>
-                <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="4710-29b0-8583-375d" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="045f-930a-c9fe-6d8a" includeChildSelections="false"/>
               </constraints>
-              <entryLinks>
-                <entryLink import="true" name="Unarmed" hidden="false" id="3b11-6962-e02a-0954" type="selectionEntry" targetId="c73b-56cd-dfbd-931b" collective="true">
-                  <constraints>
-                    <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4cdb-2a39-9970-1e12" includeChildSelections="false"/>
-                    <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2ecc-d355-12c8-f79b" includeChildSelections="false"/>
-                  </constraints>
-                </entryLink>
-              </entryLinks>
+              <costs>
+                <cost name="points" typeId="ab8b-35f3-81bf-8563" value="-10"/>
+              </costs>
             </selectionEntry>
           </selectionEntries>
-          <constraints>
-            <constraint type="min" value="2" field="selections" scope="parent" shared="true" id="c3af-725b-d92d-d195" includeChildSelections="false"/>
-            <constraint type="max" value="2" field="selections" scope="parent" shared="true" id="8fa0-bd6f-a34a-51d3" includeChildSelections="false"/>
-          </constraints>
-        </selectionEntryGroup>
-        <selectionEntryGroup name="Mortar" id="97c7-3892-c100-dd2a" hidden="false" sortIndex="3">
-          <entryLinks>
-            <entryLink import="true" name="Light mortar" hidden="false" id="d3a3-3f1a-bc8f-1336" type="selectionEntry" targetId="fa6b-c63c-bb89-d5ec">
-              <constraints>
-                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="35de-9e9b-c18f-dfe5" includeChildSelections="false"/>
-                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9426-df4e-1be4-78cf" includeChildSelections="false"/>
-              </constraints>
-            </entryLink>
-          </entryLinks>
-          <constraints>
-            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="5d12-bca9-8785-31fd" includeChildSelections="false"/>
-            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c0f3-4016-e56a-e9ea" includeChildSelections="false"/>
-          </constraints>
         </selectionEntryGroup>
       </selectionEntryGroups>
-      <categoryLinks>
-        <categoryLink targetId="ce86-e5af-5b82-d9d0" id="9b78-f118-23d4-6adb" primary="true" name="Mortar Team"/>
-        <categoryLink targetId="46b9-67df-e29a-cfe5" id="8712-2eab-2cd4-02b2" primary="false" name="Light Mortar Team"/>
-      </categoryLinks>
     </selectionEntry>
   </sharedSelectionEntries>
   <entryLinks>
-    <entryLink import="true" name="Platoon Commander" hidden="false" id="560a-17b2-a0a6-c6c1" targetId="a025-dcd6-d08c-4f3a" type="selectionEntry"/>
+    <entryLink import="true" name="Platoon Commander" hidden="false" id="560a-17b2-a0a6-c6c1" targetId="a025-dcd6-d08c-4f3a" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="5aa8-cdcf-903c-eef7" id="6bba-6312-3b75-9bf3" primary="true" name="Platoon Commander"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink import="true" name="Commisar" hidden="false" id="c846-3415-ae4e-cbbb" targetId="b88f-74d1-d220-0b8c" type="selectionEntry"/>
     <entryLink import="true" name="Forward Observer" hidden="false" id="e98e-1fa5-aaa8-5ca0" targetId="662f-5081-7ea3-d1aa" type="selectionEntry"/>
     <entryLink import="true" name="Rifle Squad" hidden="false" id="0512-8764-d4a4-0d0c" targetId="04eb-9e10-318e-6d2f" type="selectionEntry">
       <categoryLinks>
-        <categoryLink targetId="dc5d-8aeb-6591-b49b" id="7546-32c5-6523-af43" primary="true" name="Infantry Squads"/>
+        <categoryLink targetId="dc5d-8aeb-6591-b49b" id="7546-32c5-6523-af43" primary="true" name="Infantry Squad"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Light Machine Gun Squad" hidden="false" id="c2af-d0d5-84a1-b66c" targetId="b02b-4507-5e54-a12a" type="selectionEntry"/>
@@ -11445,54 +11359,204 @@
       <categoryLinks>
         <categoryLink targetId="46b9-67df-e29a-cfe5" id="6bfd-e092-826c-91ea" primary="true" name="Light Mortar Team"/>
         <categoryLink targetId="ce86-e5af-5b82-d9d0" id="fcb9-175c-7149-f900" primary="false" name="Mortar Team"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="1ce7-8c38-cf94-8cfd" targetId="ba7e-8a36-5678-1032" primary="false"/>
       </categoryLinks>
     </entryLink>
     <entryLink import="true" name="Medium Mortar Team" hidden="false" id="3171-60ac-c7af-e85d" targetId="8df2-22bf-a548-4d01" type="selectionEntry"/>
-    <entryLink import="true" name="T-26a Light Tank" hidden="false" id="ebd4-6035-55b3-d700" targetId="ad24-0db6-7cca-70e7" type="selectionEntry"/>
-    <entryLink import="true" name="T-26b Light Tank" hidden="false" id="b9ca-7836-0186-f7d7" targetId="79f4-4dac-23d0-44d1" type="selectionEntry"/>
-    <entryLink import="true" name="OT-26 And OT-133 Light Flamethrower Tank" hidden="false" id="3995-4215-032f-9d36" targetId="12a2-5550-da59-b214" type="selectionEntry"/>
-    <entryLink import="true" name="BT-5 And BT-7 Light Tank" hidden="false" id="4846-4ce9-9291-5de5" targetId="8614-183d-c315-96d3" type="selectionEntry"/>
-    <entryLink import="true" name="T-37 Light Tank" hidden="false" id="824a-4794-4422-d76a" targetId="1c65-514c-2c68-27ed" type="selectionEntry"/>
-    <entryLink import="true" name="T-40 Light Tank" hidden="false" id="21a7-5d2b-02a0-84ad" targetId="6e2a-6262-9b23-f421" type="selectionEntry"/>
-    <entryLink import="true" name="T-50 Light Infantry Tank" hidden="false" id="e2a2-2dd7-6c9c-1e5f" targetId="37f0-6015-036f-66db" type="selectionEntry"/>
-    <entryLink import="true" name="T-60 Light Tank" hidden="false" id="3e9e-8cb6-2603-a17a" targetId="ec03-64d0-d671-1599" type="selectionEntry"/>
-    <entryLink import="true" name="T-70 Light Tank" hidden="false" id="3add-c803-aba8-eaff" targetId="61ef-0d91-a07e-f52f" type="selectionEntry"/>
-    <entryLink import="true" name="T-28 Medium Tank" hidden="false" id="4700-901f-8f78-abd4" targetId="f8c7-1512-0bc1-d536" type="selectionEntry"/>
-    <entryLink import="true" name="T34/76 Medium Tank" hidden="false" id="6700-62bc-40d1-f1ff" targetId="5cf5-58c5-6f39-0e1b" type="selectionEntry"/>
-    <entryLink import="true" name="T34/85 Medium Tank" hidden="false" id="67b8-bbf7-8634-75a6" targetId="b29d-a9b8-287e-3e9f" type="selectionEntry"/>
-    <entryLink import="true" name="Tractor Factory T-34" hidden="false" id="492d-a97d-7504-9bc1" targetId="61e0-5d90-4342-15ee" type="selectionEntry"/>
-    <entryLink import="true" name="T-35 Heavy Tank" hidden="false" id="fbf6-0443-f7a7-8644" targetId="c80d-34c9-8948-6f85" type="selectionEntry"/>
-    <entryLink import="true" name="KV-1 Heavy Tank" hidden="false" id="733e-dd4f-e79c-6663" targetId="24eb-4112-4cbe-bd43" type="selectionEntry"/>
-    <entryLink import="true" name="KV-85 And IS-1 Heavy Tank" hidden="false" id="edd8-b755-d258-3d00" targetId="64ab-7d84-fb2f-51b1" type="selectionEntry"/>
-    <entryLink import="true" name="IS-2 Heavy Tank" hidden="false" id="8e76-ee44-15fd-be51" targetId="3b11-63a7-a6aa-9b12" type="selectionEntry"/>
-    <entryLink import="true" name="IS-3 Heavy Tank" hidden="false" id="2bbc-0b39-d01c-283b" targetId="70f1-75b7-296e-6339" type="selectionEntry"/>
-    <entryLink import="true" name="ZiS-30" hidden="false" id="89f1-0663-bbc9-4505" targetId="c521-5b31-d69a-4757" type="selectionEntry"/>
-    <entryLink import="true" name="SU-85" hidden="false" id="efd2-3aa6-3e34-8e46" targetId="5b3a-682e-afd9-3fab" type="selectionEntry"/>
-    <entryLink import="true" name="SU-100" hidden="false" id="ee23-ef72-9f6c-cbfb" targetId="eeb1-397b-07bc-4fbf" type="selectionEntry"/>
-    <entryLink import="true" name="ISU-122" hidden="false" id="e3fd-c32d-92c9-de1e" targetId="ecfe-bcb8-9525-701a" type="selectionEntry"/>
-    <entryLink import="true" name="SU-76" hidden="false" id="227d-99d6-87d8-7f71" targetId="f487-f7d8-d69f-fb26" type="selectionEntry"/>
-    <entryLink import="true" name="SU-76i" hidden="false" id="619e-b2ca-e7a8-0f5e" targetId="38d1-7d2a-0cba-6fc4" type="selectionEntry"/>
-    <entryLink import="true" name="SU-122" hidden="false" id="82f1-0121-5ba8-b264" targetId="fea7-1142-e832-9f0a" type="selectionEntry"/>
-    <entryLink import="true" name="KV-2" hidden="false" id="0744-e41f-c8be-6e62" targetId="1531-6e67-8e48-44d1" type="selectionEntry"/>
-    <entryLink import="true" name="SU-152 And ISU-152" hidden="false" id="b3b3-a31f-f0b8-3bfe" targetId="af60-bcff-4e45-e8f7" type="selectionEntry"/>
-    <entryLink import="true" name="Katyusha" hidden="false" id="8fa2-12a3-b110-ce54" targetId="e1bb-7478-3fbe-ce33" type="selectionEntry"/>
-    <entryLink import="true" name="Tachanka" hidden="false" id="d6ba-ba0d-95ae-03ed" targetId="941a-bc30-5e18-00d9" type="selectionEntry"/>
-    <entryLink import="true" name="The Bronekater - Soviet Riverine Craft" hidden="false" id="a9af-a41b-14fb-7511" targetId="1887-04fa-3136-63d5" type="selectionEntry"/>
-    <entryLink import="true" name="Tokarev 4m Quad Maxim On Gaz-AA Truck" hidden="false" id="0952-1985-bea5-4c89" targetId="1348-05ec-6344-c689" type="selectionEntry"/>
-    <entryLink import="true" name="BA-64" hidden="false" id="3bde-ab24-02a3-7260" targetId="e306-4218-e302-c274" type="selectionEntry"/>
-    <entryLink import="true" name="BA-20" hidden="false" id="8aed-5e59-8035-a07c" targetId="ebf1-68f1-714f-b70f" type="selectionEntry"/>
-    <entryLink import="true" name="BA-10" hidden="false" id="59b8-5b2b-1a5a-2d4d" targetId="ae67-235b-299c-6055" type="selectionEntry"/>
-    <entryLink import="true" name="BA-3/6 Heavy Armoured Car" hidden="false" id="90f5-4c69-3d51-a769" targetId="3af8-4cf6-000a-c3d3" type="selectionEntry"/>
-    <entryLink import="true" name="D-8 Light Armoured Car" hidden="false" id="7346-7317-1264-3bc1" targetId="e559-de66-77d1-79a0" type="selectionEntry"/>
-    <entryLink import="true" name="FAI Light Armoured Car" hidden="false" id="a30c-05e5-2c32-d688" targetId="9940-f505-b935-6f19" type="selectionEntry"/>
-    <entryLink import="true" name="Truck" hidden="false" id="1ece-1cae-6723-16d4" targetId="5c4c-c298-0d4e-0ba1" type="selectionEntry"/>
-    <entryLink import="true" name="Half-tracked Truck" hidden="false" id="cb6a-4f9c-0cd2-eeaf" targetId="4c89-4e1b-1fdc-b071" type="selectionEntry"/>
+    <entryLink import="true" name="T-26a Light Tank" hidden="false" id="ebd4-6035-55b3-d700" targetId="ad24-0db6-7cca-70e7" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="26b0-4383-82a1-c4b3" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="T-26b Light Tank" hidden="false" id="b9ca-7836-0186-f7d7" targetId="79f4-4dac-23d0-44d1" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="f6f3-f78f-ad72-0629" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="OT-26 And OT-133 Light Flamethrower Tank" hidden="false" id="3995-4215-032f-9d36" targetId="12a2-5550-da59-b214" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="ddfe-ab85-892e-dc60" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="BT-5 And BT-7 Light Tank" hidden="false" id="4846-4ce9-9291-5de5" targetId="8614-183d-c315-96d3" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="186a-aff3-57c9-942e" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="T-37 Light Tank" hidden="false" id="824a-4794-4422-d76a" targetId="1c65-514c-2c68-27ed" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="8301-bba2-c425-dee8" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="T-40 Light Tank" hidden="false" id="21a7-5d2b-02a0-84ad" targetId="6e2a-6262-9b23-f421" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="dd3e-f75a-ad77-3bf1" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="T-50 Light Infantry Tank" hidden="false" id="e2a2-2dd7-6c9c-1e5f" targetId="37f0-6015-036f-66db" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="f84f-891a-64d5-0e72" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="T-60 Light Tank" hidden="false" id="3e9e-8cb6-2603-a17a" targetId="ec03-64d0-d671-1599" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="d3f1-a369-8a17-f5ca" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="T-70 Light Tank" hidden="false" id="3add-c803-aba8-eaff" targetId="61ef-0d91-a07e-f52f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="0a24-d9bf-79c7-e406" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="T-28 Medium Tank" hidden="false" id="4700-901f-8f78-abd4" targetId="f8c7-1512-0bc1-d536" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="e3b2-5860-70b8-87e2" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="T-34/76 Medium Tank" hidden="false" id="6700-62bc-40d1-f1ff" targetId="5cf5-58c5-6f39-0e1b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="9647-01dc-f72d-5568" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="T-34/85 Medium Tank" hidden="false" id="67b8-bbf7-8634-75a6" targetId="b29d-a9b8-287e-3e9f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="2174-69dc-43db-5a56" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Tractor Factory T-34" hidden="false" id="492d-a97d-7504-9bc1" targetId="61e0-5d90-4342-15ee" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="0413-319f-79ea-ea99" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="T-35 Heavy Tank" hidden="false" id="fbf6-0443-f7a7-8644" targetId="c80d-34c9-8948-6f85" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="f47a-9b51-7fec-498a" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="KV-1 Heavy Tank" hidden="false" id="733e-dd4f-e79c-6663" targetId="24eb-4112-4cbe-bd43" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="b21e-7dc9-23cb-85e4" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="KV-85 And IS-1 Heavy Tank" hidden="false" id="edd8-b755-d258-3d00" targetId="64ab-7d84-fb2f-51b1" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="34cc-0372-d5dd-3534" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="IS-2 Heavy Tank" hidden="false" id="8e76-ee44-15fd-be51" targetId="3b11-63a7-a6aa-9b12" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="6f2e-5ecb-b7df-6ee4" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="IS-3 Heavy Tank" hidden="false" id="2bbc-0b39-d01c-283b" targetId="70f1-75b7-296e-6339" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="015a-417f-cf10-d078" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="ZiS-30" hidden="false" id="89f1-0663-bbc9-4505" targetId="c521-5b31-d69a-4757" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="146f-c65c-ad7d-06cf" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="SU-85" hidden="false" id="efd2-3aa6-3e34-8e46" targetId="5b3a-682e-afd9-3fab" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="3586-a175-1f28-0a0c" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="SU-100" hidden="false" id="ee23-ef72-9f6c-cbfb" targetId="eeb1-397b-07bc-4fbf" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="1ffa-2a94-8781-de78" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="ISU-122" hidden="false" id="e3fd-c32d-92c9-de1e" targetId="ecfe-bcb8-9525-701a" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="f0e4-8152-927e-f83e" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="SU-76" hidden="false" id="227d-99d6-87d8-7f71" targetId="f487-f7d8-d69f-fb26" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="423e-8961-9c54-edcd" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="SU-76i" hidden="false" id="619e-b2ca-e7a8-0f5e" targetId="38d1-7d2a-0cba-6fc4" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="a3fe-471d-c206-e54a" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="SU-122" hidden="false" id="82f1-0121-5ba8-b264" targetId="fea7-1142-e832-9f0a" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="855d-88fc-ac02-73b7" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="KV-2" hidden="false" id="0744-e41f-c8be-6e62" targetId="1531-6e67-8e48-44d1" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="a4a9-54a5-c1b6-8633" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="SU-152 And ISU-152" hidden="false" id="b3b3-a31f-f0b8-3bfe" targetId="af60-bcff-4e45-e8f7" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="4025-d7ef-5b6e-8f14" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Katyusha" hidden="false" id="8fa2-12a3-b110-ce54" targetId="e1bb-7478-3fbe-ce33" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="88c3-442d-92cb-8a02" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Tachanka" hidden="false" id="d6ba-ba0d-95ae-03ed" targetId="941a-bc30-5e18-00d9" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="344e-77d2-8c3f-d28a" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="The Bronekater - Soviet Riverine Craft" hidden="false" id="a9af-a41b-14fb-7511" targetId="1887-04fa-3136-63d5" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="6cc9-a969-fd79-a384" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Tokarev 4m Quad Maxim On Gaz-AA Truck" hidden="false" id="0952-1985-bea5-4c89" targetId="1348-05ec-6344-c689" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="3736-8df1-c8d3-b65c" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="BA-64" hidden="false" id="3bde-ab24-02a3-7260" targetId="e306-4218-e302-c274" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="c1c8-6be6-0cb8-5477" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="BA-20" hidden="false" id="8aed-5e59-8035-a07c" targetId="ebf1-68f1-714f-b70f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="6940-a9cd-9dc6-c15e" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="BA-10" hidden="false" id="59b8-5b2b-1a5a-2d4d" targetId="ae67-235b-299c-6055" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="67d2-7747-51f0-15a8" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="BA-3/6 Heavy Armoured Car" hidden="false" id="90f5-4c69-3d51-a769" targetId="3af8-4cf6-000a-c3d3" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="3c0a-ff89-6d04-ef2d" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="D-8 Light Armoured Car" hidden="false" id="7346-7317-1264-3bc1" targetId="e559-de66-77d1-79a0" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="5130-c74d-8a44-7805" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="FAI Light Armoured Car" hidden="false" id="a30c-05e5-2c32-d688" targetId="9940-f505-b935-6f19" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="d5e9-063c-d08f-8aa9" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink import="true" name="Tracked Artillery Tractor" hidden="false" id="8b60-a762-efdd-a909" targetId="cf1d-c2d7-b9a2-9b8f" type="selectionEntry"/>
     <entryLink import="true" name="Gaz &apos;jeep&apos;" hidden="false" id="0e3e-5313-f77b-6061" targetId="9f65-c1bc-ede7-d556" type="selectionEntry"/>
     <entryLink import="true" name="T-20 Komsomolets" hidden="false" id="990e-45d8-004b-2c4a" targetId="f855-bdc9-816f-02f5" type="selectionEntry"/>
     <entryLink import="true" name="Aerosan" hidden="false" id="c8f3-168d-e621-4533" targetId="b8f3-a7db-cc27-4dad" type="selectionEntry"/>
-    <entryLink import="true" name="Horse-drawn Limber" hidden="false" id="2367-ab1c-0631-64cf" targetId="ae58-5a5e-77ab-2db6" type="selectionEntry"/>
-    <entryLink import="true" name="Company Commander" hidden="false" id="7604-3738-21ee-fa6a" targetId="95d9-0288-5df5-0342" type="selectionEntry"/>
+    <entryLink import="true" name="Company Commander" hidden="false" id="7604-3738-21ee-fa6a" targetId="95d9-0288-5df5-0342" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="5e5a-6a55-edc8-468f" id="23b0-348f-094e-3c44" primary="true" name="Company Commander"/>
+      </categoryLinks>
+    </entryLink>
     <entryLink import="true" name="Light Artillery" hidden="false" id="2b65-76a1-2ea2-0c7b" targetId="878e-3ec4-f86c-10a6" type="selectionEntry"/>
     <entryLink import="true" name="Medium Artillery" hidden="false" id="4dec-57e7-eeb1-1ede" targetId="36a2-b518-9be9-b1b1" type="selectionEntry"/>
     <entryLink import="true" name="Heavy Artillery" hidden="false" id="fcd3-c1b2-f459-9429" targetId="193a-f3ad-8a01-346f" type="selectionEntry"/>
@@ -11502,14 +11566,689 @@
     <entryLink import="true" name="25mm 72-K Model 1940" hidden="false" id="9a40-12a6-4f79-b839" targetId="900b-b98e-1ca1-585c" type="selectionEntry"/>
     <entryLink import="true" name="85mm Model 1939" hidden="false" id="1ba4-7596-f721-ca73" targetId="3d14-eaca-85b6-0a0a" type="selectionEntry"/>
     <entryLink import="true" name="45mm Model 1937 Anti-tank Gun" hidden="false" id="8d19-e2ce-e433-58f9" targetId="f4c6-c51a-8b0a-333a" type="selectionEntry"/>
-    <entryLink import="true" name="42mm Anti-tank Gun" hidden="false" id="9235-febe-6124-873c" targetId="f015-9f72-0642-d390" type="selectionEntry"/>
+    <entryLink import="true" name="M-42 Anti-tank Gun" hidden="false" id="9235-febe-6124-873c" targetId="f015-9f72-0642-d390" type="selectionEntry"/>
     <entryLink import="true" name="ZiS-2 Anti-tank Gun" hidden="false" id="5e56-3c42-d9ad-fd4f" targetId="44d1-ceb5-6a82-400d" type="selectionEntry"/>
     <entryLink import="true" name="ZiS-3 Divisional Gun" hidden="false" id="a66f-fc26-80da-70cc" targetId="9ff0-7d0e-d6e1-20d4" type="selectionEntry"/>
     <entryLink import="true" name="A-19 Field Gun" hidden="false" id="0401-802d-772c-2e4c" targetId="0511-6dfb-bc48-489c" type="selectionEntry"/>
     <entryLink import="true" name="BS-3 Anti-tank Gun" hidden="false" id="56ab-c184-7357-3075" targetId="eda7-1752-a0ae-9bed" type="selectionEntry"/>
     <entryLink import="true" name="Configuration" hidden="false" id="0229-bd3e-e0f0-53b8-soviet" targetId="eef5-df6f-8d0d-be3e-soviet" type="selectionEntry"/>
     <entryLink import="true" name="Heavy Mortar Team" hidden="false" id="d13b-00c7-df66-c07a" targetId="2e65-df00-c584-85a0" type="selectionEntry"/>
-    <entryLink import="true" name="Light Mortar Team" hidden="false" id="1d04-7fdf-a819-75df" targetId="76b6-5428-188e-1c44" type="selectionEntry"/>
+    <entryLink import="true" name="Light Mortar Team" hidden="false" id="1076-dee6-bfc6-719b" targetId="9fd7-e83f-337b-3930" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink name="Light Mortar Team" hidden="false" id="f937-101a-2f47-f853" targetId="46b9-67df-e29a-cfe5" primary="false"/>
+        <categoryLink name="Mortar Team" hidden="false" id="ba92-4768-178b-adec" targetId="ce86-e5af-5b82-d9d0" primary="true"/>
+        <categoryLink name="MG_OR_MORTAR_FORCE_ORG" hidden="false" id="68d4-02a5-e384-a045" targetId="ba7e-8a36-5678-1032" primary="false"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Tracked Artillery Tractor" hidden="false" id="1cc3-1abf-6393-4b63" targetId="cf1d-c2d7-b9a2-9b8f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="20ef-fa3a-29e2-e3f7" primary="true" name="Tow"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Gaz &apos;jeep&apos; (No Transport)" hidden="false" id="5836-18f1-2493-2b18" targetId="8f45-d51b-61d4-6a24" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="ca48-ccc0-2b1e-9e30" id="6e37-9a01-d246-7ce2" primary="false" name="ARMOURED_FORCE_ORG"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Gaz &apos;jeep&apos;" hidden="false" id="b841-6d81-a056-74fa" targetId="9f65-c1bc-ede7-d556" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="65f8-ae9f-ae4a-4f39" primary="true" name="Tow"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="T-20 Komsomolets" hidden="false" id="edde-f123-aace-15dd" targetId="f855-bdc9-816f-02f5" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="6a50-07f3-fc3d-fb3d" id="f06e-4ba6-dc2b-e1fb" primary="true" name="Tow"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="T-26a Light Tank" hidden="false" id="4ccc-cb6d-f7d4-1e49" targetId="ad24-0db6-7cca-70e7" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="ce98-a893-78f5-c686" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="185e-208c-b2f1-258c" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="c366-4686-4e8d-3977" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e11d-bd46-797c-035f" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="26fd-3f58-c6fb-5716" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="T-26b Light Tank" hidden="false" id="0618-62e8-ccdd-7b52" targetId="79f4-4dac-23d0-44d1" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="ed4b-6e8e-558d-401f" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="f8e1-cea5-ac57-3c08" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="3796-29e0-18ed-d5df" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b51b-3b8d-0dd7-4692" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9689-837a-bab3-0ed4" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="T-28 Medium Tank" hidden="false" id="80f6-0c7d-37b9-551b" targetId="f8c7-1512-0bc1-d536" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="9966-386a-5c62-8491" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="036f-4af2-397e-808c" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="0612-37cb-c7b4-057a" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ed37-00d7-a11f-a26c" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="26ef-7f46-522e-05f1" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="T-35 Heavy Tank" hidden="false" id="7d94-29c3-c563-a445" targetId="c80d-34c9-8948-6f85" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="bdce-f241-aec4-6efd" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="7fb7-b64e-a745-0d92" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="6328-8421-0b94-c038" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c539-45e6-2cb9-9a61" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="238c-e6c6-7047-c9e0" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="T-37 Light Tank" hidden="false" id="d74a-f594-ca1a-fef1" targetId="1c65-514c-2c68-27ed" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="0f27-0e6c-4cf4-91ff" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="2d24-cf1e-73ca-c892" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="efc9-3788-4915-2d2a" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1019-ab31-5b9b-15d7" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="509e-467e-3446-f677" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="T-40 Light Tank" hidden="false" id="ce36-ac66-ec11-8489" targetId="6e2a-6262-9b23-f421" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="6872-42c4-a210-2312" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="211a-4b66-e071-5a88" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="7c48-61a9-eef1-2d22" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b6aa-acdb-8f9e-067c" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="4f7d-e304-2fd6-b8df" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="T-50 Light Infantry Tank" hidden="false" id="d67d-3d0a-3f5f-8d6c" targetId="37f0-6015-036f-66db" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="000a-ca58-07ac-22db" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="e076-97c6-f66d-756a" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="a044-f9de-b098-aae9" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2116-2565-7a37-9af0" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="b980-89e9-d8bc-ec3f" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="T-60 Light Tank" hidden="false" id="a6b3-f256-d11f-8e37" targetId="ec03-64d0-d671-1599" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="af32-7f3e-6ac1-afa1" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="c66e-4e62-95aa-d4e0" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="16c2-5368-a310-d0a2" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4511-a6b0-2890-0be7" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d92e-e213-adf4-8530" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="T-70 Light Tank" hidden="false" id="65ba-0007-cf74-e095" targetId="61ef-0d91-a07e-f52f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="0c2e-9bf4-ace3-8510" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="8fc4-23ac-4f92-dc00" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="9d6a-c58a-c744-4bcd" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="65d0-4ef4-5451-41b7" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0ebe-b3be-f9b4-e588" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="T-34/76 Medium Tank" hidden="false" id="7b98-9f6e-472c-eba1" targetId="5cf5-58c5-6f39-0e1b" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="d217-4fb9-2d45-51cc" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="8b2d-97e3-3a18-4f2e" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="16d2-0a34-11d4-884d" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3270-e4de-7012-3c5f" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9a4a-2016-ec90-a25a" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="T-34/85 Medium Tank" hidden="false" id="5afa-b94d-7552-39f4" targetId="b29d-a9b8-287e-3e9f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="a0be-af43-20bc-c61d" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="c30e-8264-7bfe-2416" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="3f44-9c6d-ccee-e23a" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="db0a-580b-929c-667b" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="336d-271d-e119-2c68" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="ZiS-30" hidden="false" id="65b2-885e-88ab-486b" targetId="c521-5b31-d69a-4757" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="91b6-cf14-8944-0d15" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="a7f5-36b3-b274-7595" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3967-c7e6-7e8b-bc88" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="759e-9756-736f-d725" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="82f9-984a-d5cd-b884" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Tractor Factory T-34" hidden="false" id="6512-3f94-7c3e-2531" targetId="61e0-5d90-4342-15ee" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="6b9d-cd14-7ec4-349d" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="e61b-5fdb-aba7-5470" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="3975-c789-a52d-d5e2" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cfbc-7729-da0e-f251" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5f80-8a8c-e7fa-4245" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="The Bronekater - Soviet Riverine Craft" hidden="false" id="1045-2f27-ec17-eb0a" targetId="1887-04fa-3136-63d5" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="0723-eb8c-af3f-032e" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="6f31-922d-89ec-c503" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="3d89-e6fb-1908-ba5c" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6152-d1dc-906f-3276" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="62e8-054a-47bf-3b97" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="OT-26 And OT-133 Light Flamethrower Tank" hidden="false" id="3a5e-9778-66a4-a841" targetId="12a2-5550-da59-b214" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="3eb6-e428-6ac2-0130" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="0f8c-ca46-a0a5-09b4" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="9ba8-ede1-a03b-efbb" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6633-d145-b244-1698" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0561-6322-35d2-813e" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="BT-5 And BT-7 Light Tank" hidden="false" id="71e7-71e3-f8ba-7108" targetId="8614-183d-c315-96d3" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="ebe5-0fcb-7747-a1ab" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="4bdd-25b3-8895-dc8f" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="d914-6e18-67fd-0019" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="b745-4487-d4e9-3e95" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="7542-2431-e5aa-fab0" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+    </entryLink>
+    <entryLink import="true" name="KV-1 Heavy Tank" hidden="false" id="c4ff-0d99-b84a-5cf7" targetId="24eb-4112-4cbe-bd43" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="6997-5e6a-ecdd-5f5e" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="758d-4c0e-3728-30c2" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="930e-5173-6549-6b87" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6ac8-8966-0ab6-0e77" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="ac28-a017-fe00-52b9" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="IS-2 Heavy Tank" hidden="false" id="2333-6e08-1734-5e3f" targetId="3b11-63a7-a6aa-9b12" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="e381-14d3-e92f-2eba" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="e170-c92d-16d4-b100" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="410a-0ac9-9acd-a8b8" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2be8-f07f-3df0-e25b" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="fd05-bd31-c679-fa67" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="IS-3 Heavy Tank" hidden="false" id="5950-5e9b-3416-ab7d" targetId="70f1-75b7-296e-6339" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="35b0-6d31-85a9-4704" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="bd12-f786-3ba7-80f7" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cdea-eeaa-be31-578d" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a534-91b0-4c51-bb7f" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="71bd-4b24-42d3-d65f" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="KV-85 And IS-1 Heavy Tank" hidden="false" id="d283-2aeb-2990-9359" targetId="64ab-7d84-fb2f-51b1" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="5932-4765-55af-532c" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="9159-cec2-4e42-b3fc" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="46e3-764c-ddab-4212" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="a8bb-d5df-56db-39d3" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="5c57-f412-14c0-cdb8" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="SU-76" hidden="false" id="b04a-e3ec-0f5a-77f4" targetId="f487-f7d8-d69f-fb26" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="973b-8ff7-4df6-c885" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="1e67-481a-611b-8abf" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="dfda-dcca-ab19-e537" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="438b-df77-7baa-fc44" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="d7bb-34c1-da82-4d3b" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="SU-76i" hidden="false" id="d2c2-9f8a-862f-bdd6" targetId="38d1-7d2a-0cba-6fc4" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="a1a1-2085-fdf7-4acb" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="e28c-ddca-d745-4346" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="ad65-c4d4-ae58-ee72" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d2dc-47ae-825f-7ac8" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="8845-3af6-2e18-13d7" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="SU-85" hidden="false" id="8d58-1478-ac2d-67f4" targetId="5b3a-682e-afd9-3fab" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="c6c9-a9ad-7f60-ec76" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="4830-16d8-64be-a4f4" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c7f4-14ed-c236-0e7a" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="73ad-d7f8-dda4-568f" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="fd3b-00ab-56a3-67bc" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="SU-100" hidden="false" id="a3b6-27ed-1014-54e1" targetId="eeb1-397b-07bc-4fbf" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="f43f-fd69-5ab6-1340" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="8fe9-cc00-4ac3-32a7" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="c830-f97a-2c72-16e4" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="24f5-23b1-918c-8cef" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="d502-1bab-105a-6076" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="SU-122" hidden="false" id="e10a-8808-21ad-f725" targetId="fea7-1142-e832-9f0a" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="3935-8cfb-2597-bbb0" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="d976-0c00-4e43-9ebd" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="2521-8342-6542-48e0" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f9d8-d67e-8aaa-3e10" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="2329-eab1-a830-dc44" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="SU-152 And ISU-152" hidden="false" id="7642-7033-a448-0875" targetId="af60-bcff-4e45-e8f7" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="9e6b-004a-0ebf-7fa5" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="838b-6c12-93ac-31e7" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8e00-5c5e-d9a5-64cc" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="c512-4123-2135-d972" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="0480-97c8-0672-e2e6" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="ISU-122" hidden="false" id="43ff-f93e-544d-826f" targetId="ecfe-bcb8-9525-701a" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="ea1a-1ad0-3302-843c" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="4c6f-aa56-6365-b45a" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="4677-b06c-f65d-a1b9" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6f32-26ef-4a0c-dd11" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="2916-008d-b37b-1819" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="KV-2" hidden="false" id="62c8-cdc0-af48-d618" targetId="1531-6e67-8e48-44d1" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="9ac9-37aa-38e4-fe4b" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="5b1b-f553-45e2-9526" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="3ac6-cc9d-611d-3867" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="6302-856b-aa41-743e" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="7884-c4f3-126b-2497" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Katyusha" hidden="false" id="a23d-b5f0-5f4e-7cfb" targetId="e1bb-7478-3fbe-ce33" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="586e-38fc-0985-4dda" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="f193-5579-a705-6c2c" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="e4b1-6929-6e9e-e539" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="2305-042a-7f0f-d2e3" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="1aa4-9e5c-2424-25d0" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Tachanka" hidden="false" id="3b49-a900-9d7b-f906" targetId="941a-bc30-5e18-00d9" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="0fbc-c5dd-35d9-8563" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="96fe-9235-24a9-488f" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8628-5355-b342-7a86" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="3887-9e94-3466-a68c" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="c3e5-18e2-8cf8-3f9d" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Tokarev 4m Quad Maxim On Gaz-AA Truck" hidden="false" id="007e-abdb-3ff7-09d4" targetId="1348-05ec-6344-c689" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="d3dd-cbc8-8233-e877" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="6617-f1a3-092b-33b5" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="792d-84fa-4ec4-bae3" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="9ca5-997f-ab66-8bd1" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="6ab5-9dcb-d987-d3ef" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="BA-3/6 Heavy Armoured Car" hidden="false" id="1561-1e59-e9ef-19a5" targetId="3af8-4cf6-000a-c3d3" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="705f-4323-0165-deeb" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="8bb5-991d-ca7a-f5c6" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="33be-4d57-36ee-fc6e" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="5808-09c2-bc11-1824" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="5cd1-3c28-affa-2d1d" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="BA-10" hidden="false" id="d098-cf17-94bd-56b8" targetId="ae67-235b-299c-6055" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="fdab-61e9-80f1-835c" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="2c04-ab12-6cbc-d87c" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="d707-4518-59ef-0e42" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0583-cd4b-aef4-41c9" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="9a51-1572-75b8-bcbb" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="BA-20" hidden="false" id="aa06-8588-c581-6f29" targetId="ebf1-68f1-714f-b70f" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="04dc-2858-992a-4339" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="BA-64" hidden="false" id="d56c-3ff3-609c-ae48" targetId="e306-4218-e302-c274" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="36e2-620a-7568-ad77" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="97a3-b9ea-e4c2-04d3" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="cbf6-01b5-c611-b102" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="0361-143d-f6cc-9d84" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="e574-c423-cf38-bc7e" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="D-8 Light Armoured Car" hidden="false" id="b7d9-d4e0-e95c-a9eb" targetId="e559-de66-77d1-79a0" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="9120-f4be-54c6-bfd8" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="0bb7-8391-37c8-5a10" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="71bb-e8ba-56ee-3ade" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="d126-d5db-c815-4585" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="61ec-9dfb-e566-7b08" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="FAI Light Armoured Car" hidden="false" id="ea28-db66-ee6d-b740" targetId="9940-f505-b935-6f19" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="0e5e-72c3-7384-470c" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="3803-7532-88f9-8204" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="6676-79ab-2940-f04d" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="fb0d-e800-3999-375f" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="5593-faef-b4a4-6cc6" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Gaz &apos;jeep&apos; (No Transport)" hidden="false" id="0d17-041a-0602-7fec" targetId="8f45-d51b-61d4-6a24" type="selectionEntry">
+      <selectionEntryGroups>
+        <selectionEntryGroup name="Platoon Command Vehicle" id="a10e-4a51-e527-0cb7" hidden="false">
+          <entryLinks>
+            <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="1522-35cf-7301-4847" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+              <constraints>
+                <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="1a44-3e6a-feaa-ff6a" includeChildSelections="false"/>
+                <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="ca6b-eb72-1183-16e0" includeChildSelections="false"/>
+              </constraints>
+            </entryLink>
+          </entryLinks>
+        </selectionEntryGroup>
+      </selectionEntryGroups>
+      <categoryLinks>
+        <categoryLink targetId="d45c-33e4-1fa4-2c97" id="0fff-2535-89dc-f6fb" primary="true" name="Platoon command vehicle"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Aerosan" hidden="false" id="b6a2-9354-daac-6807" targetId="b8f3-a7db-cc27-4dad" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="2c69-2f60-928f-be51 Recce" id="fac2-50b9-df32-b18b" primary="true" name="Transport Vehicle (Recce)"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="Gaz &apos;jeep&apos;" hidden="false" id="fd40-5916-88a4-7791" targetId="9f65-c1bc-ede7-d556" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="2c69-2f60-928f-be51 Recce" id="b99a-67fd-559c-21cd" primary="true" name="Transport Vehicle (Recce)"/>
+      </categoryLinks>
+    </entryLink>
+    <entryLink import="true" name="T-20 Komsomolets" hidden="false" id="7d94-a6a2-52a3-3d19" targetId="f855-bdc9-816f-02f5" type="selectionEntry">
+      <categoryLinks>
+        <categoryLink targetId="2c69-2f60-928f-be51 Recce" id="d99f-59cc-b670-f02e" primary="true" name="Transport Vehicle (Recce)"/>
+      </categoryLinks>
+    </entryLink>
   </entryLinks>
   <sharedSelectionEntryGroups>
     <selectionEntryGroup name="Weapons" id="3105-e6a4-eb4f-06c3" hidden="false" defaultSelectionEntryId="c3f8-1643-5672-eca3">
@@ -11540,6 +12279,16 @@
         <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="da5e-13a0-fff3-1334" includeChildSelections="false"/>
         <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="8594-5ed0-6c08-d87d" includeChildSelections="false"/>
       </constraints>
+    </selectionEntryGroup>
+    <selectionEntryGroup name="Platoon Command Vehicle" id="3b56-9eb1-39d2-7ac2" hidden="false">
+      <entryLinks>
+        <entryLink import="true" name="Platoon Command Vehicle" hidden="false" id="d2a7-85f9-9767-da08" type="selectionEntry" targetId="074b-5aa2-bdbc-5674">
+          <constraints>
+            <constraint type="min" value="1" field="selections" scope="parent" shared="true" id="f34c-1442-817c-4475-min" includeChildSelections="false"/>
+            <constraint type="max" value="1" field="selections" scope="parent" shared="true" id="f34c-1442-817c-4475-max" includeChildSelections="false"/>
+          </constraints>
+        </entryLink>
+      </entryLinks>
     </selectionEntryGroup>
   </sharedSelectionEntryGroups>
   <sharedRules>
